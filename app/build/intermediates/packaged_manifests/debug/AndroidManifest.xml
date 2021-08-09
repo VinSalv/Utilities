@@ -18,6 +18,10 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.Utilities" >
+        <activity android:name="com.example.utilities.Info" />
+        <activity
+            android:name="com.example.utilities.SettingsActivity"
+            android:label="@string/title_activity_settings" />
         <activity
             android:name="com.example.utilities.MainActivity"
             android:label="@string/title_activity_main"

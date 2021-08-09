@@ -1,11 +1,27 @@
 [
     {
-        "merged": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_page.xml",
-        "source": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\src\\main\\res\\layout\\fragment_page.xml"
+        "merged": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment__bussola.xml",
+        "source": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\src\\main\\res\\layout\\fragment__bussola.xml"
+    },
+    {
+        "merged": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_info.xml",
+        "source": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\src\\main\\res\\layout\\activity_info.xml"
     },
     {
         "merged": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_main.xml",
         "source": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\src\\main\\res\\layout\\fragment_main.xml"
+    },
+    {
+        "merged": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_livella.xml",
+        "source": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\src\\main\\res\\layout\\fragment_livella.xml"
+    },
+    {
+        "merged": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\settings_activity.xml",
+        "source": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\src\\main\\res\\layout\\settings_activity.xml"
+    },
+    {
+        "merged": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment_blank.xml",
+        "source": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\src\\main\\res\\layout\\fragment_blank.xml"
     },
     {
         "merged": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_main.xml",

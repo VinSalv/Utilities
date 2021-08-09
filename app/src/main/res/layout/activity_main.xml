@@ -30,9 +30,8 @@
             app:tabIndicatorHeight="2dp"
             app:tabPaddingEnd="12dp"
             app:tabPaddingStart="12dp"
-            app:tabTextColor="?attr/colorOnPrimary"
             app:tabSelectedTextColor="?attr/colorOnSecondary"
-        />
+            app:tabTextColor="?attr/colorOnPrimary" />
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.viewpager.widget.ViewPager
@@ -47,6 +46,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email"
-        android:contentDescription="@string/info" />
+        android:contentDescription="@string/info"
+        app:srcCompat="@android:drawable/ic_dialog_info" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
