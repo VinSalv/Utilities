@@ -13,7 +13,7 @@ import com.example.utilities.Utility;
 
 
 // In this case, the fragment displays simple text based on the page
-public class PageFragment extends Fragment{
+public class PageFragment extends Fragment {
     public static final String ARG_PAGE = "ARG_PAGE";
 
     private int mPage;
@@ -32,8 +32,8 @@ public class PageFragment extends Fragment{
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
             mPage = getArguments().getInt(ARG_PAGE);
-        }else{
-            util.notifyUser(this.getContext(),"No arguments!");
+        } else {
+            util.notifyUser(this.getContext(), "No arguments!");
         }
     }
 

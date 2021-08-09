@@ -6,14 +6,14 @@ import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
+import org.jetbrains.annotations.NotNull;
+
 public class SampleFragmentPagerAdapter extends FragmentPagerAdapter {
     final int PAGE_COUNT = 3;
-    private String tabTitles[] = new String[] { "Tab1", "Tab2", "Tab3" };
-    private Context context;
+    private final String[] tabTitles = new String[]{"Tab1", "Tab2", "Tab3"};
 
     public SampleFragmentPagerAdapter(FragmentManager fm, Context context) {
         super(fm);
-        this.context = context;
     }
 
     @Override
@@ -21,6 +21,7 @@ public class SampleFragmentPagerAdapter extends FragmentPagerAdapter {
         return PAGE_COUNT;
     }
 
+    @NotNull
     @Override
     public Fragment getItem(int position) {
         return PageFragment.newInstance(position + 1);
