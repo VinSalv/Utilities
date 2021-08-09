@@ -22,4 +22,8 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_settings">SettingsActivity</string>
+    <string name="utilities">utilities</string>
+    <string name="copyright">Versione 1.0.0\n\n© 2021 Engineers Rights Reserved.</string>
+    <string name="backButton">back</string>
+
 </resources>

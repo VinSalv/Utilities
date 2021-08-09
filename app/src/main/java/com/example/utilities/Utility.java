@@ -16,6 +16,7 @@ public class Utility {
                 message,
                 Toast.LENGTH_SHORT).show();
     }
+
     public void goToMainActivity(Context context) {
         Intent intent = new Intent(context, MainActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -23,6 +24,7 @@ public class Utility {
         intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
         context.startActivity(intent);
     }
+
     public void goToInfo(Context context) {
         Intent intent = new Intent(context, Info.class);
         context.startActivity(intent);

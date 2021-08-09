@@ -9,13 +9,13 @@ import androidx.viewpager.widget.ViewPager;
 import com.example.utilities.databinding.ActivityMainBinding;
 import com.example.utilities.ui.main.SectionsPagerAdapter;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
     private Utility util = new Utility();
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

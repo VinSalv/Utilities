@@ -1323,6 +1323,7 @@ int color test_mtrl_calendar_day 0x7f0500d1
 int color test_mtrl_calendar_day_selected 0x7f0500d2
 int color tooltip_background_dark 0x7f0500d3
 int color tooltip_background_light 0x7f0500d4
+int color trasparent 0x7f0500da
 int color violet_600 0x7f0500d5
 int color white 0x7f0500d6
 int color yellow_600 0x7f0500d7
@@ -1410,6 +1411,7 @@ int dimen abc_text_size_title_material_toolbar 0x7f060050
 int dimen action_bar_size 0x7f060051
 int dimen activity_horizontal_margin 0x7f060052
 int dimen activity_vertical_margin 0x7f060053
+int dimen appbar_height 0x7f0601b4
 int dimen appbar_padding 0x7f060054
 int dimen appbar_padding_top 0x7f060055
 int dimen appcompat_dialog_background_inset 0x7f060056
@@ -1843,6 +1845,7 @@ int drawable abc_textfield_search_material 0x7f070054
 int drawable abc_vector_test 0x7f070055
 int drawable avd_hide_password 0x7f070056
 int drawable avd_show_password 0x7f070057
+int drawable back 0x7f070095
 int drawable btn_checkbox_checked_mtrl 0x7f070058
 int drawable btn_checkbox_checked_to_unchecked_mtrl_animation 0x7f070059
 int drawable btn_checkbox_unchecked_mtrl 0x7f07005a
@@ -1865,7 +1868,6 @@ int drawable ic_mtrl_checked_circle 0x7f070069
 int drawable ic_mtrl_chip_checked_black 0x7f07006a
 int drawable ic_mtrl_chip_checked_circle 0x7f07006b
 int drawable ic_mtrl_chip_close_circle 0x7f07006c
-int drawable icona_di_prova 0x7f07006d
 int drawable material_cursor_drawable 0x7f07006e
 int drawable material_ic_calendar_black_24dp 0x7f07006f
 int drawable material_ic_clear_black_24dp 0x7f070070
@@ -1903,6 +1905,7 @@ int drawable preference_list_divider_material 0x7f070093
 int drawable test_custom_background 0x7f07008f
 int drawable tooltip_frame_dark 0x7f070090
 int drawable tooltip_frame_light 0x7f070091
+int drawable utilities 0x7f070094
 int id ALT 0x7f080000
 int id BOTTOM_END 0x7f080001
 int id BOTTOM_START 0x7f080002
@@ -1991,6 +1994,7 @@ int id auto 0x7f080053
 int id autoComplete 0x7f080054
 int id autoCompleteToEnd 0x7f080055
 int id autoCompleteToStart 0x7f080056
+int id back 0x7f0801e4
 int id barrier 0x7f080057
 int id baseline 0x7f080058
 int id beginOnFirstDraw 0x7f080059
@@ -2368,6 +2372,7 @@ int id uniform 0x7f0801c1
 int id unlabeled 0x7f0801c2
 int id up 0x7f0801c3
 int id useLogo 0x7f0801c4
+int id utilities 0x7f0801e3
 int id vertical_only 0x7f0801c5
 int id view_offset_helper 0x7f0801c6
 int id view_pager 0x7f0801c7
@@ -2605,6 +2610,7 @@ int string appbar_scrolling_view_behavior 0x7f0e001c
 int string attachment_summary_off 0x7f0e006d
 int string attachment_summary_on 0x7f0e006e
 int string attachment_title 0x7f0e006f
+int string backButton 0x7f0e0081
 int string bottom_sheet_behavior 0x7f0e001d
 int string bottomsheet_action_expand_halfway 0x7f0e001e
 int string character_counter_content_description 0x7f0e001f
@@ -2613,6 +2619,7 @@ int string character_counter_pattern 0x7f0e0021
 int string chip_text 0x7f0e0022
 int string clear_text_end_icon_content_description 0x7f0e0023
 int string copy 0x7f0e0070
+int string copyright 0x7f0e007f
 int string error_icon_content_description 0x7f0e0024
 int string expand_button_title 0x7f0e0071
 int string exposed_dropdown_menu_content_description 0x7f0e0025
@@ -2698,6 +2705,7 @@ int string tab_text_2 0x7f0e006b
 int string tab_text_3 0x7f0e007e
 int string title_activity_main 0x7f0e006c
 int string title_activity_settings 0x7f0e007d
+int string utilities 0x7f0e0080
 int string v7_preference_off 0x7f0e007b
 int string v7_preference_on 0x7f0e007c
 int style AlertDialog_AppCompat 0x7f0f0000
