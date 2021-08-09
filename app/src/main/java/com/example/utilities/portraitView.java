@@ -1,11 +1,9 @@
 package com.example.utilities;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
-import android.graphics.Rect;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -13,36 +11,25 @@ import android.hardware.SensorManager;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.TextView;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
 import static android.content.Context.SENSOR_SERVICE;
 
+@SuppressWarnings({"MismatchedReadAndWriteOfArray", "IntegerDivisionInFloatingPointContext"})
 public class portraitView extends View {
-    static private final double GRAVITY = 9.81d;
     static private final double MIN_DEGREE = -10d;
     static private final double MAX_DEGREE = 10d;
+    private final float[] rotation_matrix = new float[16];
+    private final float[] orientation_values = new float[4];
+    private final float[] bearings = new float[500];
+    private final float[] pitch = new float[500];
+    private final float[] roll = new float[500];
     Paint textPaint;
-    boolean altrue = true;
     Livella mObj;
     private Paint white, black, green, textp, line;
-    private Rect square;
     private int width, height;
-    private String text, text1, text2;
-    private TextView tv;
-    private SensorManager sm;
-    private float bearingArr[] = new float[500];
-    private float pitchArr[] = new float[500];
-    private float rollArr[] = new float[500];
-    private float rotation_matrix[] = new float[16];
-    private float orientation_values[] = new float[4];
-    private String[] arrSTr = new String[3];
-    private float bearings[] = new float[500];
-    private float pitch[] = new float[500];
-    private float roll[] = new float[500];
-    private int count;
     private int count2;
 
     public portraitView(Context context) {
@@ -89,10 +76,9 @@ public class portraitView extends View {
 
         mObj = new Livella();
 
-        count = 500;
         count2 = 0;
 
-        sm = (SensorManager) ((Activity) getContext()).getSystemService(SENSOR_SERVICE);
+        SensorManager sm = (SensorManager) getContext().getSystemService(SENSOR_SERVICE);
         sm.registerListener(new SensorEventListener() {
                                 public void onAccuracyChanged(Sensor sensor, int accuracy) {
                                 }
@@ -149,35 +135,14 @@ public class portraitView extends View {
         for (int i = 0; i < 8; i++) {
             for (int j = 0; j < 8; j++) {
 
-                if (i % 2 == 0) {
-                    if (j % 2 == 0) {
-
-                        canvas.drawRect(i * sqrWidth, j * sqrHeight, (i + 1) * sqrWidth, (j + 1) * sqrHeight, white);
-
-                    } else {
-                        canvas.drawRect(i * sqrWidth, j * sqrHeight, (i + 1) * sqrWidth, (j + 1) * sqrHeight, white);
-
-                    }
-                } else {
-                    if (j % 2 == 0) {
-
-                        canvas.drawRect(i * sqrWidth, j *
-                                sqrHeight, (i + 1) * sqrWidth, (j +
-                                1) * sqrHeight, white);
-
-
-                    } else {
-
-                        canvas.drawRect(i * sqrWidth, j *
-                                sqrHeight, (i + 1) * sqrWidth, (j +
-                                1) * sqrHeight, white);
-
-                    }
-                }
+                canvas.drawRect(i * sqrWidth, j * sqrHeight, (i + 1) * sqrWidth, (j + 1) * sqrHeight, white);
             }
         }
 //IF DEVICE IS FACING FRONT VIEW
 
+        String text;
+        String text1;
+        String text2;
         if (calcDeg(orientation_values[1]) < 60) {
 
             canvas.drawRect(width / (float) 2.85, (float) (375 - 10),
@@ -195,11 +160,6 @@ public class portraitView extends View {
             text = ("X-axis : " + orientation_values[2]);
             text1 = "Max Value : " + getRollmax();
             text2 = "Min Value : " + getRollmin();
-
-            canvas.drawText(text, height / 35, width - 85, textp);
-            canvas.drawText(text1, height / 35, width - 50, textp);
-            canvas.drawText(text2, height / 35, width - 20, textp);
-            invalidate();
 
 
             //AN ELSE FOR WHEN THW VALUE IS ON A FLAT SURFACE
@@ -244,15 +204,12 @@ public class portraitView extends View {
             text1 = ("X-axis Max Value : " + getRollmax() + "\t\t\tX-axis Min Value : " + getRollmin());
             text2 = ("Y-axis Max Value: " + getPitchmax() + "\t\t\tY-axis Min Value : " + getPitchmin());
 
-            canvas.drawText(text, height / 35, width - 85, textp);
-            canvas.drawText(text1, height / 35, width - 50, textp);
-            canvas.drawText(text2, height / 35, width - 20, textp);
-
-
-            invalidate();
-
 
         }
+        canvas.drawText(text, height / 35, width - 85, textp);
+        canvas.drawText(text1, height / 35, width - 50, textp);
+        canvas.drawText(text2, height / 35, width - 20, textp);
+        invalidate();
     }
 
     @SuppressLint("ClickableViewAccessibility")
@@ -269,33 +226,29 @@ public class portraitView extends View {
 
 
     public float getPitchmax() {
-        float pmax = getmax(pitch);
-        return pmax;
+        return getmax(pitch);
     }
 
     public float getRollmax() {
-        float rmax = getmax(roll);
-        return rmax;
+        return getmax(roll);
     }
 
 
     public float getPitchmin() {
-        float pmin = getmin(pitch);
-        return pmin;
+        return getmin(pitch);
     }
 
     public float getRollmin() {
-        float rmin = getmin(roll);
-        return rmin;
+        return getmin(roll);
     }
 
 
     public float getmax(float[] array) {
         float max = 0;
 
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] > max) {
-                max = array[i];
+        for (float v : array) {
+            if (v > max) {
+                max = v;
             }
         }
         return max;
@@ -304,9 +257,9 @@ public class portraitView extends View {
     public float getmin(float[] array) {
         float min = array[0];
 
-        for (int i = 0; i < array.length; i++) {
-            if (array[i] < min) {
-                min = array[i];
+        for (float v : array) {
+            if (v < min) {
+                min = v;
             }
         }
         return min;

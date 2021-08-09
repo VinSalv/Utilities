@@ -13,6 +13,10 @@ import com.example.utilities.Fragment_Livella;
 import com.example.utilities.R;
 import com.example.utilities.SettingsActivity;
 
+import org.jetbrains.annotations.NotNull;
+
+import java.util.Objects;
+
 /**
  * A [FragmentPagerAdapter] that returns a fragment corresponding to
  * one of the sections/tabs/pages.
@@ -28,6 +32,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
         mContext = context;
     }
 
+    @NotNull
     @Override
     public Fragment getItem(int position) {
         Fragment fragment = null;
@@ -42,7 +47,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
                 fragment = new SettingsActivity.SettingsFragment();
                 break;
         }
-        return fragment;
+        return Objects.requireNonNull(fragment);
     }
 
     @Nullable

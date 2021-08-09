@@ -1,10 +1,8 @@
 package com.example.utilities;
 
-import android.app.Activity;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Paint;
-import android.graphics.Path;
 import android.graphics.Rect;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
@@ -14,35 +12,25 @@ import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.TextView;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
 import static android.content.Context.SENSOR_SERVICE;
 
+@SuppressWarnings("ALL")
 public class landView extends View {
-    static private final double GRAVITY = 9.81d;
-    static private final double MIN_DEGREE = -10d;
-    static private final double MAX_DEGREE = 10d;
+    private final float[] bearingArr = new float[500];
+    private final float[] pitchArr = new float[500];
+    private final float[] rollArr = new float[500];
+    private final float[] rotation_matrix = new float[16];
+    private final float[] orientation_values = new float[4];
     Paint textPaint;
-    boolean altrue = true;
     MainActivity mObj;
     private Paint white, black, green, textp, line;
-    private Rect square;
     private int width, height;
-    private String text, text1, text2;
-    private TextView tv;
-    private SensorManager sm;
-    private float bearingArr[] = new float[500];
-    private float pitchArr[] = new float[500];
-    private float rollArr[] = new float[500];
-    private float rotation_matrix[] = new float[16];
-    private float orientation_values[] = new float[4];
-    private String[] arrSTr = new String[3];
-    private int count;
+    private String text;
     private int count2;
-    private Path path;
 
 
     public landView(Context context) {
@@ -90,11 +78,9 @@ public class landView extends View {
 
         mObj = new MainActivity();
 
-        count = 500;
         count2 = 0;
-        path = new Path();
 
-        sm = (SensorManager) ((Activity) getContext()).getSystemService(SENSOR_SERVICE);
+        SensorManager sm = (SensorManager) getContext().getSystemService(SENSOR_SERVICE);
         sm.registerListener(new SensorEventListener() {
                                 public void onAccuracyChanged(Sensor sensor, int accuracy) {
                                 }
@@ -133,8 +119,7 @@ public class landView extends View {
         // Set board as per screen size
         super.onMeasure(widthMeasureSpec, heightMeasureSpec);
         int maxwidth = getMeasuredWidth();
-        int maxheight = getMeasuredHeight();
-        width = maxheight;
+        width = getMeasuredHeight();
         height = maxwidth;
         setMeasuredDimension(height, width);
         // Log.d("mylog", "onDraw: "+ width+" "+height );
@@ -155,7 +140,7 @@ public class landView extends View {
 
                 if (i % 2 == 0) {
                     if (j % 2 == 0) {
-                        square = new Rect(i * sqrWidth, j *
+                        Rect square = new Rect(i * sqrWidth, j *
                                 sqrHeight, (i + 1) * sqrWidth, (j +
                                 1) * sqrHeight);
 
@@ -185,6 +170,8 @@ public class landView extends View {
         }
 
 //IF DEVICE IS FACING FRONT VIEW / y axis
+        String text1;
+        String text2;
         if (calcDeg(orientation_values[2]) > 115 || (0 <= calcDeg(orientation_values[2]) && calcDeg(orientation_values[2]) <= 50)) {
             canvas.drawRect(height / (float) 2.5, (float) (250 - 10), height / (float) 1.7, (float) (250 + 10), black);
 
