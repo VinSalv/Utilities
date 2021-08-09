@@ -1,37 +1,45 @@
-com/example/utilities/SettingsActivity.java
- com.example.utilities.SettingsActivity
- com.example.utilities.SettingsActivity$SettingsFragment
-com/example/utilities/databinding/SettingsActivityBinding.java
- com.example.utilities.databinding.SettingsActivityBinding
-com/example/utilities/ui/main/PageViewModel.java
- com.example.utilities.ui.main.PageViewModel
- com.example.utilities.ui.main.PageViewModel$1
-com/example/utilities/BuildConfig.java
- com.example.utilities.BuildConfig
-com/example/utilities/ui/main/PlaceholderFragment.java
- com.example.utilities.ui.main.PlaceholderFragment
- com.example.utilities.ui.main.PlaceholderFragment$1
 com/example/utilities/databinding/ActivityInfoBinding.java
  com.example.utilities.databinding.ActivityInfoBinding
 com/example/utilities/databinding/FragmentLivellaBinding.java
  com.example.utilities.databinding.FragmentLivellaBinding
-com/example/utilities/databinding/FragmentMainBinding.java
- com.example.utilities.databinding.FragmentMainBinding
-com/example/utilities/databinding/FragmentBussolaBinding.java
- com.example.utilities.databinding.FragmentBussolaBinding
-com/example/utilities/databinding/ActivityMainBinding.java
- com.example.utilities.databinding.ActivityMainBinding
 com/example/utilities/Fragment_Livella.java
  com.example.utilities.Fragment_Livella
+com/example/utilities/BuildConfig.java
+ com.example.utilities.BuildConfig
+com/example/utilities/databinding/FragmentBussolaBinding.java
+ com.example.utilities.databinding.FragmentBussolaBinding
+com/example/utilities/portraitView.java
+ com.example.utilities.portraitView
+ com.example.utilities.portraitView$1
+com/example/utilities/databinding/FragmentMainBinding.java
+ com.example.utilities.databinding.FragmentMainBinding
+com/example/utilities/landView.java
+ com.example.utilities.landView
+ com.example.utilities.landView$1
+com/example/utilities/databinding/SettingsActivityBinding.java
+ com.example.utilities.databinding.SettingsActivityBinding
+com/example/utilities/SettingsActivity.java
+ com.example.utilities.SettingsActivity
+ com.example.utilities.SettingsActivity$SettingsFragment
+com/example/utilities/Info.java
+ com.example.utilities.Info
+ com.example.utilities.Info$1
+com/example/utilities/ui/main/PageViewModel.java
+ com.example.utilities.ui.main.PageViewModel
+ com.example.utilities.ui.main.PageViewModel$1
+com/example/utilities/ui/main/PlaceholderFragment.java
+ com.example.utilities.ui.main.PlaceholderFragment
+ com.example.utilities.ui.main.PlaceholderFragment$1
+com/example/utilities/databinding/ActivityMainBinding.java
+ com.example.utilities.databinding.ActivityMainBinding
 com/example/utilities/Fragment_Bussola.java
  com.example.utilities.Fragment_Bussola
+com/example/utilities/Livella.java
+ com.example.utilities.Livella
 com/example/utilities/ui/main/SectionsPagerAdapter.java
  com.example.utilities.ui.main.SectionsPagerAdapter
 com/example/utilities/MainActivity.java
  com.example.utilities.MainActivity
  com.example.utilities.MainActivity$1
-com/example/utilities/Info.java
- com.example.utilities.Info
- com.example.utilities.Info$1
 com/example/utilities/Utility.java
  com.example.utilities.Utility

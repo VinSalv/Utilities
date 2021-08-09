@@ -4,25 +4,60 @@ package com.example.utilities.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
 import com.example.utilities.R;
-import java.lang.NullPointerException;
+import com.example.utilities.landView;
+import com.example.utilities.portraitView;
 import java.lang.Override;
 
 public final class FragmentLivellaBinding implements ViewBinding {
   @NonNull
-  private final FrameLayout rootView;
+  private final View rootView;
 
-  private FragmentLivellaBinding(@NonNull FrameLayout rootView) {
+  /**
+   * This binding is not available in all configurations.
+   * <p>
+   * Present:
+   * <ul>
+   *   <li>layout-land/</li>
+   * </ul>
+   *
+   * Absent:
+   * <ul>
+   *   <li>layout/</li>
+   * </ul>
+   */
+  @Nullable
+  public final landView landview;
+
+  /**
+   * This binding is not available in all configurations.
+   * <p>
+   * Present:
+   * <ul>
+   *   <li>layout/</li>
+   * </ul>
+   *
+   * Absent:
+   * <ul>
+   *   <li>layout-land/</li>
+   * </ul>
+   */
+  @Nullable
+  public final portraitView porView;
+
+  private FragmentLivellaBinding(@NonNull View rootView, @Nullable landView landview,
+      @Nullable portraitView porView) {
     this.rootView = rootView;
+    this.landview = landview;
+    this.porView = porView;
   }
 
   @Override
   @NonNull
-  public FrameLayout getRoot() {
+  public View getRoot() {
     return rootView;
   }
 
@@ -43,10 +78,10 @@ public final class FragmentLivellaBinding implements ViewBinding {
 
   @NonNull
   public static FragmentLivellaBinding bind(@NonNull View rootView) {
-    if (rootView == null) {
-      throw new NullPointerException("rootView");
-    }
+    landView landview = rootView.findViewById(R.id.landview);
 
-    return new FragmentLivellaBinding((FrameLayout) rootView);
+    portraitView porView = rootView.findViewById(R.id.porView);
+
+    return new FragmentLivellaBinding(rootView, landview, porView);
   }
 }
