@@ -10,8 +10,6 @@ import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.example.utilities.R;
 
-import org.jetbrains.annotations.NotNull;
-
 /**
  * A [FragmentPagerAdapter] that returns a fragment corresponding to
  * one of the sections/tabs/pages.
@@ -27,7 +25,6 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
         mContext = context;
     }
 
-    @NotNull
     @Override
     public Fragment getItem(int position) {
         // getItem is called to instantiate the fragment for the given page.

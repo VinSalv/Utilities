@@ -2,4 +2,6 @@
     <string name="app_name">Utilities</string>
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
+    <string name="info">Info</string>
+    <string name="title_activity_main">MainActivity</string>
 </resources>
