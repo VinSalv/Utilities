@@ -1,0 +1,19 @@
+com/example/utilities/ui/main/PlaceholderFragment.java
+ com.example.utilities.ui.main.PlaceholderFragment
+ com.example.utilities.ui.main.PlaceholderFragment$1
+com/example/utilities/BuildConfig.java
+ com.example.utilities.BuildConfig
+com/example/utilities/databinding/ActivityMainBinding.java
+ com.example.utilities.databinding.ActivityMainBinding
+com/example/utilities/databinding/FragmentMainBinding.java
+ com.example.utilities.databinding.FragmentMainBinding
+com/example/utilities/ui/main/SectionsPagerAdapter.java
+ com.example.utilities.ui.main.SectionsPagerAdapter
+com/example/utilities/MainActivity.java
+ com.example.utilities.MainActivity
+ com.example.utilities.MainActivity$1
+com/example/utilities/ui/main/PageViewModel.java
+ com.example.utilities.ui.main.PageViewModel
+ com.example.utilities.ui.main.PageViewModel$1
+com/example/utilities/Utility.java
+ com.example.utilities.Utility
