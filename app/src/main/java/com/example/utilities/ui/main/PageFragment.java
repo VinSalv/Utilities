@@ -9,12 +9,15 @@ import android.widget.TextView;
 import androidx.fragment.app.Fragment;
 
 import com.example.utilities.R;
+import com.example.utilities.Utility;
+
 
 // In this case, the fragment displays simple text based on the page
-public class PageFragment extends Fragment {
+public class PageFragment extends Fragment{
     public static final String ARG_PAGE = "ARG_PAGE";
 
     private int mPage;
+    private Utility util;
 
     public static PageFragment newInstance(int page) {
         Bundle args = new Bundle();
@@ -30,7 +33,7 @@ public class PageFragment extends Fragment {
         if (getArguments() != null) {
             mPage = getArguments().getInt(ARG_PAGE);
         }else{
-
+            util.notifyUser(this.getContext(),"No arguments!");
         }
     }
 
