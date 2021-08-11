@@ -10,6 +10,7 @@ import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.example.utilities.Fragment_Bussola;
 import com.example.utilities.Fragment_Livella;
+import com.example.utilities.Fragment_Sensori;
 import com.example.utilities.R;
 import com.example.utilities.SettingsActivity;
 
@@ -24,7 +25,7 @@ import java.util.Objects;
 public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     @StringRes
-    private static final int[] TAB_TITLES = new int[]{R.string.tab_text_1, R.string.tab_text_2, R.string.tab_text_3};
+    private static final int[] TAB_TITLES = new int[]{R.string.tab_text_1, R.string.tab_text_2, R.string.tab_text_3 ,R.string.tab_text_4};
     private final Context mContext;
 
     public SectionsPagerAdapter(Context context, FragmentManager fm) {
@@ -44,8 +45,10 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
                 fragment = new Fragment_Bussola();
                 break;
             case 2:
-                fragment = new SettingsActivity.SettingsFragment();
+                fragment = new Fragment_Sensori();
                 break;
+            case 3:
+                fragment = new SettingsActivity.SettingsFragment();
         }
         return Objects.requireNonNull(fragment);
     }
@@ -59,6 +62,6 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
     @Override
     public int getCount() {
         // Show 2 total pages.
-        return 3;
+        return 4;
     }
 }

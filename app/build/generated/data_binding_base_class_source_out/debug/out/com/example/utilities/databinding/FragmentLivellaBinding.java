@@ -7,6 +7,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.example.utilities.R;
 import com.example.utilities.landView;
 import com.example.utilities.portraitView;
@@ -78,9 +79,9 @@ public final class FragmentLivellaBinding implements ViewBinding {
 
   @NonNull
   public static FragmentLivellaBinding bind(@NonNull View rootView) {
-    landView landview = rootView.findViewById(R.id.landview);
+    landView landview = ViewBindings.findChildViewById(rootView, R.id.landview);
 
-    portraitView porView = rootView.findViewById(R.id.porView);
+    portraitView porView = ViewBindings.findChildViewById(rootView, R.id.porView);
 
     return new FragmentLivellaBinding(rootView, landview, porView);
   }

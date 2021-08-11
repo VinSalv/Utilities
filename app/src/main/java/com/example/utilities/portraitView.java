@@ -27,7 +27,6 @@ public class portraitView extends View {
     private final float[] pitch = new float[500];
     private final float[] roll = new float[500];
     Paint textPaint;
-    Livella mObj;
     private Paint white, black, green, textp, line;
     private int width, height;
     private int count2;
@@ -73,8 +72,6 @@ public class portraitView extends View {
         black.setColor(0xFF000000);
         black.setStyle(Paint.Style.FILL_AND_STROKE);
         green.setColor(0xFF95DD42);
-
-        mObj = new Livella();
 
         count2 = 0;
 

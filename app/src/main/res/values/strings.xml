@@ -2,7 +2,8 @@
     <string name="app_name">Utilities</string>
     <string name="tab_text_1">Livella</string>
     <string name="tab_text_2">Bussola</string>
-    <string name="tab_text_3">Settings</string>
+    <string name="tab_text_3">Sensori</string>
+    <string name="tab_text_4">Settings</string>
     <string name="info">Info</string>
     <string name="title_activity_main">MainActivity</string>
     <!-- Preference Titles -->
@@ -25,5 +26,12 @@
     <string name="utilities">utilities</string>
     <string name="copyright">Versione 1.0.0\n\n© 2021 Engineers Rights Reserved.</string>
     <string name="backButton">back</string>
+    <string name="AccelerometerNotSupported"><b>Accelerometro:</b> Non Supportato</string>
+    <string name="GyroscopeNotSupported"><b>Giroscopio:</b> Non Supportato</string>
+    <string name="MagnetometerNotSupported"><b>Magnetometro:</b> Non Supportato</string>
+    <string name="BrightnessNotSupported"><b>Luminosità:</b> Non Supportato</string>
+    <string name="PressureNotSupported"><b>Pressione:</b> Non Supportato</string>
+    <string name="TemperatureNotSupported"><b>Temperatura:</b> Non Supportato</string>
+    <string name="HumidityNotSupported"><b>Umidità:</b> Non Supportato</string>
 
 </resources>

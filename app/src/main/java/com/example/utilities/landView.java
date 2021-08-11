@@ -26,7 +26,6 @@ public class landView extends View {
     private final float[] rotation_matrix = new float[16];
     private final float[] orientation_values = new float[4];
     Paint textPaint;
-    MainActivity mObj;
     private Paint white, black, green, textp, line;
     private int width, height;
     private String text;
@@ -76,7 +75,6 @@ public class landView extends View {
         black.setStyle(Paint.Style.FILL_AND_STROKE);
         green.setColor(0xFF95DD42);
 
-        mObj = new MainActivity();
 
         count2 = 0;
 

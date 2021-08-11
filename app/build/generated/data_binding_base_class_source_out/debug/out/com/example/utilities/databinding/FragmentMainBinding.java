@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.example.utilities.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -61,7 +62,7 @@ public final class FragmentMainBinding implements ViewBinding {
       ConstraintLayout constraintLayout = (ConstraintLayout) rootView;
 
       id = R.id.section_label;
-      TextView sectionLabel = rootView.findViewById(id);
+      TextView sectionLabel = ViewBindings.findChildViewById(rootView, id);
       if (sectionLabel == null) {
         break missingId;
       }

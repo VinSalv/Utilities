@@ -16,6 +16,10 @@
         "source": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\src\\main\\res\\layout\\fragment_livella.xml"
     },
     {
+        "merged": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\fragment__sensori.xml",
+        "source": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\src\\main\\res\\layout\\fragment__sensori.xml"
+    },
+    {
         "merged": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\settings_activity.xml",
         "source": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\src\\main\\res\\layout\\settings_activity.xml"
     },

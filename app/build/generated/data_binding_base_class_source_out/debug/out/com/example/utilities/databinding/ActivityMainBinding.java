@@ -9,6 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import androidx.viewpager.widget.ViewPager;
 import com.example.utilities.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -71,25 +72,25 @@ public final class ActivityMainBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.fab;
-      FloatingActionButton fab = rootView.findViewById(id);
+      FloatingActionButton fab = ViewBindings.findChildViewById(rootView, id);
       if (fab == null) {
         break missingId;
       }
 
       id = R.id.tabs;
-      TabLayout tabs = rootView.findViewById(id);
+      TabLayout tabs = ViewBindings.findChildViewById(rootView, id);
       if (tabs == null) {
         break missingId;
       }
 
       id = R.id.title;
-      TextView title = rootView.findViewById(id);
+      TextView title = ViewBindings.findChildViewById(rootView, id);
       if (title == null) {
         break missingId;
       }
 
       id = R.id.view_pager;
-      ViewPager viewPager = rootView.findViewById(id);
+      ViewPager viewPager = ViewBindings.findChildViewById(rootView, id);
       if (viewPager == null) {
         break missingId;
       }
