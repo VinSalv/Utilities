@@ -29,5 +29,4 @@ public class Utility {
         Intent intent = new Intent(context, Info.class);
         context.startActivity(intent);
     }
-
 }

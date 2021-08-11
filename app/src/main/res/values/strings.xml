@@ -9,18 +9,15 @@
     <!-- Preference Titles -->
     <string name="messages_header">Messages</string>
     <string name="sync_header">Sync</string>
-
     <!-- Messages Preferences -->
     <string name="signature_title">Your signature</string>
     <string name="reply_title">Default reply action</string>
-
     <!-- Sync Preferences -->
     <string name="sync_title">Sync email periodically</string>
     <string name="attachment_title">Download incoming attachments</string>
     <string name="attachment_summary_on">Automatically download attachments for incoming emails
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_settings">SettingsActivity</string>
     <string name="utilities">utilities</string>
@@ -33,5 +30,19 @@
     <string name="PressureNotSupported"><b>Pressione:</b> Non Supportato</string>
     <string name="TemperatureNotSupported"><b>Temperatura:</b> Non Supportato</string>
     <string name="HumidityNotSupported"><b>Umidità:</b> Non Supportato</string>
-
+    <string name="compass_dial" translatable="false">Compass Dial</string>
+    <string name="compass_hands" translatable="false">Compass Hands</string>
+    <string name="sotw_north">N</string>
+    <string name="sotw_east">E</string>
+    <string name="sotw_south">S</string>
+    <string name="sotw_west">W</string>
+    <string name="sotw_northeast">NE</string>
+    <string name="sotw_northwest">NW</string>
+    <string name="sotw_southeast">SE</string>
+    <string name="sotw_southwest">SW</string>
+    <string name="utilityImage">UtilityImage</string>
+    <string name="accelerometer">Accelerometer</string>
+    <string name="gyroscope">Giroscopio</string>
+    <string name="magnometer">Magnetometro</string>
+    <string name="other_Sensors">Altri sensori</string>
 </resources>

@@ -18,26 +18,19 @@ import androidx.fragment.app.Fragment;
 import java.text.DecimalFormat;
 
 public class Fragment_Sensori extends Fragment implements SensorEventListener {
-
     TextView xValue, yValue, zValue, xGyroValue, yGyroValue, zGyroValue, xMagnoValue, yMagnoValue, zMagnoValue, light, pressure, temperature, humidity;
-
     DecimalFormat df = new DecimalFormat();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         df.setMaximumFractionDigits(2);
-
-
     }
 
     @SuppressLint("SetTextI18n")
     @Override
     public void onSensorChanged(SensorEvent event) {
-
         Sensor sensor = event.sensor;
-
         if (sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
             xValue.setText(Html.fromHtml("<b>X: </b>" + df.format(event.values[0])));
             yValue.setText(Html.fromHtml("<b>Y: </b>" + df.format(event.values[1])));
@@ -59,18 +52,14 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
         } else if (sensor.getType() == Sensor.TYPE_RELATIVE_HUMIDITY) {
             humidity.setText(Html.fromHtml("<b>Umidità: </b>" + df.format(event.values[0]) + " [%]"));
         }
-
-
     }
 
     @Override
     public void onAccuracyChanged(Sensor sensor, int accuracy) {
     }
 
-
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment__sensori, container, false);
 
@@ -91,7 +80,7 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
         temperature = (TextView) view.findViewById(R.id.temperature);
         humidity = (TextView) view.findViewById(R.id.humidity);
 
-        SensorManager sensorManager = (SensorManager) getActivity().getSystemService(Context.SENSOR_SERVICE);
+        SensorManager sensorManager = (SensorManager) requireActivity().getSystemService(Context.SENSOR_SERVICE);
 
         Sensor accelerometer = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
         if (accelerometer != null) {
@@ -143,6 +132,5 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
         }
 
         return view;
-
     }
 }

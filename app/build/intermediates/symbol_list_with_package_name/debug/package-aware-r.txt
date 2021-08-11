@@ -1860,6 +1860,8 @@ drawable design_ic_visibility
 drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
+drawable dial
+drawable hands
 drawable ic_arrow_down_24dp
 drawable ic_clock_black_24dp
 drawable ic_keyboard_black_24dp
@@ -2150,6 +2152,8 @@ id linear
 id listMode
 id list_item
 id magno_layout
+id main_image_dial
+id main_image_hands
 id masked
 id match_constraint
 id match_parent
@@ -2299,6 +2303,7 @@ id snackbar_action
 id snackbar_text
 id snap
 id snapMargins
+id sotw_label
 id south
 id spacer
 id special_effects_controller_view_tag
@@ -2633,6 +2638,7 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
+string accelerometer
 string app_name
 string appbar_scrolling_view_behavior
 string attachment_summary_off
@@ -2646,6 +2652,8 @@ string character_counter_overflowed_content_description
 string character_counter_pattern
 string chip_text
 string clear_text_end_icon_content_description
+string compass_dial
+string compass_hands
 string copy
 string copyright
 string error_icon_content_description
@@ -2653,11 +2661,13 @@ string expand_button_title
 string exposed_dropdown_menu_content_description
 string fab_transformation_scrim_behavior
 string fab_transformation_sheet_behavior
+string gyroscope
 string hello_blank_fragment
 string hide_bottom_view_on_scroll_behavior
 string icon_content_description
 string info
 string item_view_role_description
+string magnometer
 string material_clock_display_divider
 string material_clock_toggle_content_description
 string material_hour_selection
@@ -2715,6 +2725,7 @@ string mtrl_picker_toggle_to_day_selection
 string mtrl_picker_toggle_to_text_input_mode
 string mtrl_picker_toggle_to_year_selection
 string not_set
+string other_Sensors
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through
@@ -2724,6 +2735,14 @@ string preference_copied
 string reply_title
 string search_menu_title
 string signature_title
+string sotw_east
+string sotw_north
+string sotw_northeast
+string sotw_northwest
+string sotw_south
+string sotw_southeast
+string sotw_southwest
+string sotw_west
 string status_bar_notification_info_overflow
 string summary_collapsed_preference_list
 string sync_header
@@ -2735,6 +2754,7 @@ string tab_text_4
 string title_activity_main
 string title_activity_settings
 string utilities
+string utilityImage
 string v7_preference_off
 string v7_preference_on
 style AlertDialog_AppCompat
