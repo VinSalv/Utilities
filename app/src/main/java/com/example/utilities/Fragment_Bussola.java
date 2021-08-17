@@ -11,6 +11,9 @@ import android.widget.TextView;
 
 import androidx.fragment.app.Fragment;
 
+import com.example.utilities.Bussola.Compass;
+import com.example.utilities.Bussola.SOTWFormatter;
+
 public class Fragment_Bussola extends Fragment {
     private Compass compass;
     private ImageView arrowView;

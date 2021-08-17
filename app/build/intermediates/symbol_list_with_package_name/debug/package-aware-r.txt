@@ -1861,6 +1861,7 @@ drawable design_ic_visibility_off
 drawable design_password_eye
 drawable design_snackbar_background
 drawable dial
+drawable green
 drawable hands
 drawable ic_arrow_down_24dp
 drawable ic_clock_black_24dp
@@ -1909,6 +1910,7 @@ drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable utilities
+drawable yellow
 id ALT
 id BOTTOM_END
 id BOTTOM_START
@@ -2140,7 +2142,6 @@ id item_touch_helper_previous_elevation
 id jumpToEnd
 id jumpToStart
 id labeled
-id landview
 id layout
 id left
 id leftToRight
@@ -2245,7 +2246,6 @@ id pathRelative
 id peekHeight
 id percent
 id pin
-id porView
 id position
 id postLayout
 id pressure

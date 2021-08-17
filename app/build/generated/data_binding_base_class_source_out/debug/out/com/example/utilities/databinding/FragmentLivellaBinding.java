@@ -6,59 +6,23 @@ import android.view.View;
 import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
-import androidx.viewbinding.ViewBindings;
 import com.example.utilities.R;
-import com.example.utilities.landView;
-import com.example.utilities.portraitView;
+import java.lang.NullPointerException;
 import java.lang.Override;
 
 public final class FragmentLivellaBinding implements ViewBinding {
   @NonNull
-  private final View rootView;
+  private final ConstraintLayout rootView;
 
-  /**
-   * This binding is not available in all configurations.
-   * <p>
-   * Present:
-   * <ul>
-   *   <li>layout-land/</li>
-   * </ul>
-   *
-   * Absent:
-   * <ul>
-   *   <li>layout/</li>
-   * </ul>
-   */
-  @Nullable
-  public final landView landview;
-
-  /**
-   * This binding is not available in all configurations.
-   * <p>
-   * Present:
-   * <ul>
-   *   <li>layout/</li>
-   * </ul>
-   *
-   * Absent:
-   * <ul>
-   *   <li>layout-land/</li>
-   * </ul>
-   */
-  @Nullable
-  public final portraitView porView;
-
-  private FragmentLivellaBinding(@NonNull View rootView, @Nullable landView landview,
-      @Nullable portraitView porView) {
+  private FragmentLivellaBinding(@NonNull ConstraintLayout rootView) {
     this.rootView = rootView;
-    this.landview = landview;
-    this.porView = porView;
   }
 
   @Override
   @NonNull
-  public View getRoot() {
+  public ConstraintLayout getRoot() {
     return rootView;
   }
 
@@ -79,10 +43,10 @@ public final class FragmentLivellaBinding implements ViewBinding {
 
   @NonNull
   public static FragmentLivellaBinding bind(@NonNull View rootView) {
-    landView landview = ViewBindings.findChildViewById(rootView, R.id.landview);
+    if (rootView == null) {
+      throw new NullPointerException("rootView");
+    }
 
-    portraitView porView = ViewBindings.findChildViewById(rootView, R.id.porView);
-
-    return new FragmentLivellaBinding(rootView, landview, porView);
+    return new FragmentLivellaBinding((ConstraintLayout) rootView);
   }
 }
