@@ -45,4 +45,7 @@
     <string name="gyroscope">Giroscopio</string>
     <string name="magnometer">Magnetometro</string>
     <string name="other_Sensors">Altri sensori</string>
+    <string name="light">Light Theme</string>
+    <string name="dark">Dark Theme</string>
+    <string name="infoActivity">InfoActivity</string>
 </resources>

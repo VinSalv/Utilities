@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="yellow_600">#FDD835</color>
-    <color name="red_600">#E53935</color>
-    <color name="green_600">#7CB342</color>
-    <color name="orange_600">#FB8C00</color>
-    <color name="blue_600">#3949AB</color>
-    <color name="purple_600">#5E35B1</color>
-    <color name="violet_600">#8E24AA</color>
-    <color name="light_green_600">#00897B</color>
+    <color name="beige">#A98C60</color>
+    <color name="light_beige">#80A98C60</color>
+    <color name="dark_green">#18341D</color>
+    <color name="grey">#303030</color>
+    <color name="cream">#F3DDA1</color>
+    <color name="jeans">#657A97</color>
+    <color name="brown">#58281C</color>
+    <color name="red">#AE1B21</color>
+    <color name="light_red">#80AE1B21</color>
+    <color name="yellow">#FEE12B</color>
+    <color name="dark_yellow">#9D8800</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="trasparent">#00000000</color>

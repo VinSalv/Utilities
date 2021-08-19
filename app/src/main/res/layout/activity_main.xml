@@ -26,11 +26,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:tabBackground="?attr/colorPrimary"
-            app:tabIndicatorColor="?attr/colorSecondary"
+            app:tabIndicatorColor="?attr/colorPrimaryVariant"
             app:tabIndicatorHeight="2dp"
             app:tabPaddingEnd="12dp"
             app:tabPaddingStart="12dp"
-            app:tabSelectedTextColor="?attr/colorOnSecondary"
+            app:tabSelectedTextColor="?attr/colorPrimaryVariant"
             app:tabTextColor="?attr/colorOnPrimary" />
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -47,5 +47,6 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/fab_margin"
         android:contentDescription="@string/info"
+        app:backgroundTint="?attr/colorPrimaryVariant"
         app:srcCompat="@android:drawable/ic_dialog_info" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

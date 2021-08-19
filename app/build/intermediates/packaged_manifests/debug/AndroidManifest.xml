@@ -17,15 +17,19 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:testOnly="true"
-        android:theme="@style/Theme.Utilities" >
-        <activity android:name="com.example.utilities.Info" />
+        android:theme="@style/LightTheme" >
+        <activity
+            android:name="com.example.utilities.InfoActivity"
+            android:label="@string/infoActivity"
+            android:theme="@style/LightTheme" />
         <activity
             android:name="com.example.utilities.SettingsActivity"
-            android:label="@string/title_activity_settings" />
+            android:label="@string/title_activity_settings"
+            android:theme="@style/LightTheme" />
         <activity
             android:name="com.example.utilities.MainActivity"
             android:label="@string/title_activity_main"
-            android:theme="@style/Theme.Utilities.NoActionBar" >
+            android:theme="@style/LightTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
