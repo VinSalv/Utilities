@@ -1,5 +1,7 @@
 package com.example.utilities.Fragment;
 
+import android.content.pm.ActivityInfo;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +11,7 @@ import android.view.animation.RotateAnimation;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.example.utilities.Bussola.Compass;
@@ -19,17 +22,24 @@ import com.example.utilities.Utility.Utils;
 
 public class Fragment_Bussola extends Fragment {
     private final Utils utils = new Utils();
-    Preferences pref = new Preferences();
+    protected Configuration mPrevConfig;
+    Preferences pref;
     private Compass compass;
     private ImageView arrowView;
     private TextView sotwLabel;
     private float currentAzimuth;
     private SOTWFormatter sotwFormatter;
 
+    public static boolean isOnDarkMode(Configuration configuration) {
+        return (configuration.uiMode & Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES;
+    }
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        pref = utils.loadData(requireActivity(), pref);
+        pref = utils.loadData(requireActivity(), new Preferences());
+        mPrevConfig = new Configuration(getResources().getConfiguration());
+
     }
 
     @Override
@@ -41,7 +51,6 @@ public class Fragment_Bussola extends Fragment {
         setupCompass();
         return view;
     }
-
 
     private void setupCompass() {
         compass = new Compass(requireActivity());
@@ -72,31 +81,44 @@ public class Fragment_Bussola extends Fragment {
     }
 
     @Override
+    public void onConfigurationChanged(@NonNull Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        configurationChanged(newConfig);
+        mPrevConfig = new Configuration(newConfig);
+    }
+
+    protected void configurationChanged(Configuration newConfig) {
+        if (isNightConfigChanged(newConfig) && pref.getPredBool()) {
+            utils.goToMainActivity(requireActivity());
+        }
+    }
+
+    protected boolean isNightConfigChanged(Configuration newConfig) {
+        return (newConfig.diff(mPrevConfig) & ActivityInfo.CONFIG_UI_MODE) != 0 && isOnDarkMode(newConfig) != isOnDarkMode(mPrevConfig);
+    }
+
+    @Override
     public void onStart() {
         super.onStart();
         compass.start();
-        pref = utils.loadData(requireActivity(), pref);
     }
 
     @Override
     public void onPause() {
         super.onPause();
         compass.stop();
-        pref = utils.loadData(requireActivity(), pref);
     }
 
     @Override
     public void onResume() {
         super.onResume();
         compass.start();
-        pref = utils.loadData(requireActivity(), pref);
     }
 
     @Override
     public void onStop() {
         super.onStop();
         compass.stop();
-        pref = utils.loadData(requireActivity(), pref);
     }
 
 }

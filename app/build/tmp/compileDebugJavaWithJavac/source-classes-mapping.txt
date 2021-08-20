@@ -6,10 +6,13 @@ com/example/utilities/databinding/FragmentBussolaBinding.java
  com.example.utilities.databinding.FragmentBussolaBinding
 com/example/utilities/BuildConfig.java
  com.example.utilities.BuildConfig
-com/example/utilities/Fragment/Fragment_Sensori.java
- com.example.utilities.Fragment.Fragment_Sensori
-com/example/utilities/InfoActivity.java
- com.example.utilities.InfoActivity
+com/example/utilities/databinding/FragmentSensoriBinding.java
+ com.example.utilities.databinding.FragmentSensoriBinding
+com/example/utilities/Bussola/Compass.java
+ com.example.utilities.Bussola.Compass
+ com.example.utilities.Bussola.Compass$CompassListener
+com/example/utilities/Fragment/ui/PlaceholderFragment.java
+ com.example.utilities.Fragment.ui.PlaceholderFragment
 com/example/utilities/Fragment/ui/PageViewModel.java
  com.example.utilities.Fragment.ui.PageViewModel
 com/example/utilities/Utility/Preferences.java
@@ -18,28 +21,25 @@ com/example/utilities/databinding/FragmentMainBinding.java
  com.example.utilities.databinding.FragmentMainBinding
 com/example/utilities/databinding/SettingsActivityBinding.java
  com.example.utilities.databinding.SettingsActivityBinding
-com/example/utilities/SettingsActivity.java
- com.example.utilities.SettingsActivity
- com.example.utilities.SettingsActivity$SettingsFragment
-com/example/utilities/Fragment/Fragment_Bussola.java
- com.example.utilities.Fragment.Fragment_Bussola
-com/example/utilities/databinding/ActivityMainBinding.java
- com.example.utilities.databinding.ActivityMainBinding
-com/example/utilities/databinding/FragmentSensoriBinding.java
- com.example.utilities.databinding.FragmentSensoriBinding
-com/example/utilities/Utility/Utils.java
- com.example.utilities.Utility.Utils
 com/example/utilities/Bussola/SOTWFormatter.java
  com.example.utilities.Bussola.SOTWFormatter
-com/example/utilities/Bussola/Compass.java
- com.example.utilities.Bussola.Compass
- com.example.utilities.Bussola.Compass$CompassListener
+com/example/utilities/databinding/ActivityMainBinding.java
+ com.example.utilities.databinding.ActivityMainBinding
+com/example/utilities/Fragment/Fragment_Sensori.java
+ com.example.utilities.Fragment.Fragment_Sensori
+com/example/utilities/InfoActivity.java
+ com.example.utilities.InfoActivity
 com/example/utilities/MainActivity.java
  com.example.utilities.MainActivity
+com/example/utilities/Utility/Utils.java
+ com.example.utilities.Utility.Utils
 com/example/utilities/Fragment/Fragment_Livella.java
  com.example.utilities.Fragment.Fragment_Livella
  com.example.utilities.Fragment.Fragment_Livella$AnimatedView
+com/example/utilities/Fragment/Fragment_Bussola.java
+ com.example.utilities.Fragment.Fragment_Bussola
+com/example/utilities/Fragment/SettingsActivity.java
+ com.example.utilities.Fragment.SettingsActivity
+ com.example.utilities.Fragment.SettingsActivity$SettingsFragment
 com/example/utilities/Fragment/ui/SectionsPagerAdapter.java
  com.example.utilities.Fragment.ui.SectionsPagerAdapter
-com/example/utilities/Fragment/ui/PlaceholderFragment.java
- com.example.utilities.Fragment.ui.PlaceholderFragment

@@ -2,6 +2,8 @@ package com.example.utilities.Fragment;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
+import android.content.pm.ActivityInfo;
+import android.content.res.Configuration;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
@@ -13,6 +15,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.example.utilities.R;
@@ -21,13 +24,20 @@ import com.example.utilities.Utility.Utils;
 
 public class Fragment_Sensori extends Fragment implements SensorEventListener {
     private final Utils utils = new Utils();
+    protected Configuration mPrevConfig;
     TextView xValue, yValue, zValue, xGyroValue, yGyroValue, zGyroValue, xMagnoValue, yMagnoValue, zMagnoValue, light, pressure, temperature, humidity;
-    Preferences pref = new Preferences();
+    Preferences pref;
+
+    public static boolean isOnDarkMode(Configuration configuration) {
+        return (configuration.uiMode & Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES;
+    }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        pref = utils.loadData(requireActivity(), pref);
+        pref = utils.loadData(requireActivity(), new Preferences());
+        mPrevConfig = new Configuration(getResources().getConfiguration());
+
     }
 
     @SuppressLint("SetTextI18n")
@@ -137,27 +147,20 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
     }
 
     @Override
-    public void onStart() {
-        super.onStart();
-        pref = utils.loadData(requireActivity(), pref);
+    public void onConfigurationChanged(@NonNull Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        configurationChanged(newConfig);
+        mPrevConfig = new Configuration(newConfig);
     }
 
-    @Override
-    public void onPause() {
-        super.onPause();
-        pref = utils.loadData(requireActivity(), pref);
+    protected void configurationChanged(Configuration newConfig) {
+        if (isNightConfigChanged(newConfig) && pref.getPredBool()) {
+            utils.goToMainActivity(requireActivity());
+        }
     }
 
-    @Override
-    public void onResume() {
-        super.onResume();
-        pref = utils.loadData(requireActivity(), pref);
-    }
-
-    @Override
-    public void onStop() {
-        super.onStop();
-        pref = utils.loadData(requireActivity(), pref);
+    protected boolean isNightConfigChanged(Configuration newConfig) {
+        return (newConfig.diff(mPrevConfig) & ActivityInfo.CONFIG_UI_MODE) != 0 && isOnDarkMode(newConfig) != isOnDarkMode(mPrevConfig);
     }
 
 }

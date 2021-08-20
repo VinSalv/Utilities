@@ -3,6 +3,7 @@ package com.example.utilities.Fragment;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.pm.ActivityInfo;
+import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.BitmapShader;
@@ -32,21 +33,28 @@ import com.example.utilities.Utility.Utils;
 
 public class Fragment_Livella extends Fragment implements SensorEventListener {
     private final Utils utils = new Utils();
+    protected Configuration mPrevConfig;
     Utils util = new Utils();
     TypedValue typedValue = new TypedValue();
     int colorOnPrimary;
     int colorSecondary;
     int colorOnSecondary;
-    Preferences pref = new Preferences();
+    Preferences pref;
     private Sensor accelerometer;
     private SensorManager sensorManager;
     private AnimatedView animatedView = null;
+
+    public static boolean isOnDarkMode(Configuration configuration) {
+        return (configuration.uiMode & Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES;
+    }
 
     @SuppressLint("SourceLockedOrientationActivity")
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        pref = utils.loadData(requireActivity(), pref);
+        pref = utils.loadData(requireActivity(), new Preferences());
+        mPrevConfig = new Configuration(getResources().getConfiguration());
+
     }
 
     @RequiresApi(api = Build.VERSION_CODES.M)
@@ -80,18 +88,32 @@ public class Fragment_Livella extends Fragment implements SensorEventListener {
     }
 
     @Override
+    public void onConfigurationChanged(@NonNull Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        configurationChanged(newConfig);
+        mPrevConfig = new Configuration(newConfig);
+    }
+
+    protected void configurationChanged(Configuration newConfig) {
+        if (isNightConfigChanged(newConfig) && pref.getPredBool()) {
+            utils.goToMainActivity(requireActivity());
+        }
+    }
+
+    protected boolean isNightConfigChanged(Configuration newConfig) {
+        return (newConfig.diff(mPrevConfig) & ActivityInfo.CONFIG_UI_MODE) != 0 && isOnDarkMode(newConfig) != isOnDarkMode(mPrevConfig);
+    }
+
+    @Override
     public void onPause() {
         super.onPause();
         sensorManager.unregisterListener(this);
-        pref = utils.loadData(requireActivity(), pref);
-
     }
 
     @Override
     public void onResume() {
         super.onResume();
         sensorManager.registerListener(this, accelerometer, SensorManager.SENSOR_DELAY_FASTEST);
-        pref = utils.loadData(requireActivity(), pref);
 
     }
 
@@ -99,7 +121,6 @@ public class Fragment_Livella extends Fragment implements SensorEventListener {
     public void onStart() {
         super.onStart();
         sensorManager.registerListener(this, accelerometer, SensorManager.SENSOR_DELAY_FASTEST);
-        pref = utils.loadData(requireActivity(), pref);
 
     }
 
@@ -107,7 +128,6 @@ public class Fragment_Livella extends Fragment implements SensorEventListener {
     public void onStop() {
         super.onStop();
         sensorManager.unregisterListener(this);
-        pref = utils.loadData(requireActivity(), pref);
     }
 
     public class AnimatedView extends View {
@@ -328,5 +348,4 @@ public class Fragment_Livella extends Fragment implements SensorEventListener {
         }
 
     }
-
 }

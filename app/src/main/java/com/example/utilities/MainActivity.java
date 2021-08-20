@@ -1,7 +1,10 @@
 package com.example.utilities;
 
+import android.content.pm.ActivityInfo;
+import android.content.res.Configuration;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
@@ -14,16 +17,37 @@ import com.google.android.material.tabs.TabLayout;
 
 public class MainActivity extends AppCompatActivity {
 
-    private final Utils utils = new Utils();
-    Preferences pref = new Preferences();
+    private static final Utils utils = new Utils();
+    protected Configuration mPrevConfig;
+    Preferences pref;
+
+    public static boolean isOnDarkMode(Configuration configuration) {
+        return (configuration.uiMode & Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        pref = utils.loadData(this, pref);
-        if (!pref.getPredBool())
-            if (pref.getThemeText().equals("light_theme")) utils.changeTheme(this, 0);
-            else utils.changeTheme(this, 1);
+        pref = utils.loadData(this, new Preferences());
+        if (!pref.getPredBool()) {
+            if (pref.getThemeText().equals("LightTheme"))
+                utils.changeTheme(this, 0);
+            else
+                utils.changeTheme(this, 1);
+        } else {
+            switch (getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK) {
+                case Configuration.UI_MODE_NIGHT_UNDEFINED:
+
+                case Configuration.UI_MODE_NIGHT_NO:
+                    utils.changeTheme(this, 0);
+                    break;
+
+                case Configuration.UI_MODE_NIGHT_YES:
+                    utils.changeTheme(this, 1);
+                    break;
+            }
+
+        }
         ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
@@ -33,41 +57,24 @@ public class MainActivity extends AppCompatActivity {
         tabs.setupWithViewPager(viewPager);
         FloatingActionButton fab = binding.fab;
         fab.setOnClickListener(view -> utils.goToInfoActivity(MainActivity.this));
+        mPrevConfig = new Configuration(getResources().getConfiguration());
     }
 
     @Override
-    public void onStart() {
-        super.onStart();
-        pref = utils.loadData(this, pref);
-        if (!pref.getPredBool())
-            if (pref.getThemeText().equals("light_theme")) utils.changeTheme(this, 0);
-            else utils.changeTheme(this, 1);
-        ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
-        setContentView(binding.getRoot());
-        SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
-        ViewPager viewPager = binding.viewPager;
-        viewPager.setAdapter(sectionsPagerAdapter);
-        TabLayout tabs = binding.tabs;
-        tabs.setupWithViewPager(viewPager);
-        FloatingActionButton fab = binding.fab;
-        fab.setOnClickListener(view -> utils.goToInfoActivity(MainActivity.this));
+    public void onConfigurationChanged(@NonNull Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        configurationChanged(newConfig);
+        mPrevConfig = new Configuration(newConfig);
     }
 
-    @Override
-    public void onPause() {
-        super.onPause();
-        pref = utils.loadData(this, pref);
+    protected void configurationChanged(Configuration newConfig) {
+        if (isNightConfigChanged(newConfig) && pref.getPredBool()) {
+            utils.goToMainActivity(this);
+        }
     }
 
-    @Override
-    public void onResume() {
-        super.onResume();
-        pref = utils.loadData(this, pref);
+    protected boolean isNightConfigChanged(Configuration newConfig) {
+        return (newConfig.diff(mPrevConfig) & ActivityInfo.CONFIG_UI_MODE) != 0 && isOnDarkMode(newConfig) != isOnDarkMode(mPrevConfig);
     }
 
-    @Override
-    public void onStop() {
-        super.onStop();
-        pref = utils.loadData(this, pref);
-    }
 }

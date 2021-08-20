@@ -11,6 +11,7 @@
     <application
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:configChanges="uiMode"
         android:debuggable="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -20,14 +21,17 @@
         android:theme="@style/LightTheme" >
         <activity
             android:name="com.example.utilities.InfoActivity"
+            android:configChanges="uiMode"
             android:label="@string/infoActivity"
             android:theme="@style/LightTheme" />
         <activity
-            android:name="com.example.utilities.SettingsActivity"
+            android:name="com.example.utilities.Fragment.SettingsActivity"
+            android:configChanges="uiMode"
             android:label="@string/title_activity_settings"
             android:theme="@style/LightTheme" />
         <activity
             android:name="com.example.utilities.MainActivity"
+            android:configChanges="uiMode"
             android:label="@string/title_activity_main"
             android:theme="@style/LightTheme" >
             <intent-filter>

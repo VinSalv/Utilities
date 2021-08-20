@@ -11,8 +11,8 @@ import androidx.fragment.app.FragmentPagerAdapter;
 import com.example.utilities.Fragment.Fragment_Bussola;
 import com.example.utilities.Fragment.Fragment_Livella;
 import com.example.utilities.Fragment.Fragment_Sensori;
+import com.example.utilities.Fragment.SettingsActivity;
 import com.example.utilities.R;
-import com.example.utilities.SettingsActivity;
 
 import org.jetbrains.annotations.NotNull;
 
