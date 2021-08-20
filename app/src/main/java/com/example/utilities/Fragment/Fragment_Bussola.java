@@ -14,8 +14,12 @@ import androidx.fragment.app.Fragment;
 import com.example.utilities.Bussola.Compass;
 import com.example.utilities.Bussola.SOTWFormatter;
 import com.example.utilities.R;
+import com.example.utilities.Utility.Preferences;
+import com.example.utilities.Utility.Utils;
 
 public class Fragment_Bussola extends Fragment {
+    private final Utils utils = new Utils();
+    Preferences pref = new Preferences();
     private Compass compass;
     private ImageView arrowView;
     private TextView sotwLabel;
@@ -25,6 +29,7 @@ public class Fragment_Bussola extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        pref = utils.loadData(requireActivity(), pref);
     }
 
     @Override
@@ -37,29 +42,6 @@ public class Fragment_Bussola extends Fragment {
         return view;
     }
 
-    @Override
-    public void onStart() {
-        super.onStart();
-        compass.start();
-    }
-
-    @Override
-    public void onPause() {
-        super.onPause();
-        compass.stop();
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        compass.start();
-    }
-
-    @Override
-    public void onStop() {
-        super.onStop();
-        compass.stop();
-    }
 
     private void setupCompass() {
         compass = new Compass(requireActivity());
@@ -88,4 +70,33 @@ public class Fragment_Bussola extends Fragment {
             adjustSotwLabel(azimuth);
         });
     }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        compass.start();
+        pref = utils.loadData(requireActivity(), pref);
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        compass.stop();
+        pref = utils.loadData(requireActivity(), pref);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        compass.start();
+        pref = utils.loadData(requireActivity(), pref);
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        compass.stop();
+        pref = utils.loadData(requireActivity(), pref);
+    }
+
 }

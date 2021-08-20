@@ -2,10 +2,15 @@ package com.example.utilities.Utility;
 
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.widget.Toast;
+
+import androidx.preference.ListPreference;
+import androidx.preference.SwitchPreferenceCompat;
 
 import com.example.utilities.InfoActivity;
 import com.example.utilities.MainActivity;
+import com.example.utilities.R;
 
 public class Utils {
     public void notifyUser(Context context, String message) {
@@ -37,6 +42,32 @@ public class Utils {
 
         double scale = Math.pow(10, places);
         return Math.round(value * scale) / scale;
+    }
+
+    public void saveData(Context context, Preferences pref, SwitchPreferenceCompat pred, ListPreference list_themes) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(pref.getSharedPrefs(), Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putBoolean(pref.getPred(), pred.isChecked());
+        editor.putString(pref.getTheme(), list_themes.getValue());
+        editor.apply();
+    }
+
+    public Preferences loadData(Context context, Preferences pref) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(pref.getSharedPrefs(), Context.MODE_PRIVATE);
+        pref.setPredBool(sharedPreferences.getBoolean(pref.getPred(), true));
+        pref.setThemeText(sharedPreferences.getString(pref.getTheme(), "light_theme"));
+        return pref;
+    }
+
+    public void changeTheme(Context context, int i) {
+        switch (i) {
+            case 0:
+                context.setTheme(R.style.LightTheme);
+                break;
+            case 1:
+                context.setTheme(R.style.DarkTheme);
+                break;
+        }
     }
 
 }

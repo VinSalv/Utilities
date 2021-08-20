@@ -16,15 +16,18 @@ import android.widget.TextView;
 import androidx.fragment.app.Fragment;
 
 import com.example.utilities.R;
+import com.example.utilities.Utility.Preferences;
 import com.example.utilities.Utility.Utils;
 
 public class Fragment_Sensori extends Fragment implements SensorEventListener {
+    private final Utils utils = new Utils();
     TextView xValue, yValue, zValue, xGyroValue, yGyroValue, zGyroValue, xMagnoValue, yMagnoValue, zMagnoValue, light, pressure, temperature, humidity;
-    Utils util = new Utils();
+    Preferences pref = new Preferences();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        pref = utils.loadData(requireActivity(), pref);
     }
 
     @SuppressLint("SetTextI18n")
@@ -32,25 +35,25 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
     public void onSensorChanged(SensorEvent event) {
         Sensor sensor = event.sensor;
         if (sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
-            xValue.setText(Html.fromHtml("<b>X: </b>" + util.roundAvoid(event.values[0], 2)));
-            yValue.setText(Html.fromHtml("<b>Y: </b>" + util.roundAvoid(event.values[1], 2)));
-            zValue.setText(Html.fromHtml("<b>Z: </b>" + util.roundAvoid(event.values[2], 2)));
+            xValue.setText(Html.fromHtml("<b>X: </b>" + utils.roundAvoid(event.values[0], 2)));
+            yValue.setText(Html.fromHtml("<b>Y: </b>" + utils.roundAvoid(event.values[1], 2)));
+            zValue.setText(Html.fromHtml("<b>Z: </b>" + utils.roundAvoid(event.values[2], 2)));
         } else if (sensor.getType() == Sensor.TYPE_GYROSCOPE) {
-            xGyroValue.setText(Html.fromHtml("<b>X: </b>" + util.roundAvoid(event.values[0], 2)));
-            yGyroValue.setText(Html.fromHtml("<b>Y: </b>" + util.roundAvoid(event.values[1], 2)));
-            zGyroValue.setText(Html.fromHtml("<b>Z: </b>" + util.roundAvoid(event.values[2], 2)));
+            xGyroValue.setText(Html.fromHtml("<b>X: </b>" + utils.roundAvoid(event.values[0], 2)));
+            yGyroValue.setText(Html.fromHtml("<b>Y: </b>" + utils.roundAvoid(event.values[1], 2)));
+            zGyroValue.setText(Html.fromHtml("<b>Z: </b>" + utils.roundAvoid(event.values[2], 2)));
         } else if (sensor.getType() == Sensor.TYPE_MAGNETIC_FIELD) {
-            xMagnoValue.setText(Html.fromHtml("<b>X: </b>" + util.roundAvoid(event.values[0], 2)));
-            yMagnoValue.setText(Html.fromHtml("<b>Y: </b>" + util.roundAvoid(event.values[1], 2)));
-            zMagnoValue.setText(Html.fromHtml("<b>Z: </b>" + util.roundAvoid(event.values[2], 2)));
+            xMagnoValue.setText(Html.fromHtml("<b>X: </b>" + utils.roundAvoid(event.values[0], 2)));
+            yMagnoValue.setText(Html.fromHtml("<b>Y: </b>" + utils.roundAvoid(event.values[1], 2)));
+            zMagnoValue.setText(Html.fromHtml("<b>Z: </b>" + utils.roundAvoid(event.values[2], 2)));
         } else if (sensor.getType() == Sensor.TYPE_LIGHT) {
-            light.setText(Html.fromHtml("<b>Luminosità: </b>" + util.roundAvoid(event.values[0], 2) + " [lx]"));
+            light.setText(Html.fromHtml("<b>Luminosità: </b>" + utils.roundAvoid(event.values[0], 2) + " [lx]"));
         } else if (sensor.getType() == Sensor.TYPE_PRESSURE) {
-            pressure.setText(Html.fromHtml("<b>Pressione: </b>" + util.roundAvoid(event.values[0], 2) + " [hPa oppure mbar]"));
+            pressure.setText(Html.fromHtml("<b>Pressione: </b>" + utils.roundAvoid(event.values[0], 2) + " [hPa oppure mbar]"));
         } else if (sensor.getType() == Sensor.TYPE_AMBIENT_TEMPERATURE) {
-            temperature.setText(Html.fromHtml("<b>Temperatura: </b>" + util.roundAvoid(event.values[0], 2) + " [°C]"));
+            temperature.setText(Html.fromHtml("<b>Temperatura: </b>" + utils.roundAvoid(event.values[0], 2) + " [°C]"));
         } else if (sensor.getType() == Sensor.TYPE_RELATIVE_HUMIDITY) {
-            humidity.setText(Html.fromHtml("<b>Umidità: </b>" + util.roundAvoid(event.values[0], 2) + " [%]"));
+            humidity.setText(Html.fromHtml("<b>Umidità: </b>" + utils.roundAvoid(event.values[0], 2) + " [%]"));
         }
     }
 
@@ -130,27 +133,31 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
         } else {
             humidity.setText(R.string.HumidityNotSupported);
         }
-
         return view;
     }
 
     @Override
     public void onStart() {
         super.onStart();
+        pref = utils.loadData(requireActivity(), pref);
     }
 
     @Override
     public void onPause() {
         super.onPause();
+        pref = utils.loadData(requireActivity(), pref);
     }
 
     @Override
     public void onResume() {
         super.onResume();
+        pref = utils.loadData(requireActivity(), pref);
     }
 
     @Override
     public void onStop() {
         super.onStop();
+        pref = utils.loadData(requireActivity(), pref);
     }
+
 }

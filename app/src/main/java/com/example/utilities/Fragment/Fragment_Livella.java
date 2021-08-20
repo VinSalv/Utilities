@@ -26,15 +26,18 @@ import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 
 import com.example.utilities.R;
+import com.example.utilities.Utility.Preferences;
 import com.example.utilities.Utility.Utils;
 
 
 public class Fragment_Livella extends Fragment implements SensorEventListener {
+    private final Utils utils = new Utils();
     Utils util = new Utils();
     TypedValue typedValue = new TypedValue();
     int colorOnPrimary;
     int colorSecondary;
     int colorOnSecondary;
+    Preferences pref = new Preferences();
     private Sensor accelerometer;
     private SensorManager sensorManager;
     private AnimatedView animatedView = null;
@@ -43,6 +46,12 @@ public class Fragment_Livella extends Fragment implements SensorEventListener {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        pref = utils.loadData(requireActivity(), pref);
+    }
+
+    @RequiresApi(api = Build.VERSION_CODES.M)
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         requireActivity().getTheme().resolveAttribute(R.attr.colorOnPrimary, typedValue, true);
         colorOnPrimary = typedValue.resourceId;
         requireActivity().getTheme().resolveAttribute(R.attr.colorSecondary, typedValue, true);
@@ -53,11 +62,6 @@ public class Fragment_Livella extends Fragment implements SensorEventListener {
         sensorManager = (SensorManager) requireActivity().getSystemService(Context.SENSOR_SERVICE);
         accelerometer = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
         sensorManager.registerListener(this, accelerometer, SensorManager.SENSOR_DELAY_FASTEST);
-    }
-
-    @RequiresApi(api = Build.VERSION_CODES.M)
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         animatedView = new AnimatedView(getActivity());
         animatedView.setBackgroundColor(requireActivity().getColor(colorSecondary));
         return animatedView;
@@ -79,24 +83,31 @@ public class Fragment_Livella extends Fragment implements SensorEventListener {
     public void onPause() {
         super.onPause();
         sensorManager.unregisterListener(this);
+        pref = utils.loadData(requireActivity(), pref);
+
     }
 
     @Override
     public void onResume() {
         super.onResume();
         sensorManager.registerListener(this, accelerometer, SensorManager.SENSOR_DELAY_FASTEST);
+        pref = utils.loadData(requireActivity(), pref);
+
     }
 
     @Override
     public void onStart() {
         super.onStart();
         sensorManager.registerListener(this, accelerometer, SensorManager.SENSOR_DELAY_FASTEST);
+        pref = utils.loadData(requireActivity(), pref);
+
     }
 
     @Override
     public void onStop() {
         super.onStop();
         sensorManager.unregisterListener(this);
+        pref = utils.loadData(requireActivity(), pref);
     }
 
     public class AnimatedView extends View {
@@ -317,4 +328,5 @@ public class Fragment_Livella extends Fragment implements SensorEventListener {
         }
 
     }
+
 }

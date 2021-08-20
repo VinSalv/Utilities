@@ -12,7 +12,7 @@
 
         <ListPreference
             android:defaultValue="1"
-            android:entries="@array/themes_values"
+            android:entries="@array/themes_entries"
             android:entryValues="@array/themes_values"
             android:key="list_themes"
             android:title="Temi"

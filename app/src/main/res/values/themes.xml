@@ -17,6 +17,7 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <!-- Base application theme. -->
     <style name="DarkTheme" parent="Theme.AppCompat.DayNight">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/black</item>
