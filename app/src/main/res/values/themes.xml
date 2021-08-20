@@ -16,7 +16,6 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
-
     <!-- Base application theme. -->
     <style name="DarkTheme" parent="Theme.AppCompat.DayNight">
         <!-- Primary brand color. -->
@@ -36,7 +35,4 @@
     </style>
 
     <style name="Theme.Utilities.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-
-    <style name="Theme.Utilities.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
-
 </resources>

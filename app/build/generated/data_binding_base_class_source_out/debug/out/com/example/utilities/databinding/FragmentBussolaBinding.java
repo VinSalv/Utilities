@@ -4,8 +4,8 @@ package com.example.utilities.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -18,7 +18,7 @@ import java.lang.String;
 
 public final class FragmentBussolaBinding implements ViewBinding {
   @NonNull
-  private final FrameLayout rootView;
+  private final RelativeLayout rootView;
 
   @NonNull
   public final ImageView mainImageDial;
@@ -29,7 +29,7 @@ public final class FragmentBussolaBinding implements ViewBinding {
   @NonNull
   public final TextView sotwLabel;
 
-  private FragmentBussolaBinding(@NonNull FrameLayout rootView, @NonNull ImageView mainImageDial,
+  private FragmentBussolaBinding(@NonNull RelativeLayout rootView, @NonNull ImageView mainImageDial,
       @NonNull ImageView mainImageHands, @NonNull TextView sotwLabel) {
     this.rootView = rootView;
     this.mainImageDial = mainImageDial;
@@ -39,7 +39,7 @@ public final class FragmentBussolaBinding implements ViewBinding {
 
   @Override
   @NonNull
-  public FrameLayout getRoot() {
+  public RelativeLayout getRoot() {
     return rootView;
   }
 
@@ -82,7 +82,7 @@ public final class FragmentBussolaBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentBussolaBinding((FrameLayout) rootView, mainImageDial, mainImageHands,
+      return new FragmentBussolaBinding((RelativeLayout) rootView, mainImageDial, mainImageHands,
           sotwLabel);
     }
     String missingId = rootView.getResources().getResourceName(id);

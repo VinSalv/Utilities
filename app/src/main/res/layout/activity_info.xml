@@ -9,7 +9,7 @@
         android:id="@+id/back"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:backgroundTint="@color/trasparent"
+        android:backgroundTint="@color/transparent"
         android:contentDescription="@string/backButton"
         android:src="?attr/actionModeCloseDrawable"
         app:layout_constraintBottom_toTopOf="@id/utilities"

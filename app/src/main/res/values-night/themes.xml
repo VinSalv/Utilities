@@ -18,6 +18,4 @@
     </style>
 
     <style name="Theme.Utilities.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-
-    <style name="Theme.Utilities.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

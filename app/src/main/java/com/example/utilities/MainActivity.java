@@ -8,10 +8,10 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
-import com.example.utilities.Fragment.ui.SectionsPagerAdapter;
-import com.example.utilities.Utility.Preferences;
-import com.example.utilities.Utility.Utils;
 import com.example.utilities.databinding.ActivityMainBinding;
+import com.example.utilities.fragment.ui.SectionsPagerAdapter;
+import com.example.utilities.utility.Preferences;
+import com.example.utilities.utility.Utils;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
 

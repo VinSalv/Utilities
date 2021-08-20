@@ -13,6 +13,7 @@
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:configChanges="uiMode"
         android:debuggable="true"
+        android:fullBackupContent="@xml/backup_descriptor"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
@@ -25,13 +26,14 @@
             android:label="@string/infoActivity"
             android:theme="@style/LightTheme" />
         <activity
-            android:name="com.example.utilities.Fragment.SettingsActivity"
+            android:name="com.example.utilities.fragment.SettingsActivity"
             android:configChanges="uiMode"
             android:label="@string/title_activity_settings"
             android:theme="@style/LightTheme" />
         <activity
             android:name="com.example.utilities.MainActivity"
             android:configChanges="uiMode"
+            android:exported="true"
             android:label="@string/title_activity_main"
             android:theme="@style/LightTheme" >
             <intent-filter>

@@ -8,8 +8,8 @@ import android.widget.ImageButton;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.utilities.Utility.Preferences;
-import com.example.utilities.Utility.Utils;
+import com.example.utilities.utility.Preferences;
+import com.example.utilities.utility.Utils;
 
 public class InfoActivity extends AppCompatActivity {
     private final Utils utils = new Utils();
