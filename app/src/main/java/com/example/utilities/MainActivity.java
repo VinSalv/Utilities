@@ -39,6 +39,18 @@ public class MainActivity extends AppCompatActivity {
     public void onStart() {
         super.onStart();
         pref = utils.loadData(this, pref);
+        if (!pref.getPredBool())
+            if (pref.getThemeText().equals("light_theme")) utils.changeTheme(this, 0);
+            else utils.changeTheme(this, 1);
+        ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
+        setContentView(binding.getRoot());
+        SectionsPagerAdapter sectionsPagerAdapter = new SectionsPagerAdapter(this, getSupportFragmentManager());
+        ViewPager viewPager = binding.viewPager;
+        viewPager.setAdapter(sectionsPagerAdapter);
+        TabLayout tabs = binding.tabs;
+        tabs.setupWithViewPager(viewPager);
+        FloatingActionButton fab = binding.fab;
+        fab.setOnClickListener(view -> utils.goToInfoActivity(MainActivity.this));
     }
 
     @Override
