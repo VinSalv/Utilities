@@ -4,40 +4,40 @@ com/example/utilities/databinding/FragmentBussolaBinding.java
  com.example.utilities.databinding.FragmentBussolaBinding
 com/example/utilities/BuildConfig.java
  com.example.utilities.BuildConfig
-com/example/utilities/fragment/ui/PageViewModel.java
- com.example.utilities.fragment.ui.PageViewModel
-com/example/utilities/databinding/ActivityMainBinding.java
- com.example.utilities.databinding.ActivityMainBinding
-com/example/utilities/fragment/ui/PlaceholderFragment.java
- com.example.utilities.fragment.ui.PlaceholderFragment
-com/example/utilities/databinding/FragmentSensoriBinding.java
- com.example.utilities.databinding.FragmentSensoriBinding
-com/example/utilities/databinding/FragmentMainBinding.java
- com.example.utilities.databinding.FragmentMainBinding
-com/example/utilities/databinding/SettingsActivityBinding.java
- com.example.utilities.databinding.SettingsActivityBinding
-com/example/utilities/utility/Utils.java
- com.example.utilities.utility.Utils
 com/example/utilities/bussola/SOTWFormatter.java
  com.example.utilities.bussola.SOTWFormatter
 com/example/utilities/InfoActivity.java
  com.example.utilities.InfoActivity
-com/example/utilities/MainActivity.java
- com.example.utilities.MainActivity
-com/example/utilities/bussola/Compass.java
- com.example.utilities.bussola.Compass
- com.example.utilities.bussola.Compass$CompassListener
+com/example/utilities/fragment/ui/PlaceholderFragment.java
+ com.example.utilities.fragment.ui.PlaceholderFragment
 com/example/utilities/fragment/Fragment_Bussola.java
  com.example.utilities.fragment.Fragment_Bussola
+com/example/utilities/databinding/FragmentMainBinding.java
+ com.example.utilities.databinding.FragmentMainBinding
+com/example/utilities/databinding/SettingsActivityBinding.java
+ com.example.utilities.databinding.SettingsActivityBinding
+com/example/utilities/fragment/ui/PageViewModel.java
+ com.example.utilities.fragment.ui.PageViewModel
+com/example/utilities/fragment/Fragment_Livella.java
+ com.example.utilities.fragment.Fragment_Livella
+ com.example.utilities.fragment.Fragment_Livella$AnimatedView
+com/example/utilities/databinding/ActivityMainBinding.java
+ com.example.utilities.databinding.ActivityMainBinding
+com/example/utilities/databinding/FragmentSensoriBinding.java
+ com.example.utilities.databinding.FragmentSensoriBinding
+com/example/utilities/fragment/ui/SectionsPagerAdapter.java
+ com.example.utilities.fragment.ui.SectionsPagerAdapter
+com/example/utilities/fragment/Fragment_Sensori.java
+ com.example.utilities.fragment.Fragment_Sensori
 com/example/utilities/utility/Preferences.java
  com.example.utilities.utility.Preferences
 com/example/utilities/fragment/SettingsActivity.java
  com.example.utilities.fragment.SettingsActivity
  com.example.utilities.fragment.SettingsActivity$SettingsFragment
-com/example/utilities/fragment/Fragment_Sensori.java
- com.example.utilities.fragment.Fragment_Sensori
-com/example/utilities/fragment/Fragment_Livella.java
- com.example.utilities.fragment.Fragment_Livella
- com.example.utilities.fragment.Fragment_Livella$AnimatedView
-com/example/utilities/fragment/ui/SectionsPagerAdapter.java
- com.example.utilities.fragment.ui.SectionsPagerAdapter
+com/example/utilities/bussola/Compass.java
+ com.example.utilities.bussola.Compass
+ com.example.utilities.bussola.Compass$CompassListener
+com/example/utilities/MainActivity.java
+ com.example.utilities.MainActivity
+com/example/utilities/utility/Utils.java
+ com.example.utilities.utility.Utils

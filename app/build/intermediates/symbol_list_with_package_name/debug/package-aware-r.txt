@@ -1863,8 +1863,6 @@ drawable hands
 drawable ic_arrow_down_24dp
 drawable ic_clock_black_24dp
 drawable ic_keyboard_black_24dp
-drawable ic_launcher_background
-drawable ic_launcher_foreground
 drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
@@ -2597,8 +2595,6 @@ layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
-mipmap ic_launcher
-mipmap ic_launcher_round
 plurals mtrl_badge_content_description
 string AccelerometerNotSupported
 string BrightnessNotSupported
@@ -2739,7 +2735,6 @@ string tab_text_1
 string tab_text_2
 string tab_text_3
 string tab_text_4
-string title_activity_main
 string utilityImage
 string v7_preference_off
 string v7_preference_on
