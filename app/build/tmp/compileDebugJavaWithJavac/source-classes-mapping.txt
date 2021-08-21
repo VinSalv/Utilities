@@ -24,20 +24,20 @@ com/example/utilities/InfoActivity.java
  com.example.utilities.InfoActivity
 com/example/utilities/MainActivity.java
  com.example.utilities.MainActivity
-com/example/utilities/fragment/Fragment_Livella.java
- com.example.utilities.fragment.Fragment_Livella
- com.example.utilities.fragment.Fragment_Livella$AnimatedView
+com/example/utilities/bussola/Compass.java
+ com.example.utilities.bussola.Compass
+ com.example.utilities.bussola.Compass$CompassListener
 com/example/utilities/fragment/Fragment_Bussola.java
  com.example.utilities.fragment.Fragment_Bussola
 com/example/utilities/utility/Preferences.java
  com.example.utilities.utility.Preferences
-com/example/utilities/fragment/SettingsActivity.java
- com.example.utilities.fragment.SettingsActivity
- com.example.utilities.fragment.SettingsActivity$SettingsFragment
-com/example/utilities/bussola/Compass.java
- com.example.utilities.bussola.Compass
- com.example.utilities.bussola.Compass$CompassListener
+com/example/utilities/fragment/Fragment_Livella.java
+ com.example.utilities.fragment.Fragment_Livella
+ com.example.utilities.fragment.Fragment_Livella$AnimatedView
 com/example/utilities/fragment/ui/SectionsPagerAdapter.java
  com.example.utilities.fragment.ui.SectionsPagerAdapter
 com/example/utilities/fragment/Fragment_Sensori.java
  com.example.utilities.fragment.Fragment_Sensori
+com/example/utilities/fragment/SettingsActivity.java
+ com.example.utilities.fragment.SettingsActivity
+ com.example.utilities.fragment.SettingsActivity$SettingsFragment
