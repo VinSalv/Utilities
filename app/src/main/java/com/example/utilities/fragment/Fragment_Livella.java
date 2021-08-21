@@ -302,16 +302,16 @@ public class Fragment_Livella extends Fragment implements SensorEventListener {
             x = event.values[0];
             y = event.values[1];
 
-            if (x > 9) x = 9;
-            if (x < -9) x = -9;
-            if (y > 9) y = 9;
-            if (y < -9) y = -9;
+            if (x > 10) x = 10;
+            if (x < -10) x = -10;
+            if (y > 10) y = 10;
+            if (y < -10) y = -10;
 
             horizPos = (float) (util.roundAvoid(mapX(x, length_bar), 1) + (double) hor_start_w);
             vertPos = (float) (util.roundAvoid(mapY(y, length_bar), 1) + (double) ver_start_h);
 
-            xRound = (float) (x * (r - CIRCLE_RADIOUS) / 9);
-            yRound = (float) (-y * (r - CIRCLE_RADIOUS) / 9);
+            xRound = (float) (x * (r - CIRCLE_RADIOUS) / 10);
+            yRound = (float) (-y * (r - CIRCLE_RADIOUS) / 10);
             float module = (float) (Math.sqrt(Math.pow(xRound, 2) + Math.pow(yRound, 2)));
             if (module > r) {
                 xRound = (float) ((x * r) / Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2)));
@@ -360,11 +360,11 @@ public class Fragment_Livella extends Fragment implements SensorEventListener {
         }
 
         double mapX(double x, double wd) {
-            return (float) (((wd - (CIRCLE_RADIOUS * 2)) / 18) * x + (wd / 2));
+            return (float) (((wd - (CIRCLE_RADIOUS * 2)) / 20) * x + (wd / 2));
         }
 
         double mapY(double y, double hg) {
-            return (float) ((-((hg - (CIRCLE_RADIOUS * 2)) / 18) * y) + (hg / 2));
+            return (float) ((-((hg - (CIRCLE_RADIOUS * 2)) / 20) * y) + (hg / 2));
         }
 
 
