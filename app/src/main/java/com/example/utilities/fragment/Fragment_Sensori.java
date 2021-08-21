@@ -97,19 +97,19 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
         SensorManager sensorManager = (SensorManager) requireActivity().getSystemService(Context.SENSOR_SERVICE);
         Sensor accelerometer = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
         if (accelerometer != null) {
-            sensorManager.registerListener(Fragment_Sensori.this, accelerometer, SensorManager.SENSOR_DELAY_UI);
+            sensorManager.registerListener(Fragment_Sensori.this, accelerometer, SensorManager.SENSOR_DELAY_NORMAL);
         } else {
             xValue.setText(R.string.AccelerometerNotSupported);
         }
         Sensor mGyro = sensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE);
         if (mGyro != null) {
-            sensorManager.registerListener(Fragment_Sensori.this, mGyro, SensorManager.SENSOR_DELAY_UI);
+            sensorManager.registerListener(Fragment_Sensori.this, mGyro, SensorManager.SENSOR_DELAY_NORMAL);
         } else {
             xGyroValue.setText(R.string.GyroscopeNotSupported);
         }
         Sensor mMagno = sensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD);
         if (mMagno != null) {
-            sensorManager.registerListener(Fragment_Sensori.this, mMagno, SensorManager.SENSOR_DELAY_UI);
+            sensorManager.registerListener(Fragment_Sensori.this, mMagno, SensorManager.SENSOR_DELAY_NORMAL);
         } else {
             xMagnoValue.setText(R.string.MagnetometerNotSupported);
         }
@@ -166,6 +166,7 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
         }
         return view;
     }
+
     @Override
     public void onConfigurationChanged(@NonNull Configuration newConfig) {
         super.onConfigurationChanged(newConfig);

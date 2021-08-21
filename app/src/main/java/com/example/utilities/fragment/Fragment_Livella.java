@@ -37,9 +37,9 @@ import java.util.Objects;
 public class Fragment_Livella extends Fragment implements SensorEventListener {
     final Utils util = new Utils();
     final TypedValue typedValue = new TypedValue();
-    final int microsecond = 500000;
     private final Utils utils = new Utils();
     protected Configuration mPrevConfig;
+    int microsecond;
     int color;
     int colorOnPrimary;
     int colorPrimaryVariant;
@@ -74,6 +74,7 @@ public class Fragment_Livella extends Fragment implements SensorEventListener {
         colorSecondaryVariant = typedValue.resourceId;
         sensorManager = (SensorManager) requireActivity().getSystemService(Context.SENSOR_SERVICE);
         accelerometer = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+        microsecond = SensorManager.SENSOR_DELAY_GAME;
         if (accelerometer != null) {
             sensorManager.registerListener(Fragment_Livella.this, accelerometer, microsecond);
         } else {
@@ -112,6 +113,34 @@ public class Fragment_Livella extends Fragment implements SensorEventListener {
 
     protected boolean isNightConfigChanged(Configuration newConfig) {
         return (newConfig.diff(mPrevConfig) & ActivityInfo.CONFIG_UI_MODE) != 0 && isOnDarkMode(newConfig) != isOnDarkMode(mPrevConfig);
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        sensorManager.unregisterListener(this);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (accelerometer != null)
+            sensorManager.registerListener(this, accelerometer, microsecond);
+
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        if (accelerometer != null)
+            sensorManager.registerListener(this, accelerometer, microsecond);
+
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        sensorManager.unregisterListener(this);
     }
 
     public class AnimatedView extends View {
@@ -346,33 +375,5 @@ public class Fragment_Livella extends Fragment implements SensorEventListener {
         public float getArcSin(double x, double y) {
             return (float) (Math.toDegrees(Math.asin((y / (Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2)))))));
         }
-    }
-
-    @Override
-    public void onPause() {
-        super.onPause();
-        sensorManager.unregisterListener(this);
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        if (accelerometer != null)
-            sensorManager.registerListener(this, accelerometer, microsecond);
-
-    }
-
-    @Override
-    public void onStart() {
-        super.onStart();
-        if (accelerometer != null)
-            sensorManager.registerListener(this, accelerometer, microsecond);
-
-    }
-
-    @Override
-    public void onStop() {
-        super.onStop();
-        sensorManager.unregisterListener(this);
     }
 }

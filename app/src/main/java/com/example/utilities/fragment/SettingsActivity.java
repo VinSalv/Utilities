@@ -72,6 +72,7 @@ public class SettingsActivity extends AppCompatActivity {
     public static class SettingsFragment extends PreferenceFragmentCompat {
         SwitchPreferenceCompat pred;
         ListPreference list_themes;
+
         @RequiresApi(api = Build.VERSION_CODES.Q)
         @Override
         public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
