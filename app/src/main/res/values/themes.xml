@@ -15,7 +15,7 @@
         <!-- Customize your theme here -->
         <item name="android:textColor">@color/black</item>
         <item name="appBarLayoutStyle">@color/cream</item>
-        <item name="colorBackgroundFloating">@color/beige</item>
+        <item name="colorPrimaryDark">@color/cream</item>
         <!-- ActionBar -->
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>

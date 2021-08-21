@@ -8054,7 +8054,7 @@
         <item>Tema chiaro</item>
         <item>Tema scuro</item>
 
-    </string-array></file><file path="C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\res\values\colors.xml" qualifiers=""><color name="beige">#A98C60</color><color name="grey">#303030</color><color name="cream">#F3DDA1</color><color name="jeans">#657A97</color><color name="red">#AE1B21</color><color name="yellow">#FEE12B</color><color name="dark_yellow">#9D8800</color><color name="black">#FF000000</color><color name="white">#FFFFFFFF</color><color name="transparent">#00000000</color></file><file path="C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\res\values\dimens.xml" qualifiers=""><dimen name="activity_horizontal_margin">16dp</dimen><dimen name="activity_vertical_margin">16dp</dimen><dimen name="appbar_padding">16dp</dimen><dimen name="fab_margin">16dp</dimen></file><file path="C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\res\values\strings.xml" qualifiers=""><string name="app_name">Utilities</string><string name="tab_text_1">Livella</string><string name="tab_text_2">Bussola</string><string name="tab_text_3">Sensori</string><string name="tab_text_4">Impostazioni</string><string name="info">Info</string><string name="copyright">Versione 1.0.0\n\n© 2021 Engineers Rights Reserved.</string><string name="backButton">back</string><string name="AccelerometerNotSupported"><b>Accelerometro:</b> Non Supportato</string><string name="GyroscopeNotSupported"><b>Giroscopio:</b> Non Supportato</string><string name="MagnetometerNotSupported"><b>Magnetometro:</b> Non Supportato</string><string name="BrightnessNotSupported"><b>Luminosità:</b> Non Supportato</string><string name="PressureNotSupported"><b>Pressione:</b> Non Supportato</string><string name="TemperatureNotSupported"><b>Temperatura:</b> Non Supportato</string><string name="HumidityNotSupported"><b>Umidità:</b> Non Supportato</string><string name="compass_dial" translatable="false">Compass Dial</string><string name="compass_hands" translatable="false">Compass Hands</string><string name="sotw_north">N</string><string name="sotw_east">E</string><string name="sotw_south">S</string><string name="sotw_west">W</string><string name="sotw_northeast">NE</string><string name="sotw_northwest">NW</string><string name="sotw_southeast">SE</string><string name="sotw_southwest">SW</string><string name="utilityImage">UtilityImage</string><string name="accelerometer">Accelerometer</string><string name="gyroscope">Giroscopio</string><string name="magnometer">Magnetometro</string><string name="other_Sensors">Altri sensori</string><string name="infoActivity">InfoActivity</string></file><file path="C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\res\values\themes.xml" qualifiers=""><style name="LightTheme" parent="Theme.MaterialComponents.DayNight">
+    </string-array></file><file path="C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\res\values\colors.xml" qualifiers=""><color name="beige">#A98C60</color><color name="grey">#303030</color><color name="cream">#F3DDA1</color><color name="jeans">#657A97</color><color name="red">#AE1B21</color><color name="yellow">#FEE12B</color><color name="dark_yellow">#9D8800</color><color name="black">#FF000000</color><color name="white">#FFFFFFFF</color><color name="transparent">#00000000</color></file><file path="C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\res\values\dimens.xml" qualifiers=""><dimen name="activity_horizontal_margin">16dp</dimen><dimen name="activity_vertical_margin">16dp</dimen><dimen name="appbar_padding">16dp</dimen><dimen name="fab_margin">16dp</dimen></file><file path="C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\res\values\selectedTheme.xml" qualifiers=""><style name="LightThemeSelected" parent="ThemeOverlay.AppCompat.Light">
         
         <item name="colorPrimary">@color/cream</item>
         <item name="colorPrimaryVariant">@color/white</item>
@@ -8069,7 +8069,58 @@
         
         <item name="android:textColor">@color/black</item>
         <item name="appBarLayoutStyle">@color/cream</item>
-        <item name="colorBackgroundFloating">@color/beige</item>
+        <item name="colorPrimaryDark">@color/cream</item>
+        
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        
+        <item name="dialogTheme">@style/DialogThemeLight</item>
+        <item name="alertDialogTheme">@style/DialogThemeLight</item>
+    </style><style name="DialogThemeLight" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="android:background">@color/beige</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="colorAccent">@color/black</item>
+    </style><style name="DarkThemeSelected" parent="ThemeOverlay.AppCompat.Dark">
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryVariant">@color/yellow</item>
+        <item name="colorOnPrimary">@color/white</item>
+        
+        <item name="colorSecondary">@color/red</item>
+        <item name="colorSecondaryVariant">@color/dark_yellow</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="color">@color/grey</item>
+        
+        <item name="android:statusBarColor" ns2:targetApi="l">?attr/colorPrimary</item>
+        
+        <item name="android:textColor">@color/white</item>
+        <item name="appBarLayoutStyle">@color/black</item>
+        <item name="colorPrimaryDark">@color/red</item>
+        
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        
+        <item name="dialogTheme">@style/DialogThemeDark</item>
+        <item name="alertDialogTheme">@style/DialogThemeDark</item>
+    </style><style name="DialogThemeDark" parent="Theme.AppCompat.Dialog.Alert">
+        <item name="android:background">@color/black</item>
+        <item name="android:textColor">@color/red</item>
+        <item name="colorAccent">@color/red</item>
+    </style></file><file path="C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\res\values\strings.xml" qualifiers=""><string name="app_name">Utilities</string><string name="tab_text_1">Livella</string><string name="tab_text_2">Bussola</string><string name="tab_text_3">Sensori</string><string name="tab_text_4">Impostazioni</string><string name="info">Info</string><string name="copyright">Versione 1.0.0\n\n© 2021 Engineers Rights Reserved.</string><string name="backButton">back</string><string name="AccelerometerNotSupported"><b>Accelerometro:</b> Non Supportato</string><string name="GyroscopeNotSupported"><b>Giroscopio:</b> Non Supportato</string><string name="MagnetometerNotSupported"><b>Magnetometro:</b> Non Supportato</string><string name="BrightnessNotSupported"><b>Luminosità:</b> Non Supportato</string><string name="PressureNotSupported"><b>Pressione:</b> Non Supportato</string><string name="TemperatureNotSupported"><b>Temperatura:</b> Non Supportato</string><string name="HumidityNotSupported"><b>Umidità:</b> Non Supportato</string><string name="compass_dial" translatable="false">Compass Dial</string><string name="compass_hands" translatable="false">Compass Hands</string><string name="sotw_north">N</string><string name="sotw_east">E</string><string name="sotw_south">S</string><string name="sotw_west">W</string><string name="sotw_northeast">NE</string><string name="sotw_northwest">NW</string><string name="sotw_southeast">SE</string><string name="sotw_southwest">SW</string><string name="utilityImage">UtilityImage</string><string name="accelerometer">Accelerometer</string><string name="gyroscope">Giroscopio</string><string name="magnometer">Magnetometro</string><string name="other_Sensors">Altri sensori</string><string name="infoActivity">InfoActivity</string></file><file path="C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\res\values\themes.xml" qualifiers=""><style name="LightTheme" parent="Theme.MaterialComponents.DayNight">
+        
+        <item name="colorPrimary">@color/cream</item>
+        <item name="colorPrimaryVariant">@color/white</item>
+        <item name="colorOnPrimary">@color/black</item>
+        
+        <item name="colorSecondary">@color/beige</item>
+        <item name="colorSecondaryVariant">@color/white</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <item name="color">@color/jeans</item>
+        
+        <item name="android:statusBarColor" ns2:targetApi="l">?attr/colorPrimary</item>
+        
+        <item name="android:textColor">@color/black</item>
+        <item name="appBarLayoutStyle">@color/cream</item>
+        <item name="colorPrimaryDark">@color/cream</item>
         
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -8091,65 +8142,14 @@
         
         <item name="android:textColor">@color/white</item>
         <item name="appBarLayoutStyle">@color/black</item>
-        <item name="colorBackgroundFloating">@color/red</item>
+        <item name="colorPrimaryDark">@color/red</item>
         
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
         
         <item name="dialogTheme">@style/DialogThemeDark</item>
         <item name="alertDialogTheme">@style/DialogThemeDark</item>
-    </style></file><file name="backup_descriptor" path="C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\res\xml\backup_descriptor.xml" qualifiers="" type="xml"/><file name="root_preferences" path="C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\res\xml\root_preferences.xml" qualifiers="" type="xml"/><file path="C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\res\values\selectedTheme.xml" qualifiers=""><style name="LightThemeSelected" parent="ThemeOverlay.AppCompat.Light">
-        
-        <item name="colorPrimary">@color/cream</item>
-        <item name="colorPrimaryVariant">@color/white</item>
-        <item name="colorOnPrimary">@color/black</item>
-        
-        <item name="colorSecondary">@color/beige</item>
-        <item name="colorSecondaryVariant">@color/white</item>
-        <item name="colorOnSecondary">@color/black</item>
-        <item name="color">@color/jeans</item>
-        
-        <item name="android:statusBarColor" ns2:targetApi="l">?attr/colorPrimary</item>
-        
-        <item name="android:textColor">@color/black</item>
-        <item name="appBarLayoutStyle">@color/cream</item>
-        <item name="colorBackgroundFloating">@color/beige</item>
-        
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        
-        <item name="dialogTheme">@style/DialogThemeLight</item>
-        <item name="alertDialogTheme">@style/DialogThemeLight</item>
-    </style><style name="DarkThemeSelected" parent="ThemeOverlay.AppCompat.Dark">
-        <item name="colorPrimary">@color/black</item>
-        <item name="colorPrimaryVariant">@color/yellow</item>
-        <item name="colorOnPrimary">@color/white</item>
-        
-        <item name="colorSecondary">@color/red</item>
-        <item name="colorSecondaryVariant">@color/dark_yellow</item>
-        <item name="colorOnSecondary">@color/black</item>
-        <item name="color">@color/grey</item>
-        
-        <item name="android:statusBarColor" ns2:targetApi="l">?attr/colorPrimary</item>
-        
-        <item name="android:textColor">@color/white</item>
-        <item name="appBarLayoutStyle">@color/black</item>
-        <item name="colorBackgroundFloating">@color/red</item>
-        
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-        
-        <item name="dialogTheme">@style/DialogThemeDark</item>
-        <item name="alertDialogTheme">@style/DialogThemeDark</item>
-    </style><style name="DialogThemeDark" parent="Theme.AppCompat.Dialog.Alert">
-        <item name="android:background">@color/black</item>
-        <item name="android:textColor">@color/red</item>
-        <item name="colorAccent">@color/red</item>
-    </style><style name="DialogThemeLight" parent="Theme.AppCompat.Dialog.Alert">
-        <item name="android:background">@color/beige</item>
-        <item name="android:textColor">@color/black</item>
-        <item name="colorAccent">@color/black</item>
-    </style></file></source><source path="C:\Users\vince\AndroidStudioProjects\Utilities\app\build\generated\res\rs\debug"/><source path="C:\Users\vince\AndroidStudioProjects\Utilities\app\build\generated\res\resValues\debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\vince\AndroidStudioProjects\Utilities\app\src\debug\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug" generated-set="debug$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\vince\AndroidStudioProjects\Utilities\app\src\debug\res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="AlertDialog">
+    </style></file><file name="backup_descriptor" path="C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\res\xml\backup_descriptor.xml" qualifiers="" type="xml"/><file name="root_preferences" path="C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\res\xml\root_preferences.xml" qualifiers="" type="xml"/></source><source path="C:\Users\vince\AndroidStudioProjects\Utilities\app\build\generated\res\rs\debug"/><source path="C:\Users\vince\AndroidStudioProjects\Utilities\app\build\generated\res\resValues\debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\vince\AndroidStudioProjects\Utilities\app\src\debug\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug" generated-set="debug$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\vince\AndroidStudioProjects\Utilities\app\src\debug\res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="AlertDialog">
         <attr name="android:layout"/>
         <attr format="reference" name="buttonPanelSideLayout"/>
         <attr format="reference" name="listLayout"/>
