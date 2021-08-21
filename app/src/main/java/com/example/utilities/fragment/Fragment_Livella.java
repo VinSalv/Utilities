@@ -29,16 +29,21 @@ import androidx.fragment.app.Fragment;
 import com.example.utilities.R;
 import com.example.utilities.utility.Preferences;
 import com.example.utilities.utility.Utils;
+import com.google.android.material.tabs.TabLayout;
+
+import java.util.Objects;
 
 
 public class Fragment_Livella extends Fragment implements SensorEventListener {
     final Utils util = new Utils();
     final TypedValue typedValue = new TypedValue();
+    final int microsecond = 500000;
     private final Utils utils = new Utils();
     protected Configuration mPrevConfig;
+    int color;
     int colorOnPrimary;
-    int colorSecondary;
-    int colorOnSecondary;
+    int colorPrimaryVariant;
+    int colorSecondaryVariant;
     Preferences pref;
     private Sensor accelerometer;
     private SensorManager sensorManager;
@@ -54,23 +59,30 @@ public class Fragment_Livella extends Fragment implements SensorEventListener {
         super.onCreate(savedInstanceState);
         pref = utils.loadData(requireActivity(), new Preferences());
         mPrevConfig = new Configuration(getResources().getConfiguration());
-
     }
 
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        requireActivity().getTheme().resolveAttribute(R.attr.color, typedValue, true);
+        color = typedValue.resourceId;
         requireActivity().getTheme().resolveAttribute(R.attr.colorOnPrimary, typedValue, true);
         colorOnPrimary = typedValue.resourceId;
-        requireActivity().getTheme().resolveAttribute(R.attr.colorSecondary, typedValue, true);
-        colorSecondary = typedValue.resourceId;
-        requireActivity().getTheme().resolveAttribute(R.attr.colorOnSecondary, typedValue, true);
-        colorOnSecondary = typedValue.resourceId;
+        requireActivity().getTheme().resolveAttribute(R.attr.colorPrimaryVariant, typedValue, true);
+        colorPrimaryVariant = typedValue.resourceId;
+        requireActivity().getTheme().resolveAttribute(R.attr.colorSecondaryVariant, typedValue, true);
+        colorSecondaryVariant = typedValue.resourceId;
         sensorManager = (SensorManager) requireActivity().getSystemService(Context.SENSOR_SERVICE);
         accelerometer = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
-        sensorManager.registerListener(this, accelerometer, SensorManager.SENSOR_DELAY_FASTEST);
+        if (accelerometer != null) {
+            sensorManager.registerListener(Fragment_Livella.this, accelerometer, microsecond);
+        } else {
+            TabLayout tabs = requireActivity().findViewById(R.id.tabs);
+            Objects.requireNonNull(tabs.getTabAt(2)).select();
+            util.notifyUser(requireActivity(), "Il tuo dispositivo non dispone di un accellerometro");
+        }
         animatedView = new AnimatedView(getActivity());
-        animatedView.setBackgroundColor(requireActivity().getColor(colorSecondary));
+        animatedView.setBackgroundColor(requireActivity().getColor(colorPrimaryVariant));
         return animatedView;
     }
 
@@ -100,32 +112,6 @@ public class Fragment_Livella extends Fragment implements SensorEventListener {
 
     protected boolean isNightConfigChanged(Configuration newConfig) {
         return (newConfig.diff(mPrevConfig) & ActivityInfo.CONFIG_UI_MODE) != 0 && isOnDarkMode(newConfig) != isOnDarkMode(mPrevConfig);
-    }
-
-    @Override
-    public void onPause() {
-        super.onPause();
-        sensorManager.unregisterListener(this);
-    }
-
-    @Override
-    public void onResume() {
-        super.onResume();
-        sensorManager.registerListener(this, accelerometer, SensorManager.SENSOR_DELAY_FASTEST);
-
-    }
-
-    @Override
-    public void onStart() {
-        super.onStart();
-        sensorManager.registerListener(this, accelerometer, SensorManager.SENSOR_DELAY_FASTEST);
-
-    }
-
-    @Override
-    public void onStop() {
-        super.onStop();
-        sensorManager.unregisterListener(this);
     }
 
     public class AnimatedView extends View {
@@ -218,7 +204,23 @@ public class Fragment_Livella extends Fragment implements SensorEventListener {
             border.setStyle(Paint.Style.STROKE);
 
             textPlane = new Paint();
-            textPlane.setColor(requireActivity().getColor(colorOnSecondary));
+            if (!pref.getPredBool()) {
+                if (pref.getThemeText().equals("LightTheme") || pref.getThemeText().equals("LightThemeSelected"))
+                    textPlane.setColor(requireActivity().getColor(color));
+                else
+                    textPlane.setColor(requireActivity().getColor(colorSecondaryVariant));
+            } else
+                switch (getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK) {
+                    case Configuration.UI_MODE_NIGHT_UNDEFINED:
+
+                    case Configuration.UI_MODE_NIGHT_NO:
+                        textPlane.setColor(requireActivity().getColor(color));
+                        break;
+
+                    case Configuration.UI_MODE_NIGHT_YES:
+                        textPlane.setColor(requireActivity().getColor(colorSecondaryVariant));
+                        break;
+                }
             textPlane.setStrokeWidth(BAR_THICKNESS);
             textPlane.setStyle(Paint.Style.STROKE);
 
@@ -257,7 +259,7 @@ public class Fragment_Livella extends Fragment implements SensorEventListener {
             r = w / 4;
 
             txt_pln_start = (float) (hor_start_w * 0.8);
-            txt_pln_end = (float) (hor_start_w * 5);
+            txt_pln_end = hor_start_w * 5;
             txt_pln_hight = (float) (ver_end_h - (TEXT_SIZE / 1.1));
 
             half_hor = half_width;
@@ -344,5 +346,33 @@ public class Fragment_Livella extends Fragment implements SensorEventListener {
         public float getArcSin(double x, double y) {
             return (float) (Math.toDegrees(Math.asin((y / (Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2)))))));
         }
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        sensorManager.unregisterListener(this);
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (accelerometer != null)
+            sensorManager.registerListener(this, accelerometer, microsecond);
+
+    }
+
+    @Override
+    public void onStart() {
+        super.onStart();
+        if (accelerometer != null)
+            sensorManager.registerListener(this, accelerometer, microsecond);
+
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        sensorManager.unregisterListener(this);
     }
 }

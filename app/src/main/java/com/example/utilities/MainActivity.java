@@ -30,14 +30,13 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         pref = utils.loadData(this, new Preferences());
         if (!pref.getPredBool()) {
-            if (pref.getThemeText().equals("LightTheme"))
-                utils.changeTheme(this, 0);
+            if (pref.getThemeText().equals("LightTheme") || pref.getThemeText().equals("LightThemeSelected"))
+                utils.changeThemeSelected(this, 0);
             else
-                utils.changeTheme(this, 1);
+                utils.changeThemeSelected(this, 1);
         } else {
             switch (getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK) {
                 case Configuration.UI_MODE_NIGHT_UNDEFINED:
-
                 case Configuration.UI_MODE_NIGHT_NO:
                     utils.changeTheme(this, 0);
                     break;
@@ -46,7 +45,6 @@ public class MainActivity extends AppCompatActivity {
                     utils.changeTheme(this, 1);
                     break;
             }
-
         }
         ActivityMainBinding binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -76,5 +74,4 @@ public class MainActivity extends AppCompatActivity {
     protected boolean isNightConfigChanged(Configuration newConfig) {
         return (newConfig.diff(mPrevConfig) & ActivityInfo.CONFIG_UI_MODE) != 0 && isOnDarkMode(newConfig) != isOnDarkMode(mPrevConfig);
     }
-
 }

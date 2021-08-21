@@ -31,9 +31,8 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
     protected Configuration mPrevConfig;
     TextView xValue, yValue, zValue, xGyroValue, yGyroValue, zGyroValue, xMagnoValue, yMagnoValue, zMagnoValue, light, pressure, temperature, humidity;
     Preferences pref;
-    int colorSecondary;
+    int color;
     int colorSecondaryVariant;
-
 
     public static boolean isOnDarkMode(Configuration configuration) {
         return (configuration.uiMode & Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES;
@@ -81,106 +80,92 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment__sensori, container, false);
-
-        xValue = (TextView) view.findViewById(R.id.xValue);
-        yValue = (TextView) view.findViewById(R.id.yValue);
-        zValue = (TextView) view.findViewById(R.id.zValue);
-
-        xGyroValue = (TextView) view.findViewById(R.id.xGyroValue);
-        yGyroValue = (TextView) view.findViewById(R.id.yGyroValue);
-        zGyroValue = (TextView) view.findViewById(R.id.zGyroValue);
-
-        xMagnoValue = (TextView) view.findViewById(R.id.xMagnoValue);
-        yMagnoValue = (TextView) view.findViewById(R.id.yMagnoValue);
-        zMagnoValue = (TextView) view.findViewById(R.id.zMagnoValue);
-
-        light = (TextView) view.findViewById(R.id.light);
-        pressure = (TextView) view.findViewById(R.id.pressure);
-        temperature = (TextView) view.findViewById(R.id.temperature);
-        humidity = (TextView) view.findViewById(R.id.humidity);
-
+        xValue = view.findViewById(R.id.xValue);
+        yValue = view.findViewById(R.id.yValue);
+        zValue = view.findViewById(R.id.zValue);
+        xGyroValue = view.findViewById(R.id.xGyroValue);
+        yGyroValue = view.findViewById(R.id.yGyroValue);
+        zGyroValue = view.findViewById(R.id.zGyroValue);
+        xMagnoValue = view.findViewById(R.id.xMagnoValue);
+        yMagnoValue = view.findViewById(R.id.yMagnoValue);
+        zMagnoValue = view.findViewById(R.id.zMagnoValue);
+        light = view.findViewById(R.id.light);
+        pressure = view.findViewById(R.id.pressure);
+        temperature = view.findViewById(R.id.temperature);
+        humidity = view.findViewById(R.id.humidity);
         SensorManager sensorManager = (SensorManager) requireActivity().getSystemService(Context.SENSOR_SERVICE);
-
         Sensor accelerometer = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
         if (accelerometer != null) {
-            sensorManager.registerListener(Fragment_Sensori.this, accelerometer, SensorManager.SENSOR_DELAY_FASTEST);
+            sensorManager.registerListener(Fragment_Sensori.this, accelerometer, SensorManager.SENSOR_DELAY_UI);
         } else {
             xValue.setText(R.string.AccelerometerNotSupported);
         }
-
         Sensor mGyro = sensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE);
         if (mGyro != null) {
-            sensorManager.registerListener(Fragment_Sensori.this, mGyro, SensorManager.SENSOR_DELAY_FASTEST);
+            sensorManager.registerListener(Fragment_Sensori.this, mGyro, SensorManager.SENSOR_DELAY_UI);
         } else {
             xGyroValue.setText(R.string.GyroscopeNotSupported);
         }
-
         Sensor mMagno = sensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD);
         if (mMagno != null) {
-            sensorManager.registerListener(Fragment_Sensori.this, mMagno, SensorManager.SENSOR_DELAY_FASTEST);
+            sensorManager.registerListener(Fragment_Sensori.this, mMagno, SensorManager.SENSOR_DELAY_UI);
         } else {
             xMagnoValue.setText(R.string.MagnetometerNotSupported);
         }
-
         Sensor mLight = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
         if (mLight != null) {
-            sensorManager.registerListener(Fragment_Sensori.this, mLight, SensorManager.SENSOR_DELAY_FASTEST);
+            sensorManager.registerListener(Fragment_Sensori.this, mLight, SensorManager.SENSOR_DELAY_GAME);
         } else {
             light.setText(R.string.BrightnessNotSupported);
         }
-
         Sensor mPressure = sensorManager.getDefaultSensor(Sensor.TYPE_PRESSURE);
         if (mPressure != null) {
-            sensorManager.registerListener(Fragment_Sensori.this, mPressure, SensorManager.SENSOR_DELAY_FASTEST);
+            sensorManager.registerListener(Fragment_Sensori.this, mPressure, SensorManager.SENSOR_DELAY_GAME);
         } else {
             pressure.setText(R.string.PressureNotSupported);
         }
-
         Sensor mTemperature = sensorManager.getDefaultSensor(Sensor.TYPE_AMBIENT_TEMPERATURE);
         if (mTemperature != null) {
-            sensorManager.registerListener(Fragment_Sensori.this, mTemperature, SensorManager.SENSOR_DELAY_FASTEST);
+            sensorManager.registerListener(Fragment_Sensori.this, mTemperature, SensorManager.SENSOR_DELAY_GAME);
         } else {
             temperature.setText(R.string.TemperatureNotSupported);
         }
-
         Sensor mHumidity = sensorManager.getDefaultSensor(Sensor.TYPE_RELATIVE_HUMIDITY);
         if (mHumidity != null) {
-            sensorManager.registerListener(Fragment_Sensori.this, mHumidity, SensorManager.SENSOR_DELAY_FASTEST);
+            sensorManager.registerListener(Fragment_Sensori.this, mHumidity, SensorManager.SENSOR_DELAY_GAME);
         } else {
             humidity.setText(R.string.HumidityNotSupported);
         }
         pref = utils.loadData(requireActivity(), new Preferences());
-        requireActivity().getTheme().resolveAttribute(R.attr.colorSecondary, typedValue, true);
-        colorSecondary = typedValue.resourceId;
+        requireActivity().getTheme().resolveAttribute(R.attr.color, typedValue, true);
+        color = typedValue.resourceId;
         requireActivity().getTheme().resolveAttribute(R.attr.colorSecondaryVariant, typedValue, true);
         colorSecondaryVariant = typedValue.resourceId;
         if (!pref.getPredBool()) {
             switch (pref.getThemeText()) {
+                case "LightThemeSelected":
                 case "LightTheme":
-                    view.setBackgroundColor(requireActivity().getColor(colorSecondary));
-                    break;
-                case "DarkTheme":
                     view.setBackgroundColor(requireActivity().getColor(colorSecondaryVariant));
+                    break;
+                case "DarkThemeSelected":
+                case "DarkTheme":
+                    view.setBackgroundColor(requireActivity().getColor(color));
                     break;
             }
         } else {
             switch (getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK) {
                 case Configuration.UI_MODE_NIGHT_UNDEFINED:
-
                 case Configuration.UI_MODE_NIGHT_NO:
-                    view.setBackgroundColor(requireActivity().getColor(colorSecondary));
-                    break;
-
-                case Configuration.UI_MODE_NIGHT_YES:
                     view.setBackgroundColor(requireActivity().getColor(colorSecondaryVariant));
+                    break;
+                case Configuration.UI_MODE_NIGHT_YES:
+                    view.setBackgroundColor(requireActivity().getColor(color));
                     break;
             }
         }
         return view;
     }
-
     @Override
     public void onConfigurationChanged(@NonNull Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
@@ -197,5 +182,4 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
     protected boolean isNightConfigChanged(Configuration newConfig) {
         return (newConfig.diff(mPrevConfig) & ActivityInfo.CONFIG_UI_MODE) != 0 && isOnDarkMode(newConfig) != isOnDarkMode(mPrevConfig);
     }
-
 }

@@ -38,7 +38,6 @@ public class Utils {
     }
 
     public double roundAvoid(double value, int places) {
-
         double scale = Math.pow(10, places);
         return Math.round(value * scale) / scale;
     }
@@ -58,7 +57,6 @@ public class Utils {
         return pref;
     }
 
-
     public void changeTheme(Context context, int i) {
         switch (i) {
             case 0:
@@ -66,6 +64,17 @@ public class Utils {
                 break;
             case 1:
                 context.setTheme(R.style.DarkTheme);
+                break;
+        }
+    }
+
+    public void changeThemeSelected(Context context, int i) {
+        switch (i) {
+            case 0:
+                context.setTheme(R.style.LightThemeSelected);
+                break;
+            case 1:
+                context.setTheme(R.style.DarkThemeSelected);
                 break;
         }
     }

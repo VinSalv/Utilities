@@ -6,7 +6,6 @@
     <string name="tab_text_4">Settings</string>
     <string name="info">Info</string>
     <string name="title_activity_main">MainActivity</string>
-    <string name="title_activity_settings">SettingsActivity</string>
     <string name="copyright">Versione 1.0.0\n\n© 2021 Engineers Rights Reserved.</string>
     <string name="backButton">back</string>
     <string name="AccelerometerNotSupported"><b>Accelerometro:</b> Non Supportato</string>

@@ -16,16 +16,13 @@ public class Preferences {
         return sharedPrefs;
     }
 
-
     public String getPred() {
         return pred;
     }
 
-
     public String getTheme() {
         return theme;
     }
-
 
     public Boolean getPredBool() {
         return predBool;

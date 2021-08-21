@@ -4,9 +4,7 @@ import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.os.Build;
 import android.os.Bundle;
-import android.util.Log;
 import android.util.TypedValue;
-import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
@@ -14,6 +12,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.preference.ListPreference;
 import androidx.preference.PreferenceFragmentCompat;
+import androidx.preference.PreferenceScreen;
 import androidx.preference.SwitchPreferenceCompat;
 
 import com.example.utilities.R;
@@ -24,11 +23,11 @@ import java.util.Objects;
 
 public class SettingsActivity extends AppCompatActivity {
     static final Utils utils = new Utils();
+    static final TypedValue typedValue = new TypedValue();
     static Preferences pref;
-    final TypedValue typedValue = new TypedValue();
+    static int colorSecondary;
+    static int colorSecondaryVariant;
     protected Configuration mPrevConfig;
-    int colorSecondary;
-    int colorSecondaryVariant;
 
     public static boolean isOnDarkMode(Configuration configuration) {
         return (configuration.uiMode & Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES;
@@ -39,46 +38,7 @@ public class SettingsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         pref = utils.loadData(this, new Preferences());
-
         mPrevConfig = new Configuration(getResources().getConfiguration());
-        getTheme().resolveAttribute(R.attr.colorSecondary, typedValue, true);
-        colorSecondary = typedValue.resourceId;
-        getTheme().resolveAttribute(R.attr.colorSecondaryVariant, typedValue, true);
-        colorSecondaryVariant = typedValue.resourceId;
-        View someView = findViewById(R.id.settingsLayout);
-
-        // Find the root view
-        View root = someView.getRootView();
-        Log.d("TEMA","LightTheme2");
-
-        // Set the color
-        if (!pref.getPredBool()) {
-            switch (pref.getThemeText()) {
-                case "LightTheme":
-                    Log.d("TEMA","LightTheme1");
-                    root.setBackgroundColor(getResources().getColor(colorSecondary));
-                    break;
-                case "DarkTheme":
-                    Log.d("TEMA","DarkTheme1");
-                    root.setBackgroundColor(getResources().getColor(colorSecondaryVariant));
-                    break;
-            }
-        } else {
-            switch (getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK) {
-                case Configuration.UI_MODE_NIGHT_UNDEFINED:
-
-                case Configuration.UI_MODE_NIGHT_NO:
-                    Log.d("TEMA","LightTheme2");
-                    root.setBackgroundColor(getResources().getColor(colorSecondary));
-                    break;
-
-                case Configuration.UI_MODE_NIGHT_YES:
-                    Log.d("TEMA","DarkTheme2");
-                    root.setBackgroundColor(getResources().getColor(colorSecondaryVariant));
-                    break;
-            }
-        }
-
         setContentView(R.layout.settings_activity);
         if (savedInstanceState == null) {
             getSupportFragmentManager()
@@ -110,22 +70,23 @@ public class SettingsActivity extends AppCompatActivity {
     }
 
     public static class SettingsFragment extends PreferenceFragmentCompat {
-
         SwitchPreferenceCompat pred;
         ListPreference list_themes;
-
         @RequiresApi(api = Build.VERSION_CODES.Q)
         @Override
         public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-            setPreferencesFromResource(R.xml.root_preferences, rootKey);
             pref = utils.loadData(requireActivity(), new Preferences());
+            setPreferencesFromResource(R.xml.root_preferences, rootKey);
             pred = findPreference("pred");
             list_themes = findPreference("list_themes");
+            PreferenceScreen s = findPreference("prefScreen");
             if (!pref.getPredBool()) {
                 switch (pref.getThemeText()) {
+                    case "LightThemeSelected":
                     case "LightTheme":
                         list_themes.setValueIndex(0);
                         break;
+                    case "DarkThemeSelected":
                     case "DarkTheme":
                         list_themes.setValueIndex(1);
                         break;
@@ -133,11 +94,9 @@ public class SettingsActivity extends AppCompatActivity {
             } else {
                 switch (getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK) {
                     case Configuration.UI_MODE_NIGHT_UNDEFINED:
-
                     case Configuration.UI_MODE_NIGHT_NO:
                         list_themes.setValueIndex(0);
                         break;
-
                     case Configuration.UI_MODE_NIGHT_YES:
                         list_themes.setValueIndex(1);
                         break;
@@ -146,11 +105,9 @@ public class SettingsActivity extends AppCompatActivity {
             Objects.requireNonNull(pred).setOnPreferenceChangeListener((preference, newValue) -> {
                 switch (getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK) {
                     case Configuration.UI_MODE_NIGHT_UNDEFINED:
-
                     case Configuration.UI_MODE_NIGHT_NO:
                         list_themes.setValueIndex(0);
                         break;
-
                     case Configuration.UI_MODE_NIGHT_YES:
                         list_themes.setValueIndex(1);
                         break;
@@ -162,7 +119,6 @@ public class SettingsActivity extends AppCompatActivity {
                     utils.saveData(requireActivity(), pref, (Boolean) newValue, list_themes.getValue());
                 return true;
             });
-
             Objects.requireNonNull(list_themes).setOnPreferenceChangeListener((preference, newValue) -> {
                 utils.saveData(requireActivity(), pref, pred.isChecked(), newValue.toString());
                 utils.goToMainActivity(requireActivity());

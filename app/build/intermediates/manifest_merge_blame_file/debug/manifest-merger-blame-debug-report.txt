@@ -10,71 +10,67 @@
 9        android:targetSdkVersion="30" />
 9-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml
 10
-11    <application
-11-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:5:5-37:19
-12        android:allowBackup="true"
-12-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:6:9-35
-13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-13-->[androidx.core:core:1.5.0] C:\Users\vince\.gradle\caches\transforms-3\109c406f854d135ad1ed87dae876b357\transformed\core-1.5.0\AndroidManifest.xml:24:18-86
-14        android:configChanges="uiMode"
-14-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:7:9-39
-15        android:debuggable="true"
-16        android:fullBackupContent="@xml/backup_descriptor"
-16-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:8:9-59
-17        android:icon="@mipmap/ic_launcher"
-17-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:9:9-43
-18        android:label="@string/app_name"
-18-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:10:9-41
-19        android:roundIcon="@mipmap/ic_launcher_round"
-19-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:11:9-54
-20        android:supportsRtl="true"
-20-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:12:9-35
-21        android:testOnly="true"
-22        android:theme="@style/LightTheme" >
-22-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:13:9-42
-23        <activity
-23-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:14:9-18:49
-24            android:name="com.example.utilities.InfoActivity"
-24-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:15:13-41
-25            android:configChanges="uiMode"
-25-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:16:13-43
-26            android:label="@string/infoActivity"
-26-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:17:13-49
-27            android:theme="@style/LightTheme" />
-27-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:18:13-46
-28        <activity
-28-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:19:9-23:49
-29            android:name="com.example.utilities.fragment.SettingsActivity"
-29-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:20:13-54
-30            android:configChanges="uiMode"
-30-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:21:13-43
-31            android:label="@string/title_activity_settings"
-31-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:22:13-60
-32            android:theme="@style/LightTheme" />
-32-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:23:13-46
-33        <activity
-33-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:24:9-36:20
-34            android:name="com.example.utilities.MainActivity"
-34-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:25:13-41
-35            android:configChanges="uiMode"
-35-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:26:13-43
-36            android:exported="true"
-36-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:27:13-36
-37            android:label="@string/title_activity_main"
-37-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:28:13-56
-38            android:theme="@style/LightTheme" >
-38-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:29:13-46
-39            <intent-filter>
-39-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:31:13-35:29
-40                <action android:name="android.intent.action.MAIN" />
-40-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:32:17-69
-40-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:32:25-66
-41
-42                <category android:name="android.intent.category.LAUNCHER" />
-42-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:34:17-77
-42-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:34:27-74
-43            </intent-filter>
-44        </activity>
-45    </application>
-46
-47</manifest>
+11    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+11-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:5:5-79
+11-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:5:22-76
+12    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+12-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:6:5-81
+12-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:6:22-78
+13
+14    <application
+14-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:8:5-36:19
+15        android:allowBackup="true"
+15-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:9:9-35
+16        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+16-->[androidx.core:core:1.5.0] C:\Users\vince\.gradle\caches\transforms-3\109c406f854d135ad1ed87dae876b357\transformed\core-1.5.0\AndroidManifest.xml:24:18-86
+17        android:configChanges="uiMode"
+17-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:10:9-39
+18        android:debuggable="true"
+19        android:fullBackupContent="@xml/backup_descriptor"
+19-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:11:9-59
+20        android:icon="@mipmap/ic_launcher"
+20-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:12:9-43
+21        android:label="@string/app_name"
+21-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:13:9-41
+22        android:roundIcon="@mipmap/ic_launcher_round"
+22-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:14:9-54
+23        android:supportsRtl="true"
+23-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:15:9-35
+24        android:theme="@style/LightTheme" >
+24-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:16:9-42
+25        <activity
+25-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:17:9-21:49
+26            android:name="com.example.utilities.InfoActivity"
+26-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:18:13-41
+27            android:configChanges="uiMode"
+27-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:19:13-43
+28            android:label="@string/infoActivity"
+28-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:20:13-49
+29            android:theme="@style/LightTheme" />
+29-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:21:13-46
+30        <activity
+30-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:22:9-34:20
+31            android:name="com.example.utilities.MainActivity"
+31-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:23:13-41
+32            android:configChanges="uiMode"
+32-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:24:13-43
+33            android:exported="true"
+33-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:25:13-36
+34            android:label="@string/title_activity_main"
+34-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:26:13-56
+35            android:theme="@style/LightTheme" >
+35-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:27:13-46
+36            <intent-filter>
+36-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:29:13-33:29
+37                <action android:name="android.intent.action.MAIN" />
+37-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:30:17-69
+37-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:30:25-66
+38
+39                <category android:name="android.intent.category.LAUNCHER" />
+39-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:32:17-77
+39-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:32:27-74
+40            </intent-filter>
+41        </activity>
+42    </application>
+43
+44</manifest>

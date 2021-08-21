@@ -25,29 +25,25 @@ public class InfoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         pref = utils.loadData(this, new Preferences());
         if (!pref.getPredBool()) {
-            if (pref.getThemeText().equals("LightTheme"))
-                utils.changeTheme(this, 0);
+            if (pref.getThemeText().equals("LightTheme") || pref.getThemeText().equals("LightThemeSelected"))
+                utils.changeThemeSelected(this, 0);
             else
-                utils.changeTheme(this, 1);
+                utils.changeThemeSelected(this, 1);
         } else {
             switch (getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK) {
                 case Configuration.UI_MODE_NIGHT_UNDEFINED:
-
                 case Configuration.UI_MODE_NIGHT_NO:
                     utils.changeTheme(this, 0);
                     break;
-
                 case Configuration.UI_MODE_NIGHT_YES:
                     utils.changeTheme(this, 1);
                     break;
             }
-
         }
         setContentView(R.layout.activity_info);
         ImageButton back = findViewById(R.id.back);
         back.setOnClickListener(view -> utils.goToMainActivity(InfoActivity.this));
         mPrevConfig = new Configuration(getResources().getConfiguration());
-
     }
 
     @Override
@@ -58,8 +54,8 @@ public class InfoActivity extends AppCompatActivity {
     }
 
     protected void configurationChanged(Configuration newConfig) {
-        if (isNightConfigChanged(newConfig) && pref.getPredBool()) { // night mode has changed
-            utils.goToMainActivity(this);// do your thing
+        if (isNightConfigChanged(newConfig) && pref.getPredBool()) {
+            utils.goToMainActivity(this);
         }
     }
 
@@ -72,10 +68,10 @@ public class InfoActivity extends AppCompatActivity {
         super.onStart();
         pref = utils.loadData(this, pref);
         if (!pref.getPredBool()) {
-            if (pref.getThemeText().equals("LightTheme"))
-                utils.changeTheme(this, 0);
+            if (pref.getThemeText().equals("LightTheme") || pref.getThemeText().equals("LightThemeSelected"))
+                utils.changeThemeSelected(this, 0);
             else
-                utils.changeTheme(this, 1);
+                utils.changeThemeSelected(this, 1);
         } else {
             switch (getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK) {
                 case Configuration.UI_MODE_NIGHT_UNDEFINED:
@@ -99,10 +95,10 @@ public class InfoActivity extends AppCompatActivity {
         super.onResume();
         pref = utils.loadData(this, pref);
         if (!pref.getPredBool()) {
-            if (pref.getThemeText().equals("LightTheme"))
-                utils.changeTheme(this, 0);
+            if (pref.getThemeText().equals("LightTheme") || pref.getThemeText().equals("LightThemeSelected"))
+                utils.changeThemeSelected(this, 0);
             else
-                utils.changeTheme(this, 1);
+                utils.changeThemeSelected(this, 1);
         } else {
             switch (getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK) {
                 case Configuration.UI_MODE_NIGHT_UNDEFINED:
@@ -120,5 +116,4 @@ public class InfoActivity extends AppCompatActivity {
             back.setOnClickListener(view -> utils.goToMainActivity(InfoActivity.this));
         }
     }
-
 }

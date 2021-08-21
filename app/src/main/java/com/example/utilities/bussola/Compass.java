@@ -1,13 +1,20 @@
 package com.example.utilities.bussola;
 
+import android.app.Activity;
 import android.content.Context;
 import android.hardware.Sensor;
 import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 
-@SuppressWarnings("unused")
+import com.example.utilities.utility.Utils;
+import com.google.android.material.tabs.TabLayout;
+
+import java.util.Objects;
+
 public class Compass implements SensorEventListener {
+
+    final Utils utils = new Utils();
     private final SensorManager sensorManager;
     private final Sensor gsensor;
     private final Sensor msensor;
@@ -22,14 +29,24 @@ public class Compass implements SensorEventListener {
         sensorManager = (SensorManager) context
                 .getSystemService(Context.SENSOR_SERVICE);
         gsensor = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
+        if (gsensor == null) {
+            TabLayout tabs = ((Activity) context).findViewById(com.example.utilities.R.id.tabs);
+            Objects.requireNonNull(tabs.getTabAt(2)).select();
+            utils.notifyUser(context, "Il tuo dispositivo non dispone di un accellerometro");
+        }
         msensor = sensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD);
+        if (msensor == null) {
+            TabLayout tabs = ((Activity) context).findViewById(com.example.utilities.R.id.tabs);
+            Objects.requireNonNull(tabs.getTabAt(2)).select();
+            utils.notifyUser(context, "Il tuo dispositivo non dispone di un accellerometro");
+        }
     }
 
     public void start() {
-        sensorManager.registerListener(this, gsensor,
-                SensorManager.SENSOR_DELAY_GAME);
-        sensorManager.registerListener(this, msensor,
-                SensorManager.SENSOR_DELAY_GAME);
+        if (gsensor != null)
+            sensorManager.registerListener(this, gsensor, SensorManager.SENSOR_DELAY_GAME);
+        if (msensor != null)
+            sensorManager.registerListener(this, msensor, SensorManager.SENSOR_DELAY_GAME);
     }
 
     public void stop() {
@@ -68,12 +85,11 @@ public class Compass implements SensorEventListener {
                 mGeomagnetic[2] = alpha * mGeomagnetic[2] + (1 - alpha)
                         * event.values[2];
             }
-            boolean success = SensorManager.getRotationMatrix(R, I, mGravity,
-                    mGeomagnetic);
+            boolean success = SensorManager.getRotationMatrix(R, I, mGravity, mGeomagnetic);
             if (success) {
                 float[] orientation = new float[3];
                 SensorManager.getOrientation(R, orientation);
-                float azimuth = (float) Math.toDegrees(orientation[0]); // orientation
+                float azimuth = (float) Math.toDegrees(orientation[0]);
                 azimuth = (azimuth + azimuthFix + 360) % 360;
                 if (listener != null) {
                     listener.onNewAzimuth(azimuth);
@@ -90,3 +106,9 @@ public class Compass implements SensorEventListener {
         void onNewAzimuth(float azimuth);
     }
 }
+
+
+
+
+
+
