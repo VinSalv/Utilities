@@ -4,6 +4,10 @@
         "source": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
+        "merged": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\stripped.dir\\layout\\fragment__dado_fragment.xml",
+        "source": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\src\\main\\res\\layout\\fragment__dado_fragment.xml"
+    },
+    {
         "merged": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\stripped.dir\\layout\\settings_activity.xml",
         "source": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\src\\main\\res\\layout\\settings_activity.xml"
     },

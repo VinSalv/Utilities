@@ -4,11 +4,11 @@ package com.app.utilities.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.widget.NestedScrollView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.app.utilities.R;
@@ -18,7 +18,7 @@ import java.lang.String;
 
 public final class FragmentSensoriBinding implements ViewBinding {
   @NonNull
-  private final FrameLayout rootView;
+  private final NestedScrollView rootView;
 
   @NonNull
   public final LinearLayout accelLayout;
@@ -71,13 +71,13 @@ public final class FragmentSensoriBinding implements ViewBinding {
   @NonNull
   public final TextView zValue;
 
-  private FragmentSensoriBinding(@NonNull FrameLayout rootView, @NonNull LinearLayout accelLayout,
-      @NonNull LinearLayout gyroLayout, @NonNull TextView humidity, @NonNull TextView light,
-      @NonNull LinearLayout magnoLayout, @NonNull LinearLayout otherLayout,
-      @NonNull TextView pressure, @NonNull TextView temperature, @NonNull TextView xGyroValue,
-      @NonNull TextView xMagnoValue, @NonNull TextView xValue, @NonNull TextView yGyroValue,
-      @NonNull TextView yMagnoValue, @NonNull TextView yValue, @NonNull TextView zGyroValue,
-      @NonNull TextView zMagnoValue, @NonNull TextView zValue) {
+  private FragmentSensoriBinding(@NonNull NestedScrollView rootView,
+      @NonNull LinearLayout accelLayout, @NonNull LinearLayout gyroLayout,
+      @NonNull TextView humidity, @NonNull TextView light, @NonNull LinearLayout magnoLayout,
+      @NonNull LinearLayout otherLayout, @NonNull TextView pressure, @NonNull TextView temperature,
+      @NonNull TextView xGyroValue, @NonNull TextView xMagnoValue, @NonNull TextView xValue,
+      @NonNull TextView yGyroValue, @NonNull TextView yMagnoValue, @NonNull TextView yValue,
+      @NonNull TextView zGyroValue, @NonNull TextView zMagnoValue, @NonNull TextView zValue) {
     this.rootView = rootView;
     this.accelLayout = accelLayout;
     this.gyroLayout = gyroLayout;
@@ -100,7 +100,7 @@ public final class FragmentSensoriBinding implements ViewBinding {
 
   @Override
   @NonNull
-  public FrameLayout getRoot() {
+  public NestedScrollView getRoot() {
     return rootView;
   }
 
@@ -227,9 +227,9 @@ public final class FragmentSensoriBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentSensoriBinding((FrameLayout) rootView, accelLayout, gyroLayout, humidity,
-          light, magnoLayout, otherLayout, pressure, temperature, xGyroValue, xMagnoValue, xValue,
-          yGyroValue, yMagnoValue, yValue, zGyroValue, zMagnoValue, zValue);
+      return new FragmentSensoriBinding((NestedScrollView) rootView, accelLayout, gyroLayout,
+          humidity, light, magnoLayout, otherLayout, pressure, temperature, xGyroValue, xMagnoValue,
+          xValue, yGyroValue, yMagnoValue, yValue, zGyroValue, zMagnoValue, zValue);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

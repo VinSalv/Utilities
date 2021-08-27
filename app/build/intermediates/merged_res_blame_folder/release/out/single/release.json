@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\build\\intermediates\\merged_res\\release\\drawable_dice_3.xml.flat",
+        "source": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\src\\main\\res\\drawable\\dice_3.xml"
+    },
+    {
         "merged": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\build\\intermediates\\merged_res\\release\\layout_activity_info.xml.flat",
         "source": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\src\\main\\res\\layout\\activity_info.xml"
     },
@@ -12,8 +16,16 @@
         "source": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\src\\main\\res\\xml\\backup_descriptor.xml"
     },
     {
+        "merged": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\build\\intermediates\\merged_res\\release\\drawable_dice_2.xml.flat",
+        "source": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\src\\main\\res\\drawable\\dice_2.xml"
+    },
+    {
         "merged": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\build\\intermediates\\merged_res\\release\\layout_fragment__sensori.xml.flat",
         "source": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\src\\main\\res\\layout\\fragment__sensori.xml"
+    },
+    {
+        "merged": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\build\\intermediates\\merged_res\\release\\layout_fragment__dado_fragment.xml.flat",
+        "source": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\src\\main\\res\\layout\\fragment__dado_fragment.xml"
     },
     {
         "merged": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\build\\intermediates\\merged_res\\release\\drawable_dial.png.flat",
@@ -24,16 +36,28 @@
         "source": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\src\\main\\res\\layout\\fragment__bussola.xml"
     },
     {
+        "merged": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\build\\intermediates\\merged_res\\release\\drawable_dice_1.xml.flat",
+        "source": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\src\\main\\res\\drawable\\dice_1.xml"
+    },
+    {
+        "merged": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\build\\intermediates\\merged_res\\release\\drawable_dice_6.xml.flat",
+        "source": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\src\\main\\res\\drawable\\dice_6.xml"
+    },
+    {
         "merged": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\build\\intermediates\\merged_res\\release\\drawable_utilities.png.flat",
         "source": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\src\\main\\res\\drawable\\utilities.png"
+    },
+    {
+        "merged": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\build\\intermediates\\merged_res\\release\\drawable_green.jpg.flat",
+        "source": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\src\\main\\res\\drawable\\green.jpg"
     },
     {
         "merged": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\build\\intermediates\\merged_res\\release\\xml_root_preferences.xml.flat",
         "source": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\src\\main\\res\\xml\\root_preferences.xml"
     },
     {
-        "merged": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\build\\intermediates\\merged_res\\release\\drawable_green.jpg.flat",
-        "source": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\src\\main\\res\\drawable\\green.jpg"
+        "merged": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\build\\intermediates\\merged_res\\release\\drawable_dice_empty.xml.flat",
+        "source": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\src\\main\\res\\drawable\\dice_empty.xml"
     },
     {
         "merged": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\build\\intermediates\\merged_res\\release\\layout_activity_main.xml.flat",
@@ -42,6 +66,14 @@
     {
         "merged": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\build\\intermediates\\merged_res\\release\\layout_settings_activity.xml.flat",
         "source": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\src\\main\\res\\layout\\settings_activity.xml"
+    },
+    {
+        "merged": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\build\\intermediates\\merged_res\\release\\drawable_dice_5.xml.flat",
+        "source": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\src\\main\\res\\drawable\\dice_5.xml"
+    },
+    {
+        "merged": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\build\\intermediates\\merged_res\\release\\drawable_dice_4.xml.flat",
+        "source": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\src\\main\\res\\drawable\\dice_4.xml"
     },
     {
         "merged": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\build\\intermediates\\merged_res\\release\\layout_fragment_main.xml.flat",

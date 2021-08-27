@@ -515,6 +515,7 @@
     <color name="cardview_shadow_end_color">#03000000</color>
     <color name="cardview_shadow_start_color">#37000000</color>
     <color name="cream">#F3DDA1</color>
+    <color name="dark_gray">#121212</color>
     <color name="dark_yellow">#9D8800</color>
     <color name="design_bottom_navigation_shadow_color">#14000000</color>
     <color name="design_dark_default_color_background">#121212</color>
@@ -1190,8 +1191,11 @@
     <string name="GyroscopeNotSupported"><b>Giroscopio:</b> Non Supportato</string>
     <string name="HumidityNotSupported"><b>Umidità:</b> Non Supportato</string>
     <string name="MagnetometerNotSupported"><b>Magnetometro:</b> Non Supportato</string>
+    <string name="One_dice">1 Dado</string>
     <string name="PressureNotSupported"><b>Pressione:</b> Non Supportato</string>
+    <string name="Roll">Gira</string>
     <string name="TemperatureNotSupported"><b>Temperatura:</b> Non Supportato</string>
+    <string name="Two_dices">2 Dadi</string>
     <string name="abc_action_bar_home_description">Navigate home</string>
     <string name="abc_action_bar_up_description">Navigate up</string>
     <string name="abc_action_menu_overflow_description">More options</string>
@@ -1324,8 +1328,9 @@
     <string name="summary_collapsed_preference_list"><ns2:g id="current_items">%1$s</ns2:g>, <ns2:g id="added_items">%2$s</ns2:g></string>
     <string name="tab_text_1">Livella</string>
     <string name="tab_text_2">Bussola</string>
-    <string name="tab_text_3">Sensori</string>
-    <string name="tab_text_4">Impostazioni</string>
+    <string name="tab_text_3">Dado</string>
+    <string name="tab_text_4">Sensori</string>
+    <string name="tab_text_5">Impostazioni</string>
     <string name="utilityImage">UtilityImage</string>
     <string name="v7_preference_off">OFF</string>
     <string name="v7_preference_on">ON</string>
@@ -3370,6 +3375,7 @@
         <item name="android:textColor">@color/white</item>
         <item name="appBarLayoutStyle">@color/black</item>
         <item name="colorPrimaryDark">@color/red</item>
+        <item name="colorAccent">@color/red</item>
         <!-- ActionBar -->
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -3404,6 +3410,7 @@
         <item name="android:textColor">@color/black</item>
         <item name="appBarLayoutStyle">@color/cream</item>
         <item name="colorPrimaryDark">@color/cream</item>
+        <item name="colorAccent">@color/black</item>
         <!-- ActionBar -->
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -3427,6 +3434,7 @@
         <item name="android:textColor">@color/black</item>
         <item name="appBarLayoutStyle">@color/cream</item>
         <item name="colorPrimaryDark">@color/cream</item>
+        <item name="colorAccent">@color/black</item>
         <!-- ActionBar -->
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
