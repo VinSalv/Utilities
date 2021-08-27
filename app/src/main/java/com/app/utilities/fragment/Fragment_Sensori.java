@@ -31,7 +31,6 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
     protected Configuration mPrevConfig;
     TextView xValue, yValue, zValue, xGyroValue, yGyroValue, zGyroValue, xMagnoValue, yMagnoValue, zMagnoValue, light, pressure, temperature, humidity;
     Preferences pref;
-    int color;
     int colorSecondaryVariant;
 
     public static boolean isOnDarkMode(Configuration configuration) {
@@ -138,8 +137,6 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
             humidity.setText(R.string.HumidityNotSupported);
         }
         pref = utils.loadData(requireActivity(), new Preferences());
-        requireActivity().getTheme().resolveAttribute(R.attr.color, typedValue, true);
-        color = typedValue.resourceId;
         requireActivity().getTheme().resolveAttribute(R.attr.colorSecondaryVariant, typedValue, true);
         colorSecondaryVariant = typedValue.resourceId;
         if (!pref.getPredBool()) {
@@ -150,7 +147,7 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
                     break;
                 case "DarkThemeSelected":
                 case "DarkTheme":
-                    view.setBackgroundColor(requireActivity().getColor(color));
+                    view.setBackgroundColor(requireActivity().getColor(R.color.dark_gray));
                     break;
             }
         } else {
@@ -160,7 +157,7 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
                     view.setBackgroundColor(requireActivity().getColor(colorSecondaryVariant));
                     break;
                 case Configuration.UI_MODE_NIGHT_YES:
-                    view.setBackgroundColor(requireActivity().getColor(color));
+                    view.setBackgroundColor(requireActivity().getColor(R.color.dark_gray));
                     break;
             }
         }

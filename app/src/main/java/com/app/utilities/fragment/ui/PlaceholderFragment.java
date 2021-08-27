@@ -12,6 +12,7 @@ import androidx.lifecycle.ViewModelProvider;
 
 import com.app.utilities.databinding.FragmentMainBinding;
 
+@SuppressWarnings("unused")
 public class PlaceholderFragment extends Fragment {
     private static final String ARG_SECTION_NUMBER = "section_number";
     private com.app.utilities.fragment.ui.PageViewModel pageViewModel;

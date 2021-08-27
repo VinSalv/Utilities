@@ -12,6 +12,7 @@ import com.google.android.material.tabs.TabLayout;
 
 import java.util.Objects;
 
+@SuppressWarnings("unused")
 public class Compass implements SensorEventListener {
 
     final Utils utils = new Utils();

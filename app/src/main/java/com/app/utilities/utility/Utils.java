@@ -17,6 +17,7 @@ public class Utils {
                 Toast.LENGTH_LONG).show();
     }
 
+    @SuppressWarnings("unused")
     private void notifyUserShortWay(Context context, String message) {
         Toast.makeText(context,
                 message,
@@ -32,6 +33,7 @@ public class Utils {
         context.startActivity(intent);
     }
 
+    @SuppressWarnings("unused")
     public void goToInfoActivity(Context context) {
         Intent intent = new Intent(context, InfoActivity.class);
         context.startActivity(intent);

@@ -10,6 +10,7 @@ import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.app.utilities.R;
 import com.app.utilities.fragment.Fragment_Bussola;
+import com.app.utilities.fragment.Fragment_Dado;
 import com.app.utilities.fragment.Fragment_Livella;
 import com.app.utilities.fragment.Fragment_Sensori;
 import com.app.utilities.fragment.SettingsActivity;
@@ -20,9 +21,10 @@ import java.util.Objects;
 
 public class SectionsPagerAdapter extends FragmentPagerAdapter {
     @StringRes
-    private static final int[] TAB_TITLES = new int[]{R.string.tab_text_1, R.string.tab_text_2, R.string.tab_text_3, R.string.tab_text_4};
+    private static final int[] TAB_TITLES = new int[]{R.string.tab_text_1, R.string.tab_text_2, R.string.tab_text_3, R.string.tab_text_4, R.string.tab_text_5};
     private final Context mContext;
 
+    @SuppressWarnings("unused")
     public SectionsPagerAdapter(Context context, FragmentManager fm) {
         super(fm);
         mContext = context;
@@ -40,9 +42,12 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
                 fragment = new Fragment_Bussola();
                 break;
             case 2:
-                fragment = new Fragment_Sensori();
+                fragment = new Fragment_Dado();
                 break;
             case 3:
+                fragment = new Fragment_Sensori();
+                break;
+            case 4:
                 fragment = new SettingsActivity.SettingsFragment();
         }
         return Objects.requireNonNull(fragment);
@@ -56,6 +61,6 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return 4;
+        return 5;
     }
 }

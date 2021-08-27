@@ -7,7 +7,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
+import androidx.core.widget.NestedScrollView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.app.utilities.R;
@@ -17,16 +17,16 @@ import java.lang.String;
 
 public final class FragmentMainBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final NestedScrollView rootView;
 
   @NonNull
-  public final ConstraintLayout constraintLayout;
+  public final NestedScrollView constraintLayout;
 
   @NonNull
   public final TextView sectionLabel;
 
-  private FragmentMainBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ConstraintLayout constraintLayout, @NonNull TextView sectionLabel) {
+  private FragmentMainBinding(@NonNull NestedScrollView rootView,
+      @NonNull NestedScrollView constraintLayout, @NonNull TextView sectionLabel) {
     this.rootView = rootView;
     this.constraintLayout = constraintLayout;
     this.sectionLabel = sectionLabel;
@@ -34,7 +34,7 @@ public final class FragmentMainBinding implements ViewBinding {
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public NestedScrollView getRoot() {
     return rootView;
   }
 
@@ -59,7 +59,7 @@ public final class FragmentMainBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      ConstraintLayout constraintLayout = (ConstraintLayout) rootView;
+      NestedScrollView constraintLayout = (NestedScrollView) rootView;
 
       id = R.id.section_label;
       TextView sectionLabel = ViewBindings.findChildViewById(rootView, id);
@@ -67,7 +67,7 @@ public final class FragmentMainBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentMainBinding((ConstraintLayout) rootView, constraintLayout, sectionLabel);
+      return new FragmentMainBinding((NestedScrollView) rootView, constraintLayout, sectionLabel);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

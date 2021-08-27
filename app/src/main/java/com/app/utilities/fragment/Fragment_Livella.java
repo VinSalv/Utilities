@@ -21,10 +21,12 @@ import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.ViewPager;
 
 import com.app.utilities.R;
 import com.app.utilities.utility.Preferences;
@@ -45,6 +47,7 @@ public class Fragment_Livella extends Fragment implements SensorEventListener {
     int colorPrimaryVariant;
     int colorSecondaryVariant;
     Preferences pref;
+    ViewPager view_pager;
     private Sensor accelerometer;
     private SensorManager sensorManager;
     private AnimatedView animatedView = null;
@@ -82,6 +85,7 @@ public class Fragment_Livella extends Fragment implements SensorEventListener {
             Objects.requireNonNull(tabs.getTabAt(2)).select();
             util.notifyUser(requireActivity(), "Il tuo dispositivo non dispone di un accellerometro");
         }
+        view_pager = requireActivity().findViewById(R.id.view_pager);
         animatedView = new AnimatedView(getActivity());
         animatedView.setBackgroundColor(requireActivity().getColor(colorPrimaryVariant));
         return animatedView;
@@ -163,8 +167,6 @@ public class Fragment_Livella extends Fragment implements SensorEventListener {
         private final Paint textX;
         private final Paint textY;
         private final Paint textPlane;
-        private final double old_x = 0;
-        private final double old_y = 0;
         Bitmap bitmap;
         BitmapShader fillBMPshader;
         float hor_start_w = 0;
@@ -180,8 +182,6 @@ public class Fragment_Livella extends Fragment implements SensorEventListener {
         double y_text = 0;
         private double x = 0;
         private double y = 0;
-        private double z;
-        private double old_z;
         private float horizPos;
         private float vertPos;
         private int r;
@@ -272,9 +272,24 @@ public class Fragment_Livella extends Fragment implements SensorEventListener {
         @Override
         protected void onSizeChanged(int w, int h, int oldw, int oldh) {
             super.onSizeChanged(w, h, oldw, oldh);
+            ViewTreeObserver observer = view_pager.getViewTreeObserver();
+            observer.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
+                @Override
+                public void onGlobalLayout() {
+                    // TODO Auto-generated method stub
+                    init();
+                    view_pager.getViewTreeObserver().removeGlobalOnLayoutListener(
+                            this);
+                }
+            });
+        }
+
+        @SuppressWarnings("unused")
+        protected void init() {
+            int w = view_pager.getWidth();
+            int h = view_pager.getHeight();
             float half_width = (float) (w / 2);
             float half_height = (float) (h / 2);
-
             length_bar = (float) (w - ((w / 8) * 2));
 
             hor_start_w = (float) (w / 8);
@@ -293,8 +308,6 @@ public class Fragment_Livella extends Fragment implements SensorEventListener {
 
             half_hor = half_width;
             half_ver = (ver_start_h + ver_end_h) / 2;
-
-
         }
 
         public void onSensorEvent(@NonNull SensorEvent event) {

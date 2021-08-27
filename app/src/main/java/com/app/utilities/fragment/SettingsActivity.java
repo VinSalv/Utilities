@@ -4,7 +4,6 @@ import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.os.Build;
 import android.os.Bundle;
-import android.util.TypedValue;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
@@ -12,7 +11,6 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.preference.ListPreference;
 import androidx.preference.PreferenceFragmentCompat;
-import androidx.preference.PreferenceScreen;
 import androidx.preference.SwitchPreferenceCompat;
 
 import com.app.utilities.R;
@@ -23,10 +21,7 @@ import java.util.Objects;
 
 public class SettingsActivity extends AppCompatActivity {
     static final Utils utils = new Utils();
-    static final TypedValue typedValue = new TypedValue();
     static Preferences pref;
-    static int colorSecondary;
-    static int colorSecondaryVariant;
     protected Configuration mPrevConfig;
 
     public static boolean isOnDarkMode(Configuration configuration) {
@@ -80,7 +75,6 @@ public class SettingsActivity extends AppCompatActivity {
             setPreferencesFromResource(R.xml.root_preferences, rootKey);
             pred = findPreference("pred");
             list_themes = findPreference("list_themes");
-            PreferenceScreen s = findPreference("prefScreen");
             if (!pref.getPredBool()) {
                 switch (pref.getThemeText()) {
                     case "LightThemeSelected":

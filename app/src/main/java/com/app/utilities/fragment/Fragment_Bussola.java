@@ -20,7 +20,9 @@ import com.app.utilities.utility.Utils;
 
 public class Fragment_Bussola extends Fragment {
     private final Utils utils = new Utils();
+    @SuppressWarnings("unused")
     protected Configuration mPrevConfig;
+    @SuppressWarnings("unused")
     Preferences pref;
     private Compass compass;
     private ImageView arrowView;

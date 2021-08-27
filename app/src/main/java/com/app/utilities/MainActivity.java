@@ -23,12 +23,14 @@ import com.google.android.material.tabs.TabLayout;
 public class MainActivity extends AppCompatActivity {
 
     private static final Utils utils = new Utils();
+    @SuppressWarnings("unused")
     protected Configuration mPrevConfig;
     Preferences pref;
-    private boolean blockBack;
+    @SuppressWarnings("unused")
     private boolean doubleBackToExitPressedOnce;
 
 
+    @SuppressWarnings("unused")
     public static boolean isOnDarkMode(Configuration configuration) {
         return (configuration.uiMode & Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES;
     }
@@ -73,12 +75,14 @@ public class MainActivity extends AppCompatActivity {
         mPrevConfig = new Configuration(newConfig);
     }
 
+    @SuppressWarnings("unused")
     protected void configurationChanged(Configuration newConfig) {
         if (isNightConfigChanged(newConfig) && pref.getPredBool()) {
             utils.goToMainActivity(this);
         }
     }
 
+    @SuppressWarnings("unused")
     protected boolean isNightConfigChanged(Configuration newConfig) {
         return (newConfig.diff(mPrevConfig) & ActivityInfo.CONFIG_UI_MODE) != 0 && isOnDarkMode(newConfig) != isOnDarkMode(mPrevConfig);
     }

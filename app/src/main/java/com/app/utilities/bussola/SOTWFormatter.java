@@ -4,6 +4,7 @@ import android.content.Context;
 
 import com.app.utilities.R;
 
+@SuppressWarnings("unused")
 public class SOTWFormatter {
     private static final int[] sides = {0, 45, 90, 135, 180, 225, 270, 315, 360};
     private static String[] names = null;

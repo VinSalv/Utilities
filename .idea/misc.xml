@@ -4,12 +4,22 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/vince/AndroidStudioProjects/Utilities/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.32447916666666665" />
+        <entry key="..\:/Users/vince/AndroidStudioProjects/Utilities/app/src/main/res/drawable/dice_1.xml" value="0.54375" />
+        <entry key="..\:/Users/vince/AndroidStudioProjects/Utilities/app/src/main/res/drawable/dice_2.xml" value="0.54375" />
+        <entry key="..\:/Users/vince/AndroidStudioProjects/Utilities/app/src/main/res/drawable/dice_3.xml" value="0.54375" />
+        <entry key="..\:/Users/vince/AndroidStudioProjects/Utilities/app/src/main/res/drawable/dice_4.xml" value="0.54375" />
+        <entry key="..\:/Users/vince/AndroidStudioProjects/Utilities/app/src/main/res/drawable/dice_5.xml" value="0.54375" />
+        <entry key="..\:/Users/vince/AndroidStudioProjects/Utilities/app/src/main/res/drawable/dice_6.xml" value="0.54375" />
+        <entry key="..\:/Users/vince/AndroidStudioProjects/Utilities/app/src/main/res/drawable/dice_empty.xml" value="0.54375" />
+        <entry key="..\:/Users/vince/AndroidStudioProjects/Utilities/app/src/main/res/drawable/empty_dice.xml" value="0.54375" />
         <entry key="..\:/Users/vince/AndroidStudioProjects/Utilities/app/src/main/res/drawable/ic_launcher_background.xml" value="0.32447916666666665" />
         <entry key="..\:/Users/vince/AndroidStudioProjects/Utilities/app/src/main/res/layout-land/fragment_livella.xml" value="0.25569176882662" />
         <entry key="..\:/Users/vince/AndroidStudioProjects/Utilities/app/src/main/res/layout-v21/activity_info.xml" value="0.30416666666666664" />
+        <entry key="..\:/Users/vince/AndroidStudioProjects/Utilities/app/src/main/res/layout-v21/fragment__dado_fragment.xml" value="0.30416666666666664" />
         <entry key="..\:/Users/vince/AndroidStudioProjects/Utilities/app/src/main/res/layout/activity_info.xml" value="0.2269021739130435" />
         <entry key="..\:/Users/vince/AndroidStudioProjects/Utilities/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/Users/vince/AndroidStudioProjects/Utilities/app/src/main/res/layout/fragment__bussola.xml" value="0.2896341463414634" />
+        <entry key="..\:/Users/vince/AndroidStudioProjects/Utilities/app/src/main/res/layout/fragment__dado_fragment.xml" value="0.25" />
         <entry key="..\:/Users/vince/AndroidStudioProjects/Utilities/app/src/main/res/layout/fragment__sensori.xml" value="0.42934782608695654" />
         <entry key="..\:/Users/vince/AndroidStudioProjects/Utilities/app/src/main/res/layout/fragment_livella.xml" value="0.2269021739130435" />
         <entry key="..\:/Users/vince/AndroidStudioProjects/Utilities/app/src/main/res/layout/fragment_main.xml" value="0.2269021739130435" />

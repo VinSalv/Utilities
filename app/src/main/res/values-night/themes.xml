@@ -16,6 +16,7 @@
         <item name="android:textColor">@color/white</item>
         <item name="appBarLayoutStyle">@color/black</item>
         <item name="colorPrimaryDark">@color/red</item>
+        <item name="colorAccent">@color/red</item>
         <!-- ActionBar -->
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
