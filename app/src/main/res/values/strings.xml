@@ -1,12 +1,10 @@
 <resources>
     <string name="app_name">Utilities</string>
-    <string name="tab_text_1">Livella</string>
-    <string name="tab_text_2">Bussola</string>
-    <string name="tab_text_3">Dado</string>
-    <string name="tab_text_4">Sensori</string>
-    <string name="tab_text_5">Impostazioni</string>
+    <string name="tab_text_1">Orientazione</string>
+    <string name="tab_text_2">Sorte</string>
+    <string name="tab_text_3">Sensori</string>
     <string name="info">Info</string>
-    <string name="copyright">Versione 1.0.0\n\n© 2021 Engineers Rights Reserved.</string>
+    <string name="copyright">Versione 4.0.0\n\n© 2021 Vincenzo Salvati Rights Reserved.</string>
     <string name="backButton">back</string>
     <string name="AccelerometerNotSupported"><b>Accelerometro:</b> Non Supportato</string>
     <string name="GyroscopeNotSupported"><b>Giroscopio:</b> Non Supportato</string>
@@ -31,7 +29,31 @@
     <string name="magnometer">Magnetometro</string>
     <string name="other_Sensors">Altri sensori</string>
     <string name="infoActivity">InfoActivity</string>
+    <string name="livellaActivity">LivellaActivity</string>
+    <string name="bussolaActivity">BussolaActivity</string>
+    <string name="dadoActivity">DadoActivity</string>
+    <string name="_SCFActivity">SCFActivity</string>
+    <string name="settingsActivity">SettingsActivity</string>
+
+
     <string name="One_dice">1 Dado</string>
     <string name="Two_dices">2 Dadi</string>
     <string name="Roll">Gira</string>
+    <string name="red_player">Giocatore rosso</string>
+    <string name="blue_player">Giocatore blu</string>
+    <string name="csfWinner">Chi sarà il vincitore?</string>
+    <string name="txt_settings">Impostazioni</string>
+
+    <!-- Preference Titles -->
+
+    <!-- Messages Preferences -->
+
+    <!-- Sync Preferences -->
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="rowimageview">rowImageView</string>
+    <string name="rowtextview">rowTextView</string>
+    <!-- Strings used for fragments for navigation -->
+
+    <string name="SCF_text">Sasso Carta Forbici</string>
+
 </resources>

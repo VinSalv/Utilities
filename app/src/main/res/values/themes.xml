@@ -24,4 +24,5 @@
         <item name="dialogTheme">@style/DialogThemeLight</item>
         <item name="alertDialogTheme">@style/DialogThemeLight</item>
     </style>
+
 </resources>

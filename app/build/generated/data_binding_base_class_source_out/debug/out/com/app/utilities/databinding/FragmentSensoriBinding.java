@@ -4,7 +4,6 @@ package com.app.utilities.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -21,22 +20,10 @@ public final class FragmentSensoriBinding implements ViewBinding {
   private final NestedScrollView rootView;
 
   @NonNull
-  public final LinearLayout accelLayout;
-
-  @NonNull
-  public final LinearLayout gyroLayout;
-
-  @NonNull
   public final TextView humidity;
 
   @NonNull
   public final TextView light;
-
-  @NonNull
-  public final LinearLayout magnoLayout;
-
-  @NonNull
-  public final LinearLayout otherLayout;
 
   @NonNull
   public final TextView pressure;
@@ -71,20 +58,14 @@ public final class FragmentSensoriBinding implements ViewBinding {
   @NonNull
   public final TextView zValue;
 
-  private FragmentSensoriBinding(@NonNull NestedScrollView rootView,
-      @NonNull LinearLayout accelLayout, @NonNull LinearLayout gyroLayout,
-      @NonNull TextView humidity, @NonNull TextView light, @NonNull LinearLayout magnoLayout,
-      @NonNull LinearLayout otherLayout, @NonNull TextView pressure, @NonNull TextView temperature,
+  private FragmentSensoriBinding(@NonNull NestedScrollView rootView, @NonNull TextView humidity,
+      @NonNull TextView light, @NonNull TextView pressure, @NonNull TextView temperature,
       @NonNull TextView xGyroValue, @NonNull TextView xMagnoValue, @NonNull TextView xValue,
       @NonNull TextView yGyroValue, @NonNull TextView yMagnoValue, @NonNull TextView yValue,
       @NonNull TextView zGyroValue, @NonNull TextView zMagnoValue, @NonNull TextView zValue) {
     this.rootView = rootView;
-    this.accelLayout = accelLayout;
-    this.gyroLayout = gyroLayout;
     this.humidity = humidity;
     this.light = light;
-    this.magnoLayout = magnoLayout;
-    this.otherLayout = otherLayout;
     this.pressure = pressure;
     this.temperature = temperature;
     this.xGyroValue = xGyroValue;
@@ -125,18 +106,6 @@ public final class FragmentSensoriBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.accel_layout;
-      LinearLayout accelLayout = ViewBindings.findChildViewById(rootView, id);
-      if (accelLayout == null) {
-        break missingId;
-      }
-
-      id = R.id.gyro_layout;
-      LinearLayout gyroLayout = ViewBindings.findChildViewById(rootView, id);
-      if (gyroLayout == null) {
-        break missingId;
-      }
-
       id = R.id.humidity;
       TextView humidity = ViewBindings.findChildViewById(rootView, id);
       if (humidity == null) {
@@ -146,18 +115,6 @@ public final class FragmentSensoriBinding implements ViewBinding {
       id = R.id.light;
       TextView light = ViewBindings.findChildViewById(rootView, id);
       if (light == null) {
-        break missingId;
-      }
-
-      id = R.id.magno_layout;
-      LinearLayout magnoLayout = ViewBindings.findChildViewById(rootView, id);
-      if (magnoLayout == null) {
-        break missingId;
-      }
-
-      id = R.id.other_layout;
-      LinearLayout otherLayout = ViewBindings.findChildViewById(rootView, id);
-      if (otherLayout == null) {
         break missingId;
       }
 
@@ -227,9 +184,9 @@ public final class FragmentSensoriBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentSensoriBinding((NestedScrollView) rootView, accelLayout, gyroLayout,
-          humidity, light, magnoLayout, otherLayout, pressure, temperature, xGyroValue, xMagnoValue,
-          xValue, yGyroValue, yMagnoValue, yValue, zGyroValue, zMagnoValue, zValue);
+      return new FragmentSensoriBinding((NestedScrollView) rootView, humidity, light, pressure,
+          temperature, xGyroValue, xMagnoValue, xValue, yGyroValue, yMagnoValue, yValue, zGyroValue,
+          zMagnoValue, zValue);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

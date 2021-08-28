@@ -5,6 +5,16 @@
         <ignore path="src/main/res/drawable/dial.png" />
         <ignore path="src/main/res/drawable/green.jpg" />
         <ignore path="src/main/res/drawable/hands.png" />
+        <ignore path="src/main/res/drawable/ic_bubble_level.png" />
+        <ignore path="src/main/res/drawable/ic_compass.png" />
+        <ignore path="src/main/res/drawable/ic_csf.png" />
+        <ignore path="src/main/res/drawable/ic_dice.png" />
+        <ignore path="src/main/res/drawable/paper_blue.png" />
+        <ignore path="src/main/res/drawable/paper_red.png" />
+        <ignore path="src/main/res/drawable/rock_blue.png" />
+        <ignore path="src/main/res/drawable/rock_red.png" />
+        <ignore path="src/main/res/drawable/scissors_blue.png" />
+        <ignore path="src/main/res/drawable/scissors_red.png" />
         <ignore path="src/main/res/drawable/utilities.png" />
     </issue>
 </lint>

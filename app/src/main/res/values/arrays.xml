@@ -9,4 +9,26 @@
         <item>Tema scuro</item>
 
     </string-array>
+
+    <!-- List Sorte -->
+    <array name="sorte_images">
+        <item>@drawable/ic_dice</item>
+        <item>@drawable/ic_csf</item>
+    </array>
+
+    <string-array name="sorte_strings">
+        <item>Dadi</item>
+        <item>Carta Sasso Forbici</item>
+    </string-array>
+
+    <!-- List Orientazione -->
+    <array name="orientazione_images">
+        <item>@drawable/ic_bubble_level</item>
+        <item>@drawable/ic_compass</item>
+    </array>
+
+    <string-array name="orientazione_strings">
+        <item>Livella a bolla</item>
+        <item>Bussola</item>
+    </string-array>
 </resources>

@@ -9,7 +9,13 @@ import android.widget.Toast;
 import com.app.utilities.InfoActivity;
 import com.app.utilities.MainActivity;
 import com.app.utilities.R;
+import com.app.utilities.SettingsActivity;
+import com.app.utilities.utilitiesActivity.BussolaActivity;
+import com.app.utilities.utilitiesActivity.DadoActivity;
+import com.app.utilities.utilitiesActivity.LivellaActivity;
+import com.app.utilities.utilitiesActivity.SCFActivity;
 
+@SuppressWarnings("unused")
 public class Utils {
     public void notifyUser(Context context, String message) {
         Toast.makeText(context,
@@ -33,9 +39,33 @@ public class Utils {
         context.startActivity(intent);
     }
 
-    @SuppressWarnings("unused")
     public void goToInfoActivity(Context context) {
         Intent intent = new Intent(context, InfoActivity.class);
+        context.startActivity(intent);
+    }
+
+    public void goToSettingsActivity(Context context) {
+        Intent intent = new Intent(context, SettingsActivity.class);
+        context.startActivity(intent);
+    }
+
+    public void goToLivellaActivity(Context context) {
+        Intent intent = new Intent(context, LivellaActivity.class);
+        context.startActivity(intent);
+    }
+
+    public void goToBussolaActivity(Context context) {
+        Intent intent = new Intent(context, BussolaActivity.class);
+        context.startActivity(intent);
+    }
+
+    public void goToDadoActivity(Context context) {
+        Intent intent = new Intent(context, DadoActivity.class);
+        context.startActivity(intent);
+    }
+
+    public void goToSCFActivity(Context context) {
+        Intent intent = new Intent(context, SCFActivity.class);
         context.startActivity(intent);
     }
 

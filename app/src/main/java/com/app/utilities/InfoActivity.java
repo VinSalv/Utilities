@@ -2,12 +2,10 @@ package com.app.utilities;
 
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
-import android.os.Build;
 import android.os.Bundle;
 import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
-import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.app.utilities.utility.Preferences;
@@ -119,9 +117,4 @@ public class InfoActivity extends AppCompatActivity {
         }
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.N)
-    @Override
-    public void onBackPressed() {
-        utils.goToMainActivity(this);
-    }
 }

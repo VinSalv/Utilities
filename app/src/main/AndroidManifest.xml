@@ -3,14 +3,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="com.app.utilities">
 
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-
     <uses-sdk
         android:maxSdkVersion="30"
         android:minSdkVersion="16"
         android:targetSdkVersion="30"
         tools:ignore="GradleOverrides,OldTargetApi" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -30,6 +30,41 @@
             android:theme="@style/LightTheme"
             tools:ignore="LockedOrientationActivity" />
         <activity
+            android:name=".SettingsActivity"
+            android:configChanges="uiMode"
+            android:label="@string/settingsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LightTheme"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".utilitiesActivity.LivellaActivity"
+            android:configChanges="uiMode"
+            android:label="@string/livellaActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LightTheme"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".utilitiesActivity.BussolaActivity"
+            android:configChanges="uiMode"
+            android:label="@string/bussolaActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LightTheme"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".utilitiesActivity.DadoActivity"
+            android:configChanges="uiMode"
+            android:label="@string/dadoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LightTheme"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".utilitiesActivity.SCFActivity"
+            android:configChanges="uiMode"
+            android:label="@string/_SCFActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LightTheme"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
             android:name=".MainActivity"
             android:configChanges="uiMode"
             android:exported="true"
@@ -37,14 +72,12 @@
             android:screenOrientation="portrait"
             android:theme="@style/LightTheme"
             tools:ignore="LockedOrientationActivity">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
     </application>
 
 </manifest>

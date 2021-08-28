@@ -20,15 +20,10 @@ public final class FragmentMainBinding implements ViewBinding {
   private final NestedScrollView rootView;
 
   @NonNull
-  public final NestedScrollView constraintLayout;
-
-  @NonNull
   public final TextView sectionLabel;
 
-  private FragmentMainBinding(@NonNull NestedScrollView rootView,
-      @NonNull NestedScrollView constraintLayout, @NonNull TextView sectionLabel) {
+  private FragmentMainBinding(@NonNull NestedScrollView rootView, @NonNull TextView sectionLabel) {
     this.rootView = rootView;
-    this.constraintLayout = constraintLayout;
     this.sectionLabel = sectionLabel;
   }
 
@@ -59,15 +54,13 @@ public final class FragmentMainBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      NestedScrollView constraintLayout = (NestedScrollView) rootView;
-
       id = R.id.section_label;
       TextView sectionLabel = ViewBindings.findChildViewById(rootView, id);
       if (sectionLabel == null) {
         break missingId;
       }
 
-      return new FragmentMainBinding((NestedScrollView) rootView, constraintLayout, sectionLabel);
+      return new FragmentMainBinding((NestedScrollView) rootView, sectionLabel);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

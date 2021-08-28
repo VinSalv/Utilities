@@ -22,9 +22,6 @@ public final class ActivityInfoBinding implements ViewBinding {
   private final ConstraintLayout rootView;
 
   @NonNull
-  public final ConstraintLayout activityInfo;
-
-  @NonNull
   public final ImageButton back;
 
   @NonNull
@@ -33,11 +30,9 @@ public final class ActivityInfoBinding implements ViewBinding {
   @NonNull
   public final ImageView utilities;
 
-  private ActivityInfoBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ConstraintLayout activityInfo, @NonNull ImageButton back, @NonNull TextView info,
-      @NonNull ImageView utilities) {
+  private ActivityInfoBinding(@NonNull ConstraintLayout rootView, @NonNull ImageButton back,
+      @NonNull TextView info, @NonNull ImageView utilities) {
     this.rootView = rootView;
-    this.activityInfo = activityInfo;
     this.back = back;
     this.info = info;
     this.utilities = utilities;
@@ -70,8 +65,6 @@ public final class ActivityInfoBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      ConstraintLayout activityInfo = (ConstraintLayout) rootView;
-
       id = R.id.back;
       ImageButton back = ViewBindings.findChildViewById(rootView, id);
       if (back == null) {
@@ -90,8 +83,7 @@ public final class ActivityInfoBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityInfoBinding((ConstraintLayout) rootView, activityInfo, back, info,
-          utilities);
+      return new ActivityInfoBinding((ConstraintLayout) rootView, back, info, utilities);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

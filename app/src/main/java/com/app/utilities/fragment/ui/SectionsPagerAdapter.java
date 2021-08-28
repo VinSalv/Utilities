@@ -9,11 +9,9 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.app.utilities.R;
-import com.app.utilities.fragment.Fragment_Bussola;
-import com.app.utilities.fragment.Fragment_Dado;
-import com.app.utilities.fragment.Fragment_Livella;
+import com.app.utilities.fragment.Fragment_Orientazione;
 import com.app.utilities.fragment.Fragment_Sensori;
-import com.app.utilities.fragment.SettingsActivity;
+import com.app.utilities.fragment.Fragment_Sorte;
 
 import org.jetbrains.annotations.NotNull;
 
@@ -21,7 +19,7 @@ import java.util.Objects;
 
 public class SectionsPagerAdapter extends FragmentPagerAdapter {
     @StringRes
-    private static final int[] TAB_TITLES = new int[]{R.string.tab_text_1, R.string.tab_text_2, R.string.tab_text_3, R.string.tab_text_4, R.string.tab_text_5};
+    private static final int[] TAB_TITLES = new int[]{R.string.tab_text_1, R.string.tab_text_2, R.string.tab_text_3};
     private final Context mContext;
 
     @SuppressWarnings("unused")
@@ -36,19 +34,14 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
         Fragment fragment = null;
         switch (position) {
             case 0:
-                fragment = new Fragment_Livella();
+                fragment = new Fragment_Orientazione();
                 break;
             case 1:
-                fragment = new Fragment_Bussola();
+                fragment = new Fragment_Sorte();
                 break;
             case 2:
-                fragment = new Fragment_Dado();
-                break;
-            case 3:
                 fragment = new Fragment_Sensori();
                 break;
-            case 4:
-                fragment = new SettingsActivity.SettingsFragment();
         }
         return Objects.requireNonNull(fragment);
     }
@@ -61,6 +54,6 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public int getCount() {
-        return 5;
+        return 3;
     }
 }
