@@ -6,11 +6,11 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.app.utilities.R;
@@ -20,7 +20,10 @@ import java.lang.String;
 
 public final class ActivityScfBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final LinearLayout rootView;
+
+  @NonNull
+  public final ImageButton back;
 
   @NonNull
   public final EditText bluePlayerEditText;
@@ -37,10 +40,11 @@ public final class ActivityScfBinding implements ViewBinding {
   @NonNull
   public final EditText redPlayerEditText;
 
-  private ActivityScfBinding(@NonNull ConstraintLayout rootView,
+  private ActivityScfBinding(@NonNull LinearLayout rootView, @NonNull ImageButton back,
       @NonNull EditText bluePlayerEditText, @NonNull LinearLayout csfLayout,
       @NonNull TextView csfWinner, @NonNull Button go, @NonNull EditText redPlayerEditText) {
     this.rootView = rootView;
+    this.back = back;
     this.bluePlayerEditText = bluePlayerEditText;
     this.csfLayout = csfLayout;
     this.csfWinner = csfWinner;
@@ -50,7 +54,7 @@ public final class ActivityScfBinding implements ViewBinding {
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public LinearLayout getRoot() {
     return rootView;
   }
 
@@ -75,6 +79,12 @@ public final class ActivityScfBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.back;
+      ImageButton back = ViewBindings.findChildViewById(rootView, id);
+      if (back == null) {
+        break missingId;
+      }
+
       id = R.id.bluePlayerEditText;
       EditText bluePlayerEditText = ViewBindings.findChildViewById(rootView, id);
       if (bluePlayerEditText == null) {
@@ -105,7 +115,7 @@ public final class ActivityScfBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityScfBinding((ConstraintLayout) rootView, bluePlayerEditText, csfLayout,
+      return new ActivityScfBinding((LinearLayout) rootView, back, bluePlayerEditText, csfLayout,
           csfWinner, go, redPlayerEditText);
     }
     String missingId = rootView.getResources().getResourceName(id);

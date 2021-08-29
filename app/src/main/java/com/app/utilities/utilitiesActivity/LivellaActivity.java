@@ -17,7 +17,8 @@ import android.hardware.SensorManager;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.TypedValue;
-import android.view.View;
+import android.widget.ImageButton;
+import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
@@ -151,7 +152,7 @@ public class LivellaActivity extends AppCompatActivity implements SensorEventLis
         sensorManager.unregisterListener(this);
     }
 
-    public class AnimatedView extends View {
+    public class AnimatedView extends LinearLayout {
 
         private static final int CIRCLE_RADIOUS = 50;
         private static final int TEXT_SIZE = 60;
@@ -271,6 +272,30 @@ public class LivellaActivity extends AppCompatActivity implements SensorEventLis
             textY.setTextSize(TEXT_SIZE);
             textY.setTypeface(Typeface.create(Typeface.DEFAULT, Typeface.BOLD));
 
+
+            ImageButton back = new ImageButton(LivellaActivity.this);
+
+            if (!pref.getPredBool()) {
+                if (pref.getThemeText().equals("LightTheme") || pref.getThemeText().equals("LightThemeSelected"))
+                    back.setImageResource(R.drawable.ic_arrow_back_light);
+                else
+                    back.setImageResource(R.drawable.ic_arrow_back_dark);
+            } else {
+                switch (getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK) {
+                    case Configuration.UI_MODE_NIGHT_UNDEFINED:
+                    case Configuration.UI_MODE_NIGHT_NO:
+                        back.setImageResource(R.drawable.ic_arrow_back_light);
+                        break;
+                    case Configuration.UI_MODE_NIGHT_YES:
+                        back.setImageResource(R.drawable.ic_arrow_back_dark);
+                        break;
+                }
+            }
+            addView(back);
+            back.setOnClickListener(view -> onBackPressed());
+            back.setBackgroundColor(getColor(R.color.transparent));
+            ((MarginLayoutParams) back.getLayoutParams()).leftMargin = 60;
+            ((MarginLayoutParams) back.getLayoutParams()).topMargin = 30;
         }
 
         @SuppressWarnings("unused")
@@ -357,7 +382,6 @@ public class LivellaActivity extends AppCompatActivity implements SensorEventLis
                 canvas.drawText("X: " + x_text + "°", hor_start_w, ver_end_h - half_textSize, textX);
                 canvas.drawText("Y: " + y_text + "°", (hor_start_w * 3), ver_end_h - half_textSize, textY);
             }
-
             invalidate();
         }
 

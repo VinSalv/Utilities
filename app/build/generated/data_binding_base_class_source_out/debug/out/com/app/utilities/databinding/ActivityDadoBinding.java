@@ -5,11 +5,11 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.app.utilities.R;
@@ -19,7 +19,10 @@ import java.lang.String;
 
 public final class ActivityDadoBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
+  private final LinearLayout rootView;
+
+  @NonNull
+  public final ImageButton back;
 
   @NonNull
   public final LinearLayout diceLayout;
@@ -42,10 +45,12 @@ public final class ActivityDadoBinding implements ViewBinding {
   @NonNull
   public final Button twoDices;
 
-  private ActivityDadoBinding(@NonNull ConstraintLayout rootView, @NonNull LinearLayout diceLayout,
-      @NonNull TextView diceNumber, @NonNull TextView leftDiceNumber, @NonNull Button oneDice,
-      @NonNull TextView rightDiceNumber, @NonNull Button roll, @NonNull Button twoDices) {
+  private ActivityDadoBinding(@NonNull LinearLayout rootView, @NonNull ImageButton back,
+      @NonNull LinearLayout diceLayout, @NonNull TextView diceNumber,
+      @NonNull TextView leftDiceNumber, @NonNull Button oneDice, @NonNull TextView rightDiceNumber,
+      @NonNull Button roll, @NonNull Button twoDices) {
     this.rootView = rootView;
+    this.back = back;
     this.diceLayout = diceLayout;
     this.diceNumber = diceNumber;
     this.leftDiceNumber = leftDiceNumber;
@@ -57,7 +62,7 @@ public final class ActivityDadoBinding implements ViewBinding {
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public LinearLayout getRoot() {
     return rootView;
   }
 
@@ -82,6 +87,12 @@ public final class ActivityDadoBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.back;
+      ImageButton back = ViewBindings.findChildViewById(rootView, id);
+      if (back == null) {
+        break missingId;
+      }
+
       id = R.id.diceLayout;
       LinearLayout diceLayout = ViewBindings.findChildViewById(rootView, id);
       if (diceLayout == null) {
@@ -124,7 +135,7 @@ public final class ActivityDadoBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityDadoBinding((ConstraintLayout) rootView, diceLayout, diceNumber,
+      return new ActivityDadoBinding((LinearLayout) rootView, back, diceLayout, diceNumber,
           leftDiceNumber, oneDice, rightDiceNumber, roll, twoDices);
     }
     String missingId = rootView.getResources().getResourceName(id);

@@ -4,6 +4,7 @@ import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.animation.Animation;
 import android.view.animation.RotateAnimation;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -54,6 +55,8 @@ public class BussolaActivity extends AppCompatActivity {
         arrowView = findViewById(R.id.main_image_hands);
         sotwLabel = findViewById(R.id.sotw_label);
         setupCompass();
+        ImageButton back = findViewById(R.id.back);
+        back.setOnClickListener(view -> onBackPressed());
     }
 
     private void setupCompass() {

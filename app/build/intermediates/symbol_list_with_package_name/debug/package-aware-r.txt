@@ -1903,6 +1903,8 @@ drawable dice_6
 drawable dice_empty
 drawable green
 drawable hands
+drawable ic_arrow_back_dark
+drawable ic_arrow_back_light
 drawable ic_arrow_down_24dp
 drawable ic_bubble_level
 drawable ic_clock_black_24dp
@@ -2085,6 +2087,7 @@ id clip_vertical
 id clockwise
 id closest
 id collapseActionView
+id compass
 id confirm_button
 id constraint
 id container

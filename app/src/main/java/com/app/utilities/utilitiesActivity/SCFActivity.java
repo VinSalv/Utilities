@@ -11,6 +11,7 @@ import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -92,6 +93,8 @@ public class SCFActivity extends AppCompatActivity {
         redPlayerEditText = findViewById(R.id.redPlayerEditText);
         bluePlayerEditText = findViewById(R.id.bluePlayerEditText);
         goButton.setOnClickListener(this::goButton);
+        ImageButton back = findViewById(R.id.back);
+        back.setOnClickListener(view -> onBackPressed());
     }
 
     @RequiresApi(api = Build.VERSION_CODES.M)
