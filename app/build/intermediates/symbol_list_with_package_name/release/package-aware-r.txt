@@ -2098,8 +2098,6 @@ id continuousVelocity
 id coordinator
 id cos
 id counterclockwise
-id csfLayout
-id csfWinner
 id currentState
 id custom
 id customPanel
@@ -2326,6 +2324,8 @@ id save_non_transition_alpha
 id save_overlay_view
 id sawtooth
 id scale
+id scfLayout
+id scfWinner
 id screen
 id scroll
 id scrollIndicatorDown
@@ -2728,7 +2728,6 @@ string compass_dial
 string compass_hands
 string copy
 string copyright
-string csfWinner
 string dadoActivity
 string error_icon_content_description
 string expand_button_title
@@ -2811,6 +2810,7 @@ string preference_copied
 string red_player
 string rowimageview
 string rowtextview
+string scfWinner
 string search_menu_title
 string settingsActivity
 string sotw_east
