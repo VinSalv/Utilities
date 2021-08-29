@@ -24,7 +24,7 @@ public class Utils {
     }
 
     @SuppressWarnings("unused")
-    private void notifyUserShortWay(Context context, String message) {
+    public void notifyUserShortWay(Context context, String message) {
         Toast.makeText(context,
                 message,
                 Toast.LENGTH_SHORT).show();

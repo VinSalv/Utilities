@@ -8110,7 +8110,7 @@
     </array><string-array name="orientazione_strings">
         <item>Livella a bolla</item>
         <item>Bussola</item>
-    </string-array></file><file path="C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\res\values\colors.xml" qualifiers=""><color name="beige">#A98C60</color><color name="grey">#303030</color><color name="dark_gray">#121212</color><color name="cream">#F3DDA1</color><color name="jeans">#657A97</color><color name="red">#AE1B21</color><color name="yellow">#FEE12B</color><color name="dark_yellow">#9D8800</color><color name="black">#FF000000</color><color name="white">#FFFFFFFF</color><color name="transparent">#00000000</color></file><file path="C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\res\values\dimens.xml" qualifiers=""><dimen name="activity_horizontal_margin">16dp</dimen><dimen name="activity_vertical_margin">16dp</dimen><dimen name="fab_margin">16dp</dimen></file><file path="C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\res\values\selectedTheme.xml" qualifiers=""><style name="LightThemeSelected" parent="ThemeOverlay.AppCompat.Light">
+    </string-array></file><file path="C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\res\values\colors.xml" qualifiers=""><color name="beige">#A98C60</color><color name="grey">#303030</color><color name="dark_gray">#121212</color><color name="cream">#F3DDA1</color><color name="jeans">#657A97</color><color name="red">#AE1B21</color><color name="yellow">#FEE12B</color><color name="dark_yellow">#9D8800</color><color name="black">#FF000000</color><color name="white">#FFFFFFFF</color><color name="transparent">#00000000</color><color name="red_text">#e40c0b</color><color name="blue_text">#0305ea</color></file><file path="C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\res\values\dimens.xml" qualifiers=""><dimen name="activity_horizontal_margin">16dp</dimen><dimen name="activity_vertical_margin">16dp</dimen><dimen name="fab_margin">16dp</dimen></file><file path="C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\res\values\selectedTheme.xml" qualifiers=""><style name="LightThemeSelected" parent="ThemeOverlay.AppCompat.Light">
         
         <item name="colorPrimary">@color/cream</item>
         <item name="colorPrimaryVariant">@color/white</item>
@@ -8126,7 +8126,8 @@
         <item name="android:textColor">@color/black</item>
         <item name="appBarLayoutStyle">@color/cream</item>
         <item name="colorPrimaryDark">@color/cream</item>
-        <item name="colorAccent">@color/black</item>
+        <item name="colorAccent">@color/beige</item>
+        <item name="colorOnPrimarySurface">@color/white</item>
         
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -8153,6 +8154,7 @@
         <item name="appBarLayoutStyle">@color/black</item>
         <item name="colorPrimaryDark">@color/red</item>
         <item name="colorAccent">@color/red</item>
+        <item name="colorOnPrimarySurface">@color/dark_gray</item>
         
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -8179,7 +8181,8 @@
         <item name="android:textColor">@color/black</item>
         <item name="appBarLayoutStyle">@color/cream</item>
         <item name="colorPrimaryDark">@color/cream</item>
-        <item name="colorAccent">@color/black</item>
+        <item name="colorAccent">@color/beige</item>
+        <item name="colorOnPrimarySurface">@color/white</item>
         
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
@@ -8203,6 +8206,7 @@
         <item name="appBarLayoutStyle">@color/black</item>
         <item name="colorPrimaryDark">@color/red</item>
         <item name="colorAccent">@color/red</item>
+        <item name="colorOnPrimarySurface">@color/dark_gray</item>
         
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>

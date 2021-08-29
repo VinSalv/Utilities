@@ -11,11 +11,21 @@
     tools:ignore="Overdraw">
 
     <ImageView
+        android:id="@+id/compass"
         android:layout_width="320dp"
         android:layout_height="320dp"
         android:layout_centerInParent="true"
         android:contentDescription="@string/compass_dial"
         android:src="@drawable/dial" />
+
+    <ImageButton
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/transparent"
+        android:contentDescription="@string/backButton"
+        android:src="?attr/actionModeCloseDrawable"
+        tools:targetApi="lollipop" />
 
     <ImageView
         android:id="@+id/main_image_hands"
@@ -30,6 +40,10 @@
         android:id="@+id/sotw_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/compass"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="100dp"
         android:textSize="20sp"
         android:textStyle="bold" />
 </RelativeLayout>

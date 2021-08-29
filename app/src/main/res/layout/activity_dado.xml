@@ -4,9 +4,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingTop="30dp"
+    android:background="?attr/colorOnPrimarySurface"
     android:paddingBottom="80dp"
     tools:context=".utilitiesActivity.DadoActivity">
+
+    <ImageButton
+        android:id="@+id/back"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:backgroundTint="@color/transparent"
+        android:contentDescription="@string/backButton"
+        android:src="?attr/actionModeCloseDrawable"
+        app:layout_constraintBottom_toTopOf="@id/oneDice"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.10"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.15"
+        tools:targetApi="lollipop" />
 
     <Button
         android:id="@+id/oneDice"
@@ -18,7 +34,6 @@
         android:textColor="?attr/colorOnSecondary"
         android:textSize="20sp"
         android:textStyle="bold"
-
         app:layout_constraintBottom_toTopOf="@id/leftDiceNumber"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.20"
@@ -26,8 +41,7 @@
         app:layout_constraintRight_toLeftOf="@+id/twoDices"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back"
         tools:targetApi="o" />
 
     <Button
@@ -40,14 +54,12 @@
         android:textColor="?attr/colorOnSecondary"
         android:textSize="20sp"
         android:textStyle="bold"
-
         app:layout_constraintBottom_toTopOf="@id/leftDiceNumber"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.80"
         app:layout_constraintLeft_toRightOf="@id/oneDice"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/back"
         tools:targetApi="o" />
 
     <TextView
@@ -80,7 +92,6 @@
         android:textColor="?attr/colorAccent"
         android:textSize="50sp"
         android:textStyle="bold"
-
         app:layout_constraintBottom_toTopOf="@id/diceLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHeight_default="percent"
