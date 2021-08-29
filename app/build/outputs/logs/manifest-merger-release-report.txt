@@ -1,10 +1,11 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:2:1-50:12
-INJECTED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:2:1-50:12
-INJECTED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:2:1-50:12
-INJECTED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:2:1-50:12
+ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:2:1-81:12
+INJECTED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:2:1-81:12
+INJECTED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:2:1-81:12
+INJECTED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:2:1-81:12
 MERGED from [androidx.databinding:viewbinding:7.0.1] C:\Users\vince\.gradle\caches\transforms-3\ff5d982a54f36c84e4fced91462e97bb\transformed\viewbinding-7.0.1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-ui:2.3.5] C:\Users\vince\.gradle\caches\transforms-3\d033d0a4869757500b01256d22c25854\transformed\navigation-ui-2.3.5\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\vince\.gradle\caches\transforms-3\b401bbd386ef73872b0073bd55ee1f0b\transformed\material-1.4.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.0] C:\Users\vince\.gradle\caches\transforms-3\b59867e1c3b07c9faac419f0f79a72ff\transformed\constraintlayout-2.1.0\AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.preference:preference:1.1.1] C:\Users\vince\.gradle\caches\transforms-3\912d237a25b428afc626c9aa7f359d78\transformed\preference-1.1.1\AndroidManifest.xml:17:1-24:12
@@ -12,26 +13,29 @@ MERGED from [androidx.appcompat:appcompat:1.3.1] C:\Users\vince\.gradle\caches\t
 MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.3.1] C:\Users\vince\.gradle\caches\transforms-3\d5721cf239d9fab72568170686965605\transformed\lifecycle-livedata-ktx-2.3.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1] C:\Users\vince\.gradle\caches\transforms-3\c3772f70391107c54a2934fabaf02e2c\transformed\lifecycle-viewmodel-ktx-2.3.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\55e311d705e7ca24b3efd8612e6caa41\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-fragment:2.3.5] C:\Users\vince\.gradle\caches\transforms-3\38a4400ae8dd95bc9747872afeab006c\transformed\navigation-fragment-2.3.5\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\c84966d631d6e0b75d6bb70ed84f0980\transformed\viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\vince\.gradle\caches\transforms-3\85b785c0f464fd717fc0c3319209a901\transformed\fragment-1.3.6\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.navigation:navigation-runtime:2.3.5] C:\Users\vince\.gradle\caches\transforms-3\9a774ddf16a6c57e321338de37d1e41c\transformed\navigation-runtime-2.3.5\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.activity:activity:1.2.4] C:\Users\vince\.gradle\caches\transforms-3\5eeb40ee79f0a3a18b8785bf16b7a869\transformed\activity-1.2.4\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.appcompat:appcompat-resources:1.3.1] C:\Users\vince\.gradle\caches\transforms-3\0ddda9702ac3cc6295fde736e43ac060\transformed\appcompat-resources-1.3.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\1ea53c2095fc748f851c30510ed97702\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\8211363af40047e76e4390b012dd3d05\transformed\drawerlayout-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\vince\.gradle\caches\transforms-3\ff22d43b9c58a17396f4d0be46fee4e4\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\e4894677dd6b25cfa14192e9c70b4dd3\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.transition:transition:1.2.0] C:\Users\vince\.gradle\caches\transforms-3\1fc3776f3934c6467dd6a93111d4ebbe\transformed\transition-1.2.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\vince\.gradle\caches\transforms-3\18df5355695c88d1f8c8fa013cd2b5aa\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\vince\.gradle\caches\transforms-3\b82ee3598c1d957ab5d129dd4a9ec094\transformed\vectordrawable-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.media:media:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\20a17e71544c4e7bb3fb65a7d7b86673\transformed\media-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\bc661fbb93df02fd062b2985ab38e216\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\vince\.gradle\caches\transforms-3\062928a1947588817b4a3e14c078b234\transformed\drawerlayout-1.1.1\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.3.0] C:\Users\vince\.gradle\caches\transforms-3\f33cd038928cd18bbffecee3f47b30b5\transformed\transition-1.3.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\8739ef9f080f0ee06c65833001c9e975\transformed\viewpager-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.loader:loader:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\9e43550e678ca1123a99dd5e1b82ae60\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\vince\.gradle\caches\transforms-3\2fd6d2ffabb31454472517d795a3d324\transformed\recyclerview-1.1.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\00578af765a5666fe2159a6bf90585e6\transformed\slidingpanelayout-1.0.0\AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.customview:customview:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\d750a4640ecd46134a88514ecad02d3f\transformed\customview-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\vince\.gradle\caches\transforms-3\f60e756b887be98279beb1d6adc7b6ce\transformed\customview-1.1.0\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\9e43550e678ca1123a99dd5e1b82ae60\transformed\loader-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\71189fea469fb47b0b68202a61af4a55\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\eef5b881f034328977a13b223dc94321\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.navigation:navigation-common:2.3.5] C:\Users\vince\.gradle\caches\transforms-3\a5368c3d8fa512d63c099bc06dd07e67\transformed\navigation-common-2.3.5\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.core:core:1.5.0] C:\Users\vince\.gradle\caches\transforms-3\109c406f854d135ad1ed87dae876b357\transformed\core-1.5.0\AndroidManifest.xml:17:1-26:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\14ce081772fbaefa60f9b525e8651f2f\transformed\cursoradapter-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.3.1] C:\Users\vince\.gradle\caches\transforms-3\80436f9f5c068f0cd8ec08b0ef1a5dd1\transformed\lifecycle-viewmodel-savedstate-2.3.1\AndroidManifest.xml:17:1-24:12
@@ -50,39 +54,33 @@ MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\User
 MERGED from [androidx.print:print:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\364cd11e18b25eea3f64fd0a4b722373\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\2f8e445222e4e599ddd0550fcb0ff3e9\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\3b9b53105509eef60ab6de9e9a319267\transformed\annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
-INJECTED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:2:1-50:12
-INJECTED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:2:1-50:12
-INJECTED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:2:1-50:12
+INJECTED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:2:1-81:12
+INJECTED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:2:1-81:12
+INJECTED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:2:1-81:12
 	package
 		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:4:5-32
 		INJECTED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:2:1-50:12
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:2:1-81:12
 		INJECTED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml
 	xmlns:tools
 		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
 		INJECTED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:2:1-50:12
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:2:1-81:12
 		INJECTED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:2:11-69
-uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:6:5-79
-	android:name
-		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:6:22-76
-uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:7:5-81
-	android:name
-		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:7:22-78
 uses-sdk
-ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:9:5-13:55
-INJECTED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:9:5-13:55
-INJECTED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:9:5-13:55
+ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:6:5-10:55
+INJECTED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:6:5-10:55
+INJECTED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:6:5-10:55
 MERGED from [androidx.databinding:viewbinding:7.0.1] C:\Users\vince\.gradle\caches\transforms-3\ff5d982a54f36c84e4fced91462e97bb\transformed\viewbinding-7.0.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.databinding:viewbinding:7.0.1] C:\Users\vince\.gradle\caches\transforms-3\ff5d982a54f36c84e4fced91462e97bb\transformed\viewbinding-7.0.1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-ui:2.3.5] C:\Users\vince\.gradle\caches\transforms-3\d033d0a4869757500b01256d22c25854\transformed\navigation-ui-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-ui:2.3.5] C:\Users\vince\.gradle\caches\transforms-3\d033d0a4869757500b01256d22c25854\transformed\navigation-ui-2.3.5\AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\vince\.gradle\caches\transforms-3\b401bbd386ef73872b0073bd55ee1f0b\transformed\material-1.4.0\AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\vince\.gradle\caches\transforms-3\b401bbd386ef73872b0073bd55ee1f0b\transformed\material-1.4.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.0] C:\Users\vince\.gradle\caches\transforms-3\b59867e1c3b07c9faac419f0f79a72ff\transformed\constraintlayout-2.1.0\AndroidManifest.xml:5:5-7:41
@@ -97,24 +95,24 @@ MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1] C:\Users\vince\.g
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1] C:\Users\vince\.gradle\caches\transforms-3\c3772f70391107c54a2934fabaf02e2c\transformed\lifecycle-viewmodel-ktx-2.3.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\55e311d705e7ca24b3efd8612e6caa41\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\55e311d705e7ca24b3efd8612e6caa41\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-fragment:2.3.5] C:\Users\vince\.gradle\caches\transforms-3\38a4400ae8dd95bc9747872afeab006c\transformed\navigation-fragment-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-fragment:2.3.5] C:\Users\vince\.gradle\caches\transforms-3\38a4400ae8dd95bc9747872afeab006c\transformed\navigation-fragment-2.3.5\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\c84966d631d6e0b75d6bb70ed84f0980\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\c84966d631d6e0b75d6bb70ed84f0980\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\vince\.gradle\caches\transforms-3\85b785c0f464fd717fc0c3319209a901\transformed\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\vince\.gradle\caches\transforms-3\85b785c0f464fd717fc0c3319209a901\transformed\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-runtime:2.3.5] C:\Users\vince\.gradle\caches\transforms-3\9a774ddf16a6c57e321338de37d1e41c\transformed\navigation-runtime-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-runtime:2.3.5] C:\Users\vince\.gradle\caches\transforms-3\9a774ddf16a6c57e321338de37d1e41c\transformed\navigation-runtime-2.3.5\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.activity:activity:1.2.4] C:\Users\vince\.gradle\caches\transforms-3\5eeb40ee79f0a3a18b8785bf16b7a869\transformed\activity-1.2.4\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.activity:activity:1.2.4] C:\Users\vince\.gradle\caches\transforms-3\5eeb40ee79f0a3a18b8785bf16b7a869\transformed\activity-1.2.4\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat-resources:1.3.1] C:\Users\vince\.gradle\caches\transforms-3\0ddda9702ac3cc6295fde736e43ac060\transformed\appcompat-resources-1.3.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.appcompat:appcompat-resources:1.3.1] C:\Users\vince\.gradle\caches\transforms-3\0ddda9702ac3cc6295fde736e43ac060\transformed\appcompat-resources-1.3.1\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\1ea53c2095fc748f851c30510ed97702\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\1ea53c2095fc748f851c30510ed97702\transformed\legacy-support-core-ui-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\8211363af40047e76e4390b012dd3d05\transformed\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\8211363af40047e76e4390b012dd3d05\transformed\drawerlayout-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\vince\.gradle\caches\transforms-3\ff22d43b9c58a17396f4d0be46fee4e4\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] C:\Users\vince\.gradle\caches\transforms-3\ff22d43b9c58a17396f4d0be46fee4e4\transformed\coordinatorlayout-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\e4894677dd6b25cfa14192e9c70b4dd3\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\e4894677dd6b25cfa14192e9c70b4dd3\transformed\dynamicanimation-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.transition:transition:1.2.0] C:\Users\vince\.gradle\caches\transforms-3\1fc3776f3934c6467dd6a93111d4ebbe\transformed\transition-1.2.0\AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.transition:transition:1.2.0] C:\Users\vince\.gradle\caches\transforms-3\1fc3776f3934c6467dd6a93111d4ebbe\transformed\transition-1.2.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\vince\.gradle\caches\transforms-3\18df5355695c88d1f8c8fa013cd2b5aa\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] C:\Users\vince\.gradle\caches\transforms-3\18df5355695c88d1f8c8fa013cd2b5aa\transformed\vectordrawable-animated-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] C:\Users\vince\.gradle\caches\transforms-3\b82ee3598c1d957ab5d129dd4a9ec094\transformed\vectordrawable-1.1.0\AndroidManifest.xml:20:5-22:41
@@ -123,20 +121,26 @@ MERGED from [androidx.media:media:1.0.0] C:\Users\vince\.gradle\caches\transform
 MERGED from [androidx.media:media:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\20a17e71544c4e7bb3fb65a7d7b86673\transformed\media-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\bc661fbb93df02fd062b2985ab38e216\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\bc661fbb93df02fd062b2985ab38e216\transformed\legacy-support-core-utils-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\vince\.gradle\caches\transforms-3\062928a1947588817b4a3e14c078b234\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] C:\Users\vince\.gradle\caches\transforms-3\062928a1947588817b4a3e14c078b234\transformed\drawerlayout-1.1.1\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.3.0] C:\Users\vince\.gradle\caches\transforms-3\f33cd038928cd18bbffecee3f47b30b5\transformed\transition-1.3.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.3.0] C:\Users\vince\.gradle\caches\transforms-3\f33cd038928cd18bbffecee3f47b30b5\transformed\transition-1.3.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\8739ef9f080f0ee06c65833001c9e975\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\8739ef9f080f0ee06c65833001c9e975\transformed\viewpager-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\9e43550e678ca1123a99dd5e1b82ae60\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\9e43550e678ca1123a99dd5e1b82ae60\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\vince\.gradle\caches\transforms-3\2fd6d2ffabb31454472517d795a3d324\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.recyclerview:recyclerview:1.1.0] C:\Users\vince\.gradle\caches\transforms-3\2fd6d2ffabb31454472517d795a3d324\transformed\recyclerview-1.1.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\00578af765a5666fe2159a6bf90585e6\transformed\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\00578af765a5666fe2159a6bf90585e6\transformed\slidingpanelayout-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.customview:customview:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\d750a4640ecd46134a88514ecad02d3f\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
-MERGED from [androidx.customview:customview:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\d750a4640ecd46134a88514ecad02d3f\transformed\customview-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\vince\.gradle\caches\transforms-3\f60e756b887be98279beb1d6adc7b6ce\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] C:\Users\vince\.gradle\caches\transforms-3\f60e756b887be98279beb1d6adc7b6ce\transformed\customview-1.1.0\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\9e43550e678ca1123a99dd5e1b82ae60\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\9e43550e678ca1123a99dd5e1b82ae60\transformed\loader-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\71189fea469fb47b0b68202a61af4a55\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\71189fea469fb47b0b68202a61af4a55\transformed\swiperefreshlayout-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\eef5b881f034328977a13b223dc94321\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\eef5b881f034328977a13b223dc94321\transformed\asynclayoutinflater-1.0.0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.navigation:navigation-common:2.3.5] C:\Users\vince\.gradle\caches\transforms-3\a5368c3d8fa512d63c099bc06dd07e67\transformed\navigation-common-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.navigation:navigation-common:2.3.5] C:\Users\vince\.gradle\caches\transforms-3\a5368c3d8fa512d63c099bc06dd07e67\transformed\navigation-common-2.3.5\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.core:core:1.5.0] C:\Users\vince\.gradle\caches\transforms-3\109c406f854d135ad1ed87dae876b357\transformed\core-1.5.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.core:core:1.5.0] C:\Users\vince\.gradle\caches\transforms-3\109c406f854d135ad1ed87dae876b357\transformed\core-1.5.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\14ce081772fbaefa60f9b525e8651f2f\transformed\cursoradapter-1.0.0\AndroidManifest.xml:20:5-44
@@ -173,22 +177,30 @@ MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\vince\.gradle\ca
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\2f8e445222e4e599ddd0550fcb0ff3e9\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\3b9b53105509eef60ab6de9e9a319267\transformed\annotation-experimental-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\3b9b53105509eef60ab6de9e9a319267\transformed\annotation-experimental-1.0.0\AndroidManifest.xml:20:5-22:41
-INJECTED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:9:5-13:55
-INJECTED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:9:5-13:55
+INJECTED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:6:5-10:55
+INJECTED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:6:5-10:55
 	android:maxSdkVersion
-		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:10:9-35
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:7:9-35
 	android:targetSdkVersion
-		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:12:9-38
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:9:9-38
 		INJECTED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml
 	tools:ignore
-		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:13:9-52
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:10:9-52
 	android:minSdkVersion
-		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:11:9-35
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:8:9-35
 		INJECTED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:12:5-79
+	android:name
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:12:22-76
+uses-permission#android.permission.ACCESS_COARSE_LOCATION
+ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:13:5-81
+	android:name
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:13:22-78
 application
-ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:15:5-48:19
+ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:15:5-80:19
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\vince\.gradle\caches\transforms-3\b401bbd386ef73872b0073bd55ee1f0b\transformed\material-1.4.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\vince\.gradle\caches\transforms-3\b401bbd386ef73872b0073bd55ee1f0b\transformed\material-1.4.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.0] C:\Users\vince\.gradle\caches\transforms-3\b59867e1c3b07c9faac419f0f79a72ff\transformed\constraintlayout-2.1.0\AndroidManifest.xml:9:5-20
@@ -231,29 +243,99 @@ ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidMa
 		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:30:13-46
 	android:name
 		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:26:13-41
-activity#com.app.utilities.MainActivity
-ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:32:9-46:20
+activity#com.app.utilities.SettingsActivity
+ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:32:9-38:56
 	android:screenOrientation
-		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:37:13-49
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:36:13-49
 	android:label
-		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:36:13-45
-	android:exported
-		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:35:13-36
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:35:13-53
 	tools:ignore
-		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:39:13-53
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:38:13-53
 	android:configChanges
 		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:34:13-43
 	android:theme
-		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:38:13-46
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:37:13-46
 	android:name
-		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:33:13-41
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:33:13-45
+activity#com.app.utilities.utilitiesActivity.LivellaActivity
+ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:39:9-45:56
+	android:screenOrientation
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:43:13-49
+	android:label
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:42:13-52
+	tools:ignore
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:45:13-53
+	android:configChanges
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:41:13-43
+	android:theme
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:44:13-46
+	android:name
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:40:13-62
+activity#com.app.utilities.utilitiesActivity.BussolaActivity
+ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:46:9-52:56
+	android:screenOrientation
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:50:13-49
+	android:label
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:49:13-52
+	tools:ignore
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:52:13-53
+	android:configChanges
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:48:13-43
+	android:theme
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:51:13-46
+	android:name
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:47:13-62
+activity#com.app.utilities.utilitiesActivity.DadoActivity
+ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:53:9-59:56
+	android:screenOrientation
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:57:13-49
+	android:label
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:56:13-49
+	tools:ignore
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:59:13-53
+	android:configChanges
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:55:13-43
+	android:theme
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:58:13-46
+	android:name
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:54:13-59
+activity#com.app.utilities.utilitiesActivity.SCFActivity
+ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:60:9-66:56
+	android:screenOrientation
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:64:13-49
+	android:label
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:63:13-49
+	tools:ignore
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:66:13-53
+	android:configChanges
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:62:13-43
+	android:theme
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:65:13-46
+	android:name
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:61:13-58
+activity#com.app.utilities.MainActivity
+ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:67:9-79:20
+	android:screenOrientation
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:72:13-49
+	android:label
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:71:13-45
+	android:exported
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:70:13-36
+	tools:ignore
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:74:13-53
+	android:configChanges
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:69:13-43
+	android:theme
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:73:13-46
+	android:name
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:68:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:41:13-45:29
+ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:75:13-78:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:42:17-69
+ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:76:17-69
 	android:name
-		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:42:25-66
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:76:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:44:17-77
+ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:77:17-77
 	android:name
-		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:44:27-74
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:77:27-74

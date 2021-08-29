@@ -1,8 +1,8 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 3    package="com.app.utilities"
-4    android:versionCode="3"
-5    android:versionName="3.0" >
+4    android:versionCode="4"
+5    android:versionName="4.0" >
 6
 7    <uses-sdk
 7-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:6:5-10:55
@@ -21,7 +21,7 @@
 13-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:13:22-78
 14
 15    <application
-15-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:15:5-81:19
+15-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:15:5-80:19
 16        android:allowBackup="true"
 16-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:16:9-35
 17        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -117,7 +117,7 @@
 63            android:theme="@style/LightTheme" />
 63-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:65:13-46
 64        <activity
-64-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:67:9-80:20
+64-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:67:9-79:20
 65            android:name="com.app.utilities.MainActivity"
 65-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:68:13-41
 66            android:configChanges="uiMode"
@@ -131,14 +131,14 @@
 70            android:theme="@style/LightTheme" >
 70-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:73:13-46
 71            <intent-filter>
-71-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:75:13-79:29
+71-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:75:13-78:29
 72                <action android:name="android.intent.action.MAIN" />
 72-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:76:17-69
 72-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:76:25-66
 73
 74                <category android:name="android.intent.category.LAUNCHER" />
-74-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:78:17-77
-74-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:78:27-74
+74-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:77:17-77
+74-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:77:27-74
 75            </intent-filter>
 76        </activity>
 77    </application>

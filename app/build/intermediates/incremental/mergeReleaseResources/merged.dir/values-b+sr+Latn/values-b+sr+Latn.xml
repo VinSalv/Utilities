@@ -87,6 +87,8 @@
     <string name="mtrl_picker_toggle_to_day_selection">Dodirnite da biste prešli na izbor dana</string>
     <string name="mtrl_picker_toggle_to_text_input_mode">Pređite na režim unosa teksta</string>
     <string name="mtrl_picker_toggle_to_year_selection">Dodirnite da biste prešli na izbor godine</string>
+    <string msgid="6301633601645100427" name="nav_app_bar_navigate_up_description">"Idite nagore"</string>
+    <string msgid="7456070600745802113" name="nav_app_bar_open_drawer_description">"Otvorite fioku za navigaciju"</string>
     <string msgid="478774118347071097" name="not_set">"Nije podešeno"</string>
     <string name="password_toggle_content_description">Prikaži lozinku</string>
     <string msgid="7961817945132860002" name="preference_copied">"Rezime „<ns1:g id="SUMMARY">%1$s</ns1:g>“ je kopiran u privremenu memoriju."</string>

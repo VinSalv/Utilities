@@ -88,6 +88,8 @@
     <string name="mtrl_picker_toggle_to_day_selection">Kliknij, by wybrać dzień</string>
     <string name="mtrl_picker_toggle_to_text_input_mode">Włącz tekstowy tryb wprowadzania</string>
     <string name="mtrl_picker_toggle_to_year_selection">Kliknij, by wybrać rok</string>
+    <string msgid="6301633601645100427" name="nav_app_bar_navigate_up_description">"Przejdź wyżej"</string>
+    <string msgid="7456070600745802113" name="nav_app_bar_open_drawer_description">"Otwórz panel nawigacji"</string>
     <string msgid="478774118347071097" name="not_set">"Nie ustawiono"</string>
     <string name="password_toggle_content_description">Pokaż hasło</string>
     <string msgid="7961817945132860002" name="preference_copied">"Skopiowano „<ns1:g id="SUMMARY">%1$s</ns1:g>” do schowka."</string>

@@ -49,7 +49,7 @@
             android:textColor="@color/red_text"
             android:textSize="15sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@id/csfLayout"
+            app:layout_constraintBottom_toTopOf="@id/scfLayout"
             app:layout_constraintEnd_toStartOf="@id/bluePlayerEditText"
             app:layout_constraintHeight_default="percent"
             app:layout_constraintHeight_percent=".10"
@@ -76,7 +76,7 @@
             android:textColor="@color/blue_text"
             android:textSize="15sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@id/csfLayout"
+            app:layout_constraintBottom_toTopOf="@id/scfLayout"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHeight_default="percent"
             app:layout_constraintHeight_percent=".10"
@@ -88,12 +88,12 @@
             tools:targetApi="o" />
 
         <LinearLayout
-            android:id="@+id/csfLayout"
+            android:id="@+id/scfLayout"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:gravity="center"
             android:orientation="horizontal"
-            app:layout_constraintBottom_toTopOf="@id/csfWinner"
+            app:layout_constraintBottom_toTopOf="@id/scfWinner"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHeight_default="percent"
             app:layout_constraintHeight_percent=".3"
@@ -103,14 +103,14 @@
             app:layout_constraintWidth_percent=".90" />
 
         <TextView
-            android:id="@+id/csfWinner"
+            android:id="@+id/scfWinner"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:autoSizeMaxTextSize="30dp"
             android:autoSizeTextType="uniform"
             android:background="?attr/color"
             android:gravity="center"
-            android:text="@string/csfWinner"
+            android:text="@string/scfWinner"
             android:textAlignment="center"
             android:textColor="?attr/colorOnPrimary"
             android:textStyle="bold"
@@ -119,7 +119,7 @@
             app:layout_constraintHeight_default="percent"
             app:layout_constraintHeight_percent=".10"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/csfLayout"
+            app:layout_constraintTop_toBottomOf="@id/scfLayout"
             app:layout_constraintWidth_default="percent"
             app:layout_constraintWidth_percent=".90"
             tools:targetApi="o" />
@@ -140,7 +140,7 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/csfWinner"
+            app:layout_constraintTop_toBottomOf="@id/scfWinner"
             tools:targetApi="o" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

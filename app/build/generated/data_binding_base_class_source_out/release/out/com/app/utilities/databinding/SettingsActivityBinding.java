@@ -22,14 +22,9 @@ public final class SettingsActivityBinding implements ViewBinding {
   @NonNull
   public final FrameLayout settings;
 
-  @NonNull
-  public final LinearLayout settingsLayout;
-
-  private SettingsActivityBinding(@NonNull LinearLayout rootView, @NonNull FrameLayout settings,
-      @NonNull LinearLayout settingsLayout) {
+  private SettingsActivityBinding(@NonNull LinearLayout rootView, @NonNull FrameLayout settings) {
     this.rootView = rootView;
     this.settings = settings;
-    this.settingsLayout = settingsLayout;
   }
 
   @Override
@@ -65,9 +60,7 @@ public final class SettingsActivityBinding implements ViewBinding {
         break missingId;
       }
 
-      LinearLayout settingsLayout = (LinearLayout) rootView;
-
-      return new SettingsActivityBinding((LinearLayout) rootView, settings, settingsLayout);
+      return new SettingsActivityBinding((LinearLayout) rootView, settings);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

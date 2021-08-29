@@ -6,10 +6,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.app.utilities.R;
@@ -19,10 +19,7 @@ import java.lang.String;
 
 public final class ActivityInfoBinding implements ViewBinding {
   @NonNull
-  private final ConstraintLayout rootView;
-
-  @NonNull
-  public final ConstraintLayout activityInfo;
+  private final LinearLayout rootView;
 
   @NonNull
   public final ImageButton back;
@@ -33,11 +30,9 @@ public final class ActivityInfoBinding implements ViewBinding {
   @NonNull
   public final ImageView utilities;
 
-  private ActivityInfoBinding(@NonNull ConstraintLayout rootView,
-      @NonNull ConstraintLayout activityInfo, @NonNull ImageButton back, @NonNull TextView info,
-      @NonNull ImageView utilities) {
+  private ActivityInfoBinding(@NonNull LinearLayout rootView, @NonNull ImageButton back,
+      @NonNull TextView info, @NonNull ImageView utilities) {
     this.rootView = rootView;
-    this.activityInfo = activityInfo;
     this.back = back;
     this.info = info;
     this.utilities = utilities;
@@ -45,7 +40,7 @@ public final class ActivityInfoBinding implements ViewBinding {
 
   @Override
   @NonNull
-  public ConstraintLayout getRoot() {
+  public LinearLayout getRoot() {
     return rootView;
   }
 
@@ -70,8 +65,6 @@ public final class ActivityInfoBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      ConstraintLayout activityInfo = (ConstraintLayout) rootView;
-
       id = R.id.back;
       ImageButton back = ViewBindings.findChildViewById(rootView, id);
       if (back == null) {
@@ -90,8 +83,7 @@ public final class ActivityInfoBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityInfoBinding((ConstraintLayout) rootView, activityInfo, back, info,
-          utilities);
+      return new ActivityInfoBinding((LinearLayout) rootView, back, info, utilities);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

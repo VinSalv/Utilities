@@ -41,10 +41,10 @@ public class SCFActivity extends AppCompatActivity {
     final TypedValue typedValue = new TypedValue();
     private final Utils utils = new Utils();
     Button goButton;
-    LinearLayout csfLayout;
+    LinearLayout scfLayout;
     TextView redPlayerEditText;
     TextView bluePlayerEditText;
-    TextView csfWinner;
+    TextView scfWinner;
     int height;
     int width;
     @SuppressWarnings("unused")
@@ -79,17 +79,17 @@ public class SCFActivity extends AppCompatActivity {
         @SuppressLint("Recycle") TypedArray arr = obtainStyledAttributes(typedValue.data, new int[]{android.R.attr.colorAccent});
         colorAccent = arr.getColor(0, -1);
         goButton = findViewById(R.id.go);
-        csfLayout = findViewById(R.id.csfLayout);
-        ViewTreeObserver observer = csfLayout.getViewTreeObserver();
+        scfLayout = findViewById(R.id.scfLayout);
+        ViewTreeObserver observer = scfLayout.getViewTreeObserver();
         observer.addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
             @Override
             public void onGlobalLayout() {
                 init();
-                csfLayout.getViewTreeObserver().removeGlobalOnLayoutListener(
+                scfLayout.getViewTreeObserver().removeGlobalOnLayoutListener(
                         this);
             }
         });
-        csfWinner = findViewById(R.id.csfWinner);
+        scfWinner = findViewById(R.id.scfWinner);
         redPlayerEditText = findViewById(R.id.redPlayerEditText);
         bluePlayerEditText = findViewById(R.id.bluePlayerEditText);
         goButton.setOnClickListener(this::goButton);
@@ -129,14 +129,14 @@ public class SCFActivity extends AppCompatActivity {
     }
 
     protected void init() {
-        height = csfLayout.getHeight();
-        width = csfLayout.getWidth();
+        height = scfLayout.getHeight();
+        width = scfLayout.getWidth();
     }
 
     @SuppressLint("SetTextI18n")
     public void goButton(View view) {
-        csfLayout.removeAllViews();
-        csfWinner.setText(getString(R.string.csfWinner));
+        scfLayout.removeAllViews();
+        scfWinner.setText(getString(R.string.scfWinner));
         if ((redPlayerEditText.getText().length() == 0) && (bluePlayerEditText.getText().length() == 0)) {
             utils.notifyUserShortWay(this, "Inserisci i nomi dei gicoatori!!");
             return;
@@ -152,42 +152,42 @@ public class SCFActivity extends AppCompatActivity {
         Random RandomGenerator = new Random();
         int nred = RandomGenerator.nextInt(3);
         redPlayerImage.setImageResource(redArray[nred]);
-        csfLayout.addView(redPlayerImage);
+        scfLayout.addView(redPlayerImage);
         redPlayerImage.getLayoutParams().width = width / 2;
         redPlayerImage.getLayoutParams().height = height;
         int nblue = RandomGenerator.nextInt(3);
         bluePlayerImage.setImageResource(blueArray[nblue]);
-        csfLayout.addView(bluePlayerImage);
+        scfLayout.addView(bluePlayerImage);
         bluePlayerImage.getLayoutParams().width = width / 2;
         bluePlayerImage.getLayoutParams().height = height;
         String text = "Il vincitore è: ";
         if (nred == 0 && nblue == 1) {
-            csfWinner.setText(Html.fromHtml(text + "<font color='red'>" + redPlayerEditText.getText() + "</font>"), TextView.BufferType.SPANNABLE);
+            scfWinner.setText(Html.fromHtml(text + "<font color='red'>" + redPlayerEditText.getText() + "</font>"), TextView.BufferType.SPANNABLE);
         } else if (nred == 0 && nblue == 2) {
-            csfWinner.setText(Html.fromHtml(text + "<font color='blue'>" + bluePlayerEditText.getText() + "</font>"), TextView.BufferType.SPANNABLE);
+            scfWinner.setText(Html.fromHtml(text + "<font color='blue'>" + bluePlayerEditText.getText() + "</font>"), TextView.BufferType.SPANNABLE);
         } else if (nred == 1 && nblue == 0) {
-            csfWinner.setText(Html.fromHtml(text + "<font color='blue'>" + bluePlayerEditText.getText() + "</font>"), TextView.BufferType.SPANNABLE);
+            scfWinner.setText(Html.fromHtml(text + "<font color='blue'>" + bluePlayerEditText.getText() + "</font>"), TextView.BufferType.SPANNABLE);
         } else if (nred == 1 && nblue == 2) {
-            csfWinner.setText(Html.fromHtml(text + "<font color='red'>" + redPlayerEditText.getText() + "</font>"), TextView.BufferType.SPANNABLE);
+            scfWinner.setText(Html.fromHtml(text + "<font color='red'>" + redPlayerEditText.getText() + "</font>"), TextView.BufferType.SPANNABLE);
         } else if (nred == 2 && nblue == 0) {
-            csfWinner.setText(Html.fromHtml(text + "<font color='red'>" + redPlayerEditText.getText() + "</font>"), TextView.BufferType.SPANNABLE);
+            scfWinner.setText(Html.fromHtml(text + "<font color='red'>" + redPlayerEditText.getText() + "</font>"), TextView.BufferType.SPANNABLE);
         } else if (nred == 2 && nblue == 1) {
-            csfWinner.setText(Html.fromHtml(text + "<font color='blue'>" + bluePlayerEditText.getText() + "</font>"), TextView.BufferType.SPANNABLE);
+            scfWinner.setText(Html.fromHtml(text + "<font color='blue'>" + bluePlayerEditText.getText() + "</font>"), TextView.BufferType.SPANNABLE);
         }
         if (nblue == 0 && nred == 1) {
-            csfWinner.setText(Html.fromHtml(text + "<font color='blue'>" + bluePlayerEditText.getText() + "</font>"), TextView.BufferType.SPANNABLE);
+            scfWinner.setText(Html.fromHtml(text + "<font color='blue'>" + bluePlayerEditText.getText() + "</font>"), TextView.BufferType.SPANNABLE);
         } else if (nblue == 0 && nred == 2) {
-            csfWinner.setText(Html.fromHtml(text + "<font color='red'>" + redPlayerEditText.getText() + "</font>"), TextView.BufferType.SPANNABLE);
+            scfWinner.setText(Html.fromHtml(text + "<font color='red'>" + redPlayerEditText.getText() + "</font>"), TextView.BufferType.SPANNABLE);
         } else if (nblue == 1 && nred == 0) {
-            csfWinner.setText(Html.fromHtml(text + "<font color='red'>" + redPlayerEditText.getText() + "</font>"), TextView.BufferType.SPANNABLE);
+            scfWinner.setText(Html.fromHtml(text + "<font color='red'>" + redPlayerEditText.getText() + "</font>"), TextView.BufferType.SPANNABLE);
         } else if (nblue == 1 && nred == 2) {
-            csfWinner.setText(Html.fromHtml(text + "<font color='blue'>" + bluePlayerEditText.getText() + "</font>"), TextView.BufferType.SPANNABLE);
+            scfWinner.setText(Html.fromHtml(text + "<font color='blue'>" + bluePlayerEditText.getText() + "</font>"), TextView.BufferType.SPANNABLE);
         } else if (nblue == 2 && nred == 0) {
-            csfWinner.setText(Html.fromHtml(text + "<font color='blue'>" + bluePlayerEditText.getText() + "</font>"), TextView.BufferType.SPANNABLE);
+            scfWinner.setText(Html.fromHtml(text + "<font color='blue'>" + bluePlayerEditText.getText() + "</font>"), TextView.BufferType.SPANNABLE);
         } else if (nblue == 2 && nred == 1) {
-            csfWinner.setText(Html.fromHtml(text + "<font color='red'>" + redPlayerEditText.getText() + "</font>"), TextView.BufferType.SPANNABLE);
+            scfWinner.setText(Html.fromHtml(text + "<font color='red'>" + redPlayerEditText.getText() + "</font>"), TextView.BufferType.SPANNABLE);
         } else {
-            csfWinner.setText("Pareggio");
+            scfWinner.setText("Pareggio");
         }
     }
 

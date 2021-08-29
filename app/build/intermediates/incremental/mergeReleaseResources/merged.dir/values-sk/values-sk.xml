@@ -88,6 +88,8 @@
     <string name="mtrl_picker_toggle_to_day_selection">Klepnutím prepnete na výber dňa</string>
     <string name="mtrl_picker_toggle_to_text_input_mode">Prepnúť na textový režim vstupu</string>
     <string name="mtrl_picker_toggle_to_year_selection">Klepnutím prepnete na výber roka</string>
+    <string msgid="6301633601645100427" name="nav_app_bar_navigate_up_description">"Prejsť hore"</string>
+    <string msgid="7456070600745802113" name="nav_app_bar_open_drawer_description">"Otvoriť navigačný vysúvací panel"</string>
     <string msgid="478774118347071097" name="not_set">"Nenastavené"</string>
     <string name="password_toggle_content_description">Zobraziť heslo</string>
     <string msgid="7961817945132860002" name="preference_copied">"Položka <ns1:g id="SUMMARY">%1$s</ns1:g> bola skopírovaná do schránky."</string>
