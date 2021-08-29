@@ -55,12 +55,11 @@ public class InfoActivity extends AppCompatActivity {
 
     protected void configurationChanged(Configuration newConfig) {
         if (isNightConfigChanged(newConfig) && pref.getPredBool()) {
-            utils.goToMainActivity(this);
+            utils.refreshActivity(this);
         }
     }
 
     protected boolean isNightConfigChanged(Configuration newConfig) {
         return (newConfig.diff(mPrevConfig) & ActivityInfo.CONFIG_UI_MODE) != 0 && isOnDarkMode(newConfig) != isOnDarkMode(mPrevConfig);
     }
-
 }

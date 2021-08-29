@@ -69,6 +69,11 @@ public class Utils {
         context.startActivity(intent);
     }
 
+    public void refreshActivity(Context context) {
+        ((Activity) context).finish();
+        context.startActivity(((Activity) context).getIntent());
+    }
+
     public double roundAvoid(double value, int places) {
         double scale = Math.pow(10, places);
         return Math.round(value * scale) / scale;

@@ -1,5 +1,6 @@
 package com.app.utilities.utilitiesActivity;
 
+import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.animation.Animation;
@@ -8,6 +9,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.app.utilities.R;
@@ -27,6 +29,10 @@ public class BussolaActivity extends AppCompatActivity {
     private TextView sotwLabel;
     private float currentAzimuth;
     private SOTWFormatter sotwFormatter;
+
+    public static boolean isOnDarkMode(Configuration configuration) {
+        return (configuration.uiMode & Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES;
+    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,13 +56,13 @@ public class BussolaActivity extends AppCompatActivity {
         }
         setContentView(R.layout.activity_bussola);
         pref = utils.loadData(this, new Preferences());
-        mPrevConfig = new Configuration(getResources().getConfiguration());
         sotwFormatter = new SOTWFormatter(this);
         arrowView = findViewById(R.id.main_image_hands);
         sotwLabel = findViewById(R.id.sotw_label);
         setupCompass();
         ImageButton back = findViewById(R.id.back);
         back.setOnClickListener(view -> onBackPressed());
+        mPrevConfig = new Configuration(getResources().getConfiguration());
     }
 
     private void setupCompass() {
@@ -114,5 +120,21 @@ public class BussolaActivity extends AppCompatActivity {
         compass.stop();
     }
 
+    @Override
+    public void onConfigurationChanged(@NonNull Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        configurationChanged(newConfig);
+        mPrevConfig = new Configuration(newConfig);
+    }
+
+    protected void configurationChanged(Configuration newConfig) {
+        if (isNightConfigChanged(newConfig) && pref.getPredBool()) {
+            utils.refreshActivity(this);
+        }
+    }
+
+    protected boolean isNightConfigChanged(Configuration newConfig) {
+        return (newConfig.diff(mPrevConfig) & ActivityInfo.CONFIG_UI_MODE) != 0 && isOnDarkMode(newConfig) != isOnDarkMode(mPrevConfig);
+    }
 
 }

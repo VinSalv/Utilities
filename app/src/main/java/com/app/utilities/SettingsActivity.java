@@ -48,7 +48,6 @@ public class SettingsActivity extends AppCompatActivity {
                     break;
             }
         }
-        mPrevConfig = new Configuration(getResources().getConfiguration());
         setContentView(R.layout.settings_activity);
         if (savedInstanceState == null) {
             getSupportFragmentManager()
@@ -60,6 +59,7 @@ public class SettingsActivity extends AppCompatActivity {
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
         }
+        mPrevConfig = new Configuration(getResources().getConfiguration());
     }
 
     @Override
@@ -71,7 +71,7 @@ public class SettingsActivity extends AppCompatActivity {
 
     protected void configurationChanged(Configuration newConfig) {
         if (isNightConfigChanged(newConfig) && pref.getPredBool()) {
-            utils.goToMainActivity(this);
+            utils.refreshActivity(this);
         }
     }
 
@@ -124,16 +124,22 @@ public class SettingsActivity extends AppCompatActivity {
                 }
                 if ((Boolean) newValue) {
                     utils.saveData(requireActivity(), pref, (Boolean) newValue, list_themes.getValue());
-                    utils.goToMainActivity(requireActivity());
+                    utils.refreshActivity(requireActivity());
                 } else
                     utils.saveData(requireActivity(), pref, (Boolean) newValue, list_themes.getValue());
                 return true;
             });
             Objects.requireNonNull(list_themes).setOnPreferenceChangeListener((preference, newValue) -> {
                 utils.saveData(requireActivity(), pref, pred.isChecked(), newValue.toString());
-                utils.goToMainActivity(requireActivity());
+                utils.refreshActivity(requireActivity());
                 return true;
             });
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        utils.goToMainActivity(this);
     }
 }

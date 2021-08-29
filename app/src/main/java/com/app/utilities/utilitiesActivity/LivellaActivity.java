@@ -71,7 +71,6 @@ public class LivellaActivity extends AppCompatActivity implements SensorEventLis
                     break;
             }
         }
-        mPrevConfig = new Configuration(getResources().getConfiguration());
         getTheme().resolveAttribute(R.attr.color, typedValue, true);
         color = typedValue.resourceId;
         getTheme().resolveAttribute(R.attr.colorOnPrimary, typedValue, true);
@@ -93,6 +92,7 @@ public class LivellaActivity extends AppCompatActivity implements SensorEventLis
         animatedView = new AnimatedView(this);
         animatedView.setBackgroundColor(getColor(colorPrimaryVariant));
         setContentView(animatedView);
+        mPrevConfig = new Configuration(getResources().getConfiguration());
     }
 
     @Override
@@ -105,24 +105,6 @@ public class LivellaActivity extends AppCompatActivity implements SensorEventLis
     @Override
     public void onAccuracyChanged(Sensor sensor, int accuracy) {
     }
-
-    @Override
-    public void onConfigurationChanged(@NonNull Configuration newConfig) {
-        super.onConfigurationChanged(newConfig);
-        configurationChanged(newConfig);
-        mPrevConfig = new Configuration(newConfig);
-    }
-
-    protected void configurationChanged(Configuration newConfig) {
-        if (isNightConfigChanged(newConfig) && pref.getPredBool()) {
-            utils.goToMainActivity(this);
-        }
-    }
-
-    protected boolean isNightConfigChanged(Configuration newConfig) {
-        return (newConfig.diff(mPrevConfig) & ActivityInfo.CONFIG_UI_MODE) != 0 && isOnDarkMode(newConfig) != isOnDarkMode(mPrevConfig);
-    }
-
 
     @Override
     public void onStart() {
@@ -138,18 +120,33 @@ public class LivellaActivity extends AppCompatActivity implements SensorEventLis
             sensorManager.registerListener(this, accelerometer, microsecond);
     }
 
-
     @Override
     public void onPause() {
         super.onPause();
         sensorManager.unregisterListener(this);
     }
 
-
     @Override
     public void onStop() {
         super.onStop();
         sensorManager.unregisterListener(this);
+    }
+
+    @Override
+    public void onConfigurationChanged(@NonNull Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        configurationChanged(newConfig);
+        mPrevConfig = new Configuration(newConfig);
+    }
+
+    protected void configurationChanged(Configuration newConfig) {
+        if (isNightConfigChanged(newConfig) && pref.getPredBool()) {
+            utils.refreshActivity(this);
+        }
+    }
+
+    protected boolean isNightConfigChanged(Configuration newConfig) {
+        return (newConfig.diff(mPrevConfig) & ActivityInfo.CONFIG_UI_MODE) != 0 && isOnDarkMode(newConfig) != isOnDarkMode(mPrevConfig);
     }
 
     public class AnimatedView extends LinearLayout {
@@ -402,4 +399,5 @@ public class LivellaActivity extends AppCompatActivity implements SensorEventLis
             return (float) (Math.toDegrees(Math.asin((y / (Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2)))))));
         }
     }
+
 }

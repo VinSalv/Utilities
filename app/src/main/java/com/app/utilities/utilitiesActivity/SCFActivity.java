@@ -1,6 +1,7 @@
 package com.app.utilities.utilitiesActivity;
 
 import android.annotation.SuppressLint;
+import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
@@ -16,6 +17,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -36,10 +38,9 @@ public class SCFActivity extends AppCompatActivity {
             R.drawable.rock_blue,
             R.drawable.scissors_blue
     };
-
-
     final TypedValue typedValue = new TypedValue();
     private final Utils utils = new Utils();
+    protected Configuration mPrevConfig;
     Button goButton;
     LinearLayout scfLayout;
     TextView redPlayerEditText;
@@ -51,6 +52,9 @@ public class SCFActivity extends AppCompatActivity {
     int colorAccent;
     Preferences pref;
 
+    public static boolean isOnDarkMode(Configuration configuration) {
+        return (configuration.uiMode & Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES;
+    }
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -95,6 +99,7 @@ public class SCFActivity extends AppCompatActivity {
         goButton.setOnClickListener(this::goButton);
         ImageButton back = findViewById(R.id.back);
         back.setOnClickListener(view -> onBackPressed());
+        mPrevConfig = new Configuration(getResources().getConfiguration());
     }
 
     @RequiresApi(api = Build.VERSION_CODES.M)
@@ -189,6 +194,23 @@ public class SCFActivity extends AppCompatActivity {
         } else {
             scfWinner.setText("Pareggio");
         }
+    }
+
+    @Override
+    public void onConfigurationChanged(@NonNull Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        configurationChanged(newConfig);
+        mPrevConfig = new Configuration(newConfig);
+    }
+
+    protected void configurationChanged(Configuration newConfig) {
+        if (isNightConfigChanged(newConfig) && pref.getPredBool()) {
+            utils.refreshActivity(this);
+        }
+    }
+
+    protected boolean isNightConfigChanged(Configuration newConfig) {
+        return (newConfig.diff(mPrevConfig) & ActivityInfo.CONFIG_UI_MODE) != 0 && isOnDarkMode(newConfig) != isOnDarkMode(mPrevConfig);
     }
 
 }

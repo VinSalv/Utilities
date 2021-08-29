@@ -36,17 +36,17 @@ com/app/utilities/InfoActivity.java
  com.app.utilities.InfoActivity
 com/app/utilities/databinding/ActivityMainBinding.java
  com.app.utilities.databinding.ActivityMainBinding
-com/app/utilities/SettingsActivity.java
- com.app.utilities.SettingsActivity
- com.app.utilities.SettingsActivity$SettingsFragment
+com/app/utilities/bussola/Compass.java
+ com.app.utilities.bussola.Compass
+ com.app.utilities.bussola.Compass$CompassListener
 com/app/utilities/databinding/ActivityScfBinding.java
  com.app.utilities.databinding.ActivityScfBinding
 com/app/utilities/utility/CustomAdapter.java
  com.app.utilities.utility.CustomAdapter
  com.app.utilities.utility.CustomAdapter$1
  com.app.utilities.utility.CustomAdapter$ViewHolder
-com/app/utilities/utility/Utils.java
- com.app.utilities.utility.Utils
+com/app/utilities/databinding/SettingsActivityBinding.java
+ com.app.utilities.databinding.SettingsActivityBinding
 com/app/utilities/databinding/ActivityBussolaBinding.java
  com.app.utilities.databinding.ActivityBussolaBinding
 com/app/utilities/databinding/FragmentMainBinding.java
@@ -62,8 +62,8 @@ com/app/utilities/fragment/ui/SectionsPagerAdapter.java
  com.app.utilities.fragment.ui.SectionsPagerAdapter
 com/app/utilities/utility/Preferences.java
  com.app.utilities.utility.Preferences
-com/app/utilities/databinding/SettingsActivityBinding.java
- com.app.utilities.databinding.SettingsActivityBinding
-com/app/utilities/bussola/Compass.java
- com.app.utilities.bussola.Compass
- com.app.utilities.bussola.Compass$CompassListener
+com/app/utilities/SettingsActivity.java
+ com.app.utilities.SettingsActivity
+ com.app.utilities.SettingsActivity$SettingsFragment
+com/app/utilities/utility/Utils.java
+ com.app.utilities.utility.Utils
