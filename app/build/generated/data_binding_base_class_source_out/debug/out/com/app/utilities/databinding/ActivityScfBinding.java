@@ -29,27 +29,27 @@ public final class ActivityScfBinding implements ViewBinding {
   public final EditText bluePlayerEditText;
 
   @NonNull
-  public final LinearLayout csfLayout;
-
-  @NonNull
-  public final TextView csfWinner;
-
-  @NonNull
   public final Button go;
 
   @NonNull
   public final EditText redPlayerEditText;
 
+  @NonNull
+  public final LinearLayout scfLayout;
+
+  @NonNull
+  public final TextView scfWinner;
+
   private ActivityScfBinding(@NonNull LinearLayout rootView, @NonNull ImageButton back,
-      @NonNull EditText bluePlayerEditText, @NonNull LinearLayout csfLayout,
-      @NonNull TextView csfWinner, @NonNull Button go, @NonNull EditText redPlayerEditText) {
+      @NonNull EditText bluePlayerEditText, @NonNull Button go, @NonNull EditText redPlayerEditText,
+      @NonNull LinearLayout scfLayout, @NonNull TextView scfWinner) {
     this.rootView = rootView;
     this.back = back;
     this.bluePlayerEditText = bluePlayerEditText;
-    this.csfLayout = csfLayout;
-    this.csfWinner = csfWinner;
     this.go = go;
     this.redPlayerEditText = redPlayerEditText;
+    this.scfLayout = scfLayout;
+    this.scfWinner = scfWinner;
   }
 
   @Override
@@ -91,18 +91,6 @@ public final class ActivityScfBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.csfLayout;
-      LinearLayout csfLayout = ViewBindings.findChildViewById(rootView, id);
-      if (csfLayout == null) {
-        break missingId;
-      }
-
-      id = R.id.csfWinner;
-      TextView csfWinner = ViewBindings.findChildViewById(rootView, id);
-      if (csfWinner == null) {
-        break missingId;
-      }
-
       id = R.id.go;
       Button go = ViewBindings.findChildViewById(rootView, id);
       if (go == null) {
@@ -115,8 +103,20 @@ public final class ActivityScfBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityScfBinding((LinearLayout) rootView, back, bluePlayerEditText, csfLayout,
-          csfWinner, go, redPlayerEditText);
+      id = R.id.scfLayout;
+      LinearLayout scfLayout = ViewBindings.findChildViewById(rootView, id);
+      if (scfLayout == null) {
+        break missingId;
+      }
+
+      id = R.id.scfWinner;
+      TextView scfWinner = ViewBindings.findChildViewById(rootView, id);
+      if (scfWinner == null) {
+        break missingId;
+      }
+
+      return new ActivityScfBinding((LinearLayout) rootView, back, bluePlayerEditText, go,
+          redPlayerEditText, scfLayout, scfWinner);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

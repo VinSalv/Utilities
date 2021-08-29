@@ -1264,8 +1264,7 @@
     <string name="compass_dial" translatable="false">Compass Dial</string>
     <string name="compass_hands" translatable="false">Compass Hands</string>
     <string name="copy">Copy</string>
-    <string name="copyright">Versione 4.0.0\n\n© 2021\nVincenzo Salvati &amp; Co\nRights Reserved.</string>
-    <string name="csfWinner">Chi sarà il vincitore?</string>
+    <string name="copyright">Versione 6.0.0\n\n© 2021\nVincenzo Salvati &amp; Co\nRights Reserved.</string>
     <string name="dadoActivity">DadoActivity</string>
     <string name="error_icon_content_description">Error</string>
     <string name="expand_button_title">Advanced</string>
@@ -1350,6 +1349,7 @@
     <string name="red_player">Giocatore rosso</string>
     <string name="rowimageview">rowImageView</string>
     <string name="rowtextview">rowTextView</string>
+    <string name="scfWinner">Chi sarà il vincitore?</string>
     <string name="search_menu_title">Search</string>
     <string name="settingsActivity">SettingsActivity</string>
     <string name="sotw_east">E</string>

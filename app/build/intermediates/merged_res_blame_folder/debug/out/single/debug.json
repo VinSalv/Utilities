@@ -1,11 +1,11 @@
 [
     {
-        "merged": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_info.xml.flat",
-        "source": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\src\\main\\res\\layout\\activity_info.xml"
-    },
-    {
         "merged": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\build\\intermediates\\merged_res\\debug\\drawable_dice_empty.xml.flat",
         "source": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\src\\main\\res\\drawable\\dice_empty.xml"
+    },
+    {
+        "merged": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_info.xml.flat",
+        "source": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\src\\main\\res\\layout\\activity_info.xml"
     },
     {
         "merged": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\build\\intermediates\\merged_res\\debug\\drawable_utilities.png.flat",
