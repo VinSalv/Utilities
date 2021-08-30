@@ -89,7 +89,7 @@ public final class ActivityMainBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.view_pager;
+      id = R.id.viewPager;
       ViewPager viewPager = ViewBindings.findChildViewById(rootView, id);
       if (viewPager == null) {
         break missingId;

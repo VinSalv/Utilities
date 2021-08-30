@@ -160,7 +160,9 @@ public class ViewPortHandler {
     /**
      * ################ ################ ################ ################
      */
-    /** CODE BELOW THIS RELATED TO SCALING AND GESTURES */
+    /**
+     * CODE BELOW THIS RELATED TO SCALING AND GESTURES
+     */
 
     public float getChartHeight() {
         return mChartHeight;

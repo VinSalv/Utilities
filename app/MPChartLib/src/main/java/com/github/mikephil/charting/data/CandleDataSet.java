@@ -180,7 +180,9 @@ public class CandleDataSet extends LineScatterCandleRadarDataSet<CandleEntry> im
      * @author Mesrop
      */
 
-    /** BELOW THIS COLOR HANDLING */
+    /**
+     * BELOW THIS COLOR HANDLING
+     */
 
     @Override
     public int getNeutralColor() {

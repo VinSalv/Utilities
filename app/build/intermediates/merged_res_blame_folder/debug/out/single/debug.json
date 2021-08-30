@@ -52,10 +52,6 @@
         "source": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\src\\main\\res\\layout\\activity_dado.xml"
     },
     {
-        "merged": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\build\\intermediates\\merged_res\\debug\\menu_menu_altri_sensori.xml.flat",
-        "source": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\src\\main\\res\\menu\\menu_altri_sensori.xml"
-    },
-    {
         "merged": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\build\\intermediates\\merged_res\\debug\\drawable_hands.png.flat",
         "source": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\src\\main\\res\\drawable\\hands.png"
     },

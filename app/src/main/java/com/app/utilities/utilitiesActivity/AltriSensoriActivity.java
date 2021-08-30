@@ -74,7 +74,6 @@ public class AltriSensoriActivity extends AppCompatActivity implements SensorEve
             }
         }
         setContentView(R.layout.activity_altri_sensori);
-        pref = utils.loadData(this, new Preferences());
 
         speedLig = findViewById(R.id.speedLig);
         speedPre = findViewById(R.id.speedPre);
@@ -106,7 +105,6 @@ public class AltriSensoriActivity extends AppCompatActivity implements SensorEve
         preSimpRate = SensorManager.SENSOR_DELAY_NORMAL;
         temSimpRate = SensorManager.SENSOR_DELAY_NORMAL;
         humSimpRate = SensorManager.SENSOR_DELAY_NORMAL;
-
 
         mLight = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
         if (mLight != null) {
@@ -263,6 +261,7 @@ public class AltriSensoriActivity extends AppCompatActivity implements SensorEve
         feedMultiple();
         ImageButton back = findViewById(R.id.back);
         back.setOnClickListener(v -> utils.goToMainActivity(this));
+        mPrevConfig = new Configuration(getResources().getConfiguration());
     }
 
     @SuppressLint("SetTextI18n")

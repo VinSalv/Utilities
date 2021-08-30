@@ -1448,7 +1448,6 @@ dimen abc_text_size_title_material_toolbar
 dimen action_bar_size
 dimen activity_horizontal_margin
 dimen activity_vertical_margin
-dimen app_bar_height
 dimen appcompat_dialog_background_inset
 dimen cardview_compat_inset_shadow
 dimen cardview_default_elevation
@@ -1792,7 +1791,6 @@ dimen test_navigation_bar_item_min_width
 dimen test_navigation_bar_label_padding
 dimen test_navigation_bar_shadow_height
 dimen test_navigation_bar_text_size
-dimen text_margin
 dimen tooltip_corner_radius
 dimen tooltip_horizontal_padding
 dimen tooltip_margin
@@ -2032,7 +2030,6 @@ id action_menu_presenter
 id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
-id action_settings
 id action_text
 id actions
 id activity_chooser_view_content
@@ -2481,8 +2478,8 @@ id up
 id useLogo
 id utilities
 id vertical_only
+id viewPager
 id view_offset_helper
-id view_pager
 id view_transition
 id view_tree_lifecycle_owner
 id view_tree_saved_state_registry_owner
@@ -2699,7 +2696,6 @@ layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
 menu list_options
-menu menu_altri_sensori
 plurals mtrl_badge_content_description
 string AccelerometerNotSupported
 string AltriSensoriActivity
@@ -2742,7 +2738,6 @@ string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string accelerometer
-string action_settings
 string app_name
 string appbar_scrolling_view_behavior
 string backButton
@@ -2771,7 +2766,6 @@ string icon_content_description
 string info
 string infoActivity
 string item_view_role_description
-string large_text
 string livellaActivity
 string magnometer
 string material_clock_display_divider
@@ -2858,7 +2852,6 @@ string summary_collapsed_preference_list
 string tab_text_1
 string tab_text_2
 string tab_text_3
-string title_activity_altri_sensori
 string txt_settings
 string utilityImage
 string v7_preference_off
@@ -3100,9 +3093,6 @@ style DialogThemeDark
 style DialogThemeLight
 style EmptyTheme
 style LightTheme
-style LightTheme_AppBarOverlay
-style LightTheme_NoActionBar
-style LightTheme_PopupOverlay
 style LightThemeSelected
 style MaterialAlertDialog_MaterialComponents
 style MaterialAlertDialog_MaterialComponents_Body_Text
