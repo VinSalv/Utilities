@@ -69,6 +69,7 @@ array orientazione_images
 array orientazione_strings
 array sorte_images
 array sorte_strings
+array speed
 array themes_entries
 array themes_values
 attr ConstraintRotate
@@ -1447,6 +1448,7 @@ dimen abc_text_size_title_material_toolbar
 dimen action_bar_size
 dimen activity_horizontal_margin
 dimen activity_vertical_margin
+dimen app_bar_height
 dimen appcompat_dialog_background_inset
 dimen cardview_compat_inset_shadow
 dimen cardview_default_elevation
@@ -1790,6 +1792,7 @@ dimen test_navigation_bar_item_min_width
 dimen test_navigation_bar_label_padding
 dimen test_navigation_bar_shadow_height
 dimen test_navigation_bar_text_size
+dimen text_margin
 dimen tooltip_corner_radius
 dimen tooltip_horizontal_padding
 dimen tooltip_margin
@@ -2029,6 +2032,7 @@ id action_menu_presenter
 id action_mode_bar
 id action_mode_bar_stub
 id action_mode_close_button
+id action_settings
 id action_text
 id actions
 id activity_chooser_view_content
@@ -2072,6 +2076,19 @@ id center_horizontal
 id center_vertical
 id chain
 id chains
+id chartAceleX
+id chartAceleY
+id chartAceleZ
+id chartGirX
+id chartGirY
+id chartGirZ
+id chartHumidity
+id chartLight
+id chartMagnetX
+id chartMagnetY
+id chartMagnetZ
+id chartPressure
+id chartTemperature
 id checkbox
 id checked
 id chip
@@ -2284,6 +2301,8 @@ id notification_main_column_container
 id off
 id on
 id oneDice
+id otherSensors
+id otherSensorsLayout
 id outline
 id outward
 id overshoot
@@ -2348,6 +2367,7 @@ id seekbar_value
 id select_dialog_listview
 id selected
 id selection_type
+id sensorsLayout
 id settings
 id settings_option
 id sharedValueSet
@@ -2369,6 +2389,13 @@ id sotw_label
 id south
 id spacer
 id special_effects_controller_view_tag
+id speedAcc
+id speedGir
+id speedHum
+id speedLig
+id speedMag
+id speedPre
+id speedTem
 id spinner
 id spline
 id split_action_bar
@@ -2548,6 +2575,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_altri_sensori
 layout activity_bussola
 layout activity_dado
 layout activity_info
@@ -2671,8 +2699,10 @@ layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
 menu list_options
+menu menu_altri_sensori
 plurals mtrl_badge_content_description
 string AccelerometerNotSupported
+string AltriSensoriActivity
 string BrightnessNotSupported
 string GyroscopeNotSupported
 string HumidityNotSupported
@@ -2712,6 +2742,7 @@ string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
 string accelerometer
+string action_settings
 string app_name
 string appbar_scrolling_view_behavior
 string backButton
@@ -2740,6 +2771,7 @@ string icon_content_description
 string info
 string infoActivity
 string item_view_role_description
+string large_text
 string livellaActivity
 string magnometer
 string material_clock_display_divider
@@ -2826,6 +2858,7 @@ string summary_collapsed_preference_list
 string tab_text_1
 string tab_text_2
 string tab_text_3
+string title_activity_altri_sensori
 string txt_settings
 string utilityImage
 string v7_preference_off
@@ -3067,6 +3100,9 @@ style DialogThemeDark
 style DialogThemeLight
 style EmptyTheme
 style LightTheme
+style LightTheme_AppBarOverlay
+style LightTheme_NoActionBar
+style LightTheme_PopupOverlay
 style LightThemeSelected
 style MaterialAlertDialog_MaterialComponents
 style MaterialAlertDialog_MaterialComponents_Body_Text

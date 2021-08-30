@@ -31,4 +31,11 @@
         <item>Livella a bolla</item>
         <item>Bussola</item>
     </string-array>
+
+    <string-array name="speed">
+        <item>Molto veloce (0ms)</item>
+        <item>Veloce (20ms)</item>
+        <item>Moderato (60.000ms)</item>
+        <item>Normale (200.000ms)</item>
+    </string-array>
 </resources>

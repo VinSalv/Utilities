@@ -79,6 +79,12 @@ public class SettingsActivity extends AppCompatActivity {
         return (newConfig.diff(mPrevConfig) & ActivityInfo.CONFIG_UI_MODE) != 0 && isOnDarkMode(newConfig) != isOnDarkMode(mPrevConfig);
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        utils.goToMainActivity(this);
+    }
+
     public static class SettingsFragment extends PreferenceFragmentCompat {
         SwitchPreferenceCompat pred;
         ListPreference list_themes;
@@ -135,11 +141,5 @@ public class SettingsActivity extends AppCompatActivity {
                 return true;
             });
         }
-    }
-
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        utils.goToMainActivity(this);
     }
 }

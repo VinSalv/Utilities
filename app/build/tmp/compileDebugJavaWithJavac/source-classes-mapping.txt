@@ -1,29 +1,37 @@
+com/app/utilities/utility/RowItem.java
+ com.app.utilities.utility.RowItem
+com/app/utilities/BuildConfig.java
+ com.app.utilities.BuildConfig
+com/app/utilities/fragment/ui/PageViewModel.java
+ com.app.utilities.fragment.ui.PageViewModel
+com/app/utilities/utility/Preferences.java
+ com.app.utilities.utility.Preferences
+com/app/utilities/fragment/ui/PlaceholderFragment.java
+ com.app.utilities.fragment.ui.PlaceholderFragment
 com/app/utilities/MainActivity.java
  com.app.utilities.MainActivity
 com/app/utilities/fragment/Fragment_Sorte.java
  com.app.utilities.fragment.Fragment_Sorte
-com/app/utilities/fragment/ui/PageViewModel.java
- com.app.utilities.fragment.ui.PageViewModel
+com/app/utilities/bussola/Compass.java
+ com.app.utilities.bussola.Compass
+ com.app.utilities.bussola.Compass$CompassListener
 com/app/utilities/utilitiesActivity/LivellaActivity.java
  com.app.utilities.utilitiesActivity.LivellaActivity
  com.app.utilities.utilitiesActivity.LivellaActivity$AnimatedView
 com/app/utilities/fragment/Fragment_Orientazione.java
  com.app.utilities.fragment.Fragment_Orientazione
-com/app/utilities/fragment/ui/PlaceholderFragment.java
- com.app.utilities.fragment.ui.PlaceholderFragment
 com/app/utilities/fragment/Fragment_Sensori.java
  com.app.utilities.fragment.Fragment_Sensori
+ com.app.utilities.fragment.Fragment_Sensori$1
+ com.app.utilities.fragment.Fragment_Sensori$2
+ com.app.utilities.fragment.Fragment_Sensori$3
 com/app/utilities/databinding/ActivityInfoBinding.java
  com.app.utilities.databinding.ActivityInfoBinding
 com/app/utilities/utilitiesActivity/DadoActivity.java
  com.app.utilities.utilitiesActivity.DadoActivity
  com.app.utilities.utilitiesActivity.DadoActivity$1
-com/app/utilities/BuildConfig.java
- com.app.utilities.BuildConfig
 com/app/utilities/databinding/FragmentSensoriBinding.java
  com.app.utilities.databinding.FragmentSensoriBinding
-com/app/utilities/utility/RowItem.java
- com.app.utilities.utility.RowItem
 com/app/utilities/utilitiesActivity/BussolaActivity.java
  com.app.utilities.utilitiesActivity.BussolaActivity
 com/app/utilities/bussola/SOTWFormatter.java
@@ -36,17 +44,17 @@ com/app/utilities/InfoActivity.java
  com.app.utilities.InfoActivity
 com/app/utilities/databinding/ActivityMainBinding.java
  com.app.utilities.databinding.ActivityMainBinding
-com/app/utilities/bussola/Compass.java
- com.app.utilities.bussola.Compass
- com.app.utilities.bussola.Compass$CompassListener
+com/app/utilities/SettingsActivity.java
+ com.app.utilities.SettingsActivity
+ com.app.utilities.SettingsActivity$SettingsFragment
 com/app/utilities/databinding/ActivityScfBinding.java
  com.app.utilities.databinding.ActivityScfBinding
 com/app/utilities/utility/CustomAdapter.java
  com.app.utilities.utility.CustomAdapter
  com.app.utilities.utility.CustomAdapter$1
  com.app.utilities.utility.CustomAdapter$ViewHolder
-com/app/utilities/databinding/SettingsActivityBinding.java
- com.app.utilities.databinding.SettingsActivityBinding
+com/app/utilities/databinding/ActivityAltriSensoriBinding.java
+ com.app.utilities.databinding.ActivityAltriSensoriBinding
 com/app/utilities/databinding/ActivityBussolaBinding.java
  com.app.utilities.databinding.ActivityBussolaBinding
 com/app/utilities/databinding/FragmentMainBinding.java
@@ -60,10 +68,13 @@ com/app/utilities/utilitiesActivity/SCFActivity.java
  com.app.utilities.utilitiesActivity.SCFActivity$1
 com/app/utilities/fragment/ui/SectionsPagerAdapter.java
  com.app.utilities.fragment.ui.SectionsPagerAdapter
-com/app/utilities/utility/Preferences.java
- com.app.utilities.utility.Preferences
-com/app/utilities/SettingsActivity.java
- com.app.utilities.SettingsActivity
- com.app.utilities.SettingsActivity$SettingsFragment
+com/app/utilities/databinding/SettingsActivityBinding.java
+ com.app.utilities.databinding.SettingsActivityBinding
+com/app/utilities/utilitiesActivity/AltriSensoriActivity.java
+ com.app.utilities.utilitiesActivity.AltriSensoriActivity
+ com.app.utilities.utilitiesActivity.AltriSensoriActivity$1
+ com.app.utilities.utilitiesActivity.AltriSensoriActivity$2
+ com.app.utilities.utilitiesActivity.AltriSensoriActivity$3
+ com.app.utilities.utilitiesActivity.AltriSensoriActivity$4
 com/app/utilities/utility/Utils.java
  com.app.utilities.utility.Utils

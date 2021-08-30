@@ -1,4 +1,4 @@
-#Sun Aug 29 14:12:19 CEST 2021
-base.0=C\:\\Users\\vince\\StudioProjects\\Utilities\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
+#Mon Aug 30 20:29:25 CEST 2021
+base.0=C\:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\classes.dex
 renamed.0=classes.dex
 path.0=classes.dex

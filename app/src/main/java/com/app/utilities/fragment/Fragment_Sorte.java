@@ -29,8 +29,6 @@ public class Fragment_Sorte extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
     }
 
     @Override
@@ -39,17 +37,14 @@ public class Fragment_Sorte extends Fragment {
         rowItems = new ArrayList<>();
         sorteImagesView = getResources().obtainTypedArray(R.array.sorte_images);
         sorteTextsView = getResources().getStringArray(R.array.sorte_strings);
-
         for (int i = 0; i < sorteTextsView.length; i++) {
             RowItem item = new RowItem(sorteTextsView[i],
                     sorteImagesView.getResourceId(i, -1));
             rowItems.add(item);
         }
-
         listView = view.findViewById(R.id.sorteListView);
         adapter = new CustomAdapter(requireActivity(), rowItems);
         listView.setAdapter(adapter);
-
         listView.setOnItemClickListener((parent, view1, position, id) -> {
             if (position == 0) {
                 utils.goToDadoActivity(requireActivity());

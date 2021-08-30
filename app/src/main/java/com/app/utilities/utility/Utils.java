@@ -10,6 +10,7 @@ import com.app.utilities.InfoActivity;
 import com.app.utilities.MainActivity;
 import com.app.utilities.R;
 import com.app.utilities.SettingsActivity;
+import com.app.utilities.utilitiesActivity.AltriSensoriActivity;
 import com.app.utilities.utilitiesActivity.BussolaActivity;
 import com.app.utilities.utilitiesActivity.DadoActivity;
 import com.app.utilities.utilitiesActivity.LivellaActivity;
@@ -46,6 +47,11 @@ public class Utils {
 
     public void goToSettingsActivity(Context context) {
         Intent intent = new Intent(context, SettingsActivity.class);
+        context.startActivity(intent);
+    }
+
+    public void goToAltriSensoriActivity(Context context) {
+        Intent intent = new Intent(context, AltriSensoriActivity.class);
         context.startActivity(intent);
     }
 

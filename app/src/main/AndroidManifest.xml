@@ -37,6 +37,13 @@
             android:theme="@style/LightTheme"
             tools:ignore="LockedOrientationActivity" />
         <activity
+            android:name=".utilitiesActivity.AltriSensoriActivity"
+            android:configChanges="uiMode"
+            android:label="@string/AltriSensoriActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LightTheme"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
             android:name=".utilitiesActivity.LivellaActivity"
             android:configChanges="uiMode"
             android:label="@string/livellaActivity"
@@ -74,8 +81,10 @@
             tools:ignore="LockedOrientationActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
     </application>
+
 </manifest>

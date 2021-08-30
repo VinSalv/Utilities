@@ -24,7 +24,7 @@
     <string name="sotw_southeast">SE</string>
     <string name="sotw_southwest">SW</string>
     <string name="utilityImage">UtilityImage</string>
-    <string name="accelerometer">Accelerometer</string>
+    <string name="accelerometer">Accelerometro</string>
     <string name="gyroscope">Giroscopio</string>
     <string name="magnometer">Magnetometro</string>
     <string name="other_Sensors">Altri sensori</string>
@@ -54,5 +54,6 @@
     <!-- Strings used for fragments for navigation -->
 
     <string name="SCF_text">Sasso Carta Forbici</string>
+    <string name="AltriSensoriActivity">AltriSensoriActivity</string>
 
 </resources>
