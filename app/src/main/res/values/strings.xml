@@ -48,5 +48,6 @@
 
     <string name="SCF_text">Sasso Carta Forbici</string>
     <string name="AltriSensoriActivity">AltriSensoriActivity</string>
+    <string name="Roll_or_Shake">Clicca su GIRA\noppure \nscuoti il tuo smartphone!</string>
 
 </resources>

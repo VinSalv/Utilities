@@ -160,6 +160,15 @@ public class AltriSensoriActivity extends AppCompatActivity implements SensorEve
                     default:
                         ligSimpRate = SensorManager.SENSOR_DELAY_NORMAL;
                         break;
+                    case 4:
+                        ligSimpRate = 400000;
+                        break;
+                    case 5:
+                        ligSimpRate = 800000;
+                        break;
+                    case 6:
+                        ligSimpRate = 1000000;
+                        break;
                 }
                 if (mLight != null) {
                     sensorManager.unregisterListener(AltriSensoriActivity.this, mLight);
@@ -188,6 +197,15 @@ public class AltriSensoriActivity extends AppCompatActivity implements SensorEve
                     case 3:
                     default:
                         preSimpRate = SensorManager.SENSOR_DELAY_NORMAL;
+                        break;
+                    case 4:
+                        preSimpRate = 400000;
+                        break;
+                    case 5:
+                        preSimpRate = 800000;
+                        break;
+                    case 6:
+                        preSimpRate = 1000000;
                         break;
                 }
                 if (mPressure != null) {
@@ -218,6 +236,15 @@ public class AltriSensoriActivity extends AppCompatActivity implements SensorEve
                     default:
                         temSimpRate = SensorManager.SENSOR_DELAY_NORMAL;
                         break;
+                    case 4:
+                        temSimpRate = 400000;
+                        break;
+                    case 5:
+                        temSimpRate = 800000;
+                        break;
+                    case 6:
+                        temSimpRate = 1000000;
+                        break;
                 }
                 if (mTemperature != null) {
                     sensorManager.unregisterListener(AltriSensoriActivity.this, mTemperature);
@@ -247,6 +274,15 @@ public class AltriSensoriActivity extends AppCompatActivity implements SensorEve
                     default:
                         humSimpRate = SensorManager.SENSOR_DELAY_NORMAL;
                         break;
+                    case 4:
+                        humSimpRate = 400000;
+                        break;
+                    case 5:
+                        humSimpRate = 800000;
+                        break;
+                    case 6:
+                        humSimpRate = 1000000;
+                        break;
                 }
                 if (mHumidity != null) {
                     sensorManager.unregisterListener(AltriSensoriActivity.this, mHumidity);
@@ -260,7 +296,7 @@ public class AltriSensoriActivity extends AppCompatActivity implements SensorEve
         });
         feedMultiple();
         ImageButton back = findViewById(R.id.back);
-        back.setOnClickListener(v -> utils.goToMainActivity(this));
+        back.setOnClickListener(v -> onBackPressed());
         mPrevConfig = new Configuration(getResources().getConfiguration());
     }
 

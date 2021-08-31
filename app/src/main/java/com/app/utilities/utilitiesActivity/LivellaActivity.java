@@ -81,7 +81,7 @@ public class LivellaActivity extends AppCompatActivity implements SensorEventLis
         colorSecondaryVariant = typedValue.resourceId;
         sensorManager = (SensorManager) this.getSystemService(Context.SENSOR_SERVICE);
         accelerometer = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
-        microsecond = SensorManager.SENSOR_DELAY_GAME;
+        microsecond = sensorManager.SENSOR_DELAY_GAME;
         if (accelerometer != null) {
             sensorManager.registerListener(this, accelerometer, microsecond);
         } else {

@@ -69,6 +69,7 @@ array orientazione_images
 array orientazione_strings
 array sorte_images
 array sorte_strings
+array speed
 array themes_entries
 array themes_values
 attr ConstraintRotate
@@ -2072,6 +2073,19 @@ id center_horizontal
 id center_vertical
 id chain
 id chains
+id chartAceleX
+id chartAceleY
+id chartAceleZ
+id chartGirX
+id chartGirY
+id chartGirZ
+id chartHumidity
+id chartLight
+id chartMagnetX
+id chartMagnetY
+id chartMagnetZ
+id chartPressure
+id chartTemperature
 id checkbox
 id checked
 id chip
@@ -2284,6 +2298,8 @@ id notification_main_column_container
 id off
 id on
 id oneDice
+id otherSensors
+id otherSensorsLayout
 id outline
 id outward
 id overshoot
@@ -2348,6 +2364,7 @@ id seekbar_value
 id select_dialog_listview
 id selected
 id selection_type
+id sensorsLayout
 id settings
 id settings_option
 id sharedValueSet
@@ -2369,6 +2386,13 @@ id sotw_label
 id south
 id spacer
 id special_effects_controller_view_tag
+id speedAcc
+id speedGir
+id speedHum
+id speedLig
+id speedMag
+id speedPre
+id speedTem
 id spinner
 id spline
 id split_action_bar
@@ -2454,8 +2478,8 @@ id up
 id useLogo
 id utilities
 id vertical_only
+id viewPager
 id view_offset_helper
-id view_pager
 id view_transition
 id view_tree_lifecycle_owner
 id view_tree_saved_state_registry_owner
@@ -2548,6 +2572,7 @@ layout abc_search_dropdown_item_icons_2line
 layout abc_search_view
 layout abc_select_dialog_material
 layout abc_tooltip
+layout activity_altri_sensori
 layout activity_bussola
 layout activity_dado
 layout activity_info
@@ -2673,6 +2698,7 @@ layout text_view_without_line_height
 menu list_options
 plurals mtrl_badge_content_description
 string AccelerometerNotSupported
+string AltriSensoriActivity
 string BrightnessNotSupported
 string GyroscopeNotSupported
 string HumidityNotSupported

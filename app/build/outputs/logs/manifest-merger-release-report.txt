@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:2:1-81:12
-INJECTED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:2:1-81:12
-INJECTED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:2:1-81:12
-INJECTED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:2:1-81:12
+ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:2:1-90:12
+INJECTED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:2:1-90:12
+INJECTED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:2:1-90:12
+INJECTED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:2:1-90:12
 MERGED from [androidx.databinding:viewbinding:7.0.1] C:\Users\vince\.gradle\caches\transforms-3\ff5d982a54f36c84e4fced91462e97bb\transformed\viewbinding-7.0.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-ui:2.3.5] C:\Users\vince\.gradle\caches\transforms-3\d033d0a4869757500b01256d22c25854\transformed\navigation-ui-2.3.5\AndroidManifest.xml:17:1-24:12
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\vince\.gradle\caches\transforms-3\b401bbd386ef73872b0073bd55ee1f0b\transformed\material-1.4.0\AndroidManifest.xml:17:1-24:12
@@ -14,6 +14,7 @@ MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.3.1] C:\Users\vince\.gr
 MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1] C:\Users\vince\.gradle\caches\transforms-3\c3772f70391107c54a2934fabaf02e2c\transformed\lifecycle-viewmodel-ktx-2.3.1\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\55e311d705e7ca24b3efd8612e6caa41\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-fragment:2.3.5] C:\Users\vince\.gradle\caches\transforms-3\38a4400ae8dd95bc9747872afeab006c\transformed\navigation-fragment-2.3.5\AndroidManifest.xml:17:1-24:12
+MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0] C:\Users\vince\.gradle\caches\transforms-3\5a0c74d4d9ba36cbaad29d46a25320aa\transformed\MPAndroidChart-v3.1.0\AndroidManifest.xml:2:1-20:12
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\c84966d631d6e0b75d6bb70ed84f0980\transformed\viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\vince\.gradle\caches\transforms-3\85b785c0f464fd717fc0c3319209a901\transformed\fragment-1.3.6\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.navigation:navigation-runtime:2.3.5] C:\Users\vince\.gradle\caches\transforms-3\9a774ddf16a6c57e321338de37d1e41c\transformed\navigation-runtime-2.3.5\AndroidManifest.xml:17:1-24:12
@@ -54,29 +55,29 @@ MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\User
 MERGED from [androidx.print:print:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\364cd11e18b25eea3f64fd0a4b722373\transformed\print-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\2f8e445222e4e599ddd0550fcb0ff3e9\transformed\interpolator-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\3b9b53105509eef60ab6de9e9a319267\transformed\annotation-experimental-1.0.0\AndroidManifest.xml:17:1-24:12
-INJECTED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:2:1-81:12
-INJECTED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:2:1-81:12
-INJECTED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:2:1-81:12
+INJECTED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:2:1-90:12
+INJECTED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:2:1-90:12
+INJECTED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:2:1-90:12
 	package
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:4:5-32
-		INJECTED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:4:5-32
+		INJECTED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml
 	android:versionName
-		INJECTED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:2:1-81:12
-		INJECTED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:2:1-90:12
+		INJECTED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml
 	xmlns:tools
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:3:5-51
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:3:5-51
 	android:versionCode
-		INJECTED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:2:1-81:12
-		INJECTED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:2:1-90:12
+		INJECTED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml
 	xmlns:android
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:2:11-69
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:2:11-69
 uses-sdk
-ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:6:5-10:55
-INJECTED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:6:5-10:55
-INJECTED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:6:5-10:55
+ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:6:5-10:55
+INJECTED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:6:5-10:55
+INJECTED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:6:5-10:55
 MERGED from [androidx.databinding:viewbinding:7.0.1] C:\Users\vince\.gradle\caches\transforms-3\ff5d982a54f36c84e4fced91462e97bb\transformed\viewbinding-7.0.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.databinding:viewbinding:7.0.1] C:\Users\vince\.gradle\caches\transforms-3\ff5d982a54f36c84e4fced91462e97bb\transformed\viewbinding-7.0.1\AndroidManifest.xml:20:5-44
 MERGED from [androidx.navigation:navigation-ui:2.3.5] C:\Users\vince\.gradle\caches\transforms-3\d033d0a4869757500b01256d22c25854\transformed\navigation-ui-2.3.5\AndroidManifest.xml:20:5-22:41
@@ -97,6 +98,8 @@ MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\vince\.gradle\cac
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\55e311d705e7ca24b3efd8612e6caa41\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.navigation:navigation-fragment:2.3.5] C:\Users\vince\.gradle\caches\transforms-3\38a4400ae8dd95bc9747872afeab006c\transformed\navigation-fragment-2.3.5\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.navigation:navigation-fragment:2.3.5] C:\Users\vince\.gradle\caches\transforms-3\38a4400ae8dd95bc9747872afeab006c\transformed\navigation-fragment-2.3.5\AndroidManifest.xml:20:5-22:41
+MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0] C:\Users\vince\.gradle\caches\transforms-3\5a0c74d4d9ba36cbaad29d46a25320aa\transformed\MPAndroidChart-v3.1.0\AndroidManifest.xml:16:5-18:41
+MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0] C:\Users\vince\.gradle\caches\transforms-3\5a0c74d4d9ba36cbaad29d46a25320aa\transformed\MPAndroidChart-v3.1.0\AndroidManifest.xml:16:5-18:41
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\c84966d631d6e0b75d6bb70ed84f0980\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\c84966d631d6e0b75d6bb70ed84f0980\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\vince\.gradle\caches\transforms-3\85b785c0f464fd717fc0c3319209a901\transformed\fragment-1.3.6\AndroidManifest.xml:20:5-22:41
@@ -177,30 +180,30 @@ MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\vince\.gradle\ca
 MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\2f8e445222e4e599ddd0550fcb0ff3e9\transformed\interpolator-1.0.0\AndroidManifest.xml:20:5-44
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\3b9b53105509eef60ab6de9e9a319267\transformed\annotation-experimental-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\3b9b53105509eef60ab6de9e9a319267\transformed\annotation-experimental-1.0.0\AndroidManifest.xml:20:5-22:41
-INJECTED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:6:5-10:55
-INJECTED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:6:5-10:55
+INJECTED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:6:5-10:55
+INJECTED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:6:5-10:55
 	android:maxSdkVersion
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:7:9-35
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:7:9-35
 	android:targetSdkVersion
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:9:9-38
-		INJECTED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:9:9-38
+		INJECTED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml
 	tools:ignore
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:10:9-52
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:10:9-52
 	android:minSdkVersion
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:8:9-35
-		INJECTED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml
-		INJECTED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:8:9-35
+		INJECTED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml
+		INJECTED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml
 uses-permission#android.permission.ACCESS_FINE_LOCATION
-ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:12:5-79
+ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:12:5-79
 	android:name
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:12:22-76
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:12:22-76
 uses-permission#android.permission.ACCESS_COARSE_LOCATION
-ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:13:5-81
+ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:13:5-81
 	android:name
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:13:22-78
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:13:22-78
 application
-ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:15:5-80:19
+ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:15:5-88:19
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\vince\.gradle\caches\transforms-3\b401bbd386ef73872b0073bd55ee1f0b\transformed\material-1.4.0\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.4.0] C:\Users\vince\.gradle\caches\transforms-3\b401bbd386ef73872b0073bd55ee1f0b\transformed\material-1.4.0\AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.0] C:\Users\vince\.gradle\caches\transforms-3\b59867e1c3b07c9faac419f0f79a72ff\transformed\constraintlayout-2.1.0\AndroidManifest.xml:9:5-20
@@ -210,132 +213,146 @@ MERGED from [androidx.core:core:1.5.0] C:\Users\vince\.gradle\caches\transforms-
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\vince\.gradle\caches\transforms-3\d09f9b19d46d40ab78b2c05c9bc3bdda\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] C:\Users\vince\.gradle\caches\transforms-3\d09f9b19d46d40ab78b2c05c9bc3bdda\transformed\versionedparcelable-1.1.1\AndroidManifest.xml:24:5-25:19
 	android:screenOrientation
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:22:9-45
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:22:9-45
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.5.0] C:\Users\vince\.gradle\caches\transforms-3\109c406f854d135ad1ed87dae876b357\transformed\core-1.5.0\AndroidManifest.xml:24:18-86
 	android:supportsRtl
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:23:9-35
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:23:9-35
 	android:label
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:20:9-41
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:20:9-41
 	android:fullBackupContent
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:18:9-59
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:18:9-59
 	android:roundIcon
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:21:9-48
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:21:9-48
 	android:configChanges
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:17:9-39
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:17:9-39
 	android:icon
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:19:9-43
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:19:9-43
 	android:allowBackup
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:16:9-35
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:16:9-35
 	android:theme
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:24:9-42
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:24:9-42
 activity#com.app.utilities.InfoActivity
-ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:25:9-31:56
+ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:25:9-31:56
 	android:screenOrientation
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:29:13-49
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:29:13-49
 	android:label
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:28:13-49
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:28:13-49
 	tools:ignore
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:31:13-53
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:31:13-53
 	android:configChanges
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:27:13-43
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:27:13-43
 	android:theme
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:30:13-46
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:30:13-46
 	android:name
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:26:13-41
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:26:13-41
 activity#com.app.utilities.SettingsActivity
-ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:32:9-38:56
+ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:32:9-38:56
 	android:screenOrientation
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:36:13-49
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:36:13-49
 	android:label
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:35:13-53
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:35:13-53
 	tools:ignore
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:38:13-53
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:38:13-53
 	android:configChanges
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:34:13-43
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:34:13-43
 	android:theme
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:37:13-46
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:37:13-46
 	android:name
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:33:13-45
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:33:13-45
+activity#com.app.utilities.utilitiesActivity.AltriSensoriActivity
+ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:39:9-45:56
+	android:screenOrientation
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:43:13-49
+	android:label
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:42:13-57
+	tools:ignore
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:45:13-53
+	android:configChanges
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:41:13-43
+	android:theme
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:44:13-46
+	android:name
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:40:13-67
 activity#com.app.utilities.utilitiesActivity.LivellaActivity
-ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:39:9-45:56
+ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:46:9-52:56
 	android:screenOrientation
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:43:13-49
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:50:13-49
 	android:label
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:42:13-52
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:49:13-52
 	tools:ignore
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:45:13-53
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:52:13-53
 	android:configChanges
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:41:13-43
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:48:13-43
 	android:theme
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:44:13-46
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:51:13-46
 	android:name
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:40:13-62
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:47:13-62
 activity#com.app.utilities.utilitiesActivity.BussolaActivity
-ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:46:9-52:56
+ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:53:9-59:56
 	android:screenOrientation
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:50:13-49
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:57:13-49
 	android:label
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:49:13-52
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:56:13-52
 	tools:ignore
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:52:13-53
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:59:13-53
 	android:configChanges
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:48:13-43
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:55:13-43
 	android:theme
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:51:13-46
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:58:13-46
 	android:name
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:47:13-62
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:54:13-62
 activity#com.app.utilities.utilitiesActivity.DadoActivity
-ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:53:9-59:56
+ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:60:9-66:56
 	android:screenOrientation
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:57:13-49
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:64:13-49
 	android:label
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:56:13-49
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:63:13-49
 	tools:ignore
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:59:13-53
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:66:13-53
 	android:configChanges
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:55:13-43
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:62:13-43
 	android:theme
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:58:13-46
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:65:13-46
 	android:name
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:54:13-59
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:61:13-59
 activity#com.app.utilities.utilitiesActivity.SCFActivity
-ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:60:9-66:56
+ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:67:9-73:56
 	android:screenOrientation
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:64:13-49
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:71:13-49
 	android:label
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:63:13-49
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:70:13-49
 	tools:ignore
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:66:13-53
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:73:13-53
 	android:configChanges
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:62:13-43
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:69:13-43
 	android:theme
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:65:13-46
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:72:13-46
 	android:name
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:61:13-58
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:68:13-58
 activity#com.app.utilities.MainActivity
-ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:67:9-79:20
+ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:74:9-87:20
 	android:screenOrientation
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:72:13-49
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:79:13-49
 	android:label
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:71:13-45
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:78:13-45
 	android:exported
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:70:13-36
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:77:13-36
 	tools:ignore
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:74:13-53
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:81:13-53
 	android:configChanges
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:69:13-43
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:76:13-43
 	android:theme
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:73:13-46
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:80:13-46
 	android:name
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:68:13-41
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:75:13-41
 intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
-ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:75:13-78:29
+ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:82:13-86:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:76:17-69
+ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:83:17-69
 	android:name
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:76:25-66
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:83:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:77:17-77
+ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:85:17-77
 	android:name
-		ADDED from C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:77:27-74
+		ADDED from C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:85:27-74

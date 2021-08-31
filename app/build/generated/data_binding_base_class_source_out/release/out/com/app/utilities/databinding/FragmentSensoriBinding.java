@@ -4,6 +4,9 @@ package com.app.utilities.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.Spinner;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -11,6 +14,7 @@ import androidx.core.widget.NestedScrollView;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.app.utilities.R;
+import com.github.mikephil.charting.charts.LineChart;
 import java.lang.NullPointerException;
 import java.lang.Override;
 import java.lang.String;
@@ -20,16 +24,46 @@ public final class FragmentSensoriBinding implements ViewBinding {
   private final NestedScrollView rootView;
 
   @NonNull
-  public final TextView humidity;
+  public final LineChart chartAceleX;
 
   @NonNull
-  public final TextView light;
+  public final LineChart chartAceleY;
 
   @NonNull
-  public final TextView pressure;
+  public final LineChart chartAceleZ;
 
   @NonNull
-  public final TextView temperature;
+  public final LineChart chartGirX;
+
+  @NonNull
+  public final LineChart chartGirY;
+
+  @NonNull
+  public final LineChart chartGirZ;
+
+  @NonNull
+  public final LineChart chartMagnetX;
+
+  @NonNull
+  public final LineChart chartMagnetY;
+
+  @NonNull
+  public final LineChart chartMagnetZ;
+
+  @NonNull
+  public final Button otherSensors;
+
+  @NonNull
+  public final LinearLayout sensorsLayout;
+
+  @NonNull
+  public final Spinner speedAcc;
+
+  @NonNull
+  public final Spinner speedGir;
+
+  @NonNull
+  public final Spinner speedMag;
 
   @NonNull
   public final TextView xGyroValue;
@@ -58,16 +92,30 @@ public final class FragmentSensoriBinding implements ViewBinding {
   @NonNull
   public final TextView zValue;
 
-  private FragmentSensoriBinding(@NonNull NestedScrollView rootView, @NonNull TextView humidity,
-      @NonNull TextView light, @NonNull TextView pressure, @NonNull TextView temperature,
-      @NonNull TextView xGyroValue, @NonNull TextView xMagnoValue, @NonNull TextView xValue,
-      @NonNull TextView yGyroValue, @NonNull TextView yMagnoValue, @NonNull TextView yValue,
-      @NonNull TextView zGyroValue, @NonNull TextView zMagnoValue, @NonNull TextView zValue) {
+  private FragmentSensoriBinding(@NonNull NestedScrollView rootView, @NonNull LineChart chartAceleX,
+      @NonNull LineChart chartAceleY, @NonNull LineChart chartAceleZ, @NonNull LineChart chartGirX,
+      @NonNull LineChart chartGirY, @NonNull LineChart chartGirZ, @NonNull LineChart chartMagnetX,
+      @NonNull LineChart chartMagnetY, @NonNull LineChart chartMagnetZ,
+      @NonNull Button otherSensors, @NonNull LinearLayout sensorsLayout, @NonNull Spinner speedAcc,
+      @NonNull Spinner speedGir, @NonNull Spinner speedMag, @NonNull TextView xGyroValue,
+      @NonNull TextView xMagnoValue, @NonNull TextView xValue, @NonNull TextView yGyroValue,
+      @NonNull TextView yMagnoValue, @NonNull TextView yValue, @NonNull TextView zGyroValue,
+      @NonNull TextView zMagnoValue, @NonNull TextView zValue) {
     this.rootView = rootView;
-    this.humidity = humidity;
-    this.light = light;
-    this.pressure = pressure;
-    this.temperature = temperature;
+    this.chartAceleX = chartAceleX;
+    this.chartAceleY = chartAceleY;
+    this.chartAceleZ = chartAceleZ;
+    this.chartGirX = chartGirX;
+    this.chartGirY = chartGirY;
+    this.chartGirZ = chartGirZ;
+    this.chartMagnetX = chartMagnetX;
+    this.chartMagnetY = chartMagnetY;
+    this.chartMagnetZ = chartMagnetZ;
+    this.otherSensors = otherSensors;
+    this.sensorsLayout = sensorsLayout;
+    this.speedAcc = speedAcc;
+    this.speedGir = speedGir;
+    this.speedMag = speedMag;
     this.xGyroValue = xGyroValue;
     this.xMagnoValue = xMagnoValue;
     this.xValue = xValue;
@@ -106,27 +154,87 @@ public final class FragmentSensoriBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.humidity;
-      TextView humidity = ViewBindings.findChildViewById(rootView, id);
-      if (humidity == null) {
+      id = R.id.chartAceleX;
+      LineChart chartAceleX = ViewBindings.findChildViewById(rootView, id);
+      if (chartAceleX == null) {
         break missingId;
       }
 
-      id = R.id.light;
-      TextView light = ViewBindings.findChildViewById(rootView, id);
-      if (light == null) {
+      id = R.id.chartAceleY;
+      LineChart chartAceleY = ViewBindings.findChildViewById(rootView, id);
+      if (chartAceleY == null) {
         break missingId;
       }
 
-      id = R.id.pressure;
-      TextView pressure = ViewBindings.findChildViewById(rootView, id);
-      if (pressure == null) {
+      id = R.id.chartAceleZ;
+      LineChart chartAceleZ = ViewBindings.findChildViewById(rootView, id);
+      if (chartAceleZ == null) {
         break missingId;
       }
 
-      id = R.id.temperature;
-      TextView temperature = ViewBindings.findChildViewById(rootView, id);
-      if (temperature == null) {
+      id = R.id.chartGirX;
+      LineChart chartGirX = ViewBindings.findChildViewById(rootView, id);
+      if (chartGirX == null) {
+        break missingId;
+      }
+
+      id = R.id.chartGirY;
+      LineChart chartGirY = ViewBindings.findChildViewById(rootView, id);
+      if (chartGirY == null) {
+        break missingId;
+      }
+
+      id = R.id.chartGirZ;
+      LineChart chartGirZ = ViewBindings.findChildViewById(rootView, id);
+      if (chartGirZ == null) {
+        break missingId;
+      }
+
+      id = R.id.chartMagnetX;
+      LineChart chartMagnetX = ViewBindings.findChildViewById(rootView, id);
+      if (chartMagnetX == null) {
+        break missingId;
+      }
+
+      id = R.id.chartMagnetY;
+      LineChart chartMagnetY = ViewBindings.findChildViewById(rootView, id);
+      if (chartMagnetY == null) {
+        break missingId;
+      }
+
+      id = R.id.chartMagnetZ;
+      LineChart chartMagnetZ = ViewBindings.findChildViewById(rootView, id);
+      if (chartMagnetZ == null) {
+        break missingId;
+      }
+
+      id = R.id.otherSensors;
+      Button otherSensors = ViewBindings.findChildViewById(rootView, id);
+      if (otherSensors == null) {
+        break missingId;
+      }
+
+      id = R.id.sensorsLayout;
+      LinearLayout sensorsLayout = ViewBindings.findChildViewById(rootView, id);
+      if (sensorsLayout == null) {
+        break missingId;
+      }
+
+      id = R.id.speedAcc;
+      Spinner speedAcc = ViewBindings.findChildViewById(rootView, id);
+      if (speedAcc == null) {
+        break missingId;
+      }
+
+      id = R.id.speedGir;
+      Spinner speedGir = ViewBindings.findChildViewById(rootView, id);
+      if (speedGir == null) {
+        break missingId;
+      }
+
+      id = R.id.speedMag;
+      Spinner speedMag = ViewBindings.findChildViewById(rootView, id);
+      if (speedMag == null) {
         break missingId;
       }
 
@@ -184,9 +292,10 @@ public final class FragmentSensoriBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentSensoriBinding((NestedScrollView) rootView, humidity, light, pressure,
-          temperature, xGyroValue, xMagnoValue, xValue, yGyroValue, yMagnoValue, yValue, zGyroValue,
-          zMagnoValue, zValue);
+      return new FragmentSensoriBinding((NestedScrollView) rootView, chartAceleX, chartAceleY,
+          chartAceleZ, chartGirX, chartGirY, chartGirZ, chartMagnetX, chartMagnetY, chartMagnetZ,
+          otherSensors, sensorsLayout, speedAcc, speedGir, speedMag, xGyroValue, xMagnoValue,
+          xValue, yGyroValue, yMagnoValue, yValue, zGyroValue, zMagnoValue, zValue);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

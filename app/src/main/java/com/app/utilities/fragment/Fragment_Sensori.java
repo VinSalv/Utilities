@@ -157,6 +157,15 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
                     default:
                         accSimpRate = SensorManager.SENSOR_DELAY_NORMAL;
                         break;
+                    case 4:
+                        accSimpRate = 400000;
+                        break;
+                    case 5:
+                        accSimpRate = 800000;
+                        break;
+                    case 6:
+                        accSimpRate = 1000000;
+                        break;
                 }
                 if (mAccel != null) {
                     sensorManager.unregisterListener(Fragment_Sensori.this, mAccel);
@@ -186,6 +195,15 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
                     default:
                         girSimpRate = SensorManager.SENSOR_DELAY_NORMAL;
                         break;
+                    case 4:
+                        girSimpRate = 400000;
+                        break;
+                    case 5:
+                        girSimpRate = 800000;
+                        break;
+                    case 6:
+                        girSimpRate = 1000000;
+                        break;
                 }
                 if (mGyro != null) {
                     sensorManager.unregisterListener(Fragment_Sensori.this, mGyro);
@@ -214,6 +232,15 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
                     case 3:
                     default:
                         magSimpRate = SensorManager.SENSOR_DELAY_NORMAL;
+                        break;
+                    case 4:
+                        magSimpRate = 400000;
+                        break;
+                    case 5:
+                        magSimpRate = 800000;
+                        break;
+                    case 6:
+                        magSimpRate = 1000000;
                         break;
                 }
                 if (mMagno != null) {

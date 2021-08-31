@@ -1,12 +1,15 @@
 package com.app.utilities.utilitiesActivity;
 
 import android.annotation.SuppressLint;
+import android.content.Context;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.VibrationEffect;
+import android.os.Vibrator;
 import android.text.Html;
 import android.util.TypedValue;
 import android.view.View;
@@ -23,11 +26,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.app.utilities.R;
 import com.app.utilities.utility.Preferences;
+import com.app.utilities.utility.Shake;
 import com.app.utilities.utility.Utils;
 
 import java.util.Random;
 
-public class SCFActivity extends AppCompatActivity {
+public class SCFActivity extends AppCompatActivity implements Shake.Callback {
     final int[] redArray = {
             R.drawable.paper_red,
             R.drawable.rock_red,
@@ -51,6 +55,8 @@ public class SCFActivity extends AppCompatActivity {
     @SuppressWarnings("unused")
     int colorAccent;
     Preferences pref;
+    Vibrator vibrator;
+    private Shake shake = null;
 
     public static boolean isOnDarkMode(Configuration configuration) {
         return (configuration.uiMode & Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES;
@@ -82,6 +88,8 @@ public class SCFActivity extends AppCompatActivity {
         theme.resolveAttribute(android.R.attr.colorAccent, typedValue, true);
         @SuppressLint("Recycle") TypedArray arr = obtainStyledAttributes(typedValue.data, new int[]{android.R.attr.colorAccent});
         colorAccent = arr.getColor(0, -1);
+        vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+        shake = new Shake(this, 2.5d, 500, this);
         goButton = findViewById(R.id.go);
         scfLayout = findViewById(R.id.scfLayout);
         ViewTreeObserver observer = scfLayout.getViewTreeObserver();
@@ -197,6 +205,22 @@ public class SCFActivity extends AppCompatActivity {
     }
 
     @Override
+    public void shakingStarted() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            vibrator.vibrate(VibrationEffect.createOneShot(300, VibrationEffect.DEFAULT_AMPLITUDE));
+        } else {
+            //deprecated in API 26
+            vibrator.vibrate(300);
+        }
+        goButton(this.getWindow().getDecorView().findViewById(android.R.id.content));
+    }
+
+    @Override
+    public void shakingStopped() {
+
+    }
+
+    @Override
     public void onConfigurationChanged(@NonNull Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
         configurationChanged(newConfig);
@@ -212,5 +236,4 @@ public class SCFActivity extends AppCompatActivity {
     protected boolean isNightConfigChanged(Configuration newConfig) {
         return (newConfig.diff(mPrevConfig) & ActivityInfo.CONFIG_UI_MODE) != 0 && isOnDarkMode(newConfig) != isOnDarkMode(mPrevConfig);
     }
-
 }

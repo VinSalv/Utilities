@@ -7,22 +7,33 @@
     android:background="?attr/colorOnPrimarySurface"
     android:orientation="vertical">
 
-    <ImageButton
-        android:id="@+id/back"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:backgroundTint="@color/transparent"
-        android:contentDescription="@string/backButton"
-        android:src="?attr/actionModeCloseDrawable"
-        app:layout_constraintBottom_toTopOf="@id/compass"
-        app:layout_constraintHeight_default="percent"
-        app:layout_constraintHeight_percent="0.10"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintWidth_default="percent"
-        app:layout_constraintWidth_percent="0.15"
-        tools:targetApi="lollipop" />
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:backgroundTint="@color/transparent"
+            android:contentDescription="@string/backButton"
+            android:src="?attr/actionModeCloseDrawable"
+            tools:targetApi="lollipop" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:autoSizeTextType="uniform"
+            android:background="?attr/color"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/Roll_or_Shake"
+            android:textStyle="bold"
+
+            tools:targetApi="o" />
+    </LinearLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
