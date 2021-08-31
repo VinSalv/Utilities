@@ -34,9 +34,9 @@ com/app/utilities/settings/PrefderenzeSCF.java
 com/app/utilities/settings/PrefderenzeDado.java
  com.app.utilities.settings.PrefderenzeDado
  com.app.utilities.settings.PrefderenzeDado$SettingsFragment
-com/app/utilities/utilitiesActivity/DadoActivity.java
- com.app.utilities.utilitiesActivity.DadoActivity
- com.app.utilities.utilitiesActivity.DadoActivity$1
+com/app/utilities/settings/SettingsActivity.java
+ com.app.utilities.settings.SettingsActivity
+ com.app.utilities.settings.SettingsActivity$SettingsFragment
 com/app/utilities/BuildConfig.java
  com.app.utilities.BuildConfig
 com/app/utilities/databinding/FragmentSensoriBinding.java
@@ -63,8 +63,8 @@ com/app/utilities/utility/CustomAdapter.java
  com.app.utilities.utility.CustomAdapter
  com.app.utilities.utility.CustomAdapter$1
  com.app.utilities.utility.CustomAdapter$ViewHolder
-com/app/utilities/utility/Utils.java
- com.app.utilities.utility.Utils
+com/app/utilities/databinding/PreferenzeDadoActivityBinding.java
+ com.app.utilities.databinding.PreferenzeDadoActivityBinding
 com/app/utilities/databinding/ActivityBussolaBinding.java
  com.app.utilities.databinding.ActivityBussolaBinding
 com/app/utilities/databinding/FragmentMainBinding.java
@@ -89,8 +89,8 @@ com/app/utilities/databinding/ActivityAltriSensoriBinding.java
 com/app/utilities/bussola/Compass.java
  com.app.utilities.bussola.Compass
  com.app.utilities.bussola.Compass$CompassListener
-com/app/utilities/databinding/PreferenzeDadoActivityBinding.java
- com.app.utilities.databinding.PreferenzeDadoActivityBinding
-com/app/utilities/settings/SettingsActivity.java
- com.app.utilities.settings.SettingsActivity
- com.app.utilities.settings.SettingsActivity$SettingsFragment
+com/app/utilities/utilitiesActivity/DadoActivity.java
+ com.app.utilities.utilitiesActivity.DadoActivity
+ com.app.utilities.utilitiesActivity.DadoActivity$1
+com/app/utilities/utility/Utils.java
+ com.app.utilities.utility.Utils
