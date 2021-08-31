@@ -2718,7 +2718,8 @@ string PrefderenzeSCF
 string Preferenze
 string PressureNotSupported
 string Roll
-string Roll_or_Shake
+string Roll_or_Shake_Dice
+string Roll_or_Shake_SCF
 string SCF_text
 string TemperatureNotSupported
 string Two_dices

@@ -47,7 +47,7 @@
             android:background="?attr/color"
             android:gravity="center"
             android:padding="5dp"
-            android:text="@string/Roll_or_Shake"
+            android:text="@string/Roll_or_Shake_SCF"
             android:textStyle="bold"
             tools:targetApi="o" />
     </LinearLayout>
