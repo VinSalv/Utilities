@@ -65,6 +65,7 @@ public class DadoActivity extends AppCompatActivity implements Shake.Callback {
     ImageView rightDice;
     Vibrator vibrator;
     boolean b = true;
+    boolean b2 = false;
     private Shake shake = null;
 
     public static boolean isOnDarkMode(Configuration configuration) {
@@ -167,13 +168,14 @@ public class DadoActivity extends AppCompatActivity implements Shake.Callback {
 
     @SuppressLint("SetTextI18n")
     public void OneDiceButton(View view) {
-        if (prefDado.getVibrationButtonsDiceBool() && b)
+        if (prefDado.getVibrationButtonsDiceBool() && b & b2)
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 vibrator.vibrate(VibrationEffect.createOneShot(300, VibrationEffect.DEFAULT_AMPLITUDE));
             } else {
                 //deprecated in API 26
                 vibrator.vibrate(300);
             }
+        b2 = true;
         one = true;
         diceLayout.removeAllViews();
         diceNumber.setText("0");
