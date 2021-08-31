@@ -11,6 +11,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.Toolbar;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.app.utilities.R;
@@ -40,9 +41,12 @@ public final class ActivityScfBinding implements ViewBinding {
   @NonNull
   public final TextView scfWinner;
 
+  @NonNull
+  public final Toolbar toolbarSCF;
+
   private ActivityScfBinding(@NonNull LinearLayout rootView, @NonNull ImageButton back,
       @NonNull EditText bluePlayerEditText, @NonNull Button go, @NonNull EditText redPlayerEditText,
-      @NonNull LinearLayout scfLayout, @NonNull TextView scfWinner) {
+      @NonNull LinearLayout scfLayout, @NonNull TextView scfWinner, @NonNull Toolbar toolbarSCF) {
     this.rootView = rootView;
     this.back = back;
     this.bluePlayerEditText = bluePlayerEditText;
@@ -50,6 +54,7 @@ public final class ActivityScfBinding implements ViewBinding {
     this.redPlayerEditText = redPlayerEditText;
     this.scfLayout = scfLayout;
     this.scfWinner = scfWinner;
+    this.toolbarSCF = toolbarSCF;
   }
 
   @Override
@@ -115,8 +120,14 @@ public final class ActivityScfBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.toolbarSCF;
+      Toolbar toolbarSCF = ViewBindings.findChildViewById(rootView, id);
+      if (toolbarSCF == null) {
+        break missingId;
+      }
+
       return new ActivityScfBinding((LinearLayout) rootView, back, bluePlayerEditText, go,
-          redPlayerEditText, scfLayout, scfWinner);
+          redPlayerEditText, scfLayout, scfWinner, toolbarSCF);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

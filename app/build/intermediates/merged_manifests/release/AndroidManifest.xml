@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.app.utilities"
-    android:versionCode="8"
-    android:versionName="8.0" >
+    android:versionCode="9"
+    android:versionName="9.0" >
 
     <uses-sdk
         android:maxSdkVersion="30"
@@ -11,6 +11,8 @@
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.HIGH_SAMPLING_RATE_SENSORS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
 
     <application
         android:allowBackup="true"
@@ -24,13 +26,13 @@
         android:supportsRtl="true"
         android:theme="@style/LightTheme" >
         <activity
-            android:name="com.app.utilities.InfoActivity"
+            android:name="com.app.utilities.utilitiesActivity.InfoActivity"
             android:configChanges="uiMode"
             android:label="@string/infoActivity"
             android:screenOrientation="portrait"
             android:theme="@style/LightTheme" />
         <activity
-            android:name="com.app.utilities.SettingsActivity"
+            android:name="com.app.utilities.settings.SettingsActivity"
             android:configChanges="uiMode"
             android:label="@string/settingsActivity"
             android:screenOrientation="portrait"
@@ -60,9 +62,21 @@
             android:screenOrientation="portrait"
             android:theme="@style/LightTheme" />
         <activity
+            android:name="com.app.utilities.settings.PrefderenzeDado"
+            android:configChanges="uiMode"
+            android:label="@string/PrefderenzeDado"
+            android:screenOrientation="portrait"
+            android:theme="@style/LightTheme" />
+        <activity
             android:name="com.app.utilities.utilitiesActivity.SCFActivity"
             android:configChanges="uiMode"
             android:label="@string/_SCFActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LightTheme" />
+        <activity
+            android:name="com.app.utilities.settings.PrefderenzeSCF"
+            android:configChanges="uiMode"
+            android:label="@string/PrefderenzeSCF"
             android:screenOrientation="portrait"
             android:theme="@style/LightTheme" />
         <activity
