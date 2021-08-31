@@ -1917,6 +1917,7 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable ic_room_preferences
 drawable ic_settings
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
@@ -2317,6 +2318,9 @@ id percent
 id pin
 id position
 id postLayout
+id pref_dice
+id preference_dice
+id preference_scf
 id pressure
 id progress_circular
 id progress_horizontal
@@ -2459,6 +2463,8 @@ id titleDividerNoCustom
 id title_template
 id toggle
 id toolbar
+id toolbarDice
+id toolbarSCF
 id top
 id topPanel
 id touch_outside
@@ -2674,6 +2680,7 @@ layout preference_widget_seekbar
 layout preference_widget_seekbar_material
 layout preference_widget_switch
 layout preference_widget_switch_compat
+layout preferenze_dado_activity
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
@@ -2696,6 +2703,8 @@ layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
 menu list_options
+menu list_options_dice
+menu list_options_scf
 plurals mtrl_badge_content_description
 string AccelerometerNotSupported
 string AltriSensoriActivity
@@ -2704,8 +2713,12 @@ string GyroscopeNotSupported
 string HumidityNotSupported
 string MagnetometerNotSupported
 string One_dice
+string PrefderenzeDado
+string PrefderenzeSCF
+string Preferenze
 string PressureNotSupported
 string Roll
+string Roll_or_Shake
 string SCF_text
 string TemperatureNotSupported
 string Two_dices
@@ -3790,6 +3803,8 @@ styleable ViewStubCompat android_id android_layout android_inflatedId
 styleable ViewTransition android_id SharedValue SharedValueId clearsTag duration ifTagNotSet ifTagSet motionInterpolator motionTarget onStateTransition pathMotionArc setsTag transitionDisable upDuration viewTransitionMode
 styleable include constraintSet
 xml backup_descriptor
+xml preferences_dado
+xml preferences_scf
 xml root_preferences
 xml standalone_badge
 xml standalone_badge_gravity_bottom_end

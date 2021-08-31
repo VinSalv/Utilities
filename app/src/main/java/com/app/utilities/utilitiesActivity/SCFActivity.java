@@ -12,6 +12,8 @@ import android.os.VibrationEffect;
 import android.os.Vibrator;
 import android.text.Html;
 import android.util.TypedValue;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewTreeObserver;
 import android.widget.Button;
@@ -23,9 +25,11 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import com.app.utilities.R;
 import com.app.utilities.utility.Preferences;
+import com.app.utilities.utility.PreferencesSCF;
 import com.app.utilities.utility.Shake;
 import com.app.utilities.utility.Utils;
 
@@ -55,8 +59,9 @@ public class SCFActivity extends AppCompatActivity implements Shake.Callback {
     @SuppressWarnings("unused")
     int colorAccent;
     Preferences pref;
+    PreferencesSCF prefSCF;
     Vibrator vibrator;
-    private Shake shake = null;
+    Boolean b = true;
 
     public static boolean isOnDarkMode(Configuration configuration) {
         return (configuration.uiMode & Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES;
@@ -67,6 +72,7 @@ public class SCFActivity extends AppCompatActivity implements Shake.Callback {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         pref = utils.loadData(this, new Preferences());
+        prefSCF = utils.loadDataSCF(this, new PreferencesSCF());
         if (!pref.getPredBool()) {
             if (pref.getThemeText().equals("LightTheme") || pref.getThemeText().equals("LightThemeSelected"))
                 utils.changeThemeSelected(this, 0);
@@ -84,12 +90,14 @@ public class SCFActivity extends AppCompatActivity implements Shake.Callback {
             }
         }
         setContentView(R.layout.activity_scf);
+        Toolbar myToolbarSCF = findViewById(R.id.toolbarSCF);
+        setSupportActionBar(myToolbarSCF);
         Resources.Theme theme = getTheme();
         theme.resolveAttribute(android.R.attr.colorAccent, typedValue, true);
         @SuppressLint("Recycle") TypedArray arr = obtainStyledAttributes(typedValue.data, new int[]{android.R.attr.colorAccent});
         colorAccent = arr.getColor(0, -1);
         vibrator = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
-        shake = new Shake(this, 2.5d, 500, this);
+        @SuppressWarnings("unused") Shake shake = new Shake(this, 2.5d, 0, this);
         goButton = findViewById(R.id.go);
         scfLayout = findViewById(R.id.scfLayout);
         ViewTreeObserver observer = scfLayout.getViewTreeObserver();
@@ -148,6 +156,13 @@ public class SCFActivity extends AppCompatActivity implements Shake.Callback {
 
     @SuppressLint("SetTextI18n")
     public void goButton(View view) {
+        if (prefSCF.getVibrationButtonSCFBool() && b)
+            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                vibrator.vibrate(VibrationEffect.createOneShot(300, VibrationEffect.DEFAULT_AMPLITUDE));
+            } else {
+                //deprecated in API 26
+                vibrator.vibrate(300);
+            }
         scfLayout.removeAllViews();
         scfWinner.setText(getString(R.string.scfWinner));
         if ((redPlayerEditText.getText().length() == 0) && (bluePlayerEditText.getText().length() == 0)) {
@@ -204,20 +219,93 @@ public class SCFActivity extends AppCompatActivity implements Shake.Callback {
         }
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public void shakingStarted() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-            vibrator.vibrate(VibrationEffect.createOneShot(300, VibrationEffect.DEFAULT_AMPLITUDE));
-        } else {
-            //deprecated in API 26
-            vibrator.vibrate(300);
+        if (prefSCF.getShakeSCFBool() && b) {
+            if (prefSCF.getVibrationShakeSCFBool() && b)
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                    vibrator.vibrate(VibrationEffect.createOneShot(300, VibrationEffect.DEFAULT_AMPLITUDE));
+                } else {
+                    //deprecated in API 26
+                    vibrator.vibrate(300);
+                }
+            scfLayout.removeAllViews();
+            scfWinner.setText(getString(R.string.scfWinner));
+            if ((redPlayerEditText.getText().length() == 0) && (bluePlayerEditText.getText().length() == 0)) {
+                utils.notifyUserShortWay(this, "Inserisci i nomi dei gicoatori!!");
+                return;
+            } else if (redPlayerEditText.getText().length() == 0) {
+                utils.notifyUserShortWay(this, "Inserisci il nome del giocatore rosso!!");
+                return;
+            } else if (bluePlayerEditText.getText().length() == 0) {
+                utils.notifyUserShortWay(this, "Inserisci il nome del giocatore blu!!");
+                return;
+            }
+            final ImageView redPlayerImage = new ImageView(this);
+            final ImageView bluePlayerImage = new ImageView(this);
+            Random RandomGenerator = new Random();
+            int nred = RandomGenerator.nextInt(3);
+            redPlayerImage.setImageResource(redArray[nred]);
+            scfLayout.addView(redPlayerImage);
+            redPlayerImage.getLayoutParams().width = width / 2;
+            redPlayerImage.getLayoutParams().height = height;
+            int nblue = RandomGenerator.nextInt(3);
+            bluePlayerImage.setImageResource(blueArray[nblue]);
+            scfLayout.addView(bluePlayerImage);
+            bluePlayerImage.getLayoutParams().width = width / 2;
+            bluePlayerImage.getLayoutParams().height = height;
+            String text = "Il vincitore è: ";
+            if (nred == 0 && nblue == 1) {
+                scfWinner.setText(Html.fromHtml(text + "<font color='red'>" + redPlayerEditText.getText() + "</font>"), TextView.BufferType.SPANNABLE);
+            } else if (nred == 0 && nblue == 2) {
+                scfWinner.setText(Html.fromHtml(text + "<font color='blue'>" + bluePlayerEditText.getText() + "</font>"), TextView.BufferType.SPANNABLE);
+            } else if (nred == 1 && nblue == 0) {
+                scfWinner.setText(Html.fromHtml(text + "<font color='blue'>" + bluePlayerEditText.getText() + "</font>"), TextView.BufferType.SPANNABLE);
+            } else if (nred == 1 && nblue == 2) {
+                scfWinner.setText(Html.fromHtml(text + "<font color='red'>" + redPlayerEditText.getText() + "</font>"), TextView.BufferType.SPANNABLE);
+            } else if (nred == 2 && nblue == 0) {
+                scfWinner.setText(Html.fromHtml(text + "<font color='red'>" + redPlayerEditText.getText() + "</font>"), TextView.BufferType.SPANNABLE);
+            } else if (nred == 2 && nblue == 1) {
+                scfWinner.setText(Html.fromHtml(text + "<font color='blue'>" + bluePlayerEditText.getText() + "</font>"), TextView.BufferType.SPANNABLE);
+            }
+            if (nblue == 0 && nred == 1) {
+                scfWinner.setText(Html.fromHtml(text + "<font color='blue'>" + bluePlayerEditText.getText() + "</font>"), TextView.BufferType.SPANNABLE);
+            } else if (nblue == 0 && nred == 2) {
+                scfWinner.setText(Html.fromHtml(text + "<font color='red'>" + redPlayerEditText.getText() + "</font>"), TextView.BufferType.SPANNABLE);
+            } else if (nblue == 1 && nred == 0) {
+                scfWinner.setText(Html.fromHtml(text + "<font color='red'>" + redPlayerEditText.getText() + "</font>"), TextView.BufferType.SPANNABLE);
+            } else if (nblue == 1 && nred == 2) {
+                scfWinner.setText(Html.fromHtml(text + "<font color='blue'>" + bluePlayerEditText.getText() + "</font>"), TextView.BufferType.SPANNABLE);
+            } else if (nblue == 2 && nred == 0) {
+                scfWinner.setText(Html.fromHtml(text + "<font color='blue'>" + bluePlayerEditText.getText() + "</font>"), TextView.BufferType.SPANNABLE);
+            } else if (nblue == 2 && nred == 1) {
+                scfWinner.setText(Html.fromHtml(text + "<font color='red'>" + redPlayerEditText.getText() + "</font>"), TextView.BufferType.SPANNABLE);
+            } else {
+                scfWinner.setText("Pareggio");
+            }
         }
-        goButton(this.getWindow().getDecorView().findViewById(android.R.id.content));
     }
 
     @Override
     public void shakingStopped() {
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.list_options_scf, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == R.id.preference_scf) {
+            b = false;
+            utils.goToPrefderenzeSCF(this);
+            return true;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override
@@ -235,5 +323,19 @@ public class SCFActivity extends AppCompatActivity implements Shake.Callback {
 
     protected boolean isNightConfigChanged(Configuration newConfig) {
         return (newConfig.diff(mPrevConfig) & ActivityInfo.CONFIG_UI_MODE) != 0 && isOnDarkMode(newConfig) != isOnDarkMode(mPrevConfig);
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        prefSCF = utils.loadDataSCF(this, new PreferencesSCF());
+        b = true;
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        prefSCF = utils.loadDataSCF(this, new PreferencesSCF());
+        b = true;
     }
 }

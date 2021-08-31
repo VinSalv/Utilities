@@ -83,17 +83,17 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
         sensorManager = (SensorManager) requireActivity().getSystemService(Context.SENSOR_SERVICE);
         mAccel = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
 
-        chartAceleX = (LineChart) view.findViewById(R.id.chartAceleX);
-        chartAceleY = (LineChart) view.findViewById(R.id.chartAceleY);
-        chartAceleZ = (LineChart) view.findViewById(R.id.chartAceleZ);
+        chartAceleX = view.findViewById(R.id.chartAceleX);
+        chartAceleY = view.findViewById(R.id.chartAceleY);
+        chartAceleZ = view.findViewById(R.id.chartAceleZ);
 
-        chartGirX = (LineChart) view.findViewById(R.id.chartGirX);
-        chartGirY = (LineChart) view.findViewById(R.id.chartGirY);
-        chartGirZ = (LineChart) view.findViewById(R.id.chartGirZ);
+        chartGirX = view.findViewById(R.id.chartGirX);
+        chartGirY = view.findViewById(R.id.chartGirY);
+        chartGirZ = view.findViewById(R.id.chartGirZ);
 
-        chartMagnetX = (LineChart) view.findViewById(R.id.chartMagnetX);
-        chartMagnetY = (LineChart) view.findViewById(R.id.chartMagnetY);
-        chartMagnetZ = (LineChart) view.findViewById(R.id.chartMagnetZ);
+        chartMagnetX = view.findViewById(R.id.chartMagnetX);
+        chartMagnetY = view.findViewById(R.id.chartMagnetY);
+        chartMagnetZ = view.findViewById(R.id.chartMagnetZ);
 
         accSimpRate = SensorManager.SENSOR_DELAY_NORMAL;
         girSimpRate = SensorManager.SENSOR_DELAY_NORMAL;

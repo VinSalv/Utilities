@@ -1,4 +1,4 @@
-package com.app.utilities;
+package com.app.utilities.utilitiesActivity;
 
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
@@ -8,6 +8,7 @@ import android.widget.ImageButton;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.app.utilities.R;
 import com.app.utilities.utility.Preferences;
 import com.app.utilities.utility.Utils;
 

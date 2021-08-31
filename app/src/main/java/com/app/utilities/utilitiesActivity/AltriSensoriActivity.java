@@ -96,10 +96,10 @@ public class AltriSensoriActivity extends AppCompatActivity implements SensorEve
         sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
 
 
-        chartLight = (LineChart) findViewById(R.id.chartLight);
-        chartPressure = (LineChart) findViewById(R.id.chartPressure);
-        chartTemperature = (LineChart) findViewById(R.id.chartTemperature);
-        chartHumidity = (LineChart) findViewById(R.id.chartHumidity);
+        chartLight = findViewById(R.id.chartLight);
+        chartPressure = findViewById(R.id.chartPressure);
+        chartTemperature = findViewById(R.id.chartTemperature);
+        chartHumidity = findViewById(R.id.chartHumidity);
 
         ligSimpRate = SensorManager.SENSOR_DELAY_NORMAL;
         preSimpRate = SensorManager.SENSOR_DELAY_NORMAL;

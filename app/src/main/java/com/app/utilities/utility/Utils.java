@@ -6,13 +6,15 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.widget.Toast;
 
-import com.app.utilities.InfoActivity;
 import com.app.utilities.MainActivity;
 import com.app.utilities.R;
-import com.app.utilities.SettingsActivity;
+import com.app.utilities.settings.PrefderenzeDado;
+import com.app.utilities.settings.PrefderenzeSCF;
+import com.app.utilities.settings.SettingsActivity;
 import com.app.utilities.utilitiesActivity.AltriSensoriActivity;
 import com.app.utilities.utilitiesActivity.BussolaActivity;
 import com.app.utilities.utilitiesActivity.DadoActivity;
+import com.app.utilities.utilitiesActivity.InfoActivity;
 import com.app.utilities.utilitiesActivity.LivellaActivity;
 import com.app.utilities.utilitiesActivity.SCFActivity;
 
@@ -70,8 +72,18 @@ public class Utils {
         context.startActivity(intent);
     }
 
+    public void goToPrefderenzeDado(Context context) {
+        Intent intent = new Intent(context, PrefderenzeDado.class);
+        context.startActivity(intent);
+    }
+
     public void goToSCFActivity(Context context) {
         Intent intent = new Intent(context, SCFActivity.class);
+        context.startActivity(intent);
+    }
+
+    public void goToPrefderenzeSCF(Context context) {
+        Intent intent = new Intent(context, PrefderenzeSCF.class);
         context.startActivity(intent);
     }
 
@@ -93,11 +105,47 @@ public class Utils {
         editor.apply();
     }
 
+    public void saveDataDado(Context context, PreferencesDado prefDado, Boolean vibrationButtonsDiceBool, Boolean vibrationButtonDiceBool, Boolean shakeDiceBool, Boolean vibrationShakeDiceBool) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(prefDado.getSharedPrefs(), Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putBoolean(prefDado.getVibrationButtonsDice(), vibrationButtonsDiceBool);
+        editor.putBoolean(prefDado.getVibrationButtonDice(), vibrationButtonDiceBool);
+        editor.putBoolean(prefDado.getShakeDice(), shakeDiceBool);
+        editor.putBoolean(prefDado.getVibrationShakeDice(), vibrationShakeDiceBool);
+        editor.apply();
+    }
+
+    public void saveDataSCF(Context context, PreferencesSCF prefSCF, Boolean vibrationButtonSCFBool, Boolean shakeSCFBool, Boolean vibrationShakeSCFBool) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(prefSCF.getSharedPrefs(), Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putBoolean(prefSCF.getVibrationButtonSCF(), vibrationButtonSCFBool);
+        editor.putBoolean(prefSCF.getShakeSCF(), shakeSCFBool);
+        editor.putBoolean(prefSCF.getVibrationShakeSCF(), vibrationShakeSCFBool);
+        editor.apply();
+    }
+
     public Preferences loadData(Context context, Preferences pref) {
         SharedPreferences sharedPreferences = context.getSharedPreferences(pref.getSharedPrefs(), Context.MODE_PRIVATE);
         pref.setPredBool(sharedPreferences.getBoolean(pref.getPred(), true));
         pref.setThemeText(sharedPreferences.getString(pref.getTheme(), "light_theme"));
         return pref;
+    }
+
+    public PreferencesDado loadDataDado(Context context, PreferencesDado prefDado) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(prefDado.getSharedPrefs(), Context.MODE_PRIVATE);
+        prefDado.setVibrationButtonsDiceBool(sharedPreferences.getBoolean(prefDado.getVibrationButtonsDice(), true));
+        prefDado.setVibrationButtonDiceBool(sharedPreferences.getBoolean(prefDado.getVibrationButtonDice(), true));
+        prefDado.setShakeDiceBool(sharedPreferences.getBoolean(prefDado.getShakeDice(), true));
+        prefDado.setVibrationShakeDiceBool(sharedPreferences.getBoolean(prefDado.getVibrationShakeDice(), true));
+        return prefDado;
+    }
+
+    public PreferencesSCF loadDataSCF(Context context, PreferencesSCF prefSCF) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(prefSCF.getSharedPrefs(), Context.MODE_PRIVATE);
+        prefSCF.setVibrationButtonSCFBool(sharedPreferences.getBoolean(prefSCF.getVibrationButtonSCF(), true));
+        prefSCF.setShakeSCFBool(sharedPreferences.getBoolean(prefSCF.getShakeSCF(), true));
+        prefSCF.setVibrationShakeSCFBool(sharedPreferences.getBoolean(prefSCF.getVibrationShakeSCF(), true));
+        return prefSCF;
     }
 
     public void changeTheme(Context context, int i) {

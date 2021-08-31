@@ -1,4 +1,4 @@
-package com.app.utilities;
+package com.app.utilities.settings;
 
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
@@ -9,18 +9,20 @@ import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.preference.ListPreference;
 import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.SwitchPreferenceCompat;
 
+import com.app.utilities.R;
 import com.app.utilities.utility.Preferences;
+import com.app.utilities.utility.PreferencesDado;
 import com.app.utilities.utility.Utils;
 
 import java.util.Objects;
 
-public class SettingsActivity extends AppCompatActivity {
+public class PrefderenzeDado extends AppCompatActivity {
     static final Utils utils = new Utils();
     static Preferences pref;
+    static PreferencesDado prefDado;
     protected Configuration mPrevConfig;
 
     public static boolean isOnDarkMode(Configuration configuration) {
@@ -32,6 +34,7 @@ public class SettingsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         pref = utils.loadData(this, new Preferences());
+        prefDado = utils.loadDataDado(this, new PreferencesDado());
         if (!pref.getPredBool()) {
             if (pref.getThemeText().equals("LightTheme") || pref.getThemeText().equals("LightThemeSelected"))
                 utils.changeThemeSelected(this, 0);
@@ -48,11 +51,11 @@ public class SettingsActivity extends AppCompatActivity {
                     break;
             }
         }
-        setContentView(R.layout.settings_activity);
+        setContentView(R.layout.preferenze_dado_activity);
         if (savedInstanceState == null) {
             getSupportFragmentManager()
                     .beginTransaction()
-                    .replace(R.id.settings, new SettingsFragment())
+                    .replace(R.id.pref_dice, new SettingsFragment())
                     .commit();
         }
         ActionBar actionBar = getSupportActionBar();
@@ -79,65 +82,45 @@ public class SettingsActivity extends AppCompatActivity {
         return (newConfig.diff(mPrevConfig) & ActivityInfo.CONFIG_UI_MODE) != 0 && isOnDarkMode(newConfig) != isOnDarkMode(mPrevConfig);
     }
 
-    @Override
-    public void onBackPressed() {
-        super.onBackPressed();
-        utils.goToMainActivity(this);
-    }
-
     public static class SettingsFragment extends PreferenceFragmentCompat {
-        SwitchPreferenceCompat pred;
-        ListPreference list_themes;
+        SwitchPreferenceCompat vibration_buttons_dice;
+        SwitchPreferenceCompat vibration_button_dice;
+        SwitchPreferenceCompat shake_dice;
+        SwitchPreferenceCompat vibration_shake_dice;
 
         @RequiresApi(api = Build.VERSION_CODES.Q)
         @Override
         public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-            pref = utils.loadData(requireActivity(), new Preferences());
-            setPreferencesFromResource(R.xml.root_preferences, rootKey);
-            pred = findPreference("pred");
-            list_themes = findPreference("list_themes");
-            if (!pref.getPredBool()) {
-                switch (pref.getThemeText()) {
-                    case "LightThemeSelected":
-                    case "LightTheme":
-                        list_themes.setValueIndex(0);
-                        break;
-                    case "DarkThemeSelected":
-                    case "DarkTheme":
-                        list_themes.setValueIndex(1);
-                        break;
-                }
-            } else {
-                switch (getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK) {
-                    case Configuration.UI_MODE_NIGHT_UNDEFINED:
-                    case Configuration.UI_MODE_NIGHT_NO:
-                        list_themes.setValueIndex(0);
-                        break;
-                    case Configuration.UI_MODE_NIGHT_YES:
-                        list_themes.setValueIndex(1);
-                        break;
-                }
-            }
-            Objects.requireNonNull(pred).setOnPreferenceChangeListener((preference, newValue) -> {
-                switch (getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK) {
-                    case Configuration.UI_MODE_NIGHT_UNDEFINED:
-                    case Configuration.UI_MODE_NIGHT_NO:
-                        list_themes.setValueIndex(0);
-                        break;
-                    case Configuration.UI_MODE_NIGHT_YES:
-                        list_themes.setValueIndex(1);
-                        break;
-                }
-                if ((Boolean) newValue) {
-                    utils.saveData(requireActivity(), pref, (Boolean) newValue, list_themes.getValue());
-                    utils.refreshActivity(requireActivity());
-                } else
-                    utils.saveData(requireActivity(), pref, (Boolean) newValue, list_themes.getValue());
+            setPreferencesFromResource(R.xml.preferences_dado, rootKey);
+            vibration_buttons_dice = findPreference("vibration_buttons_dice");
+            vibration_button_dice = findPreference("vibration_button_dice");
+            shake_dice = findPreference("shake_dice");
+            vibration_shake_dice = findPreference("vibration_shake_dice");
+
+            vibration_buttons_dice.setChecked(prefDado.getVibrationButtonsDiceBool());
+            vibration_button_dice.setChecked(prefDado.getVibrationButtonDiceBool());
+            shake_dice.setChecked(prefDado.getShakeDiceBool());
+            vibration_shake_dice.setChecked(prefDado.getVibrationShakeDiceBool());
+
+            if (!shake_dice.isChecked())
+                vibration_shake_dice.setChecked(false);
+
+            Objects.requireNonNull(vibration_buttons_dice).setOnPreferenceChangeListener((preference, newValue) -> {
+                utils.saveDataDado(requireActivity(), prefDado, (Boolean) newValue, vibration_button_dice.isChecked(), shake_dice.isChecked(), vibration_shake_dice.isChecked());
                 return true;
             });
-            Objects.requireNonNull(list_themes).setOnPreferenceChangeListener((preference, newValue) -> {
-                utils.saveData(requireActivity(), pref, pred.isChecked(), newValue.toString());
-                utils.refreshActivity(requireActivity());
+            Objects.requireNonNull(vibration_button_dice).setOnPreferenceChangeListener((preference, newValue) -> {
+                utils.saveDataDado(requireActivity(), prefDado, vibration_buttons_dice.isChecked(), (Boolean) newValue, shake_dice.isChecked(), vibration_shake_dice.isChecked());
+                return true;
+            });
+            Objects.requireNonNull(shake_dice).setOnPreferenceChangeListener((preference, newValue) -> {
+                if ((Boolean) newValue)
+                    vibration_shake_dice.setChecked(false);
+                utils.saveDataDado(requireActivity(), prefDado, vibration_buttons_dice.isChecked(), vibration_button_dice.isChecked(), (Boolean) newValue, vibration_shake_dice.isChecked());
+                return true;
+            });
+            Objects.requireNonNull(vibration_shake_dice).setOnPreferenceChangeListener((preference, newValue) -> {
+                utils.saveDataDado(requireActivity(), prefDado, vibration_buttons_dice.isChecked(), vibration_button_dice.isChecked(), shake_dice.isChecked(), (Boolean) newValue);
                 return true;
             });
         }

@@ -10,6 +10,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.widget.Toolbar;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.app.utilities.R;
@@ -43,12 +44,15 @@ public final class ActivityDadoBinding implements ViewBinding {
   public final Button roll;
 
   @NonNull
+  public final Toolbar toolbarDice;
+
+  @NonNull
   public final Button twoDices;
 
   private ActivityDadoBinding(@NonNull LinearLayout rootView, @NonNull ImageButton back,
       @NonNull LinearLayout diceLayout, @NonNull TextView diceNumber,
       @NonNull TextView leftDiceNumber, @NonNull Button oneDice, @NonNull TextView rightDiceNumber,
-      @NonNull Button roll, @NonNull Button twoDices) {
+      @NonNull Button roll, @NonNull Toolbar toolbarDice, @NonNull Button twoDices) {
     this.rootView = rootView;
     this.back = back;
     this.diceLayout = diceLayout;
@@ -57,6 +61,7 @@ public final class ActivityDadoBinding implements ViewBinding {
     this.oneDice = oneDice;
     this.rightDiceNumber = rightDiceNumber;
     this.roll = roll;
+    this.toolbarDice = toolbarDice;
     this.twoDices = twoDices;
   }
 
@@ -129,6 +134,12 @@ public final class ActivityDadoBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.toolbarDice;
+      Toolbar toolbarDice = ViewBindings.findChildViewById(rootView, id);
+      if (toolbarDice == null) {
+        break missingId;
+      }
+
       id = R.id.twoDices;
       Button twoDices = ViewBindings.findChildViewById(rootView, id);
       if (twoDices == null) {
@@ -136,7 +147,7 @@ public final class ActivityDadoBinding implements ViewBinding {
       }
 
       return new ActivityDadoBinding((LinearLayout) rootView, back, diceLayout, diceNumber,
-          leftDiceNumber, oneDice, rightDiceNumber, roll, twoDices);
+          leftDiceNumber, oneDice, rightDiceNumber, roll, toolbarDice, twoDices);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

@@ -25,14 +25,14 @@
         android:supportsRtl="true"
         android:theme="@style/LightTheme">
         <activity
-            android:name=".InfoActivity"
+            android:name=".utilitiesActivity.InfoActivity"
             android:configChanges="uiMode"
             android:label="@string/infoActivity"
             android:screenOrientation="portrait"
             android:theme="@style/LightTheme"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".SettingsActivity"
+            android:name=".settings.SettingsActivity"
             android:configChanges="uiMode"
             android:label="@string/settingsActivity"
             android:screenOrientation="portrait"
@@ -67,9 +67,23 @@
             android:theme="@style/LightTheme"
             tools:ignore="LockedOrientationActivity" />
         <activity
+            android:name=".settings.PrefderenzeDado"
+            android:configChanges="uiMode"
+            android:label="@string/PrefderenzeDado"
+            android:screenOrientation="portrait"
+            android:theme="@style/LightTheme"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
             android:name=".utilitiesActivity.SCFActivity"
             android:configChanges="uiMode"
             android:label="@string/_SCFActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LightTheme"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".settings.PrefderenzeSCF"
+            android:configChanges="uiMode"
+            android:label="@string/PrefderenzeSCF"
             android:screenOrientation="portrait"
             android:theme="@style/LightTheme"
             tools:ignore="LockedOrientationActivity" />
