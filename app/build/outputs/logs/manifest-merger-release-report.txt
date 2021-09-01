@@ -15,6 +15,7 @@ MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1] C:\Users\vince\.g
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\55e311d705e7ca24b3efd8612e6caa41\transformed\legacy-support-v4-1.0.0\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.navigation:navigation-fragment:2.3.5] C:\Users\vince\.gradle\caches\transforms-3\38a4400ae8dd95bc9747872afeab006c\transformed\navigation-fragment-2.3.5\AndroidManifest.xml:17:1-24:12
 MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0] C:\Users\vince\.gradle\caches\transforms-3\5a0c74d4d9ba36cbaad29d46a25320aa\transformed\MPAndroidChart-v3.1.0\AndroidManifest.xml:2:1-20:12
+MERGED from [androidx.multidex:multidex:2.0.1] C:\Users\vince\.gradle\caches\transforms-3\c62891a8e3a42fe05b7801918841d6c1\transformed\multidex-2.0.1\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\c84966d631d6e0b75d6bb70ed84f0980\transformed\viewpager2-1.0.0\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\vince\.gradle\caches\transforms-3\85b785c0f464fd717fc0c3319209a901\transformed\fragment-1.3.6\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.navigation:navigation-runtime:2.3.5] C:\Users\vince\.gradle\caches\transforms-3\9a774ddf16a6c57e321338de37d1e41c\transformed\navigation-runtime-2.3.5\AndroidManifest.xml:17:1-24:12
@@ -100,6 +101,8 @@ MERGED from [androidx.navigation:navigation-fragment:2.3.5] C:\Users\vince\.grad
 MERGED from [androidx.navigation:navigation-fragment:2.3.5] C:\Users\vince\.gradle\caches\transforms-3\38a4400ae8dd95bc9747872afeab006c\transformed\navigation-fragment-2.3.5\AndroidManifest.xml:20:5-22:41
 MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0] C:\Users\vince\.gradle\caches\transforms-3\5a0c74d4d9ba36cbaad29d46a25320aa\transformed\MPAndroidChart-v3.1.0\AndroidManifest.xml:16:5-18:41
 MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0] C:\Users\vince\.gradle\caches\transforms-3\5a0c74d4d9ba36cbaad29d46a25320aa\transformed\MPAndroidChart-v3.1.0\AndroidManifest.xml:16:5-18:41
+MERGED from [androidx.multidex:multidex:2.0.1] C:\Users\vince\.gradle\caches\transforms-3\c62891a8e3a42fe05b7801918841d6c1\transformed\multidex-2.0.1\AndroidManifest.xml:20:5-43
+MERGED from [androidx.multidex:multidex:2.0.1] C:\Users\vince\.gradle\caches\transforms-3\c62891a8e3a42fe05b7801918841d6c1\transformed\multidex-2.0.1\AndroidManifest.xml:20:5-43
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\c84966d631d6e0b75d6bb70ed84f0980\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager2:viewpager2:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\c84966d631d6e0b75d6bb70ed84f0980\transformed\viewpager2-1.0.0\AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.fragment:fragment:1.3.6] C:\Users\vince\.gradle\caches\transforms-3\85b785c0f464fd717fc0c3319209a901\transformed\fragment-1.3.6\AndroidManifest.xml:20:5-22:41

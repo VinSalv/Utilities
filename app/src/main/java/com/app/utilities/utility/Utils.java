@@ -1,6 +1,7 @@
 package com.app.utilities.utility;
 
 import android.app.Activity;
+import android.app.DownloadManager;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -168,6 +169,10 @@ public class Utils {
                 context.setTheme(R.style.DarkThemeSelected);
                 break;
         }
+    }
+
+    public void openFolderDownload(Context context) {
+        context.startActivity(new Intent(DownloadManager.ACTION_VIEW_DOWNLOADS));
     }
 
 }

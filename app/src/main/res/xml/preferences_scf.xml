@@ -11,6 +11,9 @@
             android:summaryOn="Vibrazione sul pulsante attivata"
             app:key="vibration_button_scf"
             app:title="Vibrazione sul pulsante" />
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title='Shake'>
 
         <SwitchPreferenceCompat
             android:defaultValue="1"

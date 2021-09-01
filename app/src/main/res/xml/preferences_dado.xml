@@ -20,6 +20,10 @@
             app:key="vibration_button_dice"
             app:title='Vibrazione sul pulsante "GIRA"' />
 
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title='Shake'>
+
         <SwitchPreferenceCompat
             android:defaultValue="1"
             android:summaryOff='Agitanto NON otterrai i nuovi valori'
@@ -34,9 +38,8 @@
             android:key="vibration_shake_dice"
             android:summaryOff='Virazione allo shake disattivata'
             android:summaryOn="Vibrazione allo shake attivata"
-            android:title="Vibrazione allo shake_dice"
+            android:title="Vibrazione allo shake"
             app:dependency="shake_dice" />
-
 
     </PreferenceCategory>
 

@@ -1,10 +1,10 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Utilities</string>
     <string name="tab_text_1">Orientazione</string>
     <string name="tab_text_2">Sorte</string>
     <string name="tab_text_3">Sensori</string>
     <string name="info">Info</string>
-    <string name="copyright">Versione 10.0.0\n\n© 2021\nVincenzo Salvati &amp; Co\nRights Reserved.</string>
+    <string name="copyright">Versione 11.0.0\n\n© 2021\nVincenzo Salvati &amp; Co\nRights Reserved.</string>
     <string name="backButton">back</string>
     <string name="AccelerometerNotSupported"><b>Accelerometro:</b> Non Supportato</string>
     <string name="GyroscopeNotSupported"><b>Giroscopio:</b> Non Supportato</string>
@@ -53,5 +53,15 @@
     <string name="Preferenze">Preference</string>
     <string name="PrefderenzeSCF">PrefderenzeSCF</string>
     <string name="PrefderenzeDado">PrefderenzeDado</string>
+    <string name="CSVTextView">Registra l\'andamento dei sensori selezionati e crea i tuoi file CSV.</string>
+    <string name="CSVRecommendationTextView" tools:ignore="Typos">N.B. La registrazione verrà stoppata nel momento in cui si cambierà finestra o si uscirà dall\'app Utilities.\nQualora non dovessero visualizzarsi i CSV generati, riaprire nuovamente la cartella \"Download\" della propria memoria interna.</string>
+    <string name="allSensorsCheckBox">Tutti i sensori</string>
+    <string name="accelCheckBox">Accelerometro</string>
+    <string name="giroCheckBox">Giroscopio</string>
+    <string name="magnoCheckBox">Magnetometro</string>
+    <string name="LightCheckBox">Luminosità</string>
+    <string name="PressureCheckBox">Pressione</string>
+    <string name="TemperatureCheckBox">Temperatura</string>
+    <string name="HumidityCheckBox">Umidità</string>
 
 </resources>

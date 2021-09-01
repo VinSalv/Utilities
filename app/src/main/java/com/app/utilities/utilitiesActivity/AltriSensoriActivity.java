@@ -10,10 +10,12 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
+import android.os.Environment;
 import android.text.Html;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.CheckBox;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
@@ -33,6 +35,15 @@ import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
+import com.opencsv.CSVWriter;
+
+import java.io.FileWriter;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.List;
+import java.util.Objects;
 
 public class AltriSensoriActivity extends AppCompatActivity implements SensorEventListener {
     private final Utils utils = new Utils();
@@ -45,6 +56,12 @@ public class AltriSensoriActivity extends AppCompatActivity implements SensorEve
     Sensor mLight, mPressure, mTemperature, mHumidity;
     LinearLayout otherSensorsLayout;
     int ligSimpRate, preSimpRate, temSimpRate, humSimpRate;
+    ArrayList<String> arrayListLight, arrayListPressure, arrayListTemperature, arrayListHumidty;
+    ImageButton recOtherSensorsButton, pauseOtherSensorsButton, stopOtherSensorsButton;
+    CheckBox allOtherSensorsCheckBox, ligCheckBox, presCheckBox, tempCheckBox, humCheckBox;
+    Boolean bLig, bPres, bTemp, bHum, bRecOrPause;
+    String fileName;
+    ImageButton directory;
     private Thread thread;
     private boolean plotData = true;
     private LineChart chartLight, chartPressure, chartTemperature, chartHumidity;
@@ -75,6 +92,33 @@ public class AltriSensoriActivity extends AppCompatActivity implements SensorEve
         }
         setContentView(R.layout.activity_altri_sensori);
 
+        directory = findViewById(R.id.direcotry);
+        directory.setOnClickListener(v -> utils.openFolderDownload(this));
+
+        arrayListLight = new ArrayList<>();
+        arrayListPressure = new ArrayList<>();
+        arrayListTemperature = new ArrayList<>();
+        arrayListHumidty = new ArrayList<>();
+
+        bLig = false;
+        bPres = false;
+        bTemp = false;
+        bHum = false;
+        bRecOrPause = false;
+
+        recOtherSensorsButton = findViewById(R.id.recOtherSensorsButton);
+        pauseOtherSensorsButton = findViewById(R.id.pauseOtherSensorsButton);
+        stopOtherSensorsButton = findViewById(R.id.stopOtherSensorsButton);
+
+        allOtherSensorsCheckBox = findViewById(R.id.allOtherSensorsCheckBox);
+        ligCheckBox = findViewById(R.id.ligCheckBox);
+        presCheckBox = findViewById(R.id.presCheckBox);
+        tempCheckBox = findViewById(R.id.tempCheckBox);
+        humCheckBox = findViewById(R.id.humCheckBox);
+
+        pauseOtherSensorsButton.setEnabled(false);
+        stopOtherSensorsButton.setEnabled(false);
+
         speedLig = findViewById(R.id.speedLig);
         speedPre = findViewById(R.id.speedPre);
         speedTem = findViewById(R.id.speedTem);
@@ -95,7 +139,6 @@ public class AltriSensoriActivity extends AppCompatActivity implements SensorEve
         humidity = findViewById(R.id.humidity);
         sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
 
-
         chartLight = findViewById(R.id.chartLight);
         chartPressure = findViewById(R.id.chartPressure);
         chartTemperature = findViewById(R.id.chartTemperature);
@@ -114,6 +157,7 @@ public class AltriSensoriActivity extends AppCompatActivity implements SensorEve
             light.setText(R.string.BrightnessNotSupported);
             otherSensorsLayout.removeView(chartLight);
             otherSensorsLayout.removeView(speedLig);
+            ligCheckBox.setEnabled(false);
         }
         mPressure = sensorManager.getDefaultSensor(Sensor.TYPE_PRESSURE);
         if (mPressure != null) {
@@ -123,6 +167,7 @@ public class AltriSensoriActivity extends AppCompatActivity implements SensorEve
             pressure.setText(R.string.PressureNotSupported);
             otherSensorsLayout.removeView(chartPressure);
             otherSensorsLayout.removeView(speedPre);
+            presCheckBox.setEnabled(false);
         }
         mTemperature = sensorManager.getDefaultSensor(Sensor.TYPE_AMBIENT_TEMPERATURE);
         if (mTemperature != null) {
@@ -132,6 +177,7 @@ public class AltriSensoriActivity extends AppCompatActivity implements SensorEve
             temperature.setText(R.string.TemperatureNotSupported);
             otherSensorsLayout.removeView(chartTemperature);
             otherSensorsLayout.removeView(speedTem);
+            tempCheckBox.setEnabled(false);
         }
         mHumidity = sensorManager.getDefaultSensor(Sensor.TYPE_RELATIVE_HUMIDITY);
         if (mHumidity != null) {
@@ -141,7 +187,63 @@ public class AltriSensoriActivity extends AppCompatActivity implements SensorEve
             humidity.setText(R.string.HumidityNotSupported);
             otherSensorsLayout.removeView(chartHumidity);
             otherSensorsLayout.removeView(speedHum);
+            humCheckBox.setEnabled(false);
         }
+        allOtherSensorsCheckBox.setOnCheckedChangeListener((buttonView, isChecked) -> {
+                    if (isChecked) {
+                        if (mLight != null)
+                            ligCheckBox.setChecked(true);
+                        if (mPressure != null)
+                            presCheckBox.setChecked(true);
+                        if (mTemperature != null)
+                            tempCheckBox.setChecked(true);
+                        if (mHumidity != null)
+                            humCheckBox.setChecked(true);
+                    }
+                    if ((ligCheckBox.isChecked() ^ (mLight == null)) && (presCheckBox.isChecked() ^ (mPressure == null)) && (tempCheckBox.isChecked() ^ (mTemperature == null)) && (tempCheckBox.isChecked() ^ (mHumidity == null)))
+                        allOtherSensorsCheckBox.setChecked(true);
+                }
+        );
+        ligCheckBox.setOnCheckedChangeListener((buttonView, isChecked) -> {
+                    if (!isChecked) {
+                        allOtherSensorsCheckBox.setChecked(false);
+                    } else {
+                        bLig = true;
+                    }
+                    if ((ligCheckBox.isChecked() ^ (mLight == null)) && (presCheckBox.isChecked() ^ (mPressure == null)) && (tempCheckBox.isChecked() ^ (mTemperature == null)) && (tempCheckBox.isChecked() ^ (mHumidity == null)))
+                        allOtherSensorsCheckBox.setChecked(true);
+                }
+        );
+        presCheckBox.setOnCheckedChangeListener((buttonView, isChecked) -> {
+                    if (!isChecked) {
+                        allOtherSensorsCheckBox.setChecked(false);
+                    } else {
+                        bPres = true;
+                    }
+                    if ((ligCheckBox.isChecked() ^ (mLight == null)) && (presCheckBox.isChecked() ^ (mPressure == null)) && (tempCheckBox.isChecked() ^ (mTemperature == null)) && (tempCheckBox.isChecked() ^ (mHumidity == null)))
+                        allOtherSensorsCheckBox.setChecked(true);
+                }
+        );
+        tempCheckBox.setOnCheckedChangeListener((buttonView, isChecked) -> {
+                    if (!isChecked) {
+                        allOtherSensorsCheckBox.setChecked(false);
+                    } else {
+                        bTemp = true;
+                    }
+                    if ((ligCheckBox.isChecked() ^ (mLight == null)) && (presCheckBox.isChecked() ^ (mPressure == null)) && (tempCheckBox.isChecked() ^ (mTemperature == null)) && (tempCheckBox.isChecked() ^ (mHumidity == null)))
+                        allOtherSensorsCheckBox.setChecked(true);
+                }
+        );
+        humCheckBox.setOnCheckedChangeListener((buttonView, isChecked) -> {
+                    if (!isChecked) {
+                        allOtherSensorsCheckBox.setChecked(false);
+                    } else {
+                        bHum = true;
+                    }
+                    if (ligCheckBox.isChecked() && presCheckBox.isChecked() && tempCheckBox.isChecked() && tempCheckBox.isChecked())
+                        allOtherSensorsCheckBox.setChecked(true);
+                }
+        );
         speedLig.setSelection(3);
         speedLig.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -295,6 +397,151 @@ public class AltriSensoriActivity extends AppCompatActivity implements SensorEve
             }
         });
         feedMultiple();
+        recOtherSensorsButton.setOnClickListener(v -> {
+            if (ligCheckBox.isChecked() || presCheckBox.isChecked() || tempCheckBox.isChecked() || humCheckBox.isChecked()) {
+                bRecOrPause = true;
+                allOtherSensorsCheckBox.setEnabled(false);
+                ligCheckBox.setEnabled(false);
+                presCheckBox.setEnabled(false);
+                tempCheckBox.setEnabled(false);
+                humCheckBox.setEnabled(false);
+                recOtherSensorsButton.setEnabled(false);
+                pauseOtherSensorsButton.setEnabled(true);
+                stopOtherSensorsButton.setEnabled(true);
+                recOtherSensorsButton.setImageResource(R.drawable.ic_rec_press);
+                pauseOtherSensorsButton.setImageResource(R.drawable.ic_pause);
+                stopOtherSensorsButton.setImageResource(R.drawable.ic_stop);
+                bLig = ligCheckBox.isChecked();
+                bPres = presCheckBox.isChecked();
+                bTemp = tempCheckBox.isChecked();
+                bHum = humCheckBox.isChecked();
+                @SuppressLint("SimpleDateFormat") SimpleDateFormat sdf = new SimpleDateFormat("_yyyy_MM_dd_HH_mm_ss");
+                fileName = (sdf.format(Calendar.getInstance().getTime()) + ".csv");
+            } else {
+                utils.notifyUserShortWay(this, "Seleziona almeno un sensore!!");
+            }
+        });
+        pauseOtherSensorsButton.setOnClickListener(v -> {
+            bRecOrPause = true;
+            allOtherSensorsCheckBox.setEnabled(false);
+            ligCheckBox.setEnabled(false);
+            presCheckBox.setEnabled(false);
+            tempCheckBox.setEnabled(false);
+            humCheckBox.setEnabled(false);
+            recOtherSensorsButton.setEnabled(true);
+            pauseOtherSensorsButton.setEnabled(false);
+            stopOtherSensorsButton.setEnabled(true);
+            recOtherSensorsButton.setImageResource(R.drawable.ic_rec);
+            pauseOtherSensorsButton.setImageResource(R.drawable.ic_pause_press);
+            stopOtherSensorsButton.setImageResource(R.drawable.ic_stop);
+            bLig = false;
+            bPres = false;
+            bTemp = false;
+            bHum = false;
+        });
+        stopOtherSensorsButton.setOnClickListener(v -> {
+            bRecOrPause = false;
+            allOtherSensorsCheckBox.setEnabled(true);
+            ligCheckBox.setEnabled(true);
+            presCheckBox.setEnabled(true);
+            tempCheckBox.setEnabled(true);
+            humCheckBox.setEnabled(true);
+            recOtherSensorsButton.setEnabled(true);
+            pauseOtherSensorsButton.setEnabled(false);
+            stopOtherSensorsButton.setEnabled(false);
+            recOtherSensorsButton.setImageResource(R.drawable.ic_rec);
+            pauseOtherSensorsButton.setImageResource(R.drawable.ic_pause);
+            stopOtherSensorsButton.setImageResource(R.drawable.ic_stop);
+            bLig = ligCheckBox.isChecked();
+            bPres = presCheckBox.isChecked();
+            bTemp = tempCheckBox.isChecked();
+            bHum = humCheckBox.isChecked();
+            int count;
+            if (ligCheckBox.isChecked()) {
+                String csv = Environment.getExternalStorageDirectory() + "/Download/" + "SensoreLuminosità" + fileName;
+                CSVWriter writer;
+                try {
+                    writer = new CSVWriter(new FileWriter(csv));
+                    List<String[]> data = new ArrayList<>();
+                    count = 1;
+                    data.add(new String[]{"lx"});
+                    while (count != arrayListLight.size() + 1) {
+                        data.add(new String[]{'"' + arrayListLight.get(count - 1) + '"'});
+                        count++;
+                    }
+                    Objects.requireNonNull(writer).writeAll(data);
+                    writer.close();
+                    utils.notifyUserShortWay(this, "File CSV relativo sensore della luminosità realizzato con successo");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                    utils.notifyUser(this, "Non è stato possibile realizzare il CSV relativo al sensore della luminosità" + e);
+                }
+            }
+            if (presCheckBox.isChecked()) {
+                String csv = Environment.getExternalStorageDirectory() + "/Download/" + "SensorePressione" + fileName;
+                CSVWriter writer;
+                try {
+                    writer = new CSVWriter(new FileWriter(csv));
+                    List<String[]> data = new ArrayList<>();
+                    count = 1;
+                    data.add(new String[]{"hPa(mbar)"});
+                    while (count != arrayListPressure.size() + 1) {
+                        data.add(new String[]{'"' + arrayListPressure.get(count - 1) + '"'});
+                        count++;
+                    }
+                    Objects.requireNonNull(writer).writeAll(data);
+                    writer.close();
+                    utils.notifyUserShortWay(this, "File CSV relativo al sensore della pressione realizzato con successo");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                    utils.notifyUser(this, "Non è stato possibile realizzare il CSV relativo al sensore della pressione");
+                }
+            }
+            if (tempCheckBox.isChecked()) {
+                String csv = Environment.getExternalStorageDirectory() + "/Download/" + "SensoreTemperatura" + fileName;
+                CSVWriter writer;
+                try {
+                    writer = new CSVWriter(new FileWriter(csv));
+                    List<String[]> data = new ArrayList<>();
+                    count = 1;
+                    data.add(new String[]{"C°"});
+                    while (count != arrayListTemperature.size() + 1) {
+                        data.add(new String[]{'"' + arrayListTemperature.get(count - 1) + '"'});
+                        count++;
+                    }
+                    Objects.requireNonNull(writer).writeAll(data);
+                    writer.close();
+                    utils.notifyUserShortWay(this, "File CSV relativo al sensore della temperatura realizzato con successo");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                    utils.notifyUser(this, "Non è stato possibile realizzare il CSV relativo al sensore della temperatura");
+                }
+            }
+            if (humCheckBox.isChecked()) {
+                String csv = Environment.getExternalStorageDirectory() + "/Download/" + "SensoreUmidità" + fileName;
+                CSVWriter writer;
+                try {
+                    writer = new CSVWriter(new FileWriter(csv));
+                    List<String[]> data = new ArrayList<>();
+                    count = 1;
+                    data.add(new String[]{"%"});
+                    while (count != arrayListHumidty.size() + 1) {
+                        data.add(new String[]{'"' + arrayListHumidty.get(count - 1) + '"'});
+                        count++;
+                    }
+                    Objects.requireNonNull(writer).writeAll(data);
+                    writer.close();
+                    utils.notifyUserShortWay(this, "File CSV relativo al sensore di umidità realizzato con successo");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                    utils.notifyUser(this, "Non è stato possibile realizzare il CSV relativo al sensore di umidità");
+                }
+            }
+            arrayListLight.clear();
+            arrayListPressure.clear();
+            arrayListTemperature.clear();
+            arrayListHumidty.clear();
+        });
         ImageButton back = findViewById(R.id.back);
         back.setOnClickListener(v -> onBackPressed());
         mPrevConfig = new Configuration(getResources().getConfiguration());
@@ -311,7 +558,7 @@ public class AltriSensoriActivity extends AppCompatActivity implements SensorEve
                 plotData = false;
             }
         } else if (sensor.getType() == Sensor.TYPE_PRESSURE) {
-            pressure.setText(Html.fromHtml("<b>Pressione: </b>" + utils.roundAvoid(event.values[0], 2) + " [hPa (mbar)]"));
+            pressure.setText(Html.fromHtml("<b>Pressione: </b>" + utils.roundAvoid(event.values[0], 2) + " [hPa(mbar)]"));
             if (plotData) {
                 addEntry(event, "pressione");
                 plotData = false;
@@ -399,6 +646,8 @@ public class AltriSensoriActivity extends AppCompatActivity implements SensorEve
                     chartLight.notifyDataSetChanged();
                     chartLight.setVisibleXRangeMaximum(10);
                     chartLight.moveViewToX(data.getEntryCount());
+                    if (bLig) arrayListLight.add(String.valueOf(event.values[0]));
+
                 }
                 break;
             case "pressione":
@@ -414,6 +663,8 @@ public class AltriSensoriActivity extends AppCompatActivity implements SensorEve
                     chartPressure.notifyDataSetChanged();
                     chartPressure.setVisibleXRangeMaximum(10);
                     chartPressure.moveViewToX(data.getEntryCount());
+                    if (bPres) arrayListPressure.add(String.valueOf(event.values[0]));
+
                 }
                 break;
             case "temperatura":
@@ -429,6 +680,7 @@ public class AltriSensoriActivity extends AppCompatActivity implements SensorEve
                     chartTemperature.notifyDataSetChanged();
                     chartTemperature.setVisibleXRangeMaximum(10);
                     chartTemperature.moveViewToX(data.getEntryCount());
+                    if (bTemp) arrayListTemperature.add(String.valueOf(event.values[0]));
                 }
                 break;
             case "umidità":
@@ -444,6 +696,7 @@ public class AltriSensoriActivity extends AppCompatActivity implements SensorEve
                     chartHumidity.notifyDataSetChanged();
                     chartHumidity.setVisibleXRangeMaximum(10);
                     chartHumidity.moveViewToX(data.getEntryCount());
+                    if (bHum) arrayListHumidty.add(String.valueOf(event.values[0]));
                 }
                 break;
         }
@@ -489,6 +742,8 @@ public class AltriSensoriActivity extends AppCompatActivity implements SensorEve
             thread.interrupt();
         }
         sensorManager.unregisterListener(this);
+        if (bRecOrPause)
+            stopOtherSensorsButton.performClick();
     }
 
     @Override
@@ -523,6 +778,8 @@ public class AltriSensoriActivity extends AppCompatActivity implements SensorEve
     @Override
     public void onDestroy() {
         sensorManager.unregisterListener(this);
+        if (bRecOrPause)
+            stopOtherSensorsButton.performClick();
         thread.interrupt();
         super.onDestroy();
     }

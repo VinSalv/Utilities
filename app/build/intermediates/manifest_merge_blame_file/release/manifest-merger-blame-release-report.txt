@@ -1,8 +1,8 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 3    package="com.app.utilities"
-4    android:versionCode="10"
-5    android:versionName="10.0" >
+4    android:versionCode="11"
+5    android:versionName="11.0" >
 6
 7    <uses-sdk
 7-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:6:5-10:55
@@ -28,159 +28,160 @@
 16
 17    <application
 17-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:17:5-104:19
-18        android:allowBackup="true"
-18-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:18:9-35
-19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-19-->[androidx.core:core:1.5.0] C:\Users\vince\.gradle\caches\transforms-3\109c406f854d135ad1ed87dae876b357\transformed\core-1.5.0\AndroidManifest.xml:24:18-86
-20        android:configChanges="uiMode"
-20-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:19:9-39
-21        android:fullBackupContent="@xml/backup_descriptor"
-21-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:20:9-59
-22        android:icon="@drawable/utilities"
-22-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:21:9-43
-23        android:label="@string/app_name"
-23-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:22:9-41
-24        android:roundIcon="@drawable/utilities"
-24-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:23:9-48
-25        android:screenOrientation="portrait"
-25-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:24:9-45
-26        android:supportsRtl="true"
-26-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:25:9-35
-27        android:theme="@style/LightTheme" >
-27-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:26:9-42
-28        <activity
-28-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:27:9-33:56
-29            android:name="com.app.utilities.utilitiesActivity.InfoActivity"
-29-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:28:13-59
-30            android:configChanges="uiMode"
-30-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:29:13-43
-31            android:label="@string/infoActivity"
-31-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:30:13-49
-32            android:screenOrientation="portrait"
-32-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:31:13-49
-33            android:theme="@style/LightTheme" />
-33-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:32:13-46
-34        <activity
-34-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:34:9-40:56
-35            android:name="com.app.utilities.settings.SettingsActivity"
-35-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:35:13-54
-36            android:configChanges="uiMode"
-36-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:36:13-43
-37            android:label="@string/settingsActivity"
-37-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:37:13-53
-38            android:screenOrientation="portrait"
-38-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:38:13-49
-39            android:theme="@style/LightTheme" />
-39-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:39:13-46
-40        <activity
-40-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:41:9-47:56
-41            android:name="com.app.utilities.utilitiesActivity.AltriSensoriActivity"
-41-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:42:13-67
-42            android:configChanges="uiMode"
-42-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:43:13-43
-43            android:label="@string/AltriSensoriActivity"
-43-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:44:13-57
-44            android:screenOrientation="portrait"
-44-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:45:13-49
-45            android:theme="@style/LightTheme" />
-45-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:46:13-46
-46        <activity
-46-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:48:9-54:56
-47            android:name="com.app.utilities.utilitiesActivity.LivellaActivity"
-47-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:49:13-62
-48            android:configChanges="uiMode"
-48-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:50:13-43
-49            android:label="@string/livellaActivity"
-49-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:51:13-52
-50            android:screenOrientation="portrait"
-50-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:52:13-49
-51            android:theme="@style/LightTheme" />
-51-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:53:13-46
-52        <activity
-52-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:55:9-61:56
-53            android:name="com.app.utilities.utilitiesActivity.BussolaActivity"
-53-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:56:13-62
-54            android:configChanges="uiMode"
-54-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:57:13-43
-55            android:label="@string/bussolaActivity"
-55-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:58:13-52
-56            android:screenOrientation="portrait"
-56-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:59:13-49
-57            android:theme="@style/LightTheme" />
-57-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:60:13-46
-58        <activity
-58-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:62:9-68:56
-59            android:name="com.app.utilities.utilitiesActivity.DadoActivity"
-59-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:63:13-59
-60            android:configChanges="uiMode"
-60-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:64:13-43
-61            android:label="@string/dadoActivity"
-61-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:65:13-49
-62            android:screenOrientation="portrait"
-62-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:66:13-49
-63            android:theme="@style/LightTheme" />
-63-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:67:13-46
-64        <activity
-64-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:69:9-75:56
-65            android:name="com.app.utilities.settings.PrefderenzeDado"
-65-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:70:13-53
-66            android:configChanges="uiMode"
-66-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:71:13-43
-67            android:label="@string/PrefderenzeDado"
-67-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:72:13-52
-68            android:screenOrientation="portrait"
-68-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:73:13-49
-69            android:theme="@style/LightTheme" />
-69-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:74:13-46
-70        <activity
-70-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:76:9-82:56
-71            android:name="com.app.utilities.utilitiesActivity.SCFActivity"
-71-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:77:13-58
-72            android:configChanges="uiMode"
-72-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:78:13-43
-73            android:label="@string/_SCFActivity"
-73-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:79:13-49
-74            android:screenOrientation="portrait"
-74-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:80:13-49
-75            android:theme="@style/LightTheme" />
-75-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:81:13-46
-76        <activity
-76-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:83:9-89:56
-77            android:name="com.app.utilities.settings.PrefderenzeSCF"
-77-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:84:13-52
-78            android:configChanges="uiMode"
-78-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:85:13-43
-79            android:label="@string/PrefderenzeSCF"
-79-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:86:13-51
-80            android:screenOrientation="portrait"
-80-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:87:13-49
-81            android:theme="@style/LightTheme" />
-81-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:88:13-46
-82        <activity
-82-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:90:9-103:20
-83            android:name="com.app.utilities.MainActivity"
-83-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:91:13-41
-84            android:configChanges="uiMode"
-84-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:92:13-43
-85            android:exported="true"
-85-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:93:13-36
-86            android:label="@string/app_name"
-86-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:94:13-45
-87            android:screenOrientation="portrait"
-87-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:95:13-49
-88            android:theme="@style/LightTheme" >
-88-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:96:13-46
-89            <intent-filter>
-89-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:98:13-102:29
-90                <action android:name="android.intent.action.MAIN" />
-90-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:99:17-69
-90-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:99:25-66
-91
-92                <category android:name="android.intent.category.LAUNCHER" />
-92-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:101:17-77
-92-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:101:27-74
-93            </intent-filter>
-94        </activity>
-95    </application>
-96
-97</manifest>
+18        android:name="androidx.multidex.MultiDexApplication"
+19        android:allowBackup="true"
+19-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:18:9-35
+20        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+20-->[androidx.core:core:1.5.0] C:\Users\vince\.gradle\caches\transforms-3\109c406f854d135ad1ed87dae876b357\transformed\core-1.5.0\AndroidManifest.xml:24:18-86
+21        android:configChanges="uiMode"
+21-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:19:9-39
+22        android:fullBackupContent="@xml/backup_descriptor"
+22-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:20:9-59
+23        android:icon="@drawable/utilities"
+23-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:21:9-43
+24        android:label="@string/app_name"
+24-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:22:9-41
+25        android:roundIcon="@drawable/utilities"
+25-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:23:9-48
+26        android:screenOrientation="portrait"
+26-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:24:9-45
+27        android:supportsRtl="true"
+27-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:25:9-35
+28        android:theme="@style/LightTheme" >
+28-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:26:9-42
+29        <activity
+29-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:27:9-33:56
+30            android:name="com.app.utilities.utilitiesActivity.InfoActivity"
+30-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:28:13-59
+31            android:configChanges="uiMode"
+31-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:29:13-43
+32            android:label="@string/infoActivity"
+32-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:30:13-49
+33            android:screenOrientation="portrait"
+33-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:31:13-49
+34            android:theme="@style/LightTheme" />
+34-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:32:13-46
+35        <activity
+35-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:34:9-40:56
+36            android:name="com.app.utilities.settings.SettingsActivity"
+36-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:35:13-54
+37            android:configChanges="uiMode"
+37-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:36:13-43
+38            android:label="@string/settingsActivity"
+38-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:37:13-53
+39            android:screenOrientation="portrait"
+39-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:38:13-49
+40            android:theme="@style/LightTheme" />
+40-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:39:13-46
+41        <activity
+41-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:41:9-47:56
+42            android:name="com.app.utilities.utilitiesActivity.AltriSensoriActivity"
+42-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:42:13-67
+43            android:configChanges="uiMode"
+43-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:43:13-43
+44            android:label="@string/AltriSensoriActivity"
+44-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:44:13-57
+45            android:screenOrientation="portrait"
+45-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:45:13-49
+46            android:theme="@style/LightTheme" />
+46-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:46:13-46
+47        <activity
+47-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:48:9-54:56
+48            android:name="com.app.utilities.utilitiesActivity.LivellaActivity"
+48-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:49:13-62
+49            android:configChanges="uiMode"
+49-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:50:13-43
+50            android:label="@string/livellaActivity"
+50-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:51:13-52
+51            android:screenOrientation="portrait"
+51-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:52:13-49
+52            android:theme="@style/LightTheme" />
+52-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:53:13-46
+53        <activity
+53-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:55:9-61:56
+54            android:name="com.app.utilities.utilitiesActivity.BussolaActivity"
+54-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:56:13-62
+55            android:configChanges="uiMode"
+55-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:57:13-43
+56            android:label="@string/bussolaActivity"
+56-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:58:13-52
+57            android:screenOrientation="portrait"
+57-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:59:13-49
+58            android:theme="@style/LightTheme" />
+58-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:60:13-46
+59        <activity
+59-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:62:9-68:56
+60            android:name="com.app.utilities.utilitiesActivity.DadoActivity"
+60-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:63:13-59
+61            android:configChanges="uiMode"
+61-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:64:13-43
+62            android:label="@string/dadoActivity"
+62-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:65:13-49
+63            android:screenOrientation="portrait"
+63-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:66:13-49
+64            android:theme="@style/LightTheme" />
+64-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:67:13-46
+65        <activity
+65-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:69:9-75:56
+66            android:name="com.app.utilities.settings.PrefderenzeDado"
+66-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:70:13-53
+67            android:configChanges="uiMode"
+67-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:71:13-43
+68            android:label="@string/PrefderenzeDado"
+68-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:72:13-52
+69            android:screenOrientation="portrait"
+69-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:73:13-49
+70            android:theme="@style/LightTheme" />
+70-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:74:13-46
+71        <activity
+71-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:76:9-82:56
+72            android:name="com.app.utilities.utilitiesActivity.SCFActivity"
+72-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:77:13-58
+73            android:configChanges="uiMode"
+73-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:78:13-43
+74            android:label="@string/_SCFActivity"
+74-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:79:13-49
+75            android:screenOrientation="portrait"
+75-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:80:13-49
+76            android:theme="@style/LightTheme" />
+76-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:81:13-46
+77        <activity
+77-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:83:9-89:56
+78            android:name="com.app.utilities.settings.PrefderenzeSCF"
+78-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:84:13-52
+79            android:configChanges="uiMode"
+79-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:85:13-43
+80            android:label="@string/PrefderenzeSCF"
+80-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:86:13-51
+81            android:screenOrientation="portrait"
+81-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:87:13-49
+82            android:theme="@style/LightTheme" />
+82-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:88:13-46
+83        <activity
+83-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:90:9-103:20
+84            android:name="com.app.utilities.MainActivity"
+84-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:91:13-41
+85            android:configChanges="uiMode"
+85-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:92:13-43
+86            android:exported="true"
+86-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:93:13-36
+87            android:label="@string/app_name"
+87-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:94:13-45
+88            android:screenOrientation="portrait"
+88-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:95:13-49
+89            android:theme="@style/LightTheme" >
+89-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:96:13-46
+90            <intent-filter>
+90-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:98:13-102:29
+91                <action android:name="android.intent.action.MAIN" />
+91-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:99:17-69
+91-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:99:25-66
+92
+93                <category android:name="android.intent.category.LAUNCHER" />
+93-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:101:17-77
+93-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:101:27-74
+94            </intent-filter>
+95        </activity>
+96    </application>
+97
+98</manifest>

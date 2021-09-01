@@ -9,6 +9,7 @@ import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
 import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,6 +17,8 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -34,19 +37,34 @@ import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
 import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
+import com.opencsv.CSVWriter;
+
+import java.io.FileWriter;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.List;
+import java.util.Objects;
 
 public class Fragment_Sensori extends Fragment implements SensorEventListener {
     private final Utils utils = new Utils();
-    TextView xValue, yValue, zValue, xGyroValue, yGyroValue, zGyroValue, xMagnoValue, yMagnoValue, zMagnoValue;
-    Spinner speedAcc, speedGir, speedMag;
+    TextView xAccelValue, yAccelValue, zAccelValue, xGyroValue, yGyroValue, zGyroValue, xMagneValue, yMagneValue, zMagneValue;
+    Spinner speedAcc, speedGyr, speedMag;
     SensorManager sensorManager;
-    Sensor mAccel, mGyro, mMagno;
+    Sensor mAccel, mGyro, mMagne;
     LinearLayout sensorsLayout;
-    int accSimpRate, girSimpRate, magSimpRate;
-    Button otherSensors;
+    int accSimpRate, gyrSimpRate, magSimpRate;
+    Button otherSensorsButton;
+    ImageButton recSensorSButton, pauseSensorsButton, stopSensorsButton;
+    CheckBox allSensorsCheckBox, accelCheckBox, gyroCheckBox, magneCheckBox;
+    ArrayList<String> arrayListAccelX, arrayListAccelY, arrayListAccelZ, arrayListGyroX, arrayListGyroY, arrayListGyroZ, arrayListMagneX, arrayListMagneY, arrayListMagneZ;
+    Boolean bAccel, bGyro, bMagne, bRecOrPause;
+    String fileName;
+    ImageButton directory;
     private Thread thread;
     private boolean plotData = true;
-    private LineChart chartAceleX, chartAceleY, chartAceleZ, chartGirX, chartGirY, chartGirZ, chartMagnetX, chartMagnetY, chartMagnetZ;
+    private LineChart chartAccelX, chartAccelY, chartAccelZ, chartGyroX, chartGyroY, chartGyroZ, chartMagnetX, chartMagnetY, chartMagnetZ;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -54,95 +72,177 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
     }
 
     @RequiresApi(api = Build.VERSION_CODES.M)
+    @SuppressLint({"UseCompatLoadingForDrawables", "SetTextI18n"})
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment__sensori, container, false);
 
+        directory = view.findViewById(R.id.direcotry);
+        directory.setOnClickListener(v -> utils.openFolderDownload(requireActivity()));
+
+        arrayListAccelX = new ArrayList<>();
+        arrayListAccelY = new ArrayList<>();
+        arrayListAccelZ = new ArrayList<>();
+        arrayListGyroX = new ArrayList<>();
+        arrayListGyroY = new ArrayList<>();
+        arrayListGyroZ = new ArrayList<>();
+        arrayListMagneX = new ArrayList<>();
+        arrayListMagneY = new ArrayList<>();
+        arrayListMagneZ = new ArrayList<>();
+
+        bAccel = false;
+        bGyro = false;
+        bMagne = false;
+        bRecOrPause = false;
+
+        recSensorSButton = view.findViewById(R.id.recSensorsButton);
+        pauseSensorsButton = view.findViewById(R.id.pauseSensorsButton);
+        stopSensorsButton = view.findViewById(R.id.stopSensorsButton);
+
+        allSensorsCheckBox = view.findViewById(R.id.allSensorsCheckBox);
+        accelCheckBox = view.findViewById(R.id.accelCheckBox);
+        gyroCheckBox = view.findViewById(R.id.gyroCheckBox);
+        magneCheckBox = view.findViewById(R.id.magneCheckBox);
+
+        pauseSensorsButton.setEnabled(false);
+        stopSensorsButton.setEnabled(false);
+
         speedAcc = view.findViewById(R.id.speedAcc);
-        speedGir = view.findViewById(R.id.speedGir);
+        speedGyr = view.findViewById(R.id.speedGir);
         speedMag = view.findViewById(R.id.speedMag);
 
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(requireContext(), android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.speed));
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         speedAcc.setAdapter(arrayAdapter);
-        speedGir.setAdapter(arrayAdapter);
+        speedGyr.setAdapter(arrayAdapter);
         speedMag.setAdapter(arrayAdapter);
 
         sensorsLayout = view.findViewById(R.id.sensorsLayout);
 
-        xValue = view.findViewById(R.id.xValue);
-        yValue = view.findViewById(R.id.yValue);
-        zValue = view.findViewById(R.id.zValue);
+        xAccelValue = view.findViewById(R.id.xValue);
+        yAccelValue = view.findViewById(R.id.yValue);
+        zAccelValue = view.findViewById(R.id.zValue);
         xGyroValue = view.findViewById(R.id.xGyroValue);
         yGyroValue = view.findViewById(R.id.yGyroValue);
         zGyroValue = view.findViewById(R.id.zGyroValue);
-        xMagnoValue = view.findViewById(R.id.xMagnoValue);
-        yMagnoValue = view.findViewById(R.id.yMagnoValue);
-        zMagnoValue = view.findViewById(R.id.zMagnoValue);
+        xMagneValue = view.findViewById(R.id.xMagnoValue);
+        yMagneValue = view.findViewById(R.id.yMagnoValue);
+        zMagneValue = view.findViewById(R.id.zMagnoValue);
 
         sensorManager = (SensorManager) requireActivity().getSystemService(Context.SENSOR_SERVICE);
         mAccel = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
 
-        chartAceleX = view.findViewById(R.id.chartAceleX);
-        chartAceleY = view.findViewById(R.id.chartAceleY);
-        chartAceleZ = view.findViewById(R.id.chartAceleZ);
+        chartAccelX = view.findViewById(R.id.chartAceleX);
+        chartAccelY = view.findViewById(R.id.chartAceleY);
+        chartAccelZ = view.findViewById(R.id.chartAceleZ);
 
-        chartGirX = view.findViewById(R.id.chartGirX);
-        chartGirY = view.findViewById(R.id.chartGirY);
-        chartGirZ = view.findViewById(R.id.chartGirZ);
+        chartGyroX = view.findViewById(R.id.chartGirX);
+        chartGyroY = view.findViewById(R.id.chartGirY);
+        chartGyroZ = view.findViewById(R.id.chartGirZ);
 
         chartMagnetX = view.findViewById(R.id.chartMagnetX);
         chartMagnetY = view.findViewById(R.id.chartMagnetY);
         chartMagnetZ = view.findViewById(R.id.chartMagnetZ);
 
         accSimpRate = SensorManager.SENSOR_DELAY_NORMAL;
-        girSimpRate = SensorManager.SENSOR_DELAY_NORMAL;
+        gyrSimpRate = SensorManager.SENSOR_DELAY_NORMAL;
         magSimpRate = SensorManager.SENSOR_DELAY_NORMAL;
 
         if (mAccel != null) {
             sensorManager.registerListener(Fragment_Sensori.this, mAccel, accSimpRate);
-            config(chartAceleX, "accelerometro");
-            config(chartAceleY, "accelerometro");
-            config(chartAceleZ, "accelerometro");
+            config(chartAccelX, "accelerometro");
+            config(chartAccelY, "accelerometro");
+            config(chartAccelZ, "accelerometro");
 
         } else {
-            xValue.setText(R.string.AccelerometerNotSupported);
-            sensorsLayout.removeView(chartAceleX);
-            sensorsLayout.removeView(chartAceleY);
-            sensorsLayout.removeView(chartAceleZ);
+            xAccelValue.setText(R.string.AccelerometerNotSupported);
+            sensorsLayout.removeView(chartAccelX);
+            sensorsLayout.removeView(chartAccelY);
+            sensorsLayout.removeView(chartAccelZ);
             sensorsLayout.removeView(speedAcc);
+            accelCheckBox.setEnabled(false);
         }
+
         mGyro = sensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE);
         if (mGyro != null) {
-            sensorManager.registerListener(Fragment_Sensori.this, mGyro, girSimpRate);
-            config(chartGirX, "giroscopio");
-            config(chartGirY, "giroscopio");
-            config(chartGirZ, "giroscopio");
+            sensorManager.registerListener(Fragment_Sensori.this, mGyro, gyrSimpRate);
+            config(chartGyroX, "giroscopio");
+            config(chartGyroY, "giroscopio");
+            config(chartGyroZ, "giroscopio");
         } else {
             xGyroValue.setText(R.string.GyroscopeNotSupported);
-            sensorsLayout.removeView(chartGirX);
-            sensorsLayout.removeView(chartGirY);
-            sensorsLayout.removeView(chartGirZ);
-            sensorsLayout.removeView(speedGir);
+            sensorsLayout.removeView(chartGyroX);
+            sensorsLayout.removeView(chartGyroY);
+            sensorsLayout.removeView(chartGyroZ);
+            sensorsLayout.removeView(speedGyr);
+            gyroCheckBox.setEnabled(false);
         }
-        mMagno = sensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD);
-        if (mMagno != null) {
-            sensorManager.registerListener(Fragment_Sensori.this, mMagno, magSimpRate);
+
+        mMagne = sensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD);
+        if (mMagne != null) {
+            sensorManager.registerListener(Fragment_Sensori.this, mMagne, magSimpRate);
             config(chartMagnetX, "magnetometro");
             config(chartMagnetY, "magnetometro");
             config(chartMagnetZ, "magnetometro");
         } else {
-            xMagnoValue.setText(R.string.MagnetometerNotSupported);
+            xMagneValue.setText(R.string.MagnetometerNotSupported);
             sensorsLayout.removeView(chartMagnetX);
             sensorsLayout.removeView(chartMagnetY);
             sensorsLayout.removeView(chartMagnetZ);
             sensorsLayout.removeView(speedMag);
+            magneCheckBox.setEnabled(false);
         }
+        allSensorsCheckBox.setOnCheckedChangeListener((buttonView, isChecked) -> {
+                    if (isChecked) {
+                        if (mAccel != null)
+                            accelCheckBox.setChecked(true);
+                        if (mGyro != null)
+                            gyroCheckBox.setChecked(true);
+                        if (mMagne != null)
+                            magneCheckBox.setChecked(true);
+                    }
+                    if ((accelCheckBox.isChecked() ^ (mAccel == null)) && (gyroCheckBox.isChecked() ^ (mGyro == null)) && (magneCheckBox.isChecked() ^ (mMagne == null)))
+                        allSensorsCheckBox.setChecked(true);
+                }
+        );
+        accelCheckBox.setOnCheckedChangeListener((buttonView, isChecked) -> {
+                    if (!isChecked) {
+                        allSensorsCheckBox.setChecked(false);
+                    } else {
+                        bAccel = true;
+                    }
+                    if ((accelCheckBox.isChecked() ^ (mAccel == null)) && (gyroCheckBox.isChecked() ^ (mGyro == null)) && (magneCheckBox.isChecked() ^ (mMagne == null)))
+                        allSensorsCheckBox.setChecked(true);
+                }
+        );
+        gyroCheckBox.setOnCheckedChangeListener((buttonView, isChecked) -> {
+                    if (!isChecked) {
+                        allSensorsCheckBox.setChecked(false);
+                    } else {
+                        bGyro = true;
+                    }
+                    if ((accelCheckBox.isChecked() ^ (mAccel == null)) && (gyroCheckBox.isChecked() ^ (mGyro == null)) && (magneCheckBox.isChecked() ^ (mMagne == null)))
+                        allSensorsCheckBox.setChecked(true);
+
+                }
+        );
+        magneCheckBox.setOnCheckedChangeListener((buttonView, isChecked) -> {
+                    if (!isChecked) {
+                        allSensorsCheckBox.setChecked(false);
+                    } else {
+                        bMagne = true;
+                    }
+                    if ((accelCheckBox.isChecked() ^ (mAccel == null)) && (gyroCheckBox.isChecked() ^ (mGyro == null)) && (magneCheckBox.isChecked() ^ (mMagne == null)))
+                        allSensorsCheckBox.setChecked(true);
+
+                }
+        );
 
         speedAcc.setSelection(3);
         speedAcc.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+            public void onItemSelected(AdapterView<?> parentView, View selectedItemView,
+                                       int position, long id) {
                 switch (position) {
                     case 0:
                         accSimpRate = SensorManager.SENSOR_DELAY_FASTEST;
@@ -177,37 +277,38 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
             public void onNothingSelected(AdapterView<?> parentView) {
             }
         });
-        speedGir.setSelection(3);
-        speedGir.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        speedGyr.setSelection(3);
+        speedGyr.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+            public void onItemSelected(AdapterView<?> parentView, View selectedItemView,
+                                       int position, long id) {
                 switch (position) {
                     case 0:
-                        girSimpRate = SensorManager.SENSOR_DELAY_FASTEST;
+                        gyrSimpRate = SensorManager.SENSOR_DELAY_FASTEST;
                         break;
                     case 1:
-                        girSimpRate = SensorManager.SENSOR_DELAY_GAME;
+                        gyrSimpRate = SensorManager.SENSOR_DELAY_GAME;
                         break;
                     case 2:
-                        girSimpRate = SensorManager.SENSOR_DELAY_UI;
+                        gyrSimpRate = SensorManager.SENSOR_DELAY_UI;
                         break;
                     case 3:
                     default:
-                        girSimpRate = SensorManager.SENSOR_DELAY_NORMAL;
+                        gyrSimpRate = SensorManager.SENSOR_DELAY_NORMAL;
                         break;
                     case 4:
-                        girSimpRate = 400000;
+                        gyrSimpRate = 400000;
                         break;
                     case 5:
-                        girSimpRate = 800000;
+                        gyrSimpRate = 800000;
                         break;
                     case 6:
-                        girSimpRate = 1000000;
+                        gyrSimpRate = 1000000;
                         break;
                 }
                 if (mGyro != null) {
                     sensorManager.unregisterListener(Fragment_Sensori.this, mGyro);
-                    sensorManager.registerListener(Fragment_Sensori.this, mGyro, girSimpRate);
+                    sensorManager.registerListener(Fragment_Sensori.this, mGyro, gyrSimpRate);
                 }
             }
 
@@ -218,7 +319,8 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
         speedMag.setSelection(3);
         speedMag.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+            public void onItemSelected(AdapterView<?> parentView, View selectedItemView,
+                                       int position, long id) {
                 switch (position) {
                     case 0:
                         magSimpRate = SensorManager.SENSOR_DELAY_FASTEST;
@@ -243,9 +345,9 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
                         magSimpRate = 1000000;
                         break;
                 }
-                if (mMagno != null) {
-                    sensorManager.unregisterListener(Fragment_Sensori.this, mMagno);
-                    sensorManager.registerListener(Fragment_Sensori.this, mMagno, magSimpRate);
+                if (mMagne != null) {
+                    sensorManager.unregisterListener(Fragment_Sensori.this, mMagne);
+                    sensorManager.registerListener(Fragment_Sensori.this, mMagne, magSimpRate);
                 }
             }
 
@@ -255,8 +357,132 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
         });
 
         feedMultiple();
-        otherSensors = view.findViewById(R.id.otherSensors);
-        otherSensors.setOnClickListener(v -> utils.goToAltriSensoriActivity(requireActivity()));
+        recSensorSButton.setOnClickListener(v -> {
+            if (accelCheckBox.isChecked() || gyroCheckBox.isChecked() || magneCheckBox.isChecked()) {
+                bRecOrPause = true;
+                allSensorsCheckBox.setEnabled(false);
+                accelCheckBox.setEnabled(false);
+                gyroCheckBox.setEnabled(false);
+                magneCheckBox.setEnabled(false);
+                recSensorSButton.setEnabled(false);
+                pauseSensorsButton.setEnabled(true);
+                stopSensorsButton.setEnabled(true);
+                recSensorSButton.setImageResource(R.drawable.ic_rec_press);
+                pauseSensorsButton.setImageResource(R.drawable.ic_pause);
+                stopSensorsButton.setImageResource(R.drawable.ic_stop);
+                bAccel = accelCheckBox.isChecked();
+                bGyro = gyroCheckBox.isChecked();
+                bMagne = magneCheckBox.isChecked();
+                @SuppressLint("SimpleDateFormat") SimpleDateFormat sdf = new SimpleDateFormat("_yyyy_MM_dd_HH_mm_ss");
+                fileName = (sdf.format(Calendar.getInstance().getTime()) + ".csv");
+            } else {
+                utils.notifyUserShortWay(requireActivity(), "Seleziona almeno un sensore!!");
+            }
+        });
+        pauseSensorsButton.setOnClickListener(v -> {
+            bRecOrPause = true;
+            allSensorsCheckBox.setEnabled(false);
+            accelCheckBox.setEnabled(false);
+            gyroCheckBox.setEnabled(false);
+            magneCheckBox.setEnabled(false);
+            recSensorSButton.setEnabled(true);
+            pauseSensorsButton.setEnabled(false);
+            stopSensorsButton.setEnabled(true);
+            recSensorSButton.setImageResource(R.drawable.ic_rec);
+            pauseSensorsButton.setImageResource(R.drawable.ic_pause_press);
+            stopSensorsButton.setImageResource(R.drawable.ic_stop);
+            bAccel = false;
+            bGyro = false;
+            bMagne = false;
+        });
+        stopSensorsButton.setOnClickListener(v -> {
+            bRecOrPause = false;
+            allSensorsCheckBox.setEnabled(true);
+            accelCheckBox.setEnabled(true);
+            gyroCheckBox.setEnabled(true);
+            magneCheckBox.setEnabled(true);
+            recSensorSButton.setEnabled(true);
+            pauseSensorsButton.setEnabled(false);
+            stopSensorsButton.setEnabled(false);
+            recSensorSButton.setImageResource(R.drawable.ic_rec);
+            pauseSensorsButton.setImageResource(R.drawable.ic_pause);
+            stopSensorsButton.setImageResource(R.drawable.ic_stop);
+            bAccel = accelCheckBox.isChecked();
+            bGyro = gyroCheckBox.isChecked();
+            bMagne = magneCheckBox.isChecked();
+            int count;
+            if (accelCheckBox.isChecked()) {
+                String csv = Environment.getExternalStorageDirectory() + "/Download/" + "Accelerometro" + fileName;
+                CSVWriter writer;
+                try {
+                    writer = new CSVWriter(new FileWriter(csv));
+                    List<String[]> data = new ArrayList<>();
+                    count = 1;
+                    data.add(new String[]{"x", "y", "z"});
+                    while (count != arrayListAccelX.size() + 1) {
+                        data.add(new String[]{'"' + arrayListAccelX.get(count - 1) + '"', '"' + arrayListAccelY.get(count - 1) + '"', '"' + arrayListAccelZ.get(count - 1) + '"'});
+                        count++;
+                    }
+                    Objects.requireNonNull(writer).writeAll(data);
+                    writer.close();
+                    utils.notifyUserShortWay(requireActivity(), "File CSV relativo all'accelerometro realizzato con successo");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                    utils.notifyUser(requireActivity(), "Non è stato possibile realizzare il CSV relativo all'accelerometro");
+                }
+            }
+            if (gyroCheckBox.isChecked()) {
+                String csv = Environment.getExternalStorageDirectory() + "/Download/" + "Giroscopio" + fileName;
+                CSVWriter writer;
+                try {
+                    writer = new CSVWriter(new FileWriter(csv));
+                    List<String[]> data = new ArrayList<>();
+                    count = 1;
+                    data.add(new String[]{"x", "y", "z"});
+                    while (count != arrayListGyroX.size() + 1) {
+                        data.add(new String[]{'"' + arrayListGyroX.get(count - 1) + '"', '"' + arrayListGyroY.get(count - 1) + '"', '"' + arrayListGyroZ.get(count - 1) + '"'});
+                        count++;
+                    }
+                    Objects.requireNonNull(writer).writeAll(data);
+                    writer.close();
+                    utils.notifyUserShortWay(requireActivity(), "File CSV relativo al giroscopio realizzato con successo");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                    utils.notifyUser(requireActivity(), "Non è stato possibile realizzare il CSV relativo al giroscopio");
+                }
+            }
+            if (magneCheckBox.isChecked()) {
+                String csv = Environment.getExternalStorageDirectory() + "/Download/" + "Magnetometro" + fileName;
+                CSVWriter writer;
+                try {
+                    writer = new CSVWriter(new FileWriter(csv));
+                    List<String[]> data = new ArrayList<>();
+                    count = 1;
+                    data.add(new String[]{"x", "y", "z"});
+                    while (count != arrayListMagneX.size() + 1) {
+                        data.add(new String[]{'"' + arrayListMagneX.get(count - 1) + '"', '"' + arrayListMagneY.get(count - 1) + '"', '"' + arrayListMagneZ.get(count - 1) + '"'});
+                        count++;
+                    }
+                    Objects.requireNonNull(writer).writeAll(data);
+                    writer.close();
+                    utils.notifyUserShortWay(requireActivity(), "File CSV relativo al magnetometro realizzato con successo");
+                } catch (IOException e) {
+                    e.printStackTrace();
+                    utils.notifyUser(requireActivity(), "Non è stato possibile realizzare il CSV relativo al magnetometro");
+                }
+            }
+            arrayListAccelX.clear();
+            arrayListAccelY.clear();
+            arrayListAccelZ.clear();
+            arrayListGyroX.clear();
+            arrayListGyroY.clear();
+            arrayListGyroZ.clear();
+            arrayListMagneX.clear();
+            arrayListMagneY.clear();
+            arrayListMagneZ.clear();
+        });
+        otherSensorsButton = view.findViewById(R.id.otherSensorsButton);
+        otherSensorsButton.setOnClickListener(v -> utils.goToAltriSensoriActivity(requireActivity()));
         return view;
     }
 
@@ -265,9 +491,9 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
     public void onSensorChanged(SensorEvent event) {
         Sensor sensor = event.sensor;
         if (sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
-            xValue.setText(Html.fromHtml("<b>X: </b>" + utils.roundAvoid(event.values[0], 2)));
-            yValue.setText(Html.fromHtml("<b>Y: </b>" + utils.roundAvoid(event.values[1], 2)));
-            zValue.setText(Html.fromHtml("<b>Z: </b>" + utils.roundAvoid(event.values[2], 2)));
+            xAccelValue.setText(Html.fromHtml("<b>X: </b>" + utils.roundAvoid(event.values[0], 2)));
+            yAccelValue.setText(Html.fromHtml("<b>Y: </b>" + utils.roundAvoid(event.values[1], 2)));
+            zAccelValue.setText(Html.fromHtml("<b>Z: </b>" + utils.roundAvoid(event.values[2], 2)));
             if (plotData) {
                 addEntry(event, "accelerometro");
                 plotData = false;
@@ -281,9 +507,9 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
                 plotData = false;
             }
         } else if (sensor.getType() == Sensor.TYPE_MAGNETIC_FIELD) {
-            xMagnoValue.setText(Html.fromHtml("<b>X: </b>" + utils.roundAvoid(event.values[0], 2)));
-            yMagnoValue.setText(Html.fromHtml("<b>Y: </b>" + utils.roundAvoid(event.values[1], 2)));
-            zMagnoValue.setText(Html.fromHtml("<b>Z: </b>" + utils.roundAvoid(event.values[2], 2)));
+            xMagneValue.setText(Html.fromHtml("<b>X: </b>" + utils.roundAvoid(event.values[0], 2)));
+            yMagneValue.setText(Html.fromHtml("<b>Y: </b>" + utils.roundAvoid(event.values[1], 2)));
+            zMagneValue.setText(Html.fromHtml("<b>Z: </b>" + utils.roundAvoid(event.values[2], 2)));
             if (plotData) {
                 addEntry(event, "magnetometro");
                 plotData = false;
@@ -340,7 +566,7 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
         LineData data;
         switch (sensor) {
             case "accelerometro":
-                data = chartAceleX.getData();
+                data = chartAccelX.getData();
                 if (data != null) {
                     ILineDataSet set = data.getDataSetByIndex(0);
                     if (set == null) {
@@ -349,11 +575,13 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
                     }
                     data.addEntry(new Entry(set.getEntryCount(), event.values[0]), 0);
                     data.notifyDataChanged();
-                    chartAceleX.notifyDataSetChanged();
-                    chartAceleX.setVisibleXRangeMaximum(10);
-                    chartAceleX.moveViewToX(data.getEntryCount());
+                    chartAccelX.notifyDataSetChanged();
+                    chartAccelX.setVisibleXRangeMaximum(10);
+                    chartAccelX.moveViewToX(data.getEntryCount());
+                    if (bAccel) arrayListAccelX.add(String.valueOf(event.values[0]));
+
                 }
-                data = chartAceleY.getData();
+                data = chartAccelY.getData();
                 if (data != null) {
                     ILineDataSet set = data.getDataSetByIndex(0);
                     if (set == null) {
@@ -362,11 +590,12 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
                     }
                     data.addEntry(new Entry(set.getEntryCount(), event.values[1]), 0);
                     data.notifyDataChanged();
-                    chartAceleY.notifyDataSetChanged();
-                    chartAceleY.setVisibleXRangeMaximum(10);
-                    chartAceleY.moveViewToX(data.getEntryCount());
+                    chartAccelY.notifyDataSetChanged();
+                    chartAccelY.setVisibleXRangeMaximum(10);
+                    chartAccelY.moveViewToX(data.getEntryCount());
+                    if (bAccel) arrayListAccelY.add(String.valueOf(event.values[1]));
                 }
-                data = chartAceleZ.getData();
+                data = chartAccelZ.getData();
                 if (data != null) {
                     ILineDataSet set = data.getDataSetByIndex(0);
                     if (set == null) {
@@ -375,13 +604,14 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
                     }
                     data.addEntry(new Entry(set.getEntryCount(), event.values[2]), 0);
                     data.notifyDataChanged();
-                    chartAceleZ.notifyDataSetChanged();
-                    chartAceleZ.setVisibleXRangeMaximum(10);
-                    chartAceleZ.moveViewToX(data.getEntryCount());
+                    chartAccelZ.notifyDataSetChanged();
+                    chartAccelZ.setVisibleXRangeMaximum(10);
+                    chartAccelZ.moveViewToX(data.getEntryCount());
+                    if (bAccel) arrayListAccelZ.add(String.valueOf(event.values[2]));
                 }
                 break;
             case "giroscopio":
-                data = chartGirX.getData();
+                data = chartGyroX.getData();
                 if (data != null) {
                     ILineDataSet set = data.getDataSetByIndex(0);
                     if (set == null) {
@@ -390,11 +620,12 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
                     }
                     data.addEntry(new Entry(set.getEntryCount(), event.values[0]), 0);
                     data.notifyDataChanged();
-                    chartGirX.notifyDataSetChanged();
-                    chartGirX.setVisibleXRangeMaximum(10);
-                    chartGirX.moveViewToX(data.getEntryCount());
+                    chartGyroX.notifyDataSetChanged();
+                    chartGyroX.setVisibleXRangeMaximum(10);
+                    chartGyroX.moveViewToX(data.getEntryCount());
+                    if (bGyro) arrayListGyroX.add(String.valueOf(event.values[0]));
                 }
-                data = chartGirY.getData();
+                data = chartGyroY.getData();
                 if (data != null) {
                     ILineDataSet set = data.getDataSetByIndex(0);
                     if (set == null) {
@@ -403,11 +634,12 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
                     }
                     data.addEntry(new Entry(set.getEntryCount(), event.values[1]), 0);
                     data.notifyDataChanged();
-                    chartGirY.notifyDataSetChanged();
-                    chartGirY.setVisibleXRangeMaximum(10);
-                    chartGirY.moveViewToX(data.getEntryCount());
+                    chartGyroY.notifyDataSetChanged();
+                    chartGyroY.setVisibleXRangeMaximum(10);
+                    chartGyroY.moveViewToX(data.getEntryCount());
+                    if (bGyro) arrayListGyroY.add(String.valueOf(event.values[1]));
                 }
-                data = chartGirZ.getData();
+                data = chartGyroZ.getData();
                 if (data != null) {
                     ILineDataSet set = data.getDataSetByIndex(0);
                     if (set == null) {
@@ -416,9 +648,10 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
                     }
                     data.addEntry(new Entry(set.getEntryCount(), event.values[2]), 0);
                     data.notifyDataChanged();
-                    chartGirZ.notifyDataSetChanged();
-                    chartGirZ.setVisibleXRangeMaximum(10);
-                    chartGirZ.moveViewToX(data.getEntryCount());
+                    chartGyroZ.notifyDataSetChanged();
+                    chartGyroZ.setVisibleXRangeMaximum(10);
+                    chartGyroZ.moveViewToX(data.getEntryCount());
+                    if (bGyro) arrayListGyroZ.add(String.valueOf(event.values[2]));
                 }
                 break;
             case "magnetometro":
@@ -434,6 +667,7 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
                     chartMagnetX.notifyDataSetChanged();
                     chartMagnetX.setVisibleXRangeMaximum(10);
                     chartMagnetX.moveViewToX(data.getEntryCount());
+                    if (bMagne) arrayListMagneX.add(String.valueOf(event.values[0]));
                 }
                 data = chartMagnetY.getData();
                 if (data != null) {
@@ -447,6 +681,7 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
                     chartMagnetY.notifyDataSetChanged();
                     chartMagnetY.setVisibleXRangeMaximum(10);
                     chartMagnetY.moveViewToX(data.getEntryCount());
+                    if (bMagne) arrayListMagneY.add(String.valueOf(event.values[1]));
                 }
                 data = chartMagnetZ.getData();
                 if (data != null) {
@@ -460,10 +695,12 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
                     chartMagnetZ.notifyDataSetChanged();
                     chartMagnetZ.setVisibleXRangeMaximum(10);
                     chartMagnetZ.moveViewToX(data.getEntryCount());
-                }
-                break;
-        }
+                    if (bMagne) arrayListMagneZ.add(String.valueOf(event.values[2]));
 
+                    break;
+                }
+
+        }
     }
 
     @NonNull
@@ -505,6 +742,8 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
             thread.interrupt();
         }
         sensorManager.unregisterListener(this);
+        if (bRecOrPause)
+            stopSensorsButton.performClick();
     }
 
     @Override
@@ -513,25 +752,27 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
         if (mAccel != null) {
             sensorManager.registerListener(Fragment_Sensori.this, mAccel, accSimpRate);
         } else {
-            xValue.setText(R.string.AccelerometerNotSupported);
+            xAccelValue.setText(R.string.AccelerometerNotSupported);
         }
         mGyro = sensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE);
         if (mGyro != null) {
-            sensorManager.registerListener(Fragment_Sensori.this, mGyro, girSimpRate);
+            sensorManager.registerListener(Fragment_Sensori.this, mGyro, gyrSimpRate);
         } else {
             xGyroValue.setText(R.string.GyroscopeNotSupported);
         }
-        mMagno = sensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD);
-        if (mMagno != null) {
-            sensorManager.registerListener(Fragment_Sensori.this, mMagno, magSimpRate);
+        mMagne = sensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD);
+        if (mMagne != null) {
+            sensorManager.registerListener(Fragment_Sensori.this, mMagne, magSimpRate);
         } else {
-            xMagnoValue.setText(R.string.MagnetometerNotSupported);
+            xMagneValue.setText(R.string.MagnetometerNotSupported);
         }
     }
 
     @Override
     public void onDestroy() {
         sensorManager.unregisterListener(this);
+        if (bRecOrPause)
+            stopSensorsButton.performClick();
         thread.interrupt();
         super.onDestroy();
     }

@@ -1,42 +1,31 @@
-com/app/utilities/MainActivity.java
- com.app.utilities.MainActivity
-com/app/utilities/fragment/Fragment_Sorte.java
- com.app.utilities.fragment.Fragment_Sorte
+com/app/utilities/databinding/ActivityScfBinding.java
+ com.app.utilities.databinding.ActivityScfBinding
+com/app/utilities/databinding/PreferenzeDadoActivityBinding.java
+ com.app.utilities.databinding.PreferenzeDadoActivityBinding
 com/app/utilities/fragment/ui/PageViewModel.java
  com.app.utilities.fragment.ui.PageViewModel
-com/app/utilities/utilitiesActivity/AltriSensoriActivity.java
- com.app.utilities.utilitiesActivity.AltriSensoriActivity
- com.app.utilities.utilitiesActivity.AltriSensoriActivity$1
- com.app.utilities.utilitiesActivity.AltriSensoriActivity$2
- com.app.utilities.utilitiesActivity.AltriSensoriActivity$3
- com.app.utilities.utilitiesActivity.AltriSensoriActivity$4
-com/app/utilities/utilitiesActivity/LivellaActivity.java
- com.app.utilities.utilitiesActivity.LivellaActivity
- com.app.utilities.utilitiesActivity.LivellaActivity$AnimatedView
+com/app/utilities/databinding/ActivityBussolaBinding.java
+ com.app.utilities.databinding.ActivityBussolaBinding
+com/app/utilities/databinding/ActivityAltriSensoriBinding.java
+ com.app.utilities.databinding.ActivityAltriSensoriBinding
 com/app/utilities/utility/Shake.java
  com.app.utilities.utility.Shake
  com.app.utilities.utility.Shake$1
  com.app.utilities.utility.Shake$Callback
-com/app/utilities/fragment/Fragment_Orientazione.java
- com.app.utilities.fragment.Fragment_Orientazione
+com/app/utilities/utility/PreferencesDado.java
+ com.app.utilities.utility.PreferencesDado
 com/app/utilities/fragment/ui/PlaceholderFragment.java
  com.app.utilities.fragment.ui.PlaceholderFragment
-com/app/utilities/fragment/Fragment_Sensori.java
- com.app.utilities.fragment.Fragment_Sensori
- com.app.utilities.fragment.Fragment_Sensori$1
- com.app.utilities.fragment.Fragment_Sensori$2
- com.app.utilities.fragment.Fragment_Sensori$3
+com/app/utilities/utility/Preferences.java
+ com.app.utilities.utility.Preferences
 com/app/utilities/databinding/ActivityInfoBinding.java
  com.app.utilities.databinding.ActivityInfoBinding
-com/app/utilities/settings/PrefderenzeSCF.java
- com.app.utilities.settings.PrefderenzeSCF
- com.app.utilities.settings.PrefderenzeSCF$SettingsFragment
-com/app/utilities/settings/PrefderenzeDado.java
- com.app.utilities.settings.PrefderenzeDado
- com.app.utilities.settings.PrefderenzeDado$SettingsFragment
-com/app/utilities/settings/SettingsActivity.java
- com.app.utilities.settings.SettingsActivity
- com.app.utilities.settings.SettingsActivity$SettingsFragment
+com/app/utilities/databinding/FragmentMainBinding.java
+ com.app.utilities.databinding.FragmentMainBinding
+com/app/utilities/databinding/FragmentSorteBinding.java
+ com.app.utilities.databinding.FragmentSorteBinding
+com/app/utilities/databinding/FragmentOrientazioneBinding.java
+ com.app.utilities.databinding.FragmentOrientazioneBinding
 com/app/utilities/BuildConfig.java
  com.app.utilities.BuildConfig
 com/app/utilities/databinding/FragmentSensoriBinding.java
@@ -45,10 +34,12 @@ com/app/utilities/utility/PreferencesSCF.java
  com.app.utilities.utility.PreferencesSCF
 com/app/utilities/utility/RowItem.java
  com.app.utilities.utility.RowItem
-com/app/utilities/utilitiesActivity/InfoActivity.java
- com.app.utilities.utilitiesActivity.InfoActivity
-com/app/utilities/utilitiesActivity/BussolaActivity.java
- com.app.utilities.utilitiesActivity.BussolaActivity
+com/app/utilities/databinding/SettingsActivityBinding.java
+ com.app.utilities.databinding.SettingsActivityBinding
+com/app/utilities/utility/CustomAdapter.java
+ com.app.utilities.utility.CustomAdapter
+ com.app.utilities.utility.CustomAdapter$1
+ com.app.utilities.utility.CustomAdapter$ViewHolder
 com/app/utilities/bussola/SOTWFormatter.java
  com.app.utilities.bussola.SOTWFormatter
 com/app/utilities/databinding/SingleRowBinding.java
@@ -57,40 +48,49 @@ com/app/utilities/databinding/ActivityDadoBinding.java
  com.app.utilities.databinding.ActivityDadoBinding
 com/app/utilities/databinding/ActivityMainBinding.java
  com.app.utilities.databinding.ActivityMainBinding
-com/app/utilities/databinding/ActivityScfBinding.java
- com.app.utilities.databinding.ActivityScfBinding
-com/app/utilities/utility/CustomAdapter.java
- com.app.utilities.utility.CustomAdapter
- com.app.utilities.utility.CustomAdapter$1
- com.app.utilities.utility.CustomAdapter$ViewHolder
-com/app/utilities/databinding/PreferenzeDadoActivityBinding.java
- com.app.utilities.databinding.PreferenzeDadoActivityBinding
-com/app/utilities/databinding/ActivityBussolaBinding.java
- com.app.utilities.databinding.ActivityBussolaBinding
-com/app/utilities/databinding/FragmentMainBinding.java
- com.app.utilities.databinding.FragmentMainBinding
-com/app/utilities/databinding/FragmentSorteBinding.java
- com.app.utilities.databinding.FragmentSorteBinding
-com/app/utilities/databinding/FragmentOrientazioneBinding.java
- com.app.utilities.databinding.FragmentOrientazioneBinding
-com/app/utilities/utilitiesActivity/SCFActivity.java
- com.app.utilities.utilitiesActivity.SCFActivity
- com.app.utilities.utilitiesActivity.SCFActivity$1
-com/app/utilities/fragment/ui/SectionsPagerAdapter.java
- com.app.utilities.fragment.ui.SectionsPagerAdapter
-com/app/utilities/utility/Preferences.java
- com.app.utilities.utility.Preferences
-com/app/utilities/utility/PreferencesDado.java
- com.app.utilities.utility.PreferencesDado
-com/app/utilities/databinding/SettingsActivityBinding.java
- com.app.utilities.databinding.SettingsActivityBinding
-com/app/utilities/databinding/ActivityAltriSensoriBinding.java
- com.app.utilities.databinding.ActivityAltriSensoriBinding
+com/app/utilities/MainActivity.java
+ com.app.utilities.MainActivity
+com/app/utilities/fragment/Fragment_Sorte.java
+ com.app.utilities.fragment.Fragment_Sorte
+com/app/utilities/settings/SettingsActivity.java
+ com.app.utilities.settings.SettingsActivity
+ com.app.utilities.settings.SettingsActivity$SettingsFragment
+com/app/utilities/utilitiesActivity/LivellaActivity.java
+ com.app.utilities.utilitiesActivity.LivellaActivity
+ com.app.utilities.utilitiesActivity.LivellaActivity$AnimatedView
+com/app/utilities/utilitiesActivity/InfoActivity.java
+ com.app.utilities.utilitiesActivity.InfoActivity
+com/app/utilities/fragment/Fragment_Orientazione.java
+ com.app.utilities.fragment.Fragment_Orientazione
 com/app/utilities/bussola/Compass.java
  com.app.utilities.bussola.Compass
  com.app.utilities.bussola.Compass$CompassListener
+com/app/utilities/settings/PrefderenzeSCF.java
+ com.app.utilities.settings.PrefderenzeSCF
+ com.app.utilities.settings.PrefderenzeSCF$SettingsFragment
+com/app/utilities/settings/PrefderenzeDado.java
+ com.app.utilities.settings.PrefderenzeDado
+ com.app.utilities.settings.PrefderenzeDado$SettingsFragment
 com/app/utilities/utilitiesActivity/DadoActivity.java
  com.app.utilities.utilitiesActivity.DadoActivity
  com.app.utilities.utilitiesActivity.DadoActivity$1
+com/app/utilities/utilitiesActivity/SCFActivity.java
+ com.app.utilities.utilitiesActivity.SCFActivity
+ com.app.utilities.utilitiesActivity.SCFActivity$1
+com/app/utilities/utilitiesActivity/BussolaActivity.java
+ com.app.utilities.utilitiesActivity.BussolaActivity
+com/app/utilities/utilitiesActivity/AltriSensoriActivity.java
+ com.app.utilities.utilitiesActivity.AltriSensoriActivity
+ com.app.utilities.utilitiesActivity.AltriSensoriActivity$1
+ com.app.utilities.utilitiesActivity.AltriSensoriActivity$2
+ com.app.utilities.utilitiesActivity.AltriSensoriActivity$3
+ com.app.utilities.utilitiesActivity.AltriSensoriActivity$4
+com/app/utilities/fragment/ui/SectionsPagerAdapter.java
+ com.app.utilities.fragment.ui.SectionsPagerAdapter
 com/app/utilities/utility/Utils.java
  com.app.utilities.utility.Utils
+com/app/utilities/fragment/Fragment_Sensori.java
+ com.app.utilities.fragment.Fragment_Sensori
+ com.app.utilities.fragment.Fragment_Sensori$1
+ com.app.utilities.fragment.Fragment_Sensori$2
+ com.app.utilities.fragment.Fragment_Sensori$3

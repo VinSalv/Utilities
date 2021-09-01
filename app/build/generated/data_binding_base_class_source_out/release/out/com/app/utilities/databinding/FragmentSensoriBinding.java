@@ -5,6 +5,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -22,6 +24,18 @@ import java.lang.String;
 public final class FragmentSensoriBinding implements ViewBinding {
   @NonNull
   private final NestedScrollView rootView;
+
+  @NonNull
+  public final TextView CSVRecommendationTextView;
+
+  @NonNull
+  public final TextView CSVTextView;
+
+  @NonNull
+  public final CheckBox accelCheckBox;
+
+  @NonNull
+  public final CheckBox allSensorsCheckBox;
 
   @NonNull
   public final LineChart chartAceleX;
@@ -51,7 +65,25 @@ public final class FragmentSensoriBinding implements ViewBinding {
   public final LineChart chartMagnetZ;
 
   @NonNull
-  public final Button otherSensors;
+  public final ImageButton direcotry;
+
+  @NonNull
+  public final CheckBox gyroCheckBox;
+
+  @NonNull
+  public final CheckBox magneCheckBox;
+
+  @NonNull
+  public final Button otherSensorsButton;
+
+  @NonNull
+  public final ImageButton pauseSensorsButton;
+
+  @NonNull
+  public final ImageButton recSensorsButton;
+
+  @NonNull
+  public final LinearLayout recSensorsLayout;
 
   @NonNull
   public final LinearLayout sensorsLayout;
@@ -64,6 +96,9 @@ public final class FragmentSensoriBinding implements ViewBinding {
 
   @NonNull
   public final Spinner speedMag;
+
+  @NonNull
+  public final ImageButton stopSensorsButton;
 
   @NonNull
   public final TextView xGyroValue;
@@ -92,16 +127,27 @@ public final class FragmentSensoriBinding implements ViewBinding {
   @NonNull
   public final TextView zValue;
 
-  private FragmentSensoriBinding(@NonNull NestedScrollView rootView, @NonNull LineChart chartAceleX,
-      @NonNull LineChart chartAceleY, @NonNull LineChart chartAceleZ, @NonNull LineChart chartGirX,
-      @NonNull LineChart chartGirY, @NonNull LineChart chartGirZ, @NonNull LineChart chartMagnetX,
+  private FragmentSensoriBinding(@NonNull NestedScrollView rootView,
+      @NonNull TextView CSVRecommendationTextView, @NonNull TextView CSVTextView,
+      @NonNull CheckBox accelCheckBox, @NonNull CheckBox allSensorsCheckBox,
+      @NonNull LineChart chartAceleX, @NonNull LineChart chartAceleY,
+      @NonNull LineChart chartAceleZ, @NonNull LineChart chartGirX, @NonNull LineChart chartGirY,
+      @NonNull LineChart chartGirZ, @NonNull LineChart chartMagnetX,
       @NonNull LineChart chartMagnetY, @NonNull LineChart chartMagnetZ,
-      @NonNull Button otherSensors, @NonNull LinearLayout sensorsLayout, @NonNull Spinner speedAcc,
-      @NonNull Spinner speedGir, @NonNull Spinner speedMag, @NonNull TextView xGyroValue,
+      @NonNull ImageButton direcotry, @NonNull CheckBox gyroCheckBox,
+      @NonNull CheckBox magneCheckBox, @NonNull Button otherSensorsButton,
+      @NonNull ImageButton pauseSensorsButton, @NonNull ImageButton recSensorsButton,
+      @NonNull LinearLayout recSensorsLayout, @NonNull LinearLayout sensorsLayout,
+      @NonNull Spinner speedAcc, @NonNull Spinner speedGir, @NonNull Spinner speedMag,
+      @NonNull ImageButton stopSensorsButton, @NonNull TextView xGyroValue,
       @NonNull TextView xMagnoValue, @NonNull TextView xValue, @NonNull TextView yGyroValue,
       @NonNull TextView yMagnoValue, @NonNull TextView yValue, @NonNull TextView zGyroValue,
       @NonNull TextView zMagnoValue, @NonNull TextView zValue) {
     this.rootView = rootView;
+    this.CSVRecommendationTextView = CSVRecommendationTextView;
+    this.CSVTextView = CSVTextView;
+    this.accelCheckBox = accelCheckBox;
+    this.allSensorsCheckBox = allSensorsCheckBox;
     this.chartAceleX = chartAceleX;
     this.chartAceleY = chartAceleY;
     this.chartAceleZ = chartAceleZ;
@@ -111,11 +157,18 @@ public final class FragmentSensoriBinding implements ViewBinding {
     this.chartMagnetX = chartMagnetX;
     this.chartMagnetY = chartMagnetY;
     this.chartMagnetZ = chartMagnetZ;
-    this.otherSensors = otherSensors;
+    this.direcotry = direcotry;
+    this.gyroCheckBox = gyroCheckBox;
+    this.magneCheckBox = magneCheckBox;
+    this.otherSensorsButton = otherSensorsButton;
+    this.pauseSensorsButton = pauseSensorsButton;
+    this.recSensorsButton = recSensorsButton;
+    this.recSensorsLayout = recSensorsLayout;
     this.sensorsLayout = sensorsLayout;
     this.speedAcc = speedAcc;
     this.speedGir = speedGir;
     this.speedMag = speedMag;
+    this.stopSensorsButton = stopSensorsButton;
     this.xGyroValue = xGyroValue;
     this.xMagnoValue = xMagnoValue;
     this.xValue = xValue;
@@ -154,6 +207,30 @@ public final class FragmentSensoriBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.CSVRecommendationTextView;
+      TextView CSVRecommendationTextView = ViewBindings.findChildViewById(rootView, id);
+      if (CSVRecommendationTextView == null) {
+        break missingId;
+      }
+
+      id = R.id.CSVTextView;
+      TextView CSVTextView = ViewBindings.findChildViewById(rootView, id);
+      if (CSVTextView == null) {
+        break missingId;
+      }
+
+      id = R.id.accelCheckBox;
+      CheckBox accelCheckBox = ViewBindings.findChildViewById(rootView, id);
+      if (accelCheckBox == null) {
+        break missingId;
+      }
+
+      id = R.id.allSensorsCheckBox;
+      CheckBox allSensorsCheckBox = ViewBindings.findChildViewById(rootView, id);
+      if (allSensorsCheckBox == null) {
+        break missingId;
+      }
+
       id = R.id.chartAceleX;
       LineChart chartAceleX = ViewBindings.findChildViewById(rootView, id);
       if (chartAceleX == null) {
@@ -208,9 +285,45 @@ public final class FragmentSensoriBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.otherSensors;
-      Button otherSensors = ViewBindings.findChildViewById(rootView, id);
-      if (otherSensors == null) {
+      id = R.id.direcotry;
+      ImageButton direcotry = ViewBindings.findChildViewById(rootView, id);
+      if (direcotry == null) {
+        break missingId;
+      }
+
+      id = R.id.gyroCheckBox;
+      CheckBox gyroCheckBox = ViewBindings.findChildViewById(rootView, id);
+      if (gyroCheckBox == null) {
+        break missingId;
+      }
+
+      id = R.id.magneCheckBox;
+      CheckBox magneCheckBox = ViewBindings.findChildViewById(rootView, id);
+      if (magneCheckBox == null) {
+        break missingId;
+      }
+
+      id = R.id.otherSensorsButton;
+      Button otherSensorsButton = ViewBindings.findChildViewById(rootView, id);
+      if (otherSensorsButton == null) {
+        break missingId;
+      }
+
+      id = R.id.pauseSensorsButton;
+      ImageButton pauseSensorsButton = ViewBindings.findChildViewById(rootView, id);
+      if (pauseSensorsButton == null) {
+        break missingId;
+      }
+
+      id = R.id.recSensorsButton;
+      ImageButton recSensorsButton = ViewBindings.findChildViewById(rootView, id);
+      if (recSensorsButton == null) {
+        break missingId;
+      }
+
+      id = R.id.recSensorsLayout;
+      LinearLayout recSensorsLayout = ViewBindings.findChildViewById(rootView, id);
+      if (recSensorsLayout == null) {
         break missingId;
       }
 
@@ -235,6 +348,12 @@ public final class FragmentSensoriBinding implements ViewBinding {
       id = R.id.speedMag;
       Spinner speedMag = ViewBindings.findChildViewById(rootView, id);
       if (speedMag == null) {
+        break missingId;
+      }
+
+      id = R.id.stopSensorsButton;
+      ImageButton stopSensorsButton = ViewBindings.findChildViewById(rootView, id);
+      if (stopSensorsButton == null) {
         break missingId;
       }
 
@@ -292,10 +411,13 @@ public final class FragmentSensoriBinding implements ViewBinding {
         break missingId;
       }
 
-      return new FragmentSensoriBinding((NestedScrollView) rootView, chartAceleX, chartAceleY,
-          chartAceleZ, chartGirX, chartGirY, chartGirZ, chartMagnetX, chartMagnetY, chartMagnetZ,
-          otherSensors, sensorsLayout, speedAcc, speedGir, speedMag, xGyroValue, xMagnoValue,
-          xValue, yGyroValue, yMagnoValue, yValue, zGyroValue, zMagnoValue, zValue);
+      return new FragmentSensoriBinding((NestedScrollView) rootView, CSVRecommendationTextView,
+          CSVTextView, accelCheckBox, allSensorsCheckBox, chartAceleX, chartAceleY, chartAceleZ,
+          chartGirX, chartGirY, chartGirZ, chartMagnetX, chartMagnetY, chartMagnetZ, direcotry,
+          gyroCheckBox, magneCheckBox, otherSensorsButton, pauseSensorsButton, recSensorsButton,
+          recSensorsLayout, sensorsLayout, speedAcc, speedGir, speedMag, stopSensorsButton,
+          xGyroValue, xMagnoValue, xValue, yGyroValue, yMagnoValue, yValue, zGyroValue, zMagnoValue,
+          zValue);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
