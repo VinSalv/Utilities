@@ -76,5 +76,6 @@
     <string name="Moneta_button">Vai</string>
     <string name="giocatore_testa">Giocatore Testa</string>
     <string name="giocatore_croce">Giocatore Croce</string>
+    <string name="todo">TODO</string>
 
 </resources>

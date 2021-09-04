@@ -13,7 +13,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.widget.NestedScrollView;
 import androidx.viewbinding.ViewBinding;
-import androidx.viewbinding.ViewBindings;
 import com.app.utilities.R;
 import com.github.mikephil.charting.charts.LineChart;
 import java.lang.NullPointerException;
@@ -177,163 +176,163 @@ public final class ActivityAltriSensoriBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.CSVRecommendationTextView;
-      TextView CSVRecommendationTextView = ViewBindings.findChildViewById(rootView, id);
+      TextView CSVRecommendationTextView = rootView.findViewById(id);
       if (CSVRecommendationTextView == null) {
         break missingId;
       }
 
       id = R.id.CSVTextView;
-      TextView CSVTextView = ViewBindings.findChildViewById(rootView, id);
+      TextView CSVTextView = rootView.findViewById(id);
       if (CSVTextView == null) {
         break missingId;
       }
 
       id = R.id.allOtherSensorsCheckBox;
-      CheckBox allOtherSensorsCheckBox = ViewBindings.findChildViewById(rootView, id);
+      CheckBox allOtherSensorsCheckBox = rootView.findViewById(id);
       if (allOtherSensorsCheckBox == null) {
         break missingId;
       }
 
       id = R.id.back;
-      ImageButton back = ViewBindings.findChildViewById(rootView, id);
+      ImageButton back = rootView.findViewById(id);
       if (back == null) {
         break missingId;
       }
 
       id = R.id.chartHumidity;
-      LineChart chartHumidity = ViewBindings.findChildViewById(rootView, id);
+      LineChart chartHumidity = rootView.findViewById(id);
       if (chartHumidity == null) {
         break missingId;
       }
 
       id = R.id.chartLight;
-      LineChart chartLight = ViewBindings.findChildViewById(rootView, id);
+      LineChart chartLight = rootView.findViewById(id);
       if (chartLight == null) {
         break missingId;
       }
 
       id = R.id.chartPressure;
-      LineChart chartPressure = ViewBindings.findChildViewById(rootView, id);
+      LineChart chartPressure = rootView.findViewById(id);
       if (chartPressure == null) {
         break missingId;
       }
 
       id = R.id.chartTemperature;
-      LineChart chartTemperature = ViewBindings.findChildViewById(rootView, id);
+      LineChart chartTemperature = rootView.findViewById(id);
       if (chartTemperature == null) {
         break missingId;
       }
 
       id = R.id.direcotry;
-      ImageButton direcotry = ViewBindings.findChildViewById(rootView, id);
+      ImageButton direcotry = rootView.findViewById(id);
       if (direcotry == null) {
         break missingId;
       }
 
       id = R.id.humCheckBox;
-      CheckBox humCheckBox = ViewBindings.findChildViewById(rootView, id);
+      CheckBox humCheckBox = rootView.findViewById(id);
       if (humCheckBox == null) {
         break missingId;
       }
 
       id = R.id.humidity;
-      TextView humidity = ViewBindings.findChildViewById(rootView, id);
+      TextView humidity = rootView.findViewById(id);
       if (humidity == null) {
         break missingId;
       }
 
       id = R.id.ligCheckBox;
-      CheckBox ligCheckBox = ViewBindings.findChildViewById(rootView, id);
+      CheckBox ligCheckBox = rootView.findViewById(id);
       if (ligCheckBox == null) {
         break missingId;
       }
 
       id = R.id.light;
-      TextView light = ViewBindings.findChildViewById(rootView, id);
+      TextView light = rootView.findViewById(id);
       if (light == null) {
         break missingId;
       }
 
       id = R.id.otherSensorsLayout;
-      LinearLayout otherSensorsLayout = ViewBindings.findChildViewById(rootView, id);
+      LinearLayout otherSensorsLayout = rootView.findViewById(id);
       if (otherSensorsLayout == null) {
         break missingId;
       }
 
       id = R.id.otherSensorsTextView;
-      TextView otherSensorsTextView = ViewBindings.findChildViewById(rootView, id);
+      TextView otherSensorsTextView = rootView.findViewById(id);
       if (otherSensorsTextView == null) {
         break missingId;
       }
 
       id = R.id.pauseOtherSensorsButton;
-      ImageButton pauseOtherSensorsButton = ViewBindings.findChildViewById(rootView, id);
+      ImageButton pauseOtherSensorsButton = rootView.findViewById(id);
       if (pauseOtherSensorsButton == null) {
         break missingId;
       }
 
       id = R.id.presCheckBox;
-      CheckBox presCheckBox = ViewBindings.findChildViewById(rootView, id);
+      CheckBox presCheckBox = rootView.findViewById(id);
       if (presCheckBox == null) {
         break missingId;
       }
 
       id = R.id.pressure;
-      TextView pressure = ViewBindings.findChildViewById(rootView, id);
+      TextView pressure = rootView.findViewById(id);
       if (pressure == null) {
         break missingId;
       }
 
       id = R.id.recOtherSensorsButton;
-      ImageButton recOtherSensorsButton = ViewBindings.findChildViewById(rootView, id);
+      ImageButton recOtherSensorsButton = rootView.findViewById(id);
       if (recOtherSensorsButton == null) {
         break missingId;
       }
 
       id = R.id.recOtherSensorsLayout;
-      LinearLayout recOtherSensorsLayout = ViewBindings.findChildViewById(rootView, id);
+      LinearLayout recOtherSensorsLayout = rootView.findViewById(id);
       if (recOtherSensorsLayout == null) {
         break missingId;
       }
 
       id = R.id.speedHum;
-      Spinner speedHum = ViewBindings.findChildViewById(rootView, id);
+      Spinner speedHum = rootView.findViewById(id);
       if (speedHum == null) {
         break missingId;
       }
 
       id = R.id.speedLig;
-      Spinner speedLig = ViewBindings.findChildViewById(rootView, id);
+      Spinner speedLig = rootView.findViewById(id);
       if (speedLig == null) {
         break missingId;
       }
 
       id = R.id.speedPre;
-      Spinner speedPre = ViewBindings.findChildViewById(rootView, id);
+      Spinner speedPre = rootView.findViewById(id);
       if (speedPre == null) {
         break missingId;
       }
 
       id = R.id.speedTem;
-      Spinner speedTem = ViewBindings.findChildViewById(rootView, id);
+      Spinner speedTem = rootView.findViewById(id);
       if (speedTem == null) {
         break missingId;
       }
 
       id = R.id.stopOtherSensorsButton;
-      ImageButton stopOtherSensorsButton = ViewBindings.findChildViewById(rootView, id);
+      ImageButton stopOtherSensorsButton = rootView.findViewById(id);
       if (stopOtherSensorsButton == null) {
         break missingId;
       }
 
       id = R.id.tempCheckBox;
-      CheckBox tempCheckBox = ViewBindings.findChildViewById(rootView, id);
+      CheckBox tempCheckBox = rootView.findViewById(id);
       if (tempCheckBox == null) {
         break missingId;
       }
 
       id = R.id.temperature;
-      TextView temperature = ViewBindings.findChildViewById(rootView, id);
+      TextView temperature = rootView.findViewById(id);
       if (temperature == null) {
         break missingId;
       }

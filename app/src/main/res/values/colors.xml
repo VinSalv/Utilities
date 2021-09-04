@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <color name="beige">#A98C60</color>
     <color name="grey">#303030</color>
     <color name="dark_gray">#121212</color>
@@ -13,10 +13,10 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="transparent">#00000000</color>
-    <color name="colorPrimary">#008577</color>
-    <color name="colorPrimaryDark">#00574B</color>
-    <color name="colorAccent">#D81B60</color>
-    <color name="colorGreen">#060</color>
-    <color name="colorOrange">#FF5722</color>
+    <color name="colorPrimary" tools:ignore="UnusedResources">#008577</color>
+    <color name="colorPrimaryDark" tools:ignore="UnusedResources">#00574B</color>
+    <color name="colorAccent" tools:ignore="UnusedResources">#D81B60</color>
+    <color name="colorGreen" tools:ignore="UnusedResources">#060</color>
+    <color name="colorOrange" tools:ignore="UnusedResources">#FF5722</color>
     <color name="translucent_black">#8000</color>
 </resources>

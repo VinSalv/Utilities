@@ -1,4 +1,5 @@
 //noinspection DuplicatePlatformClasses
+//noinspection DuplicatePlatformClasses
 plugins {
     id 'com.android.application'
 }
@@ -11,6 +12,7 @@ android {
         applicationId "com.app.utilities"
         vectorDrawables.useSupportLibrary = true
         minSdkVersion 16
+        //noinspection OldTargetApi
         targetSdkVersion 29
         versionCode 12
         versionName "12.0"
@@ -58,5 +60,6 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     implementation 'androidx.multidex:multidex:2.0.1'
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //noinspection GradleDependency
     implementation "com.google.ar.sceneform.ux:sceneform-ux:1.10.0"
 }

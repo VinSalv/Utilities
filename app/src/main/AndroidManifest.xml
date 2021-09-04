@@ -79,16 +79,16 @@
             android:theme="@style/LightTheme"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".utilitiesActivity.MonetaActivity"
+            android:name=".settings.PrefderenzeDado"
             android:configChanges="uiMode"
-            android:label="@string/dadoActivity"
+            android:label="@string/PrefderenzeDado"
             android:screenOrientation="portrait"
             android:theme="@style/LightTheme"
             tools:ignore="LockedOrientationActivity" />
         <activity
-            android:name=".settings.PrefderenzeDado"
+            android:name=".utilitiesActivity.MonetaActivity"
             android:configChanges="uiMode"
-            android:label="@string/PrefderenzeDado"
+            android:label="@string/monetaActivity"
             android:screenOrientation="portrait"
             android:theme="@style/LightTheme"
             tools:ignore="LockedOrientationActivity" />

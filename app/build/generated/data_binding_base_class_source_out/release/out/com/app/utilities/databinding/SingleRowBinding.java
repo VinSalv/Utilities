@@ -10,7 +10,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
-import androidx.viewbinding.ViewBindings;
 import com.app.utilities.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -61,13 +60,13 @@ public final class SingleRowBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.rowImageView;
-      ImageView rowImageView = ViewBindings.findChildViewById(rootView, id);
+      ImageView rowImageView = rootView.findViewById(id);
       if (rowImageView == null) {
         break missingId;
       }
 
       id = R.id.rowTextView;
-      TextView rowTextView = ViewBindings.findChildViewById(rootView, id);
+      TextView rowTextView = rootView.findViewById(id);
       if (rowTextView == null) {
         break missingId;
       }

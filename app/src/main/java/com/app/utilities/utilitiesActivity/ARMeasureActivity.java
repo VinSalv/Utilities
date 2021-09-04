@@ -42,6 +42,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+@SuppressWarnings({"JavaDoc", "unused"})
 public class ARMeasureActivity extends AppCompatActivity {
 
     private static final double MIN_OPENGL_VERSION = 3.0;
@@ -49,7 +50,7 @@ public class ARMeasureActivity extends AppCompatActivity {
     private final ArrayList<String> arl_saved = new ArrayList<>();
     private final Utils utils = new Utils();
     protected Configuration mPrevConfig;
-    List<AnchorNode> anchorNodes = new ArrayList<>();
+    final List<AnchorNode> anchorNodes = new ArrayList<>();
     Preferences pref;
     private float upDistance = 0f;
     private ArFragment arFragment;
@@ -210,7 +211,7 @@ public class ARMeasureActivity extends AppCompatActivity {
                     } else {
                         emptyAnchors();
                         anchor1 = anchor;
-                        text.setText("Muovi la barra sopra i pulsanti finché il cubo raggiunge la base superiore");
+                        text.setText("Muovi la barra (in basso) finché il cubo raggiunge la base superiore");
                         sk_height_control.setEnabled(true);
                     }
 

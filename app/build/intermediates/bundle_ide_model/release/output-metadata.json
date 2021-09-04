@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 2,
   "artifactType": {
     "type": "BUNDLE",
     "kind": "RegularFile"
@@ -10,9 +10,7 @@
     {
       "type": "SINGLE",
       "filters": [],
-      "attributes": [],
       "outputFile": "../../../../release/app-release.aab"
     }
-  ],
-  "elementType": "File"
+  ]
 }

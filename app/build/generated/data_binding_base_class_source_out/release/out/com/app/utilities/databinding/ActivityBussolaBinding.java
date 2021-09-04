@@ -11,7 +11,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
-import androidx.viewbinding.ViewBindings;
 import com.app.utilities.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -70,25 +69,25 @@ public final class ActivityBussolaBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.back;
-      ImageButton back = ViewBindings.findChildViewById(rootView, id);
+      ImageButton back = rootView.findViewById(id);
       if (back == null) {
         break missingId;
       }
 
       id = R.id.compass;
-      ImageView compass = ViewBindings.findChildViewById(rootView, id);
+      ImageView compass = rootView.findViewById(id);
       if (compass == null) {
         break missingId;
       }
 
       id = R.id.main_image_hands;
-      ImageView mainImageHands = ViewBindings.findChildViewById(rootView, id);
+      ImageView mainImageHands = rootView.findViewById(id);
       if (mainImageHands == null) {
         break missingId;
       }
 
       id = R.id.sotw_label;
-      TextView sotwLabel = ViewBindings.findChildViewById(rootView, id);
+      TextView sotwLabel = rootView.findViewById(id);
       if (sotwLabel == null) {
         break missingId;
       }

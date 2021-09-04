@@ -11,7 +11,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
-import androidx.viewbinding.ViewBindings;
 import com.app.utilities.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -66,19 +65,19 @@ public final class ActivityInfoBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.back;
-      ImageButton back = ViewBindings.findChildViewById(rootView, id);
+      ImageButton back = rootView.findViewById(id);
       if (back == null) {
         break missingId;
       }
 
       id = R.id.info;
-      TextView info = ViewBindings.findChildViewById(rootView, id);
+      TextView info = rootView.findViewById(id);
       if (info == null) {
         break missingId;
       }
 
       id = R.id.utilities;
-      ImageView utilities = ViewBindings.findChildViewById(rootView, id);
+      ImageView utilities = rootView.findViewById(id);
       if (utilities == null) {
         break missingId;
       }

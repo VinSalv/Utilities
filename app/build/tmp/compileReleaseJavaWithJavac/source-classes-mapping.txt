@@ -2,6 +2,8 @@ com/app/utilities/MainActivity.java
  com.app.utilities.MainActivity
 com/app/utilities/fragment/Fragment_Sorte.java
  com.app.utilities.fragment.Fragment_Sorte
+com/app/utilities/databinding/ActivityArmeasureBinding.java
+ com.app.utilities.databinding.ActivityArmeasureBinding
 com/app/utilities/fragment/ui/PageViewModel.java
  com.app.utilities.fragment.ui.PageViewModel
 com/app/utilities/utilitiesActivity/AltriSensoriActivity.java
@@ -13,12 +15,16 @@ com/app/utilities/utilitiesActivity/AltriSensoriActivity.java
 com/app/utilities/utilitiesActivity/LivellaActivity.java
  com.app.utilities.utilitiesActivity.LivellaActivity
  com.app.utilities.utilitiesActivity.LivellaActivity$AnimatedView
+com/app/utilities/utility/PreferencesMoneta.java
+ com.app.utilities.utility.PreferencesMoneta
 com/app/utilities/utility/Shake.java
  com.app.utilities.utility.Shake
  com.app.utilities.utility.Shake$1
  com.app.utilities.utility.Shake$Callback
-com/app/utilities/fragment/Fragment_Orientazione.java
- com.app.utilities.fragment.Fragment_Orientazione
+com/app/utilities/databinding/DialogSaveBinding.java
+ com.app.utilities.databinding.DialogSaveBinding
+com/app/utilities/fragment/Fragment_Misurazione.java
+ com.app.utilities.fragment.Fragment_Misurazione
 com/app/utilities/fragment/ui/PlaceholderFragment.java
  com.app.utilities.fragment.ui.PlaceholderFragment
 com/app/utilities/fragment/Fragment_Sensori.java
@@ -37,12 +43,18 @@ com/app/utilities/settings/PrefderenzeDado.java
 com/app/utilities/utilitiesActivity/DadoActivity.java
  com.app.utilities.utilitiesActivity.DadoActivity
  com.app.utilities.utilitiesActivity.DadoActivity$1
+com/app/utilities/utilitiesActivity/ARMeasureActivity.java
+ com.app.utilities.utilitiesActivity.ARMeasureActivity
+ com.app.utilities.utilitiesActivity.ARMeasureActivity$1
 com/app/utilities/BuildConfig.java
  com.app.utilities.BuildConfig
 com/app/utilities/databinding/FragmentSensoriBinding.java
  com.app.utilities.databinding.FragmentSensoriBinding
 com/app/utilities/utility/PreferencesSCF.java
  com.app.utilities.utility.PreferencesSCF
+com/app/utilities/utilitiesActivity/MonetaActivity.java
+ com.app.utilities.utilitiesActivity.MonetaActivity
+ com.app.utilities.utilitiesActivity.MonetaActivity$1
 com/app/utilities/utility/RowItem.java
  com.app.utilities.utility.RowItem
 com/app/utilities/utilitiesActivity/InfoActivity.java
@@ -59,6 +71,9 @@ com/app/utilities/databinding/ActivityMainBinding.java
  com.app.utilities.databinding.ActivityMainBinding
 com/app/utilities/databinding/ActivityScfBinding.java
  com.app.utilities.databinding.ActivityScfBinding
+com/app/utilities/settings/PrefderenzeMoneta.java
+ com.app.utilities.settings.PrefderenzeMoneta
+ com.app.utilities.settings.PrefderenzeMoneta$SettingsFragment
 com/app/utilities/utility/CustomAdapter.java
  com.app.utilities.utility.CustomAdapter
  com.app.utilities.utility.CustomAdapter$1
@@ -94,3 +109,5 @@ com/app/utilities/databinding/PreferenzeDadoActivityBinding.java
 com/app/utilities/settings/SettingsActivity.java
  com.app.utilities.settings.SettingsActivity
  com.app.utilities.settings.SettingsActivity$SettingsFragment
+com/app/utilities/databinding/ActivityMonetaBinding.java
+ com.app.utilities.databinding.ActivityMonetaBinding

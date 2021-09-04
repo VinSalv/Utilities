@@ -12,7 +12,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
 import androidx.viewbinding.ViewBinding;
-import androidx.viewbinding.ViewBindings;
 import com.app.utilities.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -93,55 +92,55 @@ public final class ActivityDadoBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.back;
-      ImageButton back = ViewBindings.findChildViewById(rootView, id);
+      ImageButton back = rootView.findViewById(id);
       if (back == null) {
         break missingId;
       }
 
       id = R.id.diceLayout;
-      LinearLayout diceLayout = ViewBindings.findChildViewById(rootView, id);
+      LinearLayout diceLayout = rootView.findViewById(id);
       if (diceLayout == null) {
         break missingId;
       }
 
       id = R.id.diceNumber;
-      TextView diceNumber = ViewBindings.findChildViewById(rootView, id);
+      TextView diceNumber = rootView.findViewById(id);
       if (diceNumber == null) {
         break missingId;
       }
 
       id = R.id.leftDiceNumber;
-      TextView leftDiceNumber = ViewBindings.findChildViewById(rootView, id);
+      TextView leftDiceNumber = rootView.findViewById(id);
       if (leftDiceNumber == null) {
         break missingId;
       }
 
       id = R.id.oneDice;
-      Button oneDice = ViewBindings.findChildViewById(rootView, id);
+      Button oneDice = rootView.findViewById(id);
       if (oneDice == null) {
         break missingId;
       }
 
       id = R.id.rightDiceNumber;
-      TextView rightDiceNumber = ViewBindings.findChildViewById(rootView, id);
+      TextView rightDiceNumber = rootView.findViewById(id);
       if (rightDiceNumber == null) {
         break missingId;
       }
 
       id = R.id.roll;
-      Button roll = ViewBindings.findChildViewById(rootView, id);
+      Button roll = rootView.findViewById(id);
       if (roll == null) {
         break missingId;
       }
 
       id = R.id.toolbarDice;
-      Toolbar toolbarDice = ViewBindings.findChildViewById(rootView, id);
+      Toolbar toolbarDice = rootView.findViewById(id);
       if (toolbarDice == null) {
         break missingId;
       }
 
       id = R.id.twoDices;
-      Button twoDices = ViewBindings.findChildViewById(rootView, id);
+      Button twoDices = rootView.findViewById(id);
       if (twoDices == null) {
         break missingId;
       }
