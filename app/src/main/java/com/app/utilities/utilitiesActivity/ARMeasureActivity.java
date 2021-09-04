@@ -46,11 +46,11 @@ import java.util.Objects;
 public class ARMeasureActivity extends AppCompatActivity {
 
     private static final double MIN_OPENGL_VERSION = 3.0;
+    final List<AnchorNode> anchorNodes = new ArrayList<>();
     private final DecimalFormat form_numbers = new DecimalFormat("#0.00 m");
     private final ArrayList<String> arl_saved = new ArrayList<>();
     private final Utils utils = new Utils();
     protected Configuration mPrevConfig;
-    final List<AnchorNode> anchorNodes = new ArrayList<>();
     Preferences pref;
     private float upDistance = 0f;
     private ArFragment arFragment;
