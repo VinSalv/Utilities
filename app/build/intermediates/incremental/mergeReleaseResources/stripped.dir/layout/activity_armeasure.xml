@@ -4,13 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    tools:ignore="MergeRootFrame">
 
     <fragment
         android:id="@+id/ux_fragment"
         android:name="com.google.ar.sceneform.ux.ArFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        tools:ignore="FragmentTagUsage" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -25,7 +27,8 @@
             android:layout_margin="10dp"
             android:background="?attr/colorPrimaryDark"
             android:padding="10dp"
-            app:srcCompat="@drawable/ic_arrow_back_black" />
+            app:srcCompat="@drawable/ic_arrow_back_black"
+            android:contentDescription="@string/todo" />
 
         <Button
             android:id="@+id/btn_save"
@@ -46,7 +49,8 @@
             android:layout_margin="10dp"
             android:background="?attr/colorPrimaryDark"
             android:padding="1dp"
-            app:srcCompat="@drawable/ic_share_black" />
+            app:srcCompat="@drawable/ic_share_black"
+            android:contentDescription="@string/todo" />
 
     </LinearLayout>
 
@@ -121,7 +125,8 @@
             android:layout_weight="1"
             android:backgroundTint="?attr/colorPrimaryDark"
             android:src="@drawable/ic_ask"
-            tools:targetApi="lollipop" />
+            tools:targetApi="lollipop"
+            android:contentDescription="@string/todo" />
     </LinearLayout>
 
 </FrameLayout>

@@ -145,24 +145,24 @@
 75-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:79:13-46
 76        <activity
 76-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:81:9-87:56
-77            android:name="com.app.utilities.utilitiesActivity.MonetaActivity"
-77-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:82:13-61
+77            android:name="com.app.utilities.settings.PrefderenzeDado"
+77-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:82:13-53
 78            android:configChanges="uiMode"
 78-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:83:13-43
-79            android:label="@string/dadoActivity"
-79-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:84:13-49
+79            android:label="@string/PrefderenzeDado"
+79-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:84:13-52
 80            android:screenOrientation="portrait"
 80-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:85:13-49
 81            android:theme="@style/LightTheme" />
 81-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:86:13-46
 82        <activity
 82-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:88:9-94:56
-83            android:name="com.app.utilities.settings.PrefderenzeDado"
-83-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:89:13-53
+83            android:name="com.app.utilities.utilitiesActivity.MonetaActivity"
+83-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:89:13-61
 84            android:configChanges="uiMode"
 84-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:90:13-43
-85            android:label="@string/PrefderenzeDado"
-85-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:91:13-52
+85            android:label="@string/monetaActivity"
+85-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:91:13-51
 86            android:screenOrientation="portrait"
 86-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:92:13-49
 87            android:theme="@style/LightTheme" />

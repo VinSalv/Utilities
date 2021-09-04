@@ -74,15 +74,15 @@
             android:screenOrientation="portrait"
             android:theme="@style/LightTheme" />
         <activity
-            android:name="com.app.utilities.utilitiesActivity.MonetaActivity"
-            android:configChanges="uiMode"
-            android:label="@string/dadoActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/LightTheme" />
-        <activity
             android:name="com.app.utilities.settings.PrefderenzeDado"
             android:configChanges="uiMode"
             android:label="@string/PrefderenzeDado"
+            android:screenOrientation="portrait"
+            android:theme="@style/LightTheme" />
+        <activity
+            android:name="com.app.utilities.utilitiesActivity.MonetaActivity"
+            android:configChanges="uiMode"
+            android:label="@string/monetaActivity"
             android:screenOrientation="portrait"
             android:theme="@style/LightTheme" />
         <activity

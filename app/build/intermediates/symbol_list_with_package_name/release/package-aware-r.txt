@@ -2981,6 +2981,7 @@ string tab_text_1
 string tab_text_2
 string tab_text_3
 string titolo_della_misurazione
+string todo
 string txt_settings
 string utilityImage
 string v7_preference_off
