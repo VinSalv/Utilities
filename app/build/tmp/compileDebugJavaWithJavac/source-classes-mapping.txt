@@ -1,29 +1,11 @@
-com/app/utilities/utility/RowItem.java
- com.app.utilities.utility.RowItem
-com/app/utilities/utility/PreferencesSCF.java
- com.app.utilities.utility.PreferencesSCF
-com/app/utilities/utility/Preferences.java
- com.app.utilities.utility.Preferences
-com/app/utilities/fragment/ui/PageViewModel.java
- com.app.utilities.fragment.ui.PageViewModel
-com/app/utilities/fragment/ui/PlaceholderFragment.java
- com.app.utilities.fragment.ui.PlaceholderFragment
-com/app/utilities/utility/PreferencesDado.java
- com.app.utilities.utility.PreferencesDado
-com/app/utilities/utility/PreferencesMoneta.java
- com.app.utilities.utility.PreferencesMoneta
-com/app/utilities/utility/Shake.java
- com.app.utilities.utility.Shake
- com.app.utilities.utility.Shake$1
- com.app.utilities.utility.Shake$Callback
-com/app/utilities/BuildConfig.java
- com.app.utilities.BuildConfig
 com/app/utilities/MainActivity.java
  com.app.utilities.MainActivity
 com/app/utilities/fragment/Fragment_Sorte.java
  com.app.utilities.fragment.Fragment_Sorte
 com/app/utilities/databinding/ActivityArmeasureBinding.java
  com.app.utilities.databinding.ActivityArmeasureBinding
+com/app/utilities/fragment/ui/PageViewModel.java
+ com.app.utilities.fragment.ui.PageViewModel
 com/app/utilities/utilitiesActivity/AltriSensoriActivity.java
  com.app.utilities.utilitiesActivity.AltriSensoriActivity
  com.app.utilities.utilitiesActivity.AltriSensoriActivity$1
@@ -33,10 +15,18 @@ com/app/utilities/utilitiesActivity/AltriSensoriActivity.java
 com/app/utilities/utilitiesActivity/LivellaActivity.java
  com.app.utilities.utilitiesActivity.LivellaActivity
  com.app.utilities.utilitiesActivity.LivellaActivity$AnimatedView
+com/app/utilities/utility/PreferencesMoneta.java
+ com.app.utilities.utility.PreferencesMoneta
+com/app/utilities/utility/Shake.java
+ com.app.utilities.utility.Shake
+ com.app.utilities.utility.Shake$1
+ com.app.utilities.utility.Shake$Callback
 com/app/utilities/databinding/DialogSaveBinding.java
  com.app.utilities.databinding.DialogSaveBinding
 com/app/utilities/fragment/Fragment_Misurazione.java
  com.app.utilities.fragment.Fragment_Misurazione
+com/app/utilities/fragment/ui/PlaceholderFragment.java
+ com.app.utilities.fragment.ui.PlaceholderFragment
 com/app/utilities/fragment/Fragment_Sensori.java
  com.app.utilities.fragment.Fragment_Sensori
  com.app.utilities.fragment.Fragment_Sensori$1
@@ -53,13 +43,20 @@ com/app/utilities/settings/PrefderenzeDado.java
 com/app/utilities/utilitiesActivity/DadoActivity.java
  com.app.utilities.utilitiesActivity.DadoActivity
  com.app.utilities.utilitiesActivity.DadoActivity$1
-com/app/utilities/databinding/ActivityMonetaBinding.java
- com.app.utilities.databinding.ActivityMonetaBinding
+com/app/utilities/utilitiesActivity/ARMeasureActivity.java
+ com.app.utilities.utilitiesActivity.ARMeasureActivity
+ com.app.utilities.utilitiesActivity.ARMeasureActivity$1
+com/app/utilities/BuildConfig.java
+ com.app.utilities.BuildConfig
 com/app/utilities/databinding/FragmentSensoriBinding.java
  com.app.utilities.databinding.FragmentSensoriBinding
+com/app/utilities/utility/PreferencesSCF.java
+ com.app.utilities.utility.PreferencesSCF
 com/app/utilities/utilitiesActivity/MonetaActivity.java
  com.app.utilities.utilitiesActivity.MonetaActivity
  com.app.utilities.utilitiesActivity.MonetaActivity$1
+com/app/utilities/utility/RowItem.java
+ com.app.utilities.utility.RowItem
 com/app/utilities/utilitiesActivity/InfoActivity.java
  com.app.utilities.utilitiesActivity.InfoActivity
 com/app/utilities/utilitiesActivity/BussolaActivity.java
@@ -81,9 +78,8 @@ com/app/utilities/utility/CustomAdapter.java
  com.app.utilities.utility.CustomAdapter
  com.app.utilities.utility.CustomAdapter$1
  com.app.utilities.utility.CustomAdapter$ViewHolder
-com/app/utilities/settings/SettingsActivity.java
- com.app.utilities.settings.SettingsActivity
- com.app.utilities.settings.SettingsActivity$SettingsFragment
+com/app/utilities/utility/Utils.java
+ com.app.utilities.utility.Utils
 com/app/utilities/databinding/ActivityBussolaBinding.java
  com.app.utilities.databinding.ActivityBussolaBinding
 com/app/utilities/databinding/FragmentMainBinding.java
@@ -97,6 +93,10 @@ com/app/utilities/utilitiesActivity/SCFActivity.java
  com.app.utilities.utilitiesActivity.SCFActivity$1
 com/app/utilities/fragment/ui/SectionsPagerAdapter.java
  com.app.utilities.fragment.ui.SectionsPagerAdapter
+com/app/utilities/utility/Preferences.java
+ com.app.utilities.utility.Preferences
+com/app/utilities/utility/PreferencesDado.java
+ com.app.utilities.utility.PreferencesDado
 com/app/utilities/databinding/SettingsActivityBinding.java
  com.app.utilities.databinding.SettingsActivityBinding
 com/app/utilities/databinding/ActivityAltriSensoriBinding.java
@@ -106,8 +106,8 @@ com/app/utilities/bussola/Compass.java
  com.app.utilities.bussola.Compass$CompassListener
 com/app/utilities/databinding/PreferenzeDadoActivityBinding.java
  com.app.utilities.databinding.PreferenzeDadoActivityBinding
-com/app/utilities/utilitiesActivity/ARMeasureActivity.java
- com.app.utilities.utilitiesActivity.ARMeasureActivity
- com.app.utilities.utilitiesActivity.ARMeasureActivity$1
-com/app/utilities/utility/Utils.java
- com.app.utilities.utility.Utils
+com/app/utilities/settings/SettingsActivity.java
+ com.app.utilities.settings.SettingsActivity
+ com.app.utilities.settings.SettingsActivity$SettingsFragment
+com/app/utilities/databinding/ActivityMonetaBinding.java
+ com.app.utilities.databinding.ActivityMonetaBinding

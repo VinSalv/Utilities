@@ -26,9 +26,9 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:background="?attr/colorPrimaryDark"
+            android:contentDescription="@string/todo"
             android:padding="10dp"
-            app:srcCompat="@drawable/ic_arrow_back_black"
-            android:contentDescription="@string/todo" />
+            app:srcCompat="@drawable/ic_arrow_back_black" />
 
         <Button
             android:id="@+id/btn_save"
@@ -48,9 +48,9 @@
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
             android:background="?attr/colorPrimaryDark"
+            android:contentDescription="@string/todo"
             android:padding="1dp"
-            app:srcCompat="@drawable/ic_share_black"
-            android:contentDescription="@string/todo" />
+            app:srcCompat="@drawable/ic_share_black" />
 
     </LinearLayout>
 
@@ -124,9 +124,9 @@
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:backgroundTint="?attr/colorPrimaryDark"
+            android:contentDescription="@string/todo"
             android:src="@drawable/ic_ask"
-            tools:targetApi="lollipop"
-            android:contentDescription="@string/todo" />
+            tools:targetApi="lollipop" />
     </LinearLayout>
 
 </FrameLayout>
