@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.app.utilities"
-    android:versionCode="11"
-    android:versionName="11.0" >
+    android:versionCode="12"
+    android:versionName="12.0" >
 
     <uses-sdk
         android:maxSdkVersion="30"
         android:minSdkVersion="16"
-        android:targetSdkVersion="30" />
+        android:targetSdkVersion="29" />
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.HIGH_SAMPLING_RATE_SENSORS" />
     <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera.ar"
+        android:required="true" />
 
     <application
         android:name="androidx.multidex.MultiDexApplication"
@@ -47,6 +52,12 @@
             android:screenOrientation="portrait"
             android:theme="@style/LightTheme" />
         <activity
+            android:name="com.app.utilities.utilitiesActivity.ARMeasureActivity"
+            android:configChanges="uiMode"
+            android:label="@string/ARMeasureActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LightTheme" />
+        <activity
             android:name="com.app.utilities.utilitiesActivity.LivellaActivity"
             android:configChanges="uiMode"
             android:label="@string/livellaActivity"
@@ -65,9 +76,21 @@
             android:screenOrientation="portrait"
             android:theme="@style/LightTheme" />
         <activity
+            android:name="com.app.utilities.utilitiesActivity.MonetaActivity"
+            android:configChanges="uiMode"
+            android:label="@string/dadoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LightTheme" />
+        <activity
             android:name="com.app.utilities.settings.PrefderenzeDado"
             android:configChanges="uiMode"
             android:label="@string/PrefderenzeDado"
+            android:screenOrientation="portrait"
+            android:theme="@style/LightTheme" />
+        <activity
+            android:name="com.app.utilities.settings.PrefderenzeMoneta"
+            android:configChanges="uiMode"
+            android:label="@string/PrefderenzeMoneta"
             android:screenOrientation="portrait"
             android:theme="@style/LightTheme" />
         <activity
@@ -95,6 +118,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="com.google.ar.core"
+            android:value="required" />
+        <!-- The minimal version code of ARCore APK required for an app using this SDK. -->
+        <meta-data
+            android:name="com.google.ar.core.min_apk_version"
+            android:value="190519000" /> <!-- This activity is critical for installing ARCore when it is not already present. -->
+        <activity
+            android:name="com.google.ar.core.InstallActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:excludeFromRecents="true"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Material.Light.Dialog.Alert" />
     </application>
 
 </manifest>

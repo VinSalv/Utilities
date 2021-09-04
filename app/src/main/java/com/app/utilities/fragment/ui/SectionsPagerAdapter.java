@@ -9,7 +9,7 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.app.utilities.R;
-import com.app.utilities.fragment.Fragment_Orientazione;
+import com.app.utilities.fragment.Fragment_Misurazione;
 import com.app.utilities.fragment.Fragment_Sensori;
 import com.app.utilities.fragment.Fragment_Sorte;
 
@@ -34,7 +34,7 @@ public class SectionsPagerAdapter extends FragmentPagerAdapter {
         Fragment fragment = null;
         switch (position) {
             case 0:
-                fragment = new Fragment_Orientazione();
+                fragment = new Fragment_Misurazione();
                 break;
             case 1:
                 fragment = new Fragment_Sorte();

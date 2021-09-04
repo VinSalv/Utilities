@@ -6,13 +6,18 @@
     <uses-sdk
         android:maxSdkVersion="30"
         android:minSdkVersion="16"
-        android:targetSdkVersion="30"
+        android:targetSdkVersion="29"
         tools:ignore="GradleOverrides,OldTargetApi" />
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.HIGH_SAMPLING_RATE_SENSORS" />
     <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature
+        android:name="android.hardware.camera.ar"
+        android:required="true" />
 
     <application
         android:allowBackup="true"
@@ -46,6 +51,13 @@
             android:theme="@style/LightTheme"
             tools:ignore="LockedOrientationActivity" />
         <activity
+            android:name=".utilitiesActivity.ARMeasureActivity"
+            android:configChanges="uiMode"
+            android:label="@string/ARMeasureActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LightTheme"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
             android:name=".utilitiesActivity.LivellaActivity"
             android:configChanges="uiMode"
             android:label="@string/livellaActivity"
@@ -67,9 +79,23 @@
             android:theme="@style/LightTheme"
             tools:ignore="LockedOrientationActivity" />
         <activity
+            android:name=".utilitiesActivity.MonetaActivity"
+            android:configChanges="uiMode"
+            android:label="@string/dadoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LightTheme"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
             android:name=".settings.PrefderenzeDado"
             android:configChanges="uiMode"
             android:label="@string/PrefderenzeDado"
+            android:screenOrientation="portrait"
+            android:theme="@style/LightTheme"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".settings.PrefderenzeMoneta"
+            android:configChanges="uiMode"
+            android:label="@string/PrefderenzeMoneta"
             android:screenOrientation="portrait"
             android:theme="@style/LightTheme"
             tools:ignore="LockedOrientationActivity" />
@@ -101,6 +127,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <meta-data
+            android:name="com.google.ar.core"
+            android:value="required" />
     </application>
 
 </manifest>

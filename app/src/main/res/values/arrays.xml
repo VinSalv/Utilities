@@ -14,20 +14,24 @@
     <array name="sorte_images">
         <item>@drawable/ic_dice</item>
         <item>@drawable/ic_csf</item>
+        <item>@drawable/ic_testa_o_croce</item>
     </array>
 
     <string-array name="sorte_strings">
         <item>Dadi</item>
         <item>Sasso Carta Forbici</item>
+        <item>Testa o Croce</item>
     </string-array>
 
     <!-- List Orientazione -->
     <array name="orientazione_images">
+        <item>@drawable/ic_ruler</item>
         <item>@drawable/ic_bubble_level</item>
         <item>@drawable/ic_compass</item>
     </array>
 
     <string-array name="orientazione_strings">
+        <item>Metro</item>
         <item>Livella a bolla</item>
         <item>Bussola</item>
     </string-array>

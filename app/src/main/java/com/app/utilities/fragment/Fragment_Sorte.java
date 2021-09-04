@@ -50,6 +50,8 @@ public class Fragment_Sorte extends Fragment {
                 utils.goToDadoActivity(requireActivity());
             } else if (position == 1) {
                 utils.goToSCFActivity(requireActivity());
+            }else if (position == 2) {
+                utils.goToMonetaActivity(requireActivity());
             }
         });
         return view;

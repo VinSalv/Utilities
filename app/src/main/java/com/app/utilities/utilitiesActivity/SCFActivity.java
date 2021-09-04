@@ -110,8 +110,8 @@ public class SCFActivity extends AppCompatActivity implements Shake.Callback {
             }
         });
         scfWinner = findViewById(R.id.scfWinner);
-        redPlayerEditText = findViewById(R.id.redPlayerEditText);
-        bluePlayerEditText = findViewById(R.id.bluePlayerEditText);
+        redPlayerEditText = findViewById(R.id.testaPlayerEditText);
+        bluePlayerEditText = findViewById(R.id.crocePlayerEditText);
         goButton.setOnClickListener(this::goButton);
         ImageButton back = findViewById(R.id.back);
         back.setOnClickListener(view -> onBackPressed());

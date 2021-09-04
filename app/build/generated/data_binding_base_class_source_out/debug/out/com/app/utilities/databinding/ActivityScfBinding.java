@@ -13,7 +13,6 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
 import androidx.viewbinding.ViewBinding;
-import androidx.viewbinding.ViewBindings;
 import com.app.utilities.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -27,13 +26,10 @@ public final class ActivityScfBinding implements ViewBinding {
   public final ImageButton back;
 
   @NonNull
-  public final EditText bluePlayerEditText;
+  public final EditText crocePlayerEditText;
 
   @NonNull
   public final Button go;
-
-  @NonNull
-  public final EditText redPlayerEditText;
 
   @NonNull
   public final LinearLayout scfLayout;
@@ -42,18 +38,22 @@ public final class ActivityScfBinding implements ViewBinding {
   public final TextView scfWinner;
 
   @NonNull
+  public final EditText testaPlayerEditText;
+
+  @NonNull
   public final Toolbar toolbarSCF;
 
   private ActivityScfBinding(@NonNull LinearLayout rootView, @NonNull ImageButton back,
-      @NonNull EditText bluePlayerEditText, @NonNull Button go, @NonNull EditText redPlayerEditText,
-      @NonNull LinearLayout scfLayout, @NonNull TextView scfWinner, @NonNull Toolbar toolbarSCF) {
+      @NonNull EditText crocePlayerEditText, @NonNull Button go, @NonNull LinearLayout scfLayout,
+      @NonNull TextView scfWinner, @NonNull EditText testaPlayerEditText,
+      @NonNull Toolbar toolbarSCF) {
     this.rootView = rootView;
     this.back = back;
-    this.bluePlayerEditText = bluePlayerEditText;
+    this.crocePlayerEditText = crocePlayerEditText;
     this.go = go;
-    this.redPlayerEditText = redPlayerEditText;
     this.scfLayout = scfLayout;
     this.scfWinner = scfWinner;
+    this.testaPlayerEditText = testaPlayerEditText;
     this.toolbarSCF = toolbarSCF;
   }
 
@@ -85,49 +85,49 @@ public final class ActivityScfBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.back;
-      ImageButton back = ViewBindings.findChildViewById(rootView, id);
+      ImageButton back = rootView.findViewById(id);
       if (back == null) {
         break missingId;
       }
 
-      id = R.id.bluePlayerEditText;
-      EditText bluePlayerEditText = ViewBindings.findChildViewById(rootView, id);
-      if (bluePlayerEditText == null) {
+      id = R.id.crocePlayerEditText;
+      EditText crocePlayerEditText = rootView.findViewById(id);
+      if (crocePlayerEditText == null) {
         break missingId;
       }
 
       id = R.id.go;
-      Button go = ViewBindings.findChildViewById(rootView, id);
+      Button go = rootView.findViewById(id);
       if (go == null) {
         break missingId;
       }
 
-      id = R.id.redPlayerEditText;
-      EditText redPlayerEditText = ViewBindings.findChildViewById(rootView, id);
-      if (redPlayerEditText == null) {
-        break missingId;
-      }
-
       id = R.id.scfLayout;
-      LinearLayout scfLayout = ViewBindings.findChildViewById(rootView, id);
+      LinearLayout scfLayout = rootView.findViewById(id);
       if (scfLayout == null) {
         break missingId;
       }
 
       id = R.id.scfWinner;
-      TextView scfWinner = ViewBindings.findChildViewById(rootView, id);
+      TextView scfWinner = rootView.findViewById(id);
       if (scfWinner == null) {
         break missingId;
       }
 
+      id = R.id.testaPlayerEditText;
+      EditText testaPlayerEditText = rootView.findViewById(id);
+      if (testaPlayerEditText == null) {
+        break missingId;
+      }
+
       id = R.id.toolbarSCF;
-      Toolbar toolbarSCF = ViewBindings.findChildViewById(rootView, id);
+      Toolbar toolbarSCF = rootView.findViewById(id);
       if (toolbarSCF == null) {
         break missingId;
       }
 
-      return new ActivityScfBinding((LinearLayout) rootView, back, bluePlayerEditText, go,
-          redPlayerEditText, scfLayout, scfWinner, toolbarSCF);
+      return new ActivityScfBinding((LinearLayout) rootView, back, crocePlayerEditText, go,
+          scfLayout, scfWinner, testaPlayerEditText, toolbarSCF);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

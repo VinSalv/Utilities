@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Utilities</string>
-    <string name="tab_text_1">Orientazione</string>
+    <string name="tab_text_1">Misurazione</string>
     <string name="tab_text_2">Sorte</string>
     <string name="tab_text_3">Sensori</string>
     <string name="info">Info</string>
@@ -32,6 +32,7 @@
     <string name="livellaActivity">LivellaActivity</string>
     <string name="bussolaActivity">BussolaActivity</string>
     <string name="dadoActivity">DadoActivity</string>
+    <string name="monetaActivity">MonetaActivity</string>
     <string name="_SCFActivity">SCFActivity</string>
     <string name="settingsActivity">SettingsActivity</string>
 
@@ -40,6 +41,7 @@
     <string name="Roll">Gira</string>
     <string name="red_player">Giocatore rosso</string>
     <string name="blue_player">Giocatore blu</string>
+    <string name="monetaWinner">Chi sarà il vincitore?</string>
     <string name="scfWinner">Chi sarà il vincitore?</string>
     <string name="txt_settings">Impostazioni</string>
 
@@ -50,9 +52,11 @@
     <string name="AltriSensoriActivity">AltriSensoriActivity</string>
     <string name="Roll_or_Shake_Dice">Clicca su \"GIRA\"\noppure \nscuoti il tuo smartphone!</string>
     <string name="Roll_or_Shake_SCF">Clicca su \"SASSO CARTA FORBICI\"\noppure \nscuoti il tuo smartphone!</string>
+    <string name="Roll_or_Shake_Moneta">Clicca su \"VAI\"\noppure \nscuoti il tuo smartphone!</string>
     <string name="Preferenze">Preference</string>
     <string name="PrefderenzeSCF">PrefderenzeSCF</string>
     <string name="PrefderenzeDado">PrefderenzeDado</string>
+    <string name="PrefderenzeMoneta">PrefderenzeMoneta</string>
     <string name="CSVTextView">Registra l\'andamento dei sensori selezionati e crea i tuoi file CSV.</string>
     <string name="CSVRecommendationTextView" tools:ignore="Typos">N.B. La registrazione verrà stoppata nel momento in cui si cambierà finestra o si uscirà dall\'app Utilities.\nQualora non dovessero visualizzarsi i CSV generati, riaprire nuovamente la cartella \"Download\" della propria memoria interna.</string>
     <string name="allSensorsCheckBox">Tutti i sensori</string>
@@ -63,5 +67,14 @@
     <string name="PressureCheckBox">Pressione</string>
     <string name="TemperatureCheckBox">Temperatura</string>
     <string name="HumidityCheckBox">Umidità</string>
+    <string name="larghezza">Larghezza</string>
+    <string name="salva">Salva per condividere</string>
+    <string name="altezza">Altezza</string>
+    <string name="seleziona_larghezza_o_altezza">Muovi la telecamera sul pavimento finchè la manina non scompare\n(per altre info clicca su "?")</string>
+    <string name="titolo_della_misurazione">Titolo della misurazione</string>
+    <string name="ARMeasureActivity">ARMeasureAcrivity</string>
+    <string name="Moneta_button">Vai</string>
+    <string name="giocatore_testa">Giocatore Testa</string>
+    <string name="giocatore_croce">Giocatore Croce</string>
 
 </resources>

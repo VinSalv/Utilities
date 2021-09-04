@@ -10,13 +10,16 @@ import android.widget.Toast;
 import com.app.utilities.MainActivity;
 import com.app.utilities.R;
 import com.app.utilities.settings.PrefderenzeDado;
+import com.app.utilities.settings.PrefderenzeMoneta;
 import com.app.utilities.settings.PrefderenzeSCF;
 import com.app.utilities.settings.SettingsActivity;
+import com.app.utilities.utilitiesActivity.ARMeasureActivity;
 import com.app.utilities.utilitiesActivity.AltriSensoriActivity;
 import com.app.utilities.utilitiesActivity.BussolaActivity;
 import com.app.utilities.utilitiesActivity.DadoActivity;
 import com.app.utilities.utilitiesActivity.InfoActivity;
 import com.app.utilities.utilitiesActivity.LivellaActivity;
+import com.app.utilities.utilitiesActivity.MonetaActivity;
 import com.app.utilities.utilitiesActivity.SCFActivity;
 
 @SuppressWarnings("unused")
@@ -58,6 +61,11 @@ public class Utils {
         context.startActivity(intent);
     }
 
+    public void goToARMeasureActivity(Context context) {
+        Intent intent = new Intent(context, ARMeasureActivity.class);
+        context.startActivity(intent);
+    }
+
     public void goToLivellaActivity(Context context) {
         Intent intent = new Intent(context, LivellaActivity.class);
         context.startActivity(intent);
@@ -85,6 +93,16 @@ public class Utils {
 
     public void goToPrefderenzeSCF(Context context) {
         Intent intent = new Intent(context, PrefderenzeSCF.class);
+        context.startActivity(intent);
+    }
+
+    public void goToMonetaActivity(Context context) {
+        Intent intent = new Intent(context, MonetaActivity.class);
+        context.startActivity(intent);
+    }
+
+    public void goToPrefderenzeMoneta(Context context) {
+        Intent intent = new Intent(context, PrefderenzeMoneta.class);
         context.startActivity(intent);
     }
 
@@ -125,6 +143,15 @@ public class Utils {
         editor.apply();
     }
 
+    public void saveDataMoneta(Context context, PreferencesMoneta prefMoneta, Boolean vibrationButtonMonetaBool, Boolean shakeMonetaBool, Boolean vibrationShakeMonetaBool) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(prefMoneta.getSharedPrefs(), Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putBoolean(prefMoneta.getVibrationButtonMoneta(), vibrationButtonMonetaBool);
+        editor.putBoolean(prefMoneta.getShakeMoneta(), shakeMonetaBool);
+        editor.putBoolean(prefMoneta.getVibrationShakeMoneta(), vibrationShakeMonetaBool);
+        editor.apply();
+    }
+
     public Preferences loadData(Context context, Preferences pref) {
         SharedPreferences sharedPreferences = context.getSharedPreferences(pref.getSharedPrefs(), Context.MODE_PRIVATE);
         pref.setPredBool(sharedPreferences.getBoolean(pref.getPred(), true));
@@ -147,6 +174,14 @@ public class Utils {
         prefSCF.setShakeSCFBool(sharedPreferences.getBoolean(prefSCF.getShakeSCF(), true));
         prefSCF.setVibrationShakeSCFBool(sharedPreferences.getBoolean(prefSCF.getVibrationShakeSCF(), true));
         return prefSCF;
+    }
+
+    public PreferencesMoneta loadDataMoneta(Context context, PreferencesMoneta prefMoneta) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(prefMoneta.getSharedPrefs(), Context.MODE_PRIVATE);
+        prefMoneta.setVibrationButtonMonetaBool(sharedPreferences.getBoolean(prefMoneta.getVibrationButtonMoneta(), true));
+        prefMoneta.setShakeMonetaBool(sharedPreferences.getBoolean(prefMoneta.getShakeMoneta(), true));
+        prefMoneta.setVibrationShakeMonetaBool(sharedPreferences.getBoolean(prefMoneta.getVibrationShakeMoneta(), true));
+        return prefMoneta;
     }
 
     public void changeTheme(Context context, int i) {

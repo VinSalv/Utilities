@@ -9,7 +9,6 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
 import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.viewbinding.ViewBinding;
-import androidx.viewbinding.ViewBindings;
 import androidx.viewpager.widget.ViewPager;
 import com.app.utilities.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -72,25 +71,25 @@ public final class ActivityMainBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.fab;
-      FloatingActionButton fab = ViewBindings.findChildViewById(rootView, id);
+      FloatingActionButton fab = rootView.findViewById(id);
       if (fab == null) {
         break missingId;
       }
 
       id = R.id.tabs;
-      TabLayout tabs = ViewBindings.findChildViewById(rootView, id);
+      TabLayout tabs = rootView.findViewById(id);
       if (tabs == null) {
         break missingId;
       }
 
       id = R.id.toolbar;
-      Toolbar toolbar = ViewBindings.findChildViewById(rootView, id);
+      Toolbar toolbar = rootView.findViewById(id);
       if (toolbar == null) {
         break missingId;
       }
 
       id = R.id.viewPager;
-      ViewPager viewPager = ViewBindings.findChildViewById(rootView, id);
+      ViewPager viewPager = rootView.findViewById(id);
       if (viewPager == null) {
         break missingId;
       }

@@ -62,7 +62,7 @@
         tools:ignore="Overdraw">
 
         <EditText
-            android:id="@+id/redPlayerEditText"
+            android:id="@+id/testaPlayerEditText"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:autoSizeMaxTextSize="15dp"
@@ -78,7 +78,7 @@
             android:textSize="15sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toTopOf="@id/scfLayout"
-            app:layout_constraintEnd_toStartOf="@id/bluePlayerEditText"
+            app:layout_constraintEnd_toStartOf="@id/crocePlayerEditText"
             app:layout_constraintHeight_default="percent"
             app:layout_constraintHeight_percent=".10"
             app:layout_constraintStart_toStartOf="parent"
@@ -89,7 +89,7 @@
             tools:targetApi="o" />
 
         <EditText
-            android:id="@+id/bluePlayerEditText"
+            android:id="@+id/crocePlayerEditText"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:autoSizeMaxTextSize="15dp"
@@ -108,7 +108,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHeight_default="percent"
             app:layout_constraintHeight_percent=".10"
-            app:layout_constraintStart_toEndOf="@id/redPlayerEditText"
+            app:layout_constraintStart_toEndOf="@id/testaPlayerEditText"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintWidth_default="percent"
             app:layout_constraintWidth_percent=".40"
@@ -126,7 +126,7 @@
             app:layout_constraintHeight_default="percent"
             app:layout_constraintHeight_percent=".3"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/redPlayerEditText"
+            app:layout_constraintTop_toBottomOf="@id/testaPlayerEditText"
             app:layout_constraintWidth_default="percent"
             app:layout_constraintWidth_percent=".90" />
 

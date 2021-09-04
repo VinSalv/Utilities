@@ -1,9 +1,13 @@
 <component name="libraryTable">
   <library name="Gradle: androidx.versionedparcelable:versionedparcelable:1.1.1@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/d09f9b19d46d40ab78b2c05c9bc3bdda/transformed/versionedparcelable-1.1.1/jars/classes.jar!/" />
       <root url="file://$USER_HOME$/.gradle/caches/transforms-3/d09f9b19d46d40ab78b2c05c9bc3bdda/transformed/versionedparcelable-1.1.1/res" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/d09f9b19d46d40ab78b2c05c9bc3bdda/transformed/versionedparcelable-1.1.1/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/4f632648e53e556eed5f40f2824d9ac5/transformed/versionedparcelable-1.1.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/1a2c0324be32ec96fb71ec42cb1d80ec/transformed/versionedparcelable-1.1.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/820798e71dc54a63d6f17d7908bd190e/transformed/versionedparcelable-1.1.1/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/128fccd99aa32f0eba6b2a96be670803/transformed/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/820798e71dc54a63d6f17d7908bd190e/transformed/versionedparcelable-1.1.1/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/820798e71dc54a63d6f17d7908bd190e/transformed/versionedparcelable-1.1.1/jars/classes.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>
