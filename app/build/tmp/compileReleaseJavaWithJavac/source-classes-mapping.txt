@@ -43,8 +43,10 @@ com/app/utilities/settings/PrefderenzeDado.java
 com/app/utilities/utilitiesActivity/DadoActivity.java
  com.app.utilities.utilitiesActivity.DadoActivity
  com.app.utilities.utilitiesActivity.DadoActivity$1
-com/app/utilities/databinding/ActivityMonetaBinding.java
- com.app.utilities.databinding.ActivityMonetaBinding
+com/app/utilities/utilitiesActivity/ARMeasureActivity.java
+ com.app.utilities.utilitiesActivity.ARMeasureActivity
+ com.app.utilities.utilitiesActivity.ARMeasureActivity$1
+ com.app.utilities.utilitiesActivity.ARMeasureActivity$2
 com/app/utilities/BuildConfig.java
  com.app.utilities.BuildConfig
 com/app/utilities/databinding/FragmentSensoriBinding.java
@@ -77,9 +79,8 @@ com/app/utilities/utility/CustomAdapter.java
  com.app.utilities.utility.CustomAdapter
  com.app.utilities.utility.CustomAdapter$1
  com.app.utilities.utility.CustomAdapter$ViewHolder
-com/app/utilities/settings/SettingsActivity.java
- com.app.utilities.settings.SettingsActivity
- com.app.utilities.settings.SettingsActivity$SettingsFragment
+com/app/utilities/utility/Utils.java
+ com.app.utilities.utility.Utils
 com/app/utilities/databinding/ActivityBussolaBinding.java
  com.app.utilities.databinding.ActivityBussolaBinding
 com/app/utilities/databinding/FragmentMainBinding.java
@@ -91,6 +92,9 @@ com/app/utilities/databinding/FragmentOrientazioneBinding.java
 com/app/utilities/utilitiesActivity/SCFActivity.java
  com.app.utilities.utilitiesActivity.SCFActivity
  com.app.utilities.utilitiesActivity.SCFActivity$1
+com/app/utilities/utility/Arl_saved.java
+ com.app.utilities.utility.Arl_saved
+ com.app.utilities.utility.Arl_saved$1
 com/app/utilities/fragment/ui/SectionsPagerAdapter.java
  com.app.utilities.fragment.ui.SectionsPagerAdapter
 com/app/utilities/utility/Preferences.java
@@ -106,9 +110,8 @@ com/app/utilities/bussola/Compass.java
  com.app.utilities.bussola.Compass$CompassListener
 com/app/utilities/databinding/PreferenzeDadoActivityBinding.java
  com.app.utilities.databinding.PreferenzeDadoActivityBinding
-com/app/utilities/utilitiesActivity/ARMeasureActivity.java
- com.app.utilities.utilitiesActivity.ARMeasureActivity
- com.app.utilities.utilitiesActivity.ARMeasureActivity$1
- com.app.utilities.utilitiesActivity.ARMeasureActivity$2
-com/app/utilities/utility/Utils.java
- com.app.utilities.utility.Utils
+com/app/utilities/settings/SettingsActivity.java
+ com.app.utilities.settings.SettingsActivity
+ com.app.utilities.settings.SettingsActivity$SettingsFragment
+com/app/utilities/databinding/ActivityMonetaBinding.java
+ com.app.utilities.databinding.ActivityMonetaBinding

@@ -40,6 +40,9 @@ public final class ActivityArmeasureBinding implements ViewBinding {
   public final ImageButton question;
 
   @NonNull
+  public final ImageButton refresh;
+
+  @NonNull
   public final SeekBar skHeightControl;
 
   @NonNull
@@ -47,8 +50,8 @@ public final class ActivityArmeasureBinding implements ViewBinding {
 
   private ActivityArmeasureBinding(@NonNull FrameLayout rootView, @NonNull ImageButton back,
       @NonNull Button btnHeight, @NonNull Button btnSave, @NonNull ImageButton btnShare,
-      @NonNull Button btnWidth, @NonNull ImageButton question, @NonNull SeekBar skHeightControl,
-      @NonNull TextView text) {
+      @NonNull Button btnWidth, @NonNull ImageButton question, @NonNull ImageButton refresh,
+      @NonNull SeekBar skHeightControl, @NonNull TextView text) {
     this.rootView = rootView;
     this.back = back;
     this.btnHeight = btnHeight;
@@ -56,6 +59,7 @@ public final class ActivityArmeasureBinding implements ViewBinding {
     this.btnShare = btnShare;
     this.btnWidth = btnWidth;
     this.question = question;
+    this.refresh = refresh;
     this.skHeightControl = skHeightControl;
     this.text = text;
   }
@@ -123,6 +127,12 @@ public final class ActivityArmeasureBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.refresh;
+      ImageButton refresh = rootView.findViewById(id);
+      if (refresh == null) {
+        break missingId;
+      }
+
       id = R.id.sk_height_control;
       SeekBar skHeightControl = rootView.findViewById(id);
       if (skHeightControl == null) {
@@ -136,7 +146,7 @@ public final class ActivityArmeasureBinding implements ViewBinding {
       }
 
       return new ActivityArmeasureBinding((FrameLayout) rootView, back, btnHeight, btnSave,
-          btnShare, btnWidth, question, skHeightControl, text);
+          btnShare, btnWidth, question, refresh, skHeightControl, text);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));
