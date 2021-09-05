@@ -28,9 +28,17 @@ import com.app.utilities.R;
 import com.app.utilities.utility.Preferences;
 import com.app.utilities.utility.Utils;
 import com.google.ar.core.Anchor;
+import com.google.ar.core.ArCoreApk;
+import com.google.ar.core.Config;
 import com.google.ar.core.HitResult;
 import com.google.ar.core.Plane;
 import com.google.ar.core.Pose;
+import com.google.ar.core.Session;
+import com.google.ar.core.exceptions.UnavailableApkTooOldException;
+import com.google.ar.core.exceptions.UnavailableArcoreNotInstalledException;
+import com.google.ar.core.exceptions.UnavailableDeviceNotCompatibleException;
+import com.google.ar.core.exceptions.UnavailableException;
+import com.google.ar.core.exceptions.UnavailableSdkTooOldException;
 import com.google.ar.sceneform.AnchorNode;
 import com.google.ar.sceneform.math.Vector3;
 import com.google.ar.sceneform.rendering.ModelRenderable;
@@ -52,6 +60,7 @@ public class ARMeasureActivity extends AppCompatActivity {
     private final Utils utils = new Utils();
     protected Configuration mPrevConfig;
     Preferences pref;
+    Session session;
     private float upDistance = 0f;
     private ArFragment arFragment;
     private ModelRenderable andyRenderable;
@@ -65,6 +74,12 @@ public class ARMeasureActivity extends AppCompatActivity {
 
     public static boolean isOnDarkMode(Configuration configuration) {
         return (configuration.uiMode & Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES;
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        session.close();
     }
 
     @SuppressLint("SetTextI18n")
@@ -88,7 +103,6 @@ public class ARMeasureActivity extends AppCompatActivity {
                     break;
             }
         }
-
         if (!checkIsSupportedDeviceOrFinish(this)) {
             return;
         }
@@ -97,10 +111,19 @@ public class ARMeasureActivity extends AppCompatActivity {
         } catch (NullPointerException e) {
             e.printStackTrace();
         }
-
+        isARCoreSupportedAndUpToDate();
+        try {
+            createSession();
+        } catch (UnavailableSdkTooOldException e) {
+            e.printStackTrace();
+        } catch (UnavailableDeviceNotCompatibleException e) {
+            e.printStackTrace();
+        } catch (UnavailableArcoreNotInstalledException e) {
+            e.printStackTrace();
+        } catch (UnavailableApkTooOldException e) {
+            e.printStackTrace();
+        }
         setContentView(R.layout.activity_armeasure);
-
-
         arFragment = (ArFragment) getSupportFragmentManager().findFragmentById(R.id.ux_fragment);
         text = findViewById(R.id.text);
 
@@ -188,11 +211,9 @@ public class ARMeasureActivity extends AppCompatActivity {
                     }
                     myhit = hitResult;
 
-                    // Create the Anchor.
                     Anchor anchor = hitResult.createAnchor();
 
                     AnchorNode anchorNode = new AnchorNode(anchor);
-
 
                     anchorNode.setParent(arFragment.getArSceneView().getScene());
 
@@ -218,7 +239,6 @@ public class ARMeasureActivity extends AppCompatActivity {
                     myanchornode = anchorNode;
                     anchorNodes.add(anchorNode);
 
-                    // Create the transformable andy and add it to the anchor.
                     TransformableNode andy = new TransformableNode(arFragment.getTransformationSystem());
                     andy.setParent(anchorNode);
                     andy.setRenderable(andyRenderable);
@@ -227,7 +247,7 @@ public class ARMeasureActivity extends AppCompatActivity {
                 });
         ImageButton question = findViewById(R.id.question);
         question.setOnClickListener(view -> {
-            Toast toast = Toast.makeText(this, "1) Ispeziona l'area con il cellulare finchè la manina non scompare;\n\n2) Scegli quale misura adoperare;\n\n3) Piazza i cubi sui puntini bianchi che appaiono dopo aver selezionato la misura;\n\n4) Salva tutte le misure che desideri cliccando sul pulsante \"SALVA PER CONDIVIDERE\";\n\n5) Clicca sull'icona in alto a destra per usare le tue misure.\n\nP.S. Nel caso dell'altezza non sarà necessario il secondo cubo per delimitare l'estremità.", Toast.LENGTH_LONG);
+            Toast toast = Toast.makeText(this, "1) Ispeziona l'area con il telecamera finchè la manina non scompare;\n\n2) Scegli quale misura adoperare;\n\n3) Piazza i cubi sui puntini bianchi che appaiono dopo aver selezionato la misura;\n\n4) Salva tutte le misure che desideri cliccando sul pulsante \"SALVA PER CONDIVIDERE\";\n\n5) Clicca sull'icona in alto a destra per usare le tue misure.\n\nP.S. Nel caso dell'altezza non sarà necessario il secondo cubo per delimitare l'estremità.", Toast.LENGTH_LONG);
             toast.setGravity(Gravity.CENTER, 0, 0);
             toast.show();
         });
@@ -235,6 +255,68 @@ public class ARMeasureActivity extends AppCompatActivity {
         ImageButton back = findViewById(R.id.back);
         back.setOnClickListener(view -> onBackPressed());
         mPrevConfig = new Configuration(getResources().getConfiguration());
+    }
+
+
+    // Verify that ARCore is installed and using the current version.
+    private boolean isARCoreSupportedAndUpToDate() {
+        ArCoreApk.Availability availability = ArCoreApk.getInstance().checkAvailability(this);
+        switch (availability) {
+            case SUPPORTED_INSTALLED:
+                return true;
+
+            case SUPPORTED_APK_TOO_OLD:
+            case SUPPORTED_NOT_INSTALLED:
+                try {
+                    // Request ARCore installation or update if needed.
+                    ArCoreApk.InstallStatus installStatus = ArCoreApk.getInstance().requestInstall(this, true);
+                    switch (installStatus) {
+                        case INSTALL_REQUESTED:
+                            utils.notifyUser(this, "Si necessita di scaricare/aggiornare il servizio AR di Google dallo store");
+                            utils.goToMainActivity(this);
+                            return false;
+                        case INSTALLED:
+                            return true;
+                    }
+                } catch (UnavailableException e) {
+                    e.printStackTrace();
+                }
+                return false;
+            case UNSUPPORTED_DEVICE_NOT_CAPABLE:
+                utils.notifyUser(this, "Device non supportato per la tecnologia AR Camera");
+                utils.goToMainActivity(this);
+                return false;
+            case UNKNOWN_CHECKING:
+            case UNKNOWN_ERROR:
+                // ARCore is checking the availability with a remote query.
+                // This function should be called again after waiting 200 ms to determine the query result.
+                utils.goToMainActivity(this);
+                utils.notifyUser(this, "Si è verificato un errore sconosciuto");
+                return false;
+            case UNKNOWN_TIMED_OUT:
+                // There was an error checking for AR availability. This may be due to the device being offline.
+                // Handle the error appropriately.
+                utils.goToMainActivity(this);
+                utils.notifyUser(this, "Non è stato possibile verificare se il device supporta la tecnologia AR Camera.\nRiprova.");
+                return false;
+        }
+        utils.goToMainActivity(this);
+        utils.notifyUser(this, "Si è verificato un errore sconosciuto");
+        return false;
+    }
+
+    public void createSession() throws UnavailableSdkTooOldException, UnavailableDeviceNotCompatibleException, UnavailableArcoreNotInstalledException, UnavailableApkTooOldException {
+        // Create a new ARCore session.
+        session = new Session(this);
+
+        // Create a session config.
+        Config config = new Config(session);
+
+        // Do feature-specific operations here, such as enabling depth or turning on
+        // support for Augmented Faces.
+
+        // Configure the session.
+        session.configure(config);
     }
 
     /**
