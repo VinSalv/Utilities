@@ -1259,9 +1259,9 @@
     <string name="_SCFActivity">SCFActivity</string>
     <string name="__arcore_cancel">Cancel</string>
     <string name="__arcore_continue">Continue</string>
-    <string name="__arcore_install_app">This application requires the latest version of ARCore.</string>
-    <string name="__arcore_install_feature">This feature requires the latest version of ARCore.</string>
-    <string name="__arcore_installing">Installing ARCore…</string>
+    <string name="__arcore_install_app">This application requires the latest version of Google Play Services for AR.</string>
+    <string name="__arcore_install_feature">This feature requires the latest version of Google Play Services for AR.</string>
+    <string name="__arcore_installing">Installing Google Play Services for AR…</string>
     <string name="abc_action_bar_home_description">Navigate home</string>
     <string name="abc_action_bar_up_description">Navigate up</string>
     <string name="abc_action_menu_overflow_description">More options</string>
@@ -1308,7 +1308,7 @@
     <string name="compass_dial" translatable="false">Compass Dial</string>
     <string name="compass_hands" translatable="false">Compass Hands</string>
     <string name="copy">Copy</string>
-    <string name="copyright">Versione 16.0.0\n\n© 2021\nVincenzo Salvati &amp; Co\nRights Reserved.</string>
+    <string name="copyright">Versione 21.0.0\n\n© 2021\nVincenzo Salvati &amp; Co\nRights Reserved.</string>
     <string name="dadoActivity">DadoActivity</string>
     <string name="error_icon_content_description">Error</string>
     <string name="expand_button_title">Advanced</string>

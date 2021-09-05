@@ -4,20 +4,20 @@
             "outputFile": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-es-rMX\\values-es-rMX.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\vince\\.gradle\\caches\\transforms-3\\9c8cd2777080cefad486c57a953dfbd4\\transformed\\core-1.10.0\\res\\values-es-rMX\\values.xml",
+                    "source": "C:\\Users\\vince\\.gradle\\caches\\transforms-3\\5d5a9d6bf8bcc5242755fc8f6b3ee14e\\transformed\\jetified-core-1.26.0\\res\\values-es-rMX\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8",
                         "startColumns": "0,0,0,0,0",
-                        "startOffsets": "194,243,295,394,494",
-                        "endColumns": "48,51,98,99,62",
-                        "endOffsets": "242,294,393,493,556"
+                        "startOffsets": "194,243,295,419,551",
+                        "endColumns": "48,51,123,131,88",
+                        "endOffsets": "242,294,418,550,639"
                     },
                     "to": {
                         "startLines": "2,3,4,5,6",
                         "startColumns": "4,4,4,4,4",
-                        "startOffsets": "55,108,164,267,371",
-                        "endColumns": "52,55,102,103,66",
-                        "endOffsets": "103,159,262,366,433"
+                        "startOffsets": "55,108,164,292,428",
+                        "endColumns": "52,55,127,135,92",
+                        "endOffsets": "103,159,287,423,516"
                     }
                 }
             ]

@@ -2781,7 +2781,7 @@ plurals mtrl_badge_content_description
 raw cubito
 raw cubito2
 raw cubito3
-raw keep
+raw keep_arcore
 raw sceneform_camera_material
 raw sceneform_default_light_probe
 raw sceneform_face_mesh

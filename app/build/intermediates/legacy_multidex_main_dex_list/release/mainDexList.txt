@@ -161,6 +161,8 @@ androidx/viewpager2/widget/ViewPager2$ScrollState.class
 com/google/android/filament/Colors$LinearColor.class
 com/google/android/filament/Entity.class
 com/google/android/filament/EntityInstance.class
+com/google/android/filament/proguard/UsedByNative.class
+com/google/android/filament/proguard/UsedByReflection.class
 com/google/android/material/appbar/AppBarLayout$LayoutParams$ScrollFlags.class
 com/google/android/material/appbar/CollapsingToolbarLayout$TitleCollapseMode.class
 com/google/android/material/badge/BadgeDrawable$BadgeGravity.class
@@ -209,6 +211,7 @@ com/google/android/material/transition/platform/SlideDistanceProvider$GravityFla
 com/google/ar/core/annotations/NativeEnum.class
 com/google/ar/core/annotations/UsedByNative.class
 com/google/ar/core/annotations/UsedByReflection.class
+com/google/ar/core/dependencies/c.class
 com/google/gson/annotations/Expose.class
 com/google/gson/annotations/JsonAdapter.class
 com/google/gson/annotations/SerializedName.class
