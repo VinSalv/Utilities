@@ -6,7 +6,6 @@
     <uses-sdk
         android:maxSdkVersion="30"
         android:minSdkVersion="16"
-        android:targetSdkVersion="29"
         tools:ignore="GradleOverrides,OldTargetApi" />
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
@@ -28,7 +27,8 @@
         android:roundIcon="@drawable/utilities"
         android:screenOrientation="portrait"
         android:supportsRtl="true"
-        android:theme="@style/LightTheme">
+        android:theme="@style/LightTheme"
+        tools:ignore="RtlEnabled">
         <activity
             android:name=".utilitiesActivity.InfoActivity"
             android:configChanges="uiMode"

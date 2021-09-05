@@ -1,9 +1,6 @@
 package com.app.utilities.utilitiesActivity;
 
 import android.annotation.SuppressLint;
-import android.app.Activity;
-import android.app.ActivityManager;
-import android.content.Context;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
@@ -29,7 +26,6 @@ import com.app.utilities.utility.Arl_saved;
 import com.app.utilities.utility.Preferences;
 import com.app.utilities.utility.Utils;
 import com.google.ar.core.Anchor;
-import com.google.ar.core.ArCoreApk;
 import com.google.ar.core.Config;
 import com.google.ar.core.HitResult;
 import com.google.ar.core.Plane;
@@ -38,7 +34,6 @@ import com.google.ar.core.Session;
 import com.google.ar.core.exceptions.UnavailableApkTooOldException;
 import com.google.ar.core.exceptions.UnavailableArcoreNotInstalledException;
 import com.google.ar.core.exceptions.UnavailableDeviceNotCompatibleException;
-import com.google.ar.core.exceptions.UnavailableException;
 import com.google.ar.core.exceptions.UnavailableSdkTooOldException;
 import com.google.ar.sceneform.AnchorNode;
 import com.google.ar.sceneform.math.Vector3;
@@ -106,14 +101,13 @@ public class ARMeasureActivity extends AppCompatActivity {
             }
         }
 
-        if (isARCoreSupportedAndUpToDate(this))
-            try {
-                createSession();
-                Objects.requireNonNull(this.getSupportActionBar()).hide();
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-        else utils.goToMainActivity(this);
+        try {
+            createSession();
+            Objects.requireNonNull(this.getSupportActionBar()).hide();
+        } catch (Exception e) {
+            e.printStackTrace();
+
+        }
 
         setContentView(R.layout.activity_armeasure);
 
@@ -250,7 +244,7 @@ public class ARMeasureActivity extends AppCompatActivity {
                 });
         ImageButton question = findViewById(R.id.question);
         question.setOnClickListener(view -> {
-            Toast toast = Toast.makeText(this, "1) Ispeziona l'area con la telecamera finchè la manina non scompare;\n\n2) Scegli quale misura adoperare;\n\n3) Piazza i cubi:\n   - 2 per la larghezza;\n   - 1 per l'altezza;\n\n4) Salva tutte le misure che desideri cliccando sul pulsante \"SALVA MISURA\";\n\n5) Clicca sull'icona in alto a destra per usare le tue misure.\n\nP.S. Ogni quando si cambia piano di misurazione si raccomanda di cliccare sul pulsante refresh in alto (non si perderanno le misure già acquisite).\n\nPer cancellare le misure acquisite fino ad ora è necessario uscire e rientrare dall'attività \"Metro\".\n\nPuoi acquisire/salvare una sola misura per volta.", Toast.LENGTH_LONG);
+            Toast toast = Toast.makeText(this, "1) Ispeziona l'area con la telecamera finchè la manina non scompare;\n2) Scegli quale misura adoperare;\n3) Piazza i cubi:\n   - DUE per la larghezza;\n   - UNO per l'altezza;\n4) Salva tutte le misure che desideri cliccando sul pulsante \"SALVA MISURA\";\n5) Clicca sull'icona in alto a destra per usare le tue misure.\n\nP.S.\n--> Ogni quando si cambia piano di misurazione si raccomanda di cliccare sul pulsante refresh in alto (non si perderanno le misure già acquisite).\n--> Per cancellare le misure acquisite fino ad ora è necessario uscire e rientrare dall'attività \"Metro\".\n--> Se non compaiono i puntini bianchi sulla superfice (per piazzare i cubi) clicca il pulsante refresh e scansiona nuovamente la superfice di interesse.\n--> Puoi acquisire/salvare una sola misura per volta.", Toast.LENGTH_LONG);
             toast.setGravity(Gravity.CENTER, 0, 0);
             toast.show();
         });
@@ -273,59 +267,13 @@ public class ARMeasureActivity extends AppCompatActivity {
         mPrevConfig = new Configuration(getResources().getConfiguration());
     }
 
-    private boolean isARCoreSupportedAndUpToDate(final Activity activity) {
-        if (Build.VERSION.SDK_INT < VERSION_CODES.N) {
-            Toast.makeText(activity, "Sceneform richiede Android N o successivo", Toast.LENGTH_LONG).show();
-        }
-        String openGlVersionString = ((ActivityManager) activity.getSystemService(Context.ACTIVITY_SERVICE)).getDeviceConfigurationInfo().getGlEsVersion();
-        if (Double.parseDouble(openGlVersionString) < MIN_OPENGL_VERSION) {
-            Toast.makeText(activity, "Sceneform richiede OpenGL ES 3.0 o successivo", Toast.LENGTH_LONG).show();
-        }
-        ArCoreApk.Availability availability = ArCoreApk.getInstance().checkAvailability(this);
-        switch (availability) {
-            case SUPPORTED_INSTALLED:
-                return true;
-            case SUPPORTED_APK_TOO_OLD:
-            case SUPPORTED_NOT_INSTALLED:
-                try {
-                    ArCoreApk.InstallStatus installStatus = ArCoreApk.getInstance().requestInstall(this, true);
-                    switch (installStatus) {
-                        case INSTALL_REQUESTED:
-                            utils.notifyUser(this, "Si necessita di scaricare/aggiornare il servizio AR di Google dallo store");
-                            return false;
-                        case INSTALLED:
-                            return true;
-                    }
-                } catch (UnavailableException e) {
-                    e.printStackTrace();
-                }
-                return false;
-            case UNSUPPORTED_DEVICE_NOT_CAPABLE:
-                utils.notifyUser(this, "Device non supportato per la tecnologia AR Camera");
-                return false;
-            case UNKNOWN_CHECKING:
-            case UNKNOWN_ERROR:
-                // ARCore is checking the availability with a remote query.
-                // This function should be called again after waiting 200 ms to determine the query result.
-                utils.notifyUser(this, "Si è verificato un errore sconosciuto");
-                return false;
-            case UNKNOWN_TIMED_OUT:
-                // There was an error checking for AR availability. This may be due to the device being offline.
-                // Handle the error appropriately.
-                utils.notifyUser(this, "Non è stato possibile verificare se il device supporta la tecnologia AR Camera.\nRiprova.");
-                return false;
-        }
-        return false;
-    }
-
     public void createSession() throws UnavailableSdkTooOldException, UnavailableDeviceNotCompatibleException, UnavailableArcoreNotInstalledException, UnavailableApkTooOldException {
-        // Create a new ARCore session.
         session = new Session(this);
-        // Create a session config.
         Config config = new Config(session);
-        // Do feature-specific operations here, such as enabling depth or turning on
-        // support for Augmented Faces.
-        // Configure the session.
+        if (!session.isSupported(config)) {
+            utils.notifyUser(this, "Scrica AR Core di Google sullo store");
+            utils.goToMainActivity(this);
+        }
         session.configure(config);
     }
 
