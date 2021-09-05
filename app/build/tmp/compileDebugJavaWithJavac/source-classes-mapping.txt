@@ -91,6 +91,8 @@ com/app/utilities/databinding/FragmentOrientazioneBinding.java
 com/app/utilities/utilitiesActivity/SCFActivity.java
  com.app.utilities.utilitiesActivity.SCFActivity
  com.app.utilities.utilitiesActivity.SCFActivity$1
+com/app/utilities/databinding/PreferenzeDadoActivityBinding.java
+ com.app.utilities.databinding.PreferenzeDadoActivityBinding
 com/app/utilities/fragment/ui/SectionsPagerAdapter.java
  com.app.utilities.fragment.ui.SectionsPagerAdapter
 com/app/utilities/utility/Preferences.java
@@ -104,8 +106,9 @@ com/app/utilities/databinding/ActivityAltriSensoriBinding.java
 com/app/utilities/bussola/Compass.java
  com.app.utilities.bussola.Compass
  com.app.utilities.bussola.Compass$CompassListener
-com/app/utilities/databinding/PreferenzeDadoActivityBinding.java
- com.app.utilities.databinding.PreferenzeDadoActivityBinding
+com/app/utilities/utility/Arl_saved.java
+ com.app.utilities.utility.Arl_saved
+ com.app.utilities.utility.Arl_saved$1
 com/app/utilities/utilitiesActivity/ARMeasureActivity.java
  com.app.utilities.utilitiesActivity.ARMeasureActivity
  com.app.utilities.utilitiesActivity.ARMeasureActivity$1

@@ -4,7 +4,7 @@
     <string name="tab_text_2">Sorte</string>
     <string name="tab_text_3">Sensori</string>
     <string name="info">Info</string>
-    <string name="copyright">Versione 14.0.0\n\n© 2021\nVincenzo Salvati &amp; Co\nRights Reserved.</string>
+    <string name="copyright">Versione 15.0.0\n\n© 2021\nVincenzo Salvati &amp; Co\nRights Reserved.</string>
     <string name="backButton">back</string>
     <string name="AccelerometerNotSupported"><b>Accelerometro:</b> Non Supportato</string>
     <string name="GyroscopeNotSupported"><b>Giroscopio:</b> Non Supportato</string>
@@ -68,9 +68,9 @@
     <string name="TemperatureCheckBox">Temperatura</string>
     <string name="HumidityCheckBox">Umidità</string>
     <string name="larghezza">Larghezza</string>
-    <string name="salva">Salva per condividere</string>
+    <string name="salva">Salva misura</string>
     <string name="altezza">Altezza</string>
-    <string name="seleziona_larghezza_o_altezza">Muovi la telecamera sul piano di interesse finchè la manina non scompare\n(per altre info clicca su "?")</string>
+    <string name="seleziona_larghezza_o_altezza">Muovi la telecamera\nsul piano di interesse\nfinchè la manina non scompare\n(per altre info clicca su "?")</string>
     <string name="titolo_della_misurazione">Titolo della misurazione</string>
     <string name="ARMeasureActivity">ARMeasureAcrivity</string>
     <string name="Moneta_button">Vai</string>

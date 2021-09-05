@@ -1932,6 +1932,7 @@ int drawable ic_pause 0x7f080082
 int drawable ic_pause_press 0x7f080083
 int drawable ic_rec 0x7f080084
 int drawable ic_rec_press 0x7f080085
+int drawable ic_refresh 0x7f0800bb
 int drawable ic_room_preferences 0x7f080086
 int drawable ic_ruler 0x7f080087
 int drawable ic_settings 0x7f080088
@@ -2381,6 +2382,7 @@ int id recSensorsButton 0x7f090188
 int id recSensorsLayout 0x7f090189
 int id rectangles 0x7f09018a
 int id recycler_view 0x7f09018b
+int id refresh 0x7f09024b
 int id reverseSawtooth 0x7f09018c
 int id right 0x7f09018d
 int id rightDiceNumber 0x7f09018e

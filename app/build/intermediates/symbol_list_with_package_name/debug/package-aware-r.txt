@@ -1933,6 +1933,7 @@ drawable ic_pause
 drawable ic_pause_press
 drawable ic_rec
 drawable ic_rec_press
+drawable ic_refresh
 drawable ic_room_preferences
 drawable ic_ruler
 drawable ic_settings
@@ -2382,6 +2383,7 @@ id recSensorsButton
 id recSensorsLayout
 id rectangles
 id recycler_view
+id refresh
 id reverseSawtooth
 id right
 id rightDiceNumber
