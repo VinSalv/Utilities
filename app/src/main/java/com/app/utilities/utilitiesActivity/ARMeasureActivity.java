@@ -257,18 +257,14 @@ public class ARMeasureActivity extends AppCompatActivity {
         mPrevConfig = new Configuration(getResources().getConfiguration());
     }
 
-
-    // Verify that ARCore is installed and using the current version.
     private boolean isARCoreSupportedAndUpToDate() {
         ArCoreApk.Availability availability = ArCoreApk.getInstance().checkAvailability(this);
         switch (availability) {
             case SUPPORTED_INSTALLED:
                 return true;
-
             case SUPPORTED_APK_TOO_OLD:
             case SUPPORTED_NOT_INSTALLED:
                 try {
-                    // Request ARCore installation or update if needed.
                     ArCoreApk.InstallStatus installStatus = ArCoreApk.getInstance().requestInstall(this, true);
                     switch (installStatus) {
                         case INSTALL_REQUESTED:
@@ -308,13 +304,10 @@ public class ARMeasureActivity extends AppCompatActivity {
     public void createSession() throws UnavailableSdkTooOldException, UnavailableDeviceNotCompatibleException, UnavailableArcoreNotInstalledException, UnavailableApkTooOldException {
         // Create a new ARCore session.
         session = new Session(this);
-
         // Create a session config.
         Config config = new Config(session);
-
         // Do feature-specific operations here, such as enabling depth or turning on
         // support for Augmented Faces.
-
         // Configure the session.
         session.configure(config);
     }

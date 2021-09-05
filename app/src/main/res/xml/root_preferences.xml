@@ -5,6 +5,7 @@
     <PreferenceCategory app:title="Personalizzazione">
 
         <SwitchPreferenceCompat
+            android:defaultValue="1"
             android:disableDependentsState="true"
             android:summaryOff='Clicca su "Temi"'
             android:summaryOn="È impostato il tema dello smartphone"
