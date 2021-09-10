@@ -1,6 +1,7 @@
 package com.app.utilities.utilitiesActivity.inclinometro;
 
 import android.Manifest;
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.pm.ActivityInfo;
 import android.content.pm.PackageManager;
@@ -188,6 +189,7 @@ public class InclinometroActivity extends AppCompatActivity implements SensorEve
         mPrevConfig = new Configuration(getResources().getConfiguration());
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public void onSensorChanged(SensorEvent event) {
         if (event.sensor.getType() == Sensor.TYPE_ACCELEROMETER) {

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.app.utilities"
-    android:versionCode="21"
-    android:versionName="21.0" >
+    android:versionCode="22"
+    android:versionName="22.0" >
 
     <uses-sdk
         android:maxSdkVersion="30"
@@ -16,18 +16,6 @@
     <uses-permission android:name="android.permission.CAMERA" />
 
     <uses-feature
-        android:name="android.hardware.sensor.accelerometer"
-        android:required="true" />
-    <uses-feature
-        android:name="android.hardware.camera"
-        android:required="false" />
-    <uses-feature
-        android:name="android.hardware.camera.front"
-        android:required="false" />
-    <uses-feature
-        android:name="android.hardware.camera.autofocus"
-        android:required="false" />
-    <uses-feature
         android:glEsVersion="0x00030000"
         android:required="true" />
     <uses-feature android:name="android.hardware.camera.ar" />
@@ -35,7 +23,20 @@
     <queries>
         <package android:name="com.google.ar.core" />
     </queries>
-
+    <!--
+         Have developers add this. We don't want AUDIO permission to be auto-added to
+         apps that just want to take pictures.
+    -->
+    <!-- uses-permission android:name="android.permission.RECORD_AUDIO" / -->
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
     <uses-feature
         android:name="android.hardware.microphone"
         android:required="false" />
@@ -77,7 +78,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/LightTheme" />
         <activity
-            android:name="com.app.utilities.utilitiesActivity.ARMeasure.ARMeasureActivity"
+            android:name="com.app.utilities.utilitiesActivity._ARMeasure.ARMeasureActivity"
             android:configChanges="uiMode"
             android:label="@string/ARMeasureActivity"
             android:screenOrientation="portrait"
