@@ -9,6 +9,7 @@ import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.app.utilities.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -54,7 +55,7 @@ public final class DialogSaveBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.et_measure;
-      EditText etMeasure = rootView.findViewById(id);
+      EditText etMeasure = ViewBindings.findChildViewById(rootView, id);
       if (etMeasure == null) {
         break missingId;
       }

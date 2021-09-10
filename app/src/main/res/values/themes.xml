@@ -19,6 +19,8 @@
         <item name="colorAccent">@color/beige</item>
         <item name="colorOnPrimarySurface">@color/white</item>
         <item name="colorPrimarySurface">@color/black</item>
+        <item name="colorOnBackground">@color/translucent_jeans</item>
+        <item name="backgroundColor">@color/jeans</item>
         <!-- ActionBar -->
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>

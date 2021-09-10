@@ -9,6 +9,7 @@ import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.app.utilities.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -54,7 +55,7 @@ public final class SettingsActivityBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.settings;
-      FrameLayout settings = rootView.findViewById(id);
+      FrameLayout settings = ViewBindings.findChildViewById(rootView, id);
       if (settings == null) {
         break missingId;
       }

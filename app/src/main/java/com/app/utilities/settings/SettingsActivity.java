@@ -14,14 +14,13 @@ import androidx.preference.PreferenceFragmentCompat;
 import androidx.preference.SwitchPreferenceCompat;
 
 import com.app.utilities.R;
-import com.app.utilities.utility.Preferences;
 import com.app.utilities.utility.Utils;
 
 import java.util.Objects;
 
 public class SettingsActivity extends AppCompatActivity {
     static final Utils utils = new Utils();
-    static Preferences pref;
+    static Preferenze pref;
     protected Configuration mPrevConfig;
 
     public static boolean isOnDarkMode(Configuration configuration) {
@@ -32,7 +31,7 @@ public class SettingsActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        pref = utils.loadData(this, new Preferences());
+        pref = utils.loadData(this, new Preferenze());
         if (!pref.getPredBool()) {
             if (pref.getThemeText().equals("LightTheme") || pref.getThemeText().equals("LightThemeSelected"))
                 utils.changeThemeSelected(this, 0);
@@ -93,8 +92,8 @@ public class SettingsActivity extends AppCompatActivity {
         @RequiresApi(api = Build.VERSION_CODES.Q)
         @Override
         public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-            pref = utils.loadData(requireActivity(), new Preferences());
-            setPreferencesFromResource(R.xml.root_preferences, rootKey);
+            pref = utils.loadData(requireActivity(), new Preferenze());
+            setPreferencesFromResource(R.xml.preferences, rootKey);
             pred = findPreference("pred");
             list_themes = findPreference("list_themes");
             if (!pref.getPredBool()) {

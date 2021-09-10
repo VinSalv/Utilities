@@ -18,7 +18,7 @@ import androidx.viewpager.widget.ViewPager;
 
 import com.app.utilities.databinding.ActivityMainBinding;
 import com.app.utilities.fragment.ui.SectionsPagerAdapter;
-import com.app.utilities.utility.Preferences;
+import com.app.utilities.settings.Preferenze;
 import com.app.utilities.utility.Utils;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private static final Utils utils = new Utils();
     @SuppressWarnings("unused")
     protected Configuration mPrevConfig;
-    Preferences pref;
+    Preferenze pref;
     @SuppressWarnings("unused")
     private boolean doubleBackToExitPressedOnce;
 
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        pref = utils.loadData(this, new Preferences());
+        pref = utils.loadData(this, new Preferenze());
         if (!pref.getPredBool()) {
             if (pref.getThemeText().equals("LightTheme") || pref.getThemeText().equals("LightThemeSelected"))
                 utils.changeThemeSelected(this, 0);

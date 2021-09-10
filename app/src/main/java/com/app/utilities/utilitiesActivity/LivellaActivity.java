@@ -25,7 +25,7 @@ import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.app.utilities.R;
-import com.app.utilities.utility.Preferences;
+import com.app.utilities.settings.Preferenze;
 import com.app.utilities.utility.Utils;
 import com.google.android.material.tabs.TabLayout;
 
@@ -41,7 +41,7 @@ public class LivellaActivity extends AppCompatActivity implements SensorEventLis
     int colorOnPrimary;
     int colorPrimaryVariant;
     int colorSecondaryVariant;
-    Preferences pref;
+    Preferenze pref;
     private Sensor accelerometer;
     private SensorManager sensorManager;
     private AnimatedView animatedView = null;
@@ -54,7 +54,7 @@ public class LivellaActivity extends AppCompatActivity implements SensorEventLis
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        pref = utils.loadData(this, new Preferences());
+        pref = utils.loadData(this, new Preferenze());
         if (!pref.getPredBool()) {
             if (pref.getThemeText().equals("LightTheme") || pref.getThemeText().equals("LightThemeSelected"))
                 utils.changeThemeSelected(this, 0);
@@ -255,20 +255,17 @@ public class LivellaActivity extends AppCompatActivity implements SensorEventLis
             textPlane.setStrokeWidth(BAR_THICKNESS);
             textPlane.setStyle(Paint.Style.STROKE);
 
-
             textX = new Paint();
             textX.setColor(getColor(colorOnPrimary));
             textX.setStyle(Paint.Style.FILL_AND_STROKE);
             textX.setTextSize(TEXT_SIZE);
             textX.setTypeface(Typeface.create(Typeface.DEFAULT, Typeface.BOLD));
 
-
             textY = new Paint();
             textY.setColor(getColor(colorOnPrimary));
             textY.setStyle(Paint.Style.FILL_AND_STROKE);
             textY.setTextSize(TEXT_SIZE);
             textY.setTypeface(Typeface.create(Typeface.DEFAULT, Typeface.BOLD));
-
 
             ImageButton back = new ImageButton(LivellaActivity.this);
 

@@ -18,5 +18,7 @@
     <color name="colorAccent" tools:ignore="UnusedResources">#D81B60</color>
     <color name="colorGreen" tools:ignore="UnusedResources">#060</color>
     <color name="colorOrange" tools:ignore="UnusedResources">#FF5722</color>
-    <color name="translucent_black">#8000</color>
+    <color name="translucent_black">#80000000</color>
+    <color name="translucent_jeans">#80657A97</color>
+
 </resources>

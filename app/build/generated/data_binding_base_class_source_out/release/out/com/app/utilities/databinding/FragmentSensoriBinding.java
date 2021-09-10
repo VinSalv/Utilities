@@ -14,6 +14,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.widget.NestedScrollView;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.app.utilities.R;
 import com.github.mikephil.charting.charts.LineChart;
 import java.lang.NullPointerException;
@@ -207,205 +208,205 @@ public final class FragmentSensoriBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.CSVRecommendationTextView;
-      TextView CSVRecommendationTextView = rootView.findViewById(id);
+      TextView CSVRecommendationTextView = ViewBindings.findChildViewById(rootView, id);
       if (CSVRecommendationTextView == null) {
         break missingId;
       }
 
       id = R.id.CSVTextView;
-      TextView CSVTextView = rootView.findViewById(id);
+      TextView CSVTextView = ViewBindings.findChildViewById(rootView, id);
       if (CSVTextView == null) {
         break missingId;
       }
 
       id = R.id.accelCheckBox;
-      CheckBox accelCheckBox = rootView.findViewById(id);
+      CheckBox accelCheckBox = ViewBindings.findChildViewById(rootView, id);
       if (accelCheckBox == null) {
         break missingId;
       }
 
       id = R.id.allSensorsCheckBox;
-      CheckBox allSensorsCheckBox = rootView.findViewById(id);
+      CheckBox allSensorsCheckBox = ViewBindings.findChildViewById(rootView, id);
       if (allSensorsCheckBox == null) {
         break missingId;
       }
 
       id = R.id.chartAceleX;
-      LineChart chartAceleX = rootView.findViewById(id);
+      LineChart chartAceleX = ViewBindings.findChildViewById(rootView, id);
       if (chartAceleX == null) {
         break missingId;
       }
 
       id = R.id.chartAceleY;
-      LineChart chartAceleY = rootView.findViewById(id);
+      LineChart chartAceleY = ViewBindings.findChildViewById(rootView, id);
       if (chartAceleY == null) {
         break missingId;
       }
 
       id = R.id.chartAceleZ;
-      LineChart chartAceleZ = rootView.findViewById(id);
+      LineChart chartAceleZ = ViewBindings.findChildViewById(rootView, id);
       if (chartAceleZ == null) {
         break missingId;
       }
 
       id = R.id.chartGirX;
-      LineChart chartGirX = rootView.findViewById(id);
+      LineChart chartGirX = ViewBindings.findChildViewById(rootView, id);
       if (chartGirX == null) {
         break missingId;
       }
 
       id = R.id.chartGirY;
-      LineChart chartGirY = rootView.findViewById(id);
+      LineChart chartGirY = ViewBindings.findChildViewById(rootView, id);
       if (chartGirY == null) {
         break missingId;
       }
 
       id = R.id.chartGirZ;
-      LineChart chartGirZ = rootView.findViewById(id);
+      LineChart chartGirZ = ViewBindings.findChildViewById(rootView, id);
       if (chartGirZ == null) {
         break missingId;
       }
 
       id = R.id.chartMagnetX;
-      LineChart chartMagnetX = rootView.findViewById(id);
+      LineChart chartMagnetX = ViewBindings.findChildViewById(rootView, id);
       if (chartMagnetX == null) {
         break missingId;
       }
 
       id = R.id.chartMagnetY;
-      LineChart chartMagnetY = rootView.findViewById(id);
+      LineChart chartMagnetY = ViewBindings.findChildViewById(rootView, id);
       if (chartMagnetY == null) {
         break missingId;
       }
 
       id = R.id.chartMagnetZ;
-      LineChart chartMagnetZ = rootView.findViewById(id);
+      LineChart chartMagnetZ = ViewBindings.findChildViewById(rootView, id);
       if (chartMagnetZ == null) {
         break missingId;
       }
 
       id = R.id.direcotry;
-      ImageButton direcotry = rootView.findViewById(id);
+      ImageButton direcotry = ViewBindings.findChildViewById(rootView, id);
       if (direcotry == null) {
         break missingId;
       }
 
       id = R.id.gyroCheckBox;
-      CheckBox gyroCheckBox = rootView.findViewById(id);
+      CheckBox gyroCheckBox = ViewBindings.findChildViewById(rootView, id);
       if (gyroCheckBox == null) {
         break missingId;
       }
 
       id = R.id.magneCheckBox;
-      CheckBox magneCheckBox = rootView.findViewById(id);
+      CheckBox magneCheckBox = ViewBindings.findChildViewById(rootView, id);
       if (magneCheckBox == null) {
         break missingId;
       }
 
       id = R.id.otherSensorsButton;
-      Button otherSensorsButton = rootView.findViewById(id);
+      Button otherSensorsButton = ViewBindings.findChildViewById(rootView, id);
       if (otherSensorsButton == null) {
         break missingId;
       }
 
       id = R.id.pauseSensorsButton;
-      ImageButton pauseSensorsButton = rootView.findViewById(id);
+      ImageButton pauseSensorsButton = ViewBindings.findChildViewById(rootView, id);
       if (pauseSensorsButton == null) {
         break missingId;
       }
 
       id = R.id.recSensorsButton;
-      ImageButton recSensorsButton = rootView.findViewById(id);
+      ImageButton recSensorsButton = ViewBindings.findChildViewById(rootView, id);
       if (recSensorsButton == null) {
         break missingId;
       }
 
       id = R.id.recSensorsLayout;
-      LinearLayout recSensorsLayout = rootView.findViewById(id);
+      LinearLayout recSensorsLayout = ViewBindings.findChildViewById(rootView, id);
       if (recSensorsLayout == null) {
         break missingId;
       }
 
       id = R.id.sensorsLayout;
-      LinearLayout sensorsLayout = rootView.findViewById(id);
+      LinearLayout sensorsLayout = ViewBindings.findChildViewById(rootView, id);
       if (sensorsLayout == null) {
         break missingId;
       }
 
       id = R.id.speedAcc;
-      Spinner speedAcc = rootView.findViewById(id);
+      Spinner speedAcc = ViewBindings.findChildViewById(rootView, id);
       if (speedAcc == null) {
         break missingId;
       }
 
       id = R.id.speedGir;
-      Spinner speedGir = rootView.findViewById(id);
+      Spinner speedGir = ViewBindings.findChildViewById(rootView, id);
       if (speedGir == null) {
         break missingId;
       }
 
       id = R.id.speedMag;
-      Spinner speedMag = rootView.findViewById(id);
+      Spinner speedMag = ViewBindings.findChildViewById(rootView, id);
       if (speedMag == null) {
         break missingId;
       }
 
       id = R.id.stopSensorsButton;
-      ImageButton stopSensorsButton = rootView.findViewById(id);
+      ImageButton stopSensorsButton = ViewBindings.findChildViewById(rootView, id);
       if (stopSensorsButton == null) {
         break missingId;
       }
 
       id = R.id.xGyroValue;
-      TextView xGyroValue = rootView.findViewById(id);
+      TextView xGyroValue = ViewBindings.findChildViewById(rootView, id);
       if (xGyroValue == null) {
         break missingId;
       }
 
       id = R.id.xMagnoValue;
-      TextView xMagnoValue = rootView.findViewById(id);
+      TextView xMagnoValue = ViewBindings.findChildViewById(rootView, id);
       if (xMagnoValue == null) {
         break missingId;
       }
 
       id = R.id.xValue;
-      TextView xValue = rootView.findViewById(id);
+      TextView xValue = ViewBindings.findChildViewById(rootView, id);
       if (xValue == null) {
         break missingId;
       }
 
       id = R.id.yGyroValue;
-      TextView yGyroValue = rootView.findViewById(id);
+      TextView yGyroValue = ViewBindings.findChildViewById(rootView, id);
       if (yGyroValue == null) {
         break missingId;
       }
 
       id = R.id.yMagnoValue;
-      TextView yMagnoValue = rootView.findViewById(id);
+      TextView yMagnoValue = ViewBindings.findChildViewById(rootView, id);
       if (yMagnoValue == null) {
         break missingId;
       }
 
       id = R.id.yValue;
-      TextView yValue = rootView.findViewById(id);
+      TextView yValue = ViewBindings.findChildViewById(rootView, id);
       if (yValue == null) {
         break missingId;
       }
 
       id = R.id.zGyroValue;
-      TextView zGyroValue = rootView.findViewById(id);
+      TextView zGyroValue = ViewBindings.findChildViewById(rootView, id);
       if (zGyroValue == null) {
         break missingId;
       }
 
       id = R.id.zMagnoValue;
-      TextView zMagnoValue = rootView.findViewById(id);
+      TextView zMagnoValue = ViewBindings.findChildViewById(rootView, id);
       if (zMagnoValue == null) {
         break missingId;
       }
 
       id = R.id.zValue;
-      TextView zValue = rootView.findViewById(id);
+      TextView zValue = ViewBindings.findChildViewById(rootView, id);
       if (zValue == null) {
         break missingId;
       }

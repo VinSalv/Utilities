@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".utilitiesActivity.inclinometro.InclinometroActivity">
+
+    <TextureView
+        android:id="@+id/textureView"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        app:layout_anchor="@+id/imageView"
+        app:layout_anchorGravity="center" />
+
+    <ImageButton
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:backgroundTint="@color/translucent_black"
+        android:contentDescription="@string/backButton"
+        android:src="?attr/actionModeCloseDrawable"
+        tools:targetApi="lollipop" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        android:layout_gravity="center"
+        android:background="@color/black" />
+
+    <ImageView
+        android:layout_width="5dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="@color/black" />
+
+    <TextView
+        android:id="@+id/textViewDegree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="?attr/colorOnBackground"
+        android:padding="10dp"
+        android:text="0°"
+        android:textColor="?attr/colorPrimaryDark"
+        android:textSize="60sp"
+        android:textStyle="bold" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

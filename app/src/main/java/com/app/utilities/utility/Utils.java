@@ -9,18 +9,23 @@ import android.widget.Toast;
 
 import com.app.utilities.MainActivity;
 import com.app.utilities.R;
-import com.app.utilities.settings.PrefderenzeDado;
-import com.app.utilities.settings.PrefderenzeMoneta;
-import com.app.utilities.settings.PrefderenzeSCF;
+import com.app.utilities.settings.Preferenze;
+import com.app.utilities.settings.PreferenzeDado;
+import com.app.utilities.settings.PreferenzeMoneta;
+import com.app.utilities.settings.PreferenzeSCF;
 import com.app.utilities.settings.SettingsActivity;
-import com.app.utilities.utilitiesActivity.ARMeasureActivity;
 import com.app.utilities.utilitiesActivity.AltriSensoriActivity;
-import com.app.utilities.utilitiesActivity.BussolaActivity;
-import com.app.utilities.utilitiesActivity.DadoActivity;
 import com.app.utilities.utilitiesActivity.InfoActivity;
 import com.app.utilities.utilitiesActivity.LivellaActivity;
-import com.app.utilities.utilitiesActivity.MonetaActivity;
-import com.app.utilities.utilitiesActivity.SCFActivity;
+import com.app.utilities.utilitiesActivity._ARMeasure.ARMeasureActivity;
+import com.app.utilities.utilitiesActivity.bussola.BussolaActivity;
+import com.app.utilities.utilitiesActivity.dado.DadoActivity;
+import com.app.utilities.utilitiesActivity.dado.PreferencesDado;
+import com.app.utilities.utilitiesActivity.inclinometro.InclinometroActivity;
+import com.app.utilities.utilitiesActivity.moneta.MonetaActivity;
+import com.app.utilities.utilitiesActivity.moneta.PreferencesMoneta;
+import com.app.utilities.utilitiesActivity.scf.PreferencesSCF;
+import com.app.utilities.utilitiesActivity.scf.SCFActivity;
 
 @SuppressWarnings("unused")
 public class Utils {
@@ -76,13 +81,18 @@ public class Utils {
         context.startActivity(intent);
     }
 
+    public void goToInclinometroActivity(Context context) {
+        Intent intent = new Intent(context, InclinometroActivity.class);
+        context.startActivity(intent);
+    }
+
     public void goToDadoActivity(Context context) {
         Intent intent = new Intent(context, DadoActivity.class);
         context.startActivity(intent);
     }
 
     public void goToPrefderenzeDado(Context context) {
-        Intent intent = new Intent(context, PrefderenzeDado.class);
+        Intent intent = new Intent(context, PreferenzeDado.class);
         context.startActivity(intent);
     }
 
@@ -92,7 +102,7 @@ public class Utils {
     }
 
     public void goToPrefderenzeSCF(Context context) {
-        Intent intent = new Intent(context, PrefderenzeSCF.class);
+        Intent intent = new Intent(context, PreferenzeSCF.class);
         context.startActivity(intent);
     }
 
@@ -102,7 +112,7 @@ public class Utils {
     }
 
     public void goToPrefderenzeMoneta(Context context) {
-        Intent intent = new Intent(context, PrefderenzeMoneta.class);
+        Intent intent = new Intent(context, PreferenzeMoneta.class);
         context.startActivity(intent);
     }
 
@@ -116,7 +126,7 @@ public class Utils {
         return Math.round(value * scale) / scale;
     }
 
-    public void saveData(Context context, Preferences pref, Boolean pred, String theme) {
+    public void saveData(Context context, Preferenze pref, Boolean pred, String theme) {
         SharedPreferences sharedPreferences = context.getSharedPreferences(pref.getSharedPrefs(), Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
         editor.putBoolean(pref.getPred(), pred);
@@ -152,7 +162,7 @@ public class Utils {
         editor.apply();
     }
 
-    public Preferences loadData(Context context, Preferences pref) {
+    public Preferenze loadData(Context context, Preferenze pref) {
         SharedPreferences sharedPreferences = context.getSharedPreferences(pref.getSharedPrefs(), Context.MODE_PRIVATE);
         pref.setPredBool(sharedPreferences.getBoolean(pref.getPred(), true));
         pref.setThemeText(sharedPreferences.getString(pref.getTheme(), "light_theme"));

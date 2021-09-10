@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.app.utilities"
-    android:versionCode="21"
-    android:versionName="21.0" >
+    android:versionCode="22"
+    android:versionName="22.0" >
 
     <uses-sdk
         android:maxSdkVersion="30"
@@ -16,6 +16,18 @@
     <uses-permission android:name="android.permission.CAMERA" />
 
     <uses-feature
+        android:name="android.hardware.sensor.accelerometer"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
         android:glEsVersion="0x00030000"
         android:required="true" />
     <uses-feature android:name="android.hardware.camera.ar" />
@@ -23,6 +35,10 @@
     <queries>
         <package android:name="com.google.ar.core" />
     </queries>
+
+    <uses-feature
+        android:name="android.hardware.microphone"
+        android:required="false" />
 
     <application
         android:name="androidx.multidex.MultiDexApplication"
@@ -59,7 +75,7 @@
             android:screenOrientation="portrait"
             android:theme="@style/LightTheme" />
         <activity
-            android:name="com.app.utilities.utilitiesActivity.ARMeasureActivity"
+            android:name="com.app.utilities.utilitiesActivity._ARMeasure.ARMeasureActivity"
             android:configChanges="uiMode"
             android:label="@string/ARMeasureActivity"
             android:screenOrientation="portrait"
@@ -71,43 +87,49 @@
             android:screenOrientation="portrait"
             android:theme="@style/LightTheme" />
         <activity
-            android:name="com.app.utilities.utilitiesActivity.BussolaActivity"
+            android:name="com.app.utilities.utilitiesActivity.bussola.BussolaActivity"
             android:configChanges="uiMode"
             android:label="@string/bussolaActivity"
             android:screenOrientation="portrait"
             android:theme="@style/LightTheme" />
         <activity
-            android:name="com.app.utilities.utilitiesActivity.DadoActivity"
+            android:name="com.app.utilities.utilitiesActivity.inclinometro.InclinometroActivity"
+            android:configChanges="uiMode"
+            android:label="InclinometroActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LightTheme" />
+        <activity
+            android:name="com.app.utilities.utilitiesActivity.dado.DadoActivity"
             android:configChanges="uiMode"
             android:label="@string/dadoActivity"
             android:screenOrientation="portrait"
             android:theme="@style/LightTheme" />
         <activity
-            android:name="com.app.utilities.settings.PrefderenzeDado"
+            android:name="com.app.utilities.settings.PreferenzeDado"
             android:configChanges="uiMode"
             android:label="@string/PrefderenzeDado"
             android:screenOrientation="portrait"
             android:theme="@style/LightTheme" />
         <activity
-            android:name="com.app.utilities.utilitiesActivity.MonetaActivity"
+            android:name="com.app.utilities.utilitiesActivity.moneta.MonetaActivity"
             android:configChanges="uiMode"
             android:label="@string/monetaActivity"
             android:screenOrientation="portrait"
             android:theme="@style/LightTheme" />
         <activity
-            android:name="com.app.utilities.settings.PrefderenzeMoneta"
+            android:name="com.app.utilities.settings.PreferenzeMoneta"
             android:configChanges="uiMode"
             android:label="@string/PrefderenzeMoneta"
             android:screenOrientation="portrait"
             android:theme="@style/LightTheme" />
         <activity
-            android:name="com.app.utilities.utilitiesActivity.SCFActivity"
+            android:name="com.app.utilities.utilitiesActivity.scf.SCFActivity"
             android:configChanges="uiMode"
             android:label="@string/_SCFActivity"
             android:screenOrientation="portrait"
             android:theme="@style/LightTheme" />
         <activity
-            android:name="com.app.utilities.settings.PrefderenzeSCF"
+            android:name="com.app.utilities.settings.PreferenzeSCF"
             android:configChanges="uiMode"
             android:label="@string/PrefderenzeSCF"
             android:screenOrientation="portrait"
@@ -136,6 +158,10 @@
             android:exported="false"
             android:launchMode="singleTop"
             android:theme="@android:style/Theme.Material.Light.Dialog.Alert" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
     </application>
 
 </manifest>

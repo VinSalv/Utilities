@@ -13,6 +13,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.Toolbar;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.app.utilities.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -85,43 +86,43 @@ public final class ActivityMonetaBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.back;
-      ImageButton back = rootView.findViewById(id);
+      ImageButton back = ViewBindings.findChildViewById(rootView, id);
       if (back == null) {
         break missingId;
       }
 
       id = R.id.crocePlayerEditText;
-      EditText crocePlayerEditText = rootView.findViewById(id);
+      EditText crocePlayerEditText = ViewBindings.findChildViewById(rootView, id);
       if (crocePlayerEditText == null) {
         break missingId;
       }
 
       id = R.id.goMoneta;
-      Button goMoneta = rootView.findViewById(id);
+      Button goMoneta = ViewBindings.findChildViewById(rootView, id);
       if (goMoneta == null) {
         break missingId;
       }
 
       id = R.id.monetaLayout;
-      LinearLayout monetaLayout = rootView.findViewById(id);
+      LinearLayout monetaLayout = ViewBindings.findChildViewById(rootView, id);
       if (monetaLayout == null) {
         break missingId;
       }
 
       id = R.id.monetaWinner;
-      TextView monetaWinner = rootView.findViewById(id);
+      TextView monetaWinner = ViewBindings.findChildViewById(rootView, id);
       if (monetaWinner == null) {
         break missingId;
       }
 
       id = R.id.testaPlayerEditText;
-      EditText testaPlayerEditText = rootView.findViewById(id);
+      EditText testaPlayerEditText = ViewBindings.findChildViewById(rootView, id);
       if (testaPlayerEditText == null) {
         break missingId;
       }
 
       id = R.id.toolbarMoneta;
-      Toolbar toolbarMoneta = rootView.findViewById(id);
+      Toolbar toolbarMoneta = ViewBindings.findChildViewById(rootView, id);
       if (toolbarMoneta == null) {
         break missingId;
       }

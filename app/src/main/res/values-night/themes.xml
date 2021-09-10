@@ -19,6 +19,8 @@
         <item name="colorAccent">@color/red</item>
         <item name="colorOnPrimarySurface">@color/dark_gray</item>
         <item name="colorPrimarySurface">@color/red</item>
+        <item name="colorOnBackground">@color/translucent_black</item>
+        <item name="backgroundColor">@color/black</item>
         <!-- ActionBar -->
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>

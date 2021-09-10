@@ -25,7 +25,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.app.utilities.R;
-import com.app.utilities.utility.Preferences;
+import com.app.utilities.settings.Preferenze;
 import com.app.utilities.utility.Utils;
 import com.github.mikephil.charting.charts.LineChart;
 import com.github.mikephil.charting.components.Legend;
@@ -50,7 +50,7 @@ public class AltriSensoriActivity extends AppCompatActivity implements SensorEve
     @SuppressWarnings("unused")
     protected Configuration mPrevConfig;
     TextView light, pressure, temperature, humidity;
-    Preferences pref;
+    Preferenze pref;
     Spinner speedLig, speedPre, speedTem, speedHum;
     SensorManager sensorManager;
     Sensor mLight, mPressure, mTemperature, mHumidity;
@@ -73,7 +73,7 @@ public class AltriSensoriActivity extends AppCompatActivity implements SensorEve
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        pref = utils.loadData(this, new Preferences());
+        pref = utils.loadData(this, new Preferenze());
         if (!pref.getPredBool()) {
             if (pref.getThemeText().equals("LightTheme") || pref.getThemeText().equals("LightThemeSelected"))
                 utils.changeThemeSelected(this, 0);

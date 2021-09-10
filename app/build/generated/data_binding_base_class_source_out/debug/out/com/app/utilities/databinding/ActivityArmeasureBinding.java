@@ -12,6 +12,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.app.utilities.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -92,55 +93,55 @@ public final class ActivityArmeasureBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.back;
-      ImageButton back = rootView.findViewById(id);
+      ImageButton back = ViewBindings.findChildViewById(rootView, id);
       if (back == null) {
         break missingId;
       }
 
       id = R.id.btn_height;
-      Button btnHeight = rootView.findViewById(id);
+      Button btnHeight = ViewBindings.findChildViewById(rootView, id);
       if (btnHeight == null) {
         break missingId;
       }
 
       id = R.id.btn_save;
-      Button btnSave = rootView.findViewById(id);
+      Button btnSave = ViewBindings.findChildViewById(rootView, id);
       if (btnSave == null) {
         break missingId;
       }
 
       id = R.id.btn_share;
-      ImageButton btnShare = rootView.findViewById(id);
+      ImageButton btnShare = ViewBindings.findChildViewById(rootView, id);
       if (btnShare == null) {
         break missingId;
       }
 
       id = R.id.btn_width;
-      Button btnWidth = rootView.findViewById(id);
+      Button btnWidth = ViewBindings.findChildViewById(rootView, id);
       if (btnWidth == null) {
         break missingId;
       }
 
       id = R.id.question;
-      ImageButton question = rootView.findViewById(id);
+      ImageButton question = ViewBindings.findChildViewById(rootView, id);
       if (question == null) {
         break missingId;
       }
 
       id = R.id.refresh;
-      ImageButton refresh = rootView.findViewById(id);
+      ImageButton refresh = ViewBindings.findChildViewById(rootView, id);
       if (refresh == null) {
         break missingId;
       }
 
       id = R.id.sk_height_control;
-      SeekBar skHeightControl = rootView.findViewById(id);
+      SeekBar skHeightControl = ViewBindings.findChildViewById(rootView, id);
       if (skHeightControl == null) {
         break missingId;
       }
 
       id = R.id.text;
-      TextView text = rootView.findViewById(id);
+      TextView text = ViewBindings.findChildViewById(rootView, id);
       if (text == null) {
         break missingId;
       }

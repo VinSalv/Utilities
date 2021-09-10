@@ -9,13 +9,13 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.app.utilities.R;
-import com.app.utilities.utility.Preferences;
+import com.app.utilities.settings.Preferenze;
 import com.app.utilities.utility.Utils;
 
 public class InfoActivity extends AppCompatActivity {
     private final Utils utils = new Utils();
     protected Configuration mPrevConfig;
-    Preferences pref;
+    Preferenze pref;
 
     public static boolean isOnDarkMode(Configuration configuration) {
         return (configuration.uiMode & Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES;
@@ -24,7 +24,7 @@ public class InfoActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        pref = utils.loadData(this, new Preferences());
+        pref = utils.loadData(this, new Preferenze());
         if (!pref.getPredBool()) {
             if (pref.getThemeText().equals("LightTheme") || pref.getThemeText().equals("LightThemeSelected"))
                 utils.changeThemeSelected(this, 0);

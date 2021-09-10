@@ -55,6 +55,8 @@ public class Fragment_Misurazione extends Fragment {
                 utils.goToLivellaActivity(requireActivity());
             } else if (position == 2) {
                 utils.goToBussolaActivity(requireActivity());
+            } else if (position == 3) {
+                utils.goToInclinometroActivity(requireActivity());
             }
         });
         return view;

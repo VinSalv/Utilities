@@ -9,6 +9,7 @@ import android.widget.LinearLayout;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.viewbinding.ViewBinding;
+import androidx.viewbinding.ViewBindings;
 import com.app.utilities.R;
 import java.lang.NullPointerException;
 import java.lang.Override;
@@ -55,7 +56,7 @@ public final class PreferenzeDadoActivityBinding implements ViewBinding {
     int id;
     missingId: {
       id = R.id.pref_dice;
-      FrameLayout prefDice = rootView.findViewById(id);
+      FrameLayout prefDice = ViewBindings.findChildViewById(rootView, id);
       if (prefDice == null) {
         break missingId;
       }
