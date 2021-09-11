@@ -23,14 +23,11 @@
         <item>Testa o Croce</item>
     </string-array>
     <string-array name="speed">
-        <item>Velocissimo (0ms)</item>
-        <item>Molto veloce (20.000ms)</item>
-        <item>Veloce (60.000ms)</item>
-        <item>Normale (200.000ms)</item>
-        <item>Lento (400.000ms)</item>
-        <item>Molto lento (800.000ms)</item>
-        <item>Lentissimo (1.000.000ms)</item>
-
+        <item>Molto veloce (0ms)</item>
+        <item>Veloce (20.000ms)</item>
+        <item>Normale (60.000ms)</item>
+        <item>Lento (200.000ms)</item>
+        <item>Disabilita</item>
     </string-array>
     <string-array name="themes_entries">
         <item>Tema chiaro</item>
@@ -1998,7 +1995,7 @@
     <string name="compass_dial" translatable="false">Compass Dial</string>
     <string name="compass_hands" translatable="false">Compass Hands</string>
     <string name="copy">Copy</string>
-    <string name="copyright">Versione 22.0.0\n\n© 2021\nVincenzo Salvati &amp; Co\nRights Reserved.</string>
+    <string name="copyright">Versione 23.0.0\n\n© 2021\nVincenzo Salvati &amp; Co\nRights Reserved.</string>
     <string name="dadoActivity">DadoActivity</string>
     <string name="error_icon_content_description">Error</string>
     <string name="expand_button_title">Advanced</string>

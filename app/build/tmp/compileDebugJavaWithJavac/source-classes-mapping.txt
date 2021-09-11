@@ -1,25 +1,19 @@
-com/app/utilities/MainActivity.java
- com.app.utilities.MainActivity
-com/app/utilities/settings/PreferenzeSCF.java
- com.app.utilities.settings.PreferenzeSCF
- com.app.utilities.settings.PreferenzeSCF$SettingsFragment
-com/app/utilities/fragment/Fragment_Sorte.java
- com.app.utilities.fragment.Fragment_Sorte
+com/app/utilities/databinding/ActivityBussolaBinding.java
+ com.app.utilities.databinding.ActivityBussolaBinding
+com/app/utilities/databinding/SettingsActivityBinding.java
+ com.app.utilities.databinding.SettingsActivityBinding
+com/app/utilities/fragment/ui/SectionsPagerAdapter.java
+ com.app.utilities.fragment.ui.SectionsPagerAdapter
 com/app/utilities/utilitiesActivity/scf/PreferencesSCF.java
  com.app.utilities.utilitiesActivity.scf.PreferencesSCF
 com/app/utilities/databinding/ActivityArmeasureBinding.java
  com.app.utilities.databinding.ActivityArmeasureBinding
 com/app/utilities/fragment/ui/PageViewModel.java
  com.app.utilities.fragment.ui.PageViewModel
-com/app/utilities/utilitiesActivity/AltriSensoriActivity.java
- com.app.utilities.utilitiesActivity.AltriSensoriActivity
- com.app.utilities.utilitiesActivity.AltriSensoriActivity$1
- com.app.utilities.utilitiesActivity.AltriSensoriActivity$2
- com.app.utilities.utilitiesActivity.AltriSensoriActivity$3
- com.app.utilities.utilitiesActivity.AltriSensoriActivity$4
-com/app/utilities/utilitiesActivity/LivellaActivity.java
- com.app.utilities.utilitiesActivity.LivellaActivity
- com.app.utilities.utilitiesActivity.LivellaActivity$AnimatedView
+com/app/utilities/databinding/ActivityAltriSensoriBinding.java
+ com.app.utilities.databinding.ActivityAltriSensoriBinding
+com/app/utilities/databinding/ActivityMonetaBinding.java
+ com.app.utilities.databinding.ActivityMonetaBinding
 com/app/utilities/settings/Preferenze.java
  com.app.utilities.settings.Preferenze
 com/app/utilities/utility/Shake.java
@@ -28,40 +22,37 @@ com/app/utilities/utility/Shake.java
  com.app.utilities.utility.Shake$Callback
 com/app/utilities/databinding/DialogSaveBinding.java
  com.app.utilities.databinding.DialogSaveBinding
-com/app/utilities/fragment/Fragment_Misurazione.java
- com.app.utilities.fragment.Fragment_Misurazione
+com/app/utilities/databinding/FragmentSorteBinding.java
+ com.app.utilities.databinding.FragmentSorteBinding
 com/app/utilities/fragment/ui/PlaceholderFragment.java
  com.app.utilities.fragment.ui.PlaceholderFragment
-com/app/utilities/fragment/Fragment_Sensori.java
- com.app.utilities.fragment.Fragment_Sensori
- com.app.utilities.fragment.Fragment_Sensori$1
- com.app.utilities.fragment.Fragment_Sensori$2
- com.app.utilities.fragment.Fragment_Sensori$3
+com/app/utilities/utility/CustomAdapter.java
+ com.app.utilities.utility.CustomAdapter
+ com.app.utilities.utility.CustomAdapter$1
+ com.app.utilities.utility.CustomAdapter$ViewHolder
 com/app/utilities/databinding/ActivityInfoBinding.java
  com.app.utilities.databinding.ActivityInfoBinding
 com/app/utilities/utilitiesActivity/dado/PreferencesDado.java
  com.app.utilities.utilitiesActivity.dado.PreferencesDado
 com/app/utilities/utilitiesActivity/bussola/SOTWFormatter.java
  com.app.utilities.utilitiesActivity.bussola.SOTWFormatter
-com/app/utilities/settings/PreferenzeDado.java
- com.app.utilities.settings.PreferenzeDado
- com.app.utilities.settings.PreferenzeDado$SettingsFragment
+com/app/utilities/databinding/ActivityInclinometroBinding.java
+ com.app.utilities.databinding.ActivityInclinometroBinding
 com/app/utilities/BuildConfig.java
  com.app.utilities.BuildConfig
-com/app/utilities/settings/PreferenzeMoneta.java
- com.app.utilities.settings.PreferenzeMoneta
- com.app.utilities.settings.PreferenzeMoneta$SettingsFragment
-com/app/utilities/utilitiesActivity/moneta/MonetaActivity.java
- com.app.utilities.utilitiesActivity.moneta.MonetaActivity
- com.app.utilities.utilitiesActivity.moneta.MonetaActivity$1
+com/app/utilities/utilitiesActivity/_ARMeasure/Arl_saved.java
+ com.app.utilities.utilitiesActivity._ARMeasure.Arl_saved
+ com.app.utilities.utilitiesActivity._ARMeasure.Arl_saved$1
+com/app/utilities/utilitiesActivity/moneta/PreferencesMoneta.java
+ com.app.utilities.utilitiesActivity.moneta.PreferencesMoneta
 com/app/utilities/databinding/FragmentSensoriBinding.java
  com.app.utilities.databinding.FragmentSensoriBinding
 com/app/utilities/utility/RowItem.java
  com.app.utilities.utility.RowItem
-com/app/utilities/utilitiesActivity/InfoActivity.java
- com.app.utilities.utilitiesActivity.InfoActivity
-com/app/utilities/utilitiesActivity/bussola/BussolaActivity.java
- com.app.utilities.utilitiesActivity.bussola.BussolaActivity
+com/app/utilities/databinding/FragmentOrientazioneBinding.java
+ com.app.utilities.databinding.FragmentOrientazioneBinding
+com/app/utilities/databinding/PreferenzeDadoActivityBinding.java
+ com.app.utilities.databinding.PreferenzeDadoActivityBinding
 com/app/utilities/databinding/SingleRowBinding.java
  com.app.utilities.databinding.SingleRowBinding
 com/app/utilities/databinding/ActivityDadoBinding.java
@@ -70,55 +61,64 @@ com/app/utilities/databinding/ActivityMainBinding.java
  com.app.utilities.databinding.ActivityMainBinding
 com/app/utilities/databinding/ActivityScfBinding.java
  com.app.utilities.databinding.ActivityScfBinding
+com/app/utilities/databinding/FragmentMainBinding.java
+ com.app.utilities.databinding.FragmentMainBinding
+com/app/utilities/MainActivity.java
+ com.app.utilities.MainActivity
+com/app/utilities/settings/PreferenzeSCF.java
+ com.app.utilities.settings.PreferenzeSCF
+ com.app.utilities.settings.PreferenzeSCF$SettingsFragment
+com/app/utilities/fragment/Fragment_Sorte.java
+ com.app.utilities.fragment.Fragment_Sorte
 com/app/utilities/utilitiesActivity/bussola/Compass.java
  com.app.utilities.utilitiesActivity.bussola.Compass
  com.app.utilities.utilitiesActivity.bussola.Compass$CompassListener
-com/app/utilities/utility/CustomAdapter.java
- com.app.utilities.utility.CustomAdapter
- com.app.utilities.utility.CustomAdapter$1
- com.app.utilities.utility.CustomAdapter$ViewHolder
-com/app/utilities/utility/Utils.java
- com.app.utilities.utility.Utils
+com/app/utilities/settings/SettingsActivity.java
+ com.app.utilities.settings.SettingsActivity
+ com.app.utilities.settings.SettingsActivity$SettingsFragment
+com/app/utilities/utilitiesActivity/LivellaActivity.java
+ com.app.utilities.utilitiesActivity.LivellaActivity
+ com.app.utilities.utilitiesActivity.LivellaActivity$AnimatedView
+com/app/utilities/utilitiesActivity/bussola/BussolaActivity.java
+ com.app.utilities.utilitiesActivity.bussola.BussolaActivity
 com/app/utilities/utilitiesActivity/inclinometro/InclinometroActivity.java
  com.app.utilities.utilitiesActivity.inclinometro.InclinometroActivity
  com.app.utilities.utilitiesActivity.inclinometro.InclinometroActivity$1
  com.app.utilities.utilitiesActivity.inclinometro.InclinometroActivity$2
  com.app.utilities.utilitiesActivity.inclinometro.InclinometroActivity$3
  com.app.utilities.utilitiesActivity.inclinometro.InclinometroActivity$CompareSizeByArea
-com/app/utilities/databinding/ActivityBussolaBinding.java
- com.app.utilities.databinding.ActivityBussolaBinding
-com/app/utilities/utilitiesActivity/moneta/PreferencesMoneta.java
- com.app.utilities.utilitiesActivity.moneta.PreferencesMoneta
-com/app/utilities/utilitiesActivity/_ARMeasure/Arl_saved.java
- com.app.utilities.utilitiesActivity._ARMeasure.Arl_saved
- com.app.utilities.utilitiesActivity._ARMeasure.Arl_saved$1
+com/app/utilities/fragment/Fragment_Misurazione.java
+ com.app.utilities.fragment.Fragment_Misurazione
+com/app/utilities/fragment/Fragment_Sensori.java
+ com.app.utilities.fragment.Fragment_Sensori
+ com.app.utilities.fragment.Fragment_Sensori$1
+ com.app.utilities.fragment.Fragment_Sensori$2
+ com.app.utilities.fragment.Fragment_Sensori$3
 com/app/utilities/utilitiesActivity/_ARMeasure/ARMeasureActivity.java
  com.app.utilities.utilitiesActivity._ARMeasure.ARMeasureActivity
  com.app.utilities.utilitiesActivity._ARMeasure.ARMeasureActivity$1
-com/app/utilities/databinding/FragmentMainBinding.java
- com.app.utilities.databinding.FragmentMainBinding
-com/app/utilities/databinding/ActivityInclinometroBinding.java
- com.app.utilities.databinding.ActivityInclinometroBinding
 com/app/utilities/utilitiesActivity/scf/SCFActivity.java
  com.app.utilities.utilitiesActivity.scf.SCFActivity
  com.app.utilities.utilitiesActivity.scf.SCFActivity$1
-com/app/utilities/databinding/FragmentSorteBinding.java
- com.app.utilities.databinding.FragmentSorteBinding
-com/app/utilities/databinding/FragmentOrientazioneBinding.java
- com.app.utilities.databinding.FragmentOrientazioneBinding
+com/app/utilities/settings/PreferenzeDado.java
+ com.app.utilities.settings.PreferenzeDado
+ com.app.utilities.settings.PreferenzeDado$SettingsFragment
+com/app/utilities/settings/PreferenzeMoneta.java
+ com.app.utilities.settings.PreferenzeMoneta
+ com.app.utilities.settings.PreferenzeMoneta$SettingsFragment
+com/app/utilities/utilitiesActivity/moneta/MonetaActivity.java
+ com.app.utilities.utilitiesActivity.moneta.MonetaActivity
+ com.app.utilities.utilitiesActivity.moneta.MonetaActivity$1
 com/app/utilities/utilitiesActivity/dado/DadoActivity.java
  com.app.utilities.utilitiesActivity.dado.DadoActivity
  com.app.utilities.utilitiesActivity.dado.DadoActivity$1
-com/app/utilities/fragment/ui/SectionsPagerAdapter.java
- com.app.utilities.fragment.ui.SectionsPagerAdapter
-com/app/utilities/databinding/SettingsActivityBinding.java
- com.app.utilities.databinding.SettingsActivityBinding
-com/app/utilities/databinding/ActivityAltriSensoriBinding.java
- com.app.utilities.databinding.ActivityAltriSensoriBinding
-com/app/utilities/databinding/PreferenzeDadoActivityBinding.java
- com.app.utilities.databinding.PreferenzeDadoActivityBinding
-com/app/utilities/settings/SettingsActivity.java
- com.app.utilities.settings.SettingsActivity
- com.app.utilities.settings.SettingsActivity$SettingsFragment
-com/app/utilities/databinding/ActivityMonetaBinding.java
- com.app.utilities.databinding.ActivityMonetaBinding
+com/app/utilities/utilitiesActivity/InfoActivity.java
+ com.app.utilities.utilitiesActivity.InfoActivity
+com/app/utilities/utilitiesActivity/AltriSensoriActivity.java
+ com.app.utilities.utilitiesActivity.AltriSensoriActivity
+ com.app.utilities.utilitiesActivity.AltriSensoriActivity$1
+ com.app.utilities.utilitiesActivity.AltriSensoriActivity$2
+ com.app.utilities.utilitiesActivity.AltriSensoriActivity$3
+ com.app.utilities.utilitiesActivity.AltriSensoriActivity$4
+com/app/utilities/utility/Utils.java
+ com.app.utilities.utility.Utils
