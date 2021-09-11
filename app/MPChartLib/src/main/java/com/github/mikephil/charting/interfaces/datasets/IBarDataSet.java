@@ -60,7 +60,6 @@ public interface IBarDataSet extends IBarLineScatterCandleBubbleDataSet<BarEntry
      */
     int getHighLightAlpha();
 
-
     /**
      * Returns the labels used for the different value-stacks in the legend.
      * This is only relevant for stacked bar entries.

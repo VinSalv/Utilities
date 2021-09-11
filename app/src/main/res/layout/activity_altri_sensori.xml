@@ -32,7 +32,6 @@
                 android:src="?attr/actionModeCloseDrawable" />
 
             <TextView
-                android:id="@+id/otherSensorsTextView"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="center"
@@ -42,7 +41,6 @@
         </LinearLayout>
 
         <TextView
-            android:id="@+id/CSVTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
@@ -52,7 +50,6 @@
             app:autoSizeTextType="uniform" />
 
         <TextView
-            android:id="@+id/CSVRecommendationTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
@@ -61,7 +58,6 @@
             android:textStyle="italic" />
 
         <LinearLayout
-            android:id="@+id/recOtherSensorsLayout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="5dp"

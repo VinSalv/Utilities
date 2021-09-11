@@ -80,4 +80,3 @@ public interface IPieDataSet extends IDataSet<PieEntry> {
     Integer getHighlightColor();
 
 }
-

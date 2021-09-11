@@ -25,12 +25,6 @@ public final class ActivityAltriSensoriBinding implements ViewBinding {
   private final NestedScrollView rootView;
 
   @NonNull
-  public final TextView CSVRecommendationTextView;
-
-  @NonNull
-  public final TextView CSVTextView;
-
-  @NonNull
   public final CheckBox allOtherSensorsCheckBox;
 
   @NonNull
@@ -67,9 +61,6 @@ public final class ActivityAltriSensoriBinding implements ViewBinding {
   public final LinearLayout otherSensorsLayout;
 
   @NonNull
-  public final TextView otherSensorsTextView;
-
-  @NonNull
   public final ImageButton pauseOtherSensorsButton;
 
   @NonNull
@@ -80,9 +71,6 @@ public final class ActivityAltriSensoriBinding implements ViewBinding {
 
   @NonNull
   public final ImageButton recOtherSensorsButton;
-
-  @NonNull
-  public final LinearLayout recOtherSensorsLayout;
 
   @NonNull
   public final Spinner speedHum;
@@ -106,22 +94,18 @@ public final class ActivityAltriSensoriBinding implements ViewBinding {
   public final TextView temperature;
 
   private ActivityAltriSensoriBinding(@NonNull NestedScrollView rootView,
-      @NonNull TextView CSVRecommendationTextView, @NonNull TextView CSVTextView,
       @NonNull CheckBox allOtherSensorsCheckBox, @NonNull ImageButton back,
       @NonNull LineChart chartHumidity, @NonNull LineChart chartLight,
       @NonNull LineChart chartPressure, @NonNull LineChart chartTemperature,
       @NonNull ImageButton direcotry, @NonNull CheckBox humCheckBox, @NonNull TextView humidity,
       @NonNull CheckBox ligCheckBox, @NonNull TextView light,
-      @NonNull LinearLayout otherSensorsLayout, @NonNull TextView otherSensorsTextView,
-      @NonNull ImageButton pauseOtherSensorsButton, @NonNull CheckBox presCheckBox,
-      @NonNull TextView pressure, @NonNull ImageButton recOtherSensorsButton,
-      @NonNull LinearLayout recOtherSensorsLayout, @NonNull Spinner speedHum,
+      @NonNull LinearLayout otherSensorsLayout, @NonNull ImageButton pauseOtherSensorsButton,
+      @NonNull CheckBox presCheckBox, @NonNull TextView pressure,
+      @NonNull ImageButton recOtherSensorsButton, @NonNull Spinner speedHum,
       @NonNull Spinner speedLig, @NonNull Spinner speedPre, @NonNull Spinner speedTem,
       @NonNull ImageButton stopOtherSensorsButton, @NonNull CheckBox tempCheckBox,
       @NonNull TextView temperature) {
     this.rootView = rootView;
-    this.CSVRecommendationTextView = CSVRecommendationTextView;
-    this.CSVTextView = CSVTextView;
     this.allOtherSensorsCheckBox = allOtherSensorsCheckBox;
     this.back = back;
     this.chartHumidity = chartHumidity;
@@ -134,12 +118,10 @@ public final class ActivityAltriSensoriBinding implements ViewBinding {
     this.ligCheckBox = ligCheckBox;
     this.light = light;
     this.otherSensorsLayout = otherSensorsLayout;
-    this.otherSensorsTextView = otherSensorsTextView;
     this.pauseOtherSensorsButton = pauseOtherSensorsButton;
     this.presCheckBox = presCheckBox;
     this.pressure = pressure;
     this.recOtherSensorsButton = recOtherSensorsButton;
-    this.recOtherSensorsLayout = recOtherSensorsLayout;
     this.speedHum = speedHum;
     this.speedLig = speedLig;
     this.speedPre = speedPre;
@@ -176,18 +158,6 @@ public final class ActivityAltriSensoriBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.CSVRecommendationTextView;
-      TextView CSVRecommendationTextView = ViewBindings.findChildViewById(rootView, id);
-      if (CSVRecommendationTextView == null) {
-        break missingId;
-      }
-
-      id = R.id.CSVTextView;
-      TextView CSVTextView = ViewBindings.findChildViewById(rootView, id);
-      if (CSVTextView == null) {
-        break missingId;
-      }
-
       id = R.id.allOtherSensorsCheckBox;
       CheckBox allOtherSensorsCheckBox = ViewBindings.findChildViewById(rootView, id);
       if (allOtherSensorsCheckBox == null) {
@@ -260,12 +230,6 @@ public final class ActivityAltriSensoriBinding implements ViewBinding {
         break missingId;
       }
 
-      id = R.id.otherSensorsTextView;
-      TextView otherSensorsTextView = ViewBindings.findChildViewById(rootView, id);
-      if (otherSensorsTextView == null) {
-        break missingId;
-      }
-
       id = R.id.pauseOtherSensorsButton;
       ImageButton pauseOtherSensorsButton = ViewBindings.findChildViewById(rootView, id);
       if (pauseOtherSensorsButton == null) {
@@ -287,12 +251,6 @@ public final class ActivityAltriSensoriBinding implements ViewBinding {
       id = R.id.recOtherSensorsButton;
       ImageButton recOtherSensorsButton = ViewBindings.findChildViewById(rootView, id);
       if (recOtherSensorsButton == null) {
-        break missingId;
-      }
-
-      id = R.id.recOtherSensorsLayout;
-      LinearLayout recOtherSensorsLayout = ViewBindings.findChildViewById(rootView, id);
-      if (recOtherSensorsLayout == null) {
         break missingId;
       }
 
@@ -338,11 +296,10 @@ public final class ActivityAltriSensoriBinding implements ViewBinding {
         break missingId;
       }
 
-      return new ActivityAltriSensoriBinding((NestedScrollView) rootView, CSVRecommendationTextView,
-          CSVTextView, allOtherSensorsCheckBox, back, chartHumidity, chartLight, chartPressure,
-          chartTemperature, direcotry, humCheckBox, humidity, ligCheckBox, light,
-          otherSensorsLayout, otherSensorsTextView, pauseOtherSensorsButton, presCheckBox, pressure,
-          recOtherSensorsButton, recOtherSensorsLayout, speedHum, speedLig, speedPre, speedTem,
+      return new ActivityAltriSensoriBinding((NestedScrollView) rootView, allOtherSensorsCheckBox,
+          back, chartHumidity, chartLight, chartPressure, chartTemperature, direcotry, humCheckBox,
+          humidity, ligCheckBox, light, otherSensorsLayout, pauseOtherSensorsButton, presCheckBox,
+          pressure, recOtherSensorsButton, speedHum, speedLig, speedPre, speedTem,
           stopOtherSensorsButton, tempCheckBox, temperature);
     }
     String missingId = rootView.getResources().getResourceName(id);

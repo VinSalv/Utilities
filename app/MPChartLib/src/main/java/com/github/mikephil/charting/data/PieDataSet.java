@@ -253,7 +253,6 @@ public class PieDataSet extends DataSet<PieEntry> implements IPieDataSet {
         this.mHighlightColor = color;
     }
 
-
     public enum ValuePosition {
         INSIDE_SLICE,
         OUTSIDE_SLICE

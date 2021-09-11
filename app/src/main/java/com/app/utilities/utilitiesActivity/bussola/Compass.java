@@ -107,9 +107,3 @@ public class Compass implements SensorEventListener {
         void onNewAzimuth(float azimuth);
     }
 }
-
-
-
-
-
-

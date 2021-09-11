@@ -97,7 +97,6 @@ public class XAxisRenderer extends AxisRenderer {
                 labelHeight,
                 mXAxis.getLabelRotationAngle());
 
-
         mXAxis.mLabelWidth = Math.round(labelWidth);
         mXAxis.mLabelHeight = Math.round(labelHeight);
         mXAxis.mLabelRotatedWidth = Math.round(labelRotatedSize.width);
@@ -366,7 +365,6 @@ public class XAxisRenderer extends AxisRenderer {
             mLimitLinePaint.setColor(limitLine.getTextColor());
             mLimitLinePaint.setStrokeWidth(0.5f);
             mLimitLinePaint.setTextSize(limitLine.getTextSize());
-
 
             float xOffset = limitLine.getLineWidth() + limitLine.getXOffset();
 

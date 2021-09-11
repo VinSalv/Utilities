@@ -5,7 +5,6 @@ package com.github.mikephil.charting.utils;
  */
 public class HorizontalViewPortHandler extends ViewPortHandler {
 
-
 //    @Override
 //    public void setMinimumScaleX(float xScale) {
 //        setMinimumScaleY(xScale);

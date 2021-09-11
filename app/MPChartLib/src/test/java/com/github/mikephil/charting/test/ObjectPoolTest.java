@@ -42,7 +42,6 @@ public class ObjectPoolTest {
         Assert.assertEquals(4, poolCapacity);
         Assert.assertEquals(4, poolCount);
 
-
         testPoolable = TestPoolable.getInstance(20, 30);
         Assert.assertEquals(20, testPoolable.foo);
         Assert.assertEquals(30, testPoolable.bar);
@@ -64,7 +63,6 @@ public class ObjectPoolTest {
         Assert.assertEquals(4, poolCapacity);
         Assert.assertEquals(0, poolCount);
 
-
         TestPoolable.recycleInstances(testPoolables);
         poolCapacity = TestPoolable.getPool().getPoolCapacity();
         poolCount = TestPoolable.getPool().getPoolCount();
@@ -72,7 +70,6 @@ public class ObjectPoolTest {
         Assert.assertEquals(4, poolCount);
 
         testPoolables.clear();
-
 
         testPoolables.add(TestPoolable.getInstance(12, 24));
         testPoolables.add(TestPoolable.getInstance(1, 2));
@@ -90,7 +87,6 @@ public class ObjectPoolTest {
         Assert.assertEquals(8, testPoolables.get(4).foo);
         Assert.assertEquals(9, testPoolables.get(4).bar);
 
-
         poolCapacity = TestPoolable.getPool().getPoolCapacity();
         poolCount = TestPoolable.getPool().getPoolCount();
         Assert.assertEquals(4, poolCapacity);
@@ -103,7 +99,6 @@ public class ObjectPoolTest {
         Assert.assertEquals(8, poolCount);
 
         testPoolables.clear();
-
 
         testPoolables.add(TestPoolable.getInstance(0, 0));
         testPoolables.add(TestPoolable.getInstance(6, 8));
@@ -154,7 +149,6 @@ public class ObjectPoolTest {
         Assert.assertEquals(16, poolCapacity);
         Assert.assertEquals(15, poolCount);
 
-
         TestPoolable.recycleInstance(testPoolable);
 
         poolCapacity = TestPoolable.getPool().getPoolCapacity();
@@ -192,7 +186,6 @@ public class ObjectPoolTest {
         poolCount = TestPoolable.getPool().getPoolCount();
         Assert.assertEquals(16, poolCapacity);
         Assert.assertEquals(7, poolCount);
-
 
     }
 

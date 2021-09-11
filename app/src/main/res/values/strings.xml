@@ -77,5 +77,6 @@
     <string name="giocatore_testa">Giocatore Testa</string>
     <string name="giocatore_croce">Giocatore Croce</string>
     <string name="todo">TODO</string>
+    <string name="_0">0°</string>
 
 </resources>

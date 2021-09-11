@@ -1,5 +1,6 @@
 //noinspection DuplicatePlatformClasses
 //noinspection DuplicatePlatformClasses
+//noinspection DuplicatePlatformClasses
 plugins {
     id 'com.android.application'
 }

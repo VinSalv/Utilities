@@ -80,6 +80,28 @@ public class InclinometroActivity extends AppCompatActivity implements SensorEve
     private String mCameraId;
     private Size mPreviewSize;
     private ImageReader mImageReader;
+    private final TextureView.SurfaceTextureListener mSurfaceTextureListener = new TextureView.SurfaceTextureListener() {
+        @Override
+        public void onSurfaceTextureAvailable(SurfaceTexture surface, int width, int height) {
+            setupCamera(width, height);
+            connectCamera();
+        }
+
+        @Override
+        public void onSurfaceTextureSizeChanged(SurfaceTexture surface, int width, int height) {
+
+        }
+
+        @Override
+        public boolean onSurfaceTextureDestroyed(SurfaceTexture surface) {
+            return false;
+        }
+
+        @Override
+        public void onSurfaceTextureUpdated(SurfaceTexture surface) {
+
+        }
+    };
     private CameraDevice mCameraDevice;
     private MediaRecorder mMediaRecorder;
     private CameraCaptureSession mPreviewCaptureSession;
@@ -102,28 +124,6 @@ public class InclinometroActivity extends AppCompatActivity implements SensorEve
         public void onError(CameraDevice camera, int error) {
             camera.close();
             mCameraDevice = null;
-        }
-    };
-    private final TextureView.SurfaceTextureListener mSurfaceTextureListener = new TextureView.SurfaceTextureListener() {
-        @Override
-        public void onSurfaceTextureAvailable(SurfaceTexture surface, int width, int height) {
-            setupCamera(width, height);
-            connectCamera();
-        }
-
-        @Override
-        public void onSurfaceTextureSizeChanged(SurfaceTexture surface, int width, int height) {
-
-        }
-
-        @Override
-        public boolean onSurfaceTextureDestroyed(SurfaceTexture surface) {
-            return false;
-        }
-
-        @Override
-        public void onSurfaceTextureUpdated(SurfaceTexture surface) {
-
         }
     };
     private double x = 0;

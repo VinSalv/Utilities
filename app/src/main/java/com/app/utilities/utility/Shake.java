@@ -28,7 +28,7 @@ public class Shake {
         }
 
         public void onAccuracyChanged(Sensor sensor, int accuracy) {
-            // unused
+
         }
     };
 

@@ -456,14 +456,12 @@ public abstract class BarLineChartBase<T extends BarLineScatterCandleBubbleData<
                                 mViewPortHandler.getChartHeight() * mLegend.getMaxSizePercent())
                                 + mLegend.getYOffset();
 
-
                         break;
 
                     case BOTTOM:
                         offsets.bottom += Math.min(mLegend.mNeededHeight,
                                 mViewPortHandler.getChartHeight() * mLegend.getMaxSizePercent())
                                 + mLegend.getYOffset();
-
 
                         break;
 

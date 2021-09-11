@@ -1526,7 +1526,6 @@ public abstract class Chart<T extends ChartData<? extends IDataSet<? extends Ent
      */
     public boolean saveToPath(String title, String pathOnSD) {
 
-
         Bitmap b = getChartBitmap();
 
         OutputStream stream = null;

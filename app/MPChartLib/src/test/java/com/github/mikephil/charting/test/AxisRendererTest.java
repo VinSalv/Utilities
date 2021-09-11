@@ -13,7 +13,6 @@ import static junit.framework.Assert.assertEquals;
  */
 public class AxisRendererTest {
 
-
     @Test
     public void testComputeAxisValues() {
 

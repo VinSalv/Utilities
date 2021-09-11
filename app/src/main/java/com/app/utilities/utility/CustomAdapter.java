@@ -14,7 +14,6 @@ import com.app.utilities.R;
 
 import java.util.List;
 
-
 public class CustomAdapter extends BaseAdapter {
 
     final Context context;

@@ -20,7 +20,6 @@ public final class FSize extends ObjectPool.Poolable {
     public float width;
     public float height;
 
-
     public FSize() {
     }
 

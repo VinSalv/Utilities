@@ -320,15 +320,6 @@ public class LivellaActivity extends AppCompatActivity implements SensorEventLis
         }
 
         public void onSensorEvent(@NonNull SensorEvent event) {
-            // In this example, alpha is calculated as t / (t + dT),
-            // where t is the low-pass filter's time-constant and
-            // dT is the event delivery rate.
-            //Filter Coefficient/Alpha: A value 0 < a < 1 that determines how much weight
-            // should be applied to the high-pass and sometimes the low-pass portion of the signal.
-            //Time Constant/T: The time constant, T, is the relative duration of the signal
-            // that the filter will act on. That means that on a low-pass filter, signals that
-            // are much longer than the time constant will pass through unaltered, but signals
-            // that are shorter than the time constant with be ignored.
 
             x = x + alpha * (event.values[0] - x);
             y = y + alpha * (event.values[1] - y);
@@ -393,7 +384,6 @@ public class LivellaActivity extends AppCompatActivity implements SensorEventLis
         double mapY(double y, double hg) {
             return (float) ((((hg - (CIRCLE_RADIOUS * 2)) / 20) * (-y)) + (hg / 2));
         }
-
 
         public float getArcCos(double x, double y) {
             return (float) (Math.toDegrees(Math.acos((x / (Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2)))))));

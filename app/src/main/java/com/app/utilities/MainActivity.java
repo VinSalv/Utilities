@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
     @SuppressWarnings("unused")
     private boolean doubleBackToExitPressedOnce;
 
-
     @SuppressWarnings("unused")
     public static boolean isOnDarkMode(Configuration configuration) {
         return (configuration.uiMode & Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES;

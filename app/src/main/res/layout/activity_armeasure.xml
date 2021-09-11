@@ -27,8 +27,11 @@
             android:layout_margin="10dp"
             android:background="?attr/colorPrimaryDark"
             android:contentDescription="@string/todo"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
             android:padding="10dp"
-            app:srcCompat="@drawable/ic_arrow_back_black" />
+            app:srcCompat="@drawable/ic_arrow_back_black"
+            tools:ignore="DuplicateSpeakableTextCheck" />
 
         <ImageButton
             android:id="@+id/refresh"
@@ -37,6 +40,8 @@
             android:layout_margin="10dp"
             android:background="?attr/colorPrimaryDark"
             android:contentDescription="@string/todo"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
             android:padding="10dp"
             app:srcCompat="@drawable/ic_refresh" />
 
@@ -59,6 +64,8 @@
             android:layout_margin="10dp"
             android:background="?attr/colorPrimaryDark"
             android:contentDescription="@string/todo"
+            android:minWidth="48dp"
+            android:minHeight="48dp"
             android:padding="1dp"
             app:srcCompat="@drawable/ic_share_black" />
 

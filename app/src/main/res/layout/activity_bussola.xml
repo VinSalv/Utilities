@@ -46,7 +46,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-
         <ImageView
             android:id="@+id/main_image_hands"
             android:layout_width="20dp"

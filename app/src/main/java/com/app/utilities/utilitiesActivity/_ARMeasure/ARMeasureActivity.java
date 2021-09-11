@@ -105,7 +105,6 @@ public class ARMeasureActivity extends AppCompatActivity {
             Objects.requireNonNull(this.getSupportActionBar()).hide();
         } catch (Exception e) {
             e.printStackTrace();
-
         }
 
         setContentView(R.layout.activity_armeasure);
@@ -165,7 +164,6 @@ public class ARMeasureActivity extends AppCompatActivity {
                 Toast.makeText(ARMeasureActivity.this, "Salvare le misure prima di condividere", Toast.LENGTH_SHORT).show();
         });
 
-
         sk_height_control.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
@@ -173,7 +171,7 @@ public class ARMeasureActivity extends AppCompatActivity {
                 fl_measurement = progress / 100f;
                 text.setText("Altezza: " + form_numbers.format(fl_measurement));
                 myanchornode.setLocalScale(new Vector3(1f, progress / 10f, 1f));
-                //ascend(myanchornode, upDistance);
+
             }
 
             @Override
@@ -276,12 +274,6 @@ public class ARMeasureActivity extends AppCompatActivity {
         session.configure(config);
     }
 
-    /**
-     * Function to raise an object perpendicular to the ArPlane a specific distance
-     *
-     * @param an anchor belonging to the object that should be raised
-     * @param up distance in centimeters the object should be raised vertically
-     */
     @SuppressWarnings("unused")
     private void ascend(AnchorNode an, float up) {
         Anchor anchor = myhit.getTrackable().createAnchor(
@@ -290,13 +282,6 @@ public class ARMeasureActivity extends AppCompatActivity {
         an.setAnchor(anchor);
     }
 
-    /**
-     * Function to return the distance in meters between two objects placed in ArPlane
-     *
-     * @param anchor1 first object's anchor
-     * @param anchor2 second object's anchor
-     * @return the distance between the two anchors in meters
-     */
     private float getMetersBetweenAnchors(Anchor anchor1, Anchor anchor2) {
         float[] distance_vector = anchor1.getPose().inverse()
                 .compose(anchor2.getPose()).getTranslation();
@@ -323,9 +308,6 @@ public class ARMeasureActivity extends AppCompatActivity {
         dialog.show();
     }
 
-    /**
-     * Set layout to its initial state
-     */
     private void resetLayout() {
         sk_height_control.setProgress(10);
         sk_height_control.setEnabled(false);

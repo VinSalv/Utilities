@@ -435,7 +435,6 @@ public class YAxis extends AxisBase {
         OUTSIDE_CHART, INSIDE_CHART
     }
 
-
     /**
      * Enum that specifies the axis a DataSet should be plotted against, either LEFT or RIGHT.
      *

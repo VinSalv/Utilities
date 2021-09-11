@@ -128,10 +128,6 @@
         "source": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\src\\main\\res\\raw\\cubito2.sfb"
     },
     {
-        "merged": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\build\\intermediates\\merged_res\\debug\\drawable_orizzontale.png.flat",
-        "source": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\src\\main\\res\\drawable\\orizzontale.png"
-    },
-    {
         "merged": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\build\\intermediates\\merged_res\\debug\\layout_activity_altri_sensori.xml.flat",
         "source": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\src\\main\\res\\layout\\activity_altri_sensori.xml"
     },
@@ -200,10 +196,6 @@
         "source": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\src\\main\\res\\menu\\list_options.xml"
     },
     {
-        "merged": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\build\\intermediates\\merged_res\\debug\\drawable_verticale.png.flat",
-        "source": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\src\\main\\res\\drawable\\verticale.png"
-    },
-    {
         "merged": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\build\\intermediates\\merged_res\\debug\\drawable_green.jpg.flat",
         "source": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\src\\main\\res\\drawable\\green.jpg"
     },
@@ -250,10 +242,6 @@
     {
         "merged": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\build\\intermediates\\merged_res\\debug\\drawable_ic_pause.xml.flat",
         "source": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\src\\main\\res\\drawable\\ic_pause.xml"
-    },
-    {
-        "merged": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\build\\intermediates\\merged_res\\debug\\drawable_cross.png.flat",
-        "source": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\src\\main\\res\\drawable\\cross.png"
     },
     {
         "merged": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\build\\intermediates\\merged_res\\debug\\xml_preferences_moneta.xml.flat",

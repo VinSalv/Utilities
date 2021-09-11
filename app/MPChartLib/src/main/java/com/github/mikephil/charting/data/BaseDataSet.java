@@ -106,7 +106,6 @@ public abstract class BaseDataSet<T extends Entry> implements IDataSet<T> {
         calcMinMax();
     }
 
-
     /**
      * ###### ###### COLOR GETTING RELATED METHODS ##### ######
      */
@@ -411,7 +410,6 @@ public abstract class BaseDataSet<T extends Entry> implements IDataSet<T> {
     public void setAxisDependency(YAxis.AxisDependency dependency) {
         mAxisDependency = dependency;
     }
-
 
     /**
      * ###### ###### DATA RELATED METHODS ###### ######

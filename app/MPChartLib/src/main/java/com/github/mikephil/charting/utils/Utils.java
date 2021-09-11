@@ -698,7 +698,6 @@ public abstract class Utils {
                 (int) Math.max(Math.ceil(constrainedToSize.width), 1.f),
                 Layout.Alignment.ALIGN_NORMAL, 1.f, 0.f, false);
 
-
         drawMultilineText(c, textLayout, x, y, paint, anchor, angleDegrees);
     }
 

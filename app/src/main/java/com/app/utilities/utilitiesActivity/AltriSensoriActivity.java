@@ -594,17 +594,9 @@ public class AltriSensoriActivity extends AppCompatActivity implements SensorEve
             case "luminosità":
                 leftAxis.setAxisMinimum(0f);
                 break;
-            /*case "pressione":
-                leftAxis.setAxisMaximum(mPressure.getMaximumRange());
-                leftAxis.setAxisMinimum(-mPressure.getMaximumRange());
-                break;
-            case "temperatura":
-                leftAxis.setAxisMaximum(mTemperature.getMaximumRange());
-                leftAxis.setAxisMinimum(-mTemperature.getMaximumRange());
-                break;
-             */
+
             case "umnidità":
-                //noinspection DuplicateBranchesInSwitch
+
                 leftAxis.setAxisMinimum(0f);
                 break;
         }
@@ -710,7 +702,7 @@ public class AltriSensoriActivity extends AppCompatActivity implements SensorEve
             while (true) {
                 plotData = true;
                 try {
-                    //noinspection BusyWait
+
                     Thread.sleep(10);
                 } catch (InterruptedException e) {
                     e.printStackTrace();

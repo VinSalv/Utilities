@@ -25,7 +25,6 @@ public abstract class LineScatterCandleRadarDataSet<T extends Entry> extends Bar
      */
     protected DashPathEffect mHighlightDashPathEffect = null;
 
-
     public LineScatterCandleRadarDataSet(List<T> yVals, String label) {
         super(yVals, label);
         mHighlightLineWidth = Utils.convertDpToPixel(0.5f);

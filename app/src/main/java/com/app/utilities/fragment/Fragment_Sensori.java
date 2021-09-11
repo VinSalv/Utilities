@@ -530,23 +530,12 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
         YAxis leftAxis = chart.getAxisLeft();
         leftAxis.setTextColor(Color.BLACK);
         leftAxis.setDrawGridLines(false);
-        //noinspection CommentedOutCode
+
         switch (sensor) {
             case "accelerometro":
                 leftAxis.setAxisMaximum(10f);
                 leftAxis.setAxisMinimum(-10f);
-            /*
-            case "giroscopio":
-                leftAxis.setAxisMaximum(10f);
-                leftAxis.setAxisMinimum(-10f);
-                break;
-             */
-            /*
-            case "magnetometro":
-                leftAxis.setAxisMaximum(80);
-                leftAxis.setAxisMinimum(-80);
-                break;
-            */
+
         }
         YAxis rightAxis = chart.getAxisRight();
         rightAxis.setEnabled(false);
@@ -718,7 +707,7 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
             while (true) {
                 plotData = true;
                 try {
-                    //noinspection BusyWait
+
                     Thread.sleep(10);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
@@ -770,4 +759,3 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
         super.onDestroy();
     }
 }
-

@@ -1,5 +1,5 @@
 <resources>
-    <!-- Reply Preference -->
+
     <string-array name="themes_values">
         <item>LightTheme</item>
         <item>DarkTheme</item>
@@ -10,7 +10,6 @@
 
     </string-array>
 
-    <!-- List Sorte -->
     <array name="sorte_images">
         <item>@drawable/ic_dice</item>
         <item>@drawable/ic_csf</item>
@@ -23,7 +22,6 @@
         <item>Testa o Croce</item>
     </string-array>
 
-    <!-- List Orientazione -->
     <array name="orientazione_images">
         <item>@drawable/ic_ruler</item>
         <item>@drawable/ic_bubble_level</item>
