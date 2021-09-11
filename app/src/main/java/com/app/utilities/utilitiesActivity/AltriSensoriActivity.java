@@ -248,33 +248,28 @@ public class AltriSensoriActivity extends AppCompatActivity implements SensorEve
         speedLig.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                sensorManager.unregisterListener(AltriSensoriActivity.this, mLight);
                 switch (position) {
                     case 0:
                         ligSimpRate = SensorManager.SENSOR_DELAY_FASTEST;
+                        sensorManager.registerListener(AltriSensoriActivity.this, mLight, ligSimpRate);
                         break;
                     case 1:
                         ligSimpRate = SensorManager.SENSOR_DELAY_GAME;
+                        sensorManager.registerListener(AltriSensoriActivity.this, mLight, ligSimpRate);
                         break;
                     case 2:
                         ligSimpRate = SensorManager.SENSOR_DELAY_UI;
+                        sensorManager.registerListener(AltriSensoriActivity.this, mLight, ligSimpRate);
                         break;
                     case 3:
                     default:
                         ligSimpRate = SensorManager.SENSOR_DELAY_NORMAL;
+                        sensorManager.registerListener(AltriSensoriActivity.this, mLight, ligSimpRate);
                         break;
                     case 4:
-                        ligSimpRate = 400000;
+                        sensorManager.unregisterListener(AltriSensoriActivity.this, mLight);
                         break;
-                    case 5:
-                        ligSimpRate = 800000;
-                        break;
-                    case 6:
-                        ligSimpRate = 1000000;
-                        break;
-                }
-                if (mLight != null) {
-                    sensorManager.unregisterListener(AltriSensoriActivity.this, mLight);
-                    sensorManager.registerListener(AltriSensoriActivity.this, mLight, ligSimpRate);
                 }
             }
 
@@ -286,33 +281,28 @@ public class AltriSensoriActivity extends AppCompatActivity implements SensorEve
         speedPre.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                sensorManager.unregisterListener(AltriSensoriActivity.this, mPressure);
                 switch (position) {
                     case 0:
                         preSimpRate = SensorManager.SENSOR_DELAY_FASTEST;
+                        sensorManager.registerListener(AltriSensoriActivity.this, mPressure, preSimpRate);
                         break;
                     case 1:
                         preSimpRate = SensorManager.SENSOR_DELAY_GAME;
+                        sensorManager.registerListener(AltriSensoriActivity.this, mPressure, preSimpRate);
                         break;
                     case 2:
                         preSimpRate = SensorManager.SENSOR_DELAY_UI;
+                        sensorManager.registerListener(AltriSensoriActivity.this, mPressure, preSimpRate);
                         break;
                     case 3:
                     default:
                         preSimpRate = SensorManager.SENSOR_DELAY_NORMAL;
+                        sensorManager.registerListener(AltriSensoriActivity.this, mPressure, preSimpRate);
                         break;
                     case 4:
-                        preSimpRate = 400000;
+                        sensorManager.unregisterListener(AltriSensoriActivity.this, mPressure);
                         break;
-                    case 5:
-                        preSimpRate = 800000;
-                        break;
-                    case 6:
-                        preSimpRate = 1000000;
-                        break;
-                }
-                if (mPressure != null) {
-                    sensorManager.unregisterListener(AltriSensoriActivity.this, mPressure);
-                    sensorManager.registerListener(AltriSensoriActivity.this, mPressure, preSimpRate);
                 }
             }
 
@@ -324,33 +314,28 @@ public class AltriSensoriActivity extends AppCompatActivity implements SensorEve
         speedTem.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                sensorManager.unregisterListener(AltriSensoriActivity.this, mTemperature);
                 switch (position) {
                     case 0:
                         temSimpRate = SensorManager.SENSOR_DELAY_FASTEST;
+                        sensorManager.registerListener(AltriSensoriActivity.this, mTemperature, temSimpRate);
                         break;
                     case 1:
                         temSimpRate = SensorManager.SENSOR_DELAY_GAME;
+                        sensorManager.registerListener(AltriSensoriActivity.this, mTemperature, temSimpRate);
                         break;
                     case 2:
                         temSimpRate = SensorManager.SENSOR_DELAY_UI;
+                        sensorManager.registerListener(AltriSensoriActivity.this, mTemperature, temSimpRate);
                         break;
                     case 3:
                     default:
                         temSimpRate = SensorManager.SENSOR_DELAY_NORMAL;
+                        sensorManager.registerListener(AltriSensoriActivity.this, mTemperature, temSimpRate);
                         break;
                     case 4:
-                        temSimpRate = 400000;
+                        sensorManager.unregisterListener(AltriSensoriActivity.this, mTemperature);
                         break;
-                    case 5:
-                        temSimpRate = 800000;
-                        break;
-                    case 6:
-                        temSimpRate = 1000000;
-                        break;
-                }
-                if (mTemperature != null) {
-                    sensorManager.unregisterListener(AltriSensoriActivity.this, mTemperature);
-                    sensorManager.registerListener(AltriSensoriActivity.this, mTemperature, temSimpRate);
                 }
             }
 
@@ -362,33 +347,28 @@ public class AltriSensoriActivity extends AppCompatActivity implements SensorEve
         speedHum.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                sensorManager.unregisterListener(AltriSensoriActivity.this, mHumidity);
                 switch (position) {
                     case 0:
                         humSimpRate = SensorManager.SENSOR_DELAY_FASTEST;
+                        sensorManager.registerListener(AltriSensoriActivity.this, mHumidity, humSimpRate);
                         break;
                     case 1:
                         humSimpRate = SensorManager.SENSOR_DELAY_GAME;
+                        sensorManager.registerListener(AltriSensoriActivity.this, mHumidity, humSimpRate);
                         break;
                     case 2:
                         humSimpRate = SensorManager.SENSOR_DELAY_UI;
+                        sensorManager.registerListener(AltriSensoriActivity.this, mHumidity, humSimpRate);
                         break;
                     case 3:
                     default:
                         humSimpRate = SensorManager.SENSOR_DELAY_NORMAL;
+                        sensorManager.registerListener(AltriSensoriActivity.this, mHumidity, humSimpRate);
                         break;
                     case 4:
-                        humSimpRate = 400000;
+                        sensorManager.unregisterListener(AltriSensoriActivity.this, mHumidity);
                         break;
-                    case 5:
-                        humSimpRate = 800000;
-                        break;
-                    case 6:
-                        humSimpRate = 1000000;
-                        break;
-                }
-                if (mHumidity != null) {
-                    sensorManager.unregisterListener(AltriSensoriActivity.this, mHumidity);
-                    sensorManager.registerListener(AltriSensoriActivity.this, mHumidity, humSimpRate);
                 }
             }
 
@@ -545,6 +525,11 @@ public class AltriSensoriActivity extends AppCompatActivity implements SensorEve
         ImageButton back = findViewById(R.id.back);
         back.setOnClickListener(v -> onBackPressed());
         mPrevConfig = new Configuration(getResources().getConfiguration());
+    }
+
+    @Override
+    public void onBackPressed() {
+        utils.goToMainActivity2(this);
     }
 
     @SuppressLint("SetTextI18n")

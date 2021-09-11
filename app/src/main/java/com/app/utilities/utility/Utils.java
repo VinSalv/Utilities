@@ -51,6 +51,16 @@ public class Utils {
         context.startActivity(intent);
     }
 
+    public void goToMainActivity2(Context context) {
+        ((Activity) context).finish();
+        Intent intent = new Intent(context, MainActivity.class);
+        intent.putExtra("from", "othersSensors");
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+        context.startActivity(intent);
+    }
+
     public void goToInfoActivity(Context context) {
         Intent intent = new Intent(context, InfoActivity.class);
         context.startActivity(intent);

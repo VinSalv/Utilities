@@ -241,36 +241,32 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
         speedAcc.setSelection(3);
         speedAcc.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemSelected(AdapterView<?> parentView, View selectedItemView,
-                                       int position, long id) {
+            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                sensorManager.unregisterListener(Fragment_Sensori.this, mAccel);
                 switch (position) {
                     case 0:
                         accSimpRate = SensorManager.SENSOR_DELAY_FASTEST;
+                        sensorManager.registerListener(Fragment_Sensori.this, mAccel, accSimpRate);
                         break;
                     case 1:
                         accSimpRate = SensorManager.SENSOR_DELAY_GAME;
+                        sensorManager.registerListener(Fragment_Sensori.this, mAccel, accSimpRate);
                         break;
                     case 2:
                         accSimpRate = SensorManager.SENSOR_DELAY_UI;
+                        sensorManager.registerListener(Fragment_Sensori.this, mAccel, accSimpRate);
                         break;
                     case 3:
                     default:
                         accSimpRate = SensorManager.SENSOR_DELAY_NORMAL;
+                        sensorManager.registerListener(Fragment_Sensori.this, mAccel, accSimpRate);
                         break;
                     case 4:
-                        accSimpRate = 400000;
+                        sensorManager.unregisterListener(Fragment_Sensori.this, mAccel);
                         break;
-                    case 5:
-                        accSimpRate = 800000;
-                        break;
-                    case 6:
-                        accSimpRate = 1000000;
-                        break;
+
                 }
-                if (mAccel != null) {
-                    sensorManager.unregisterListener(Fragment_Sensori.this, mAccel);
-                    sensorManager.registerListener(Fragment_Sensori.this, mAccel, accSimpRate);
-                }
+
             }
 
             @Override
@@ -280,36 +276,31 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
         speedGyr.setSelection(3);
         speedGyr.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemSelected(AdapterView<?> parentView, View selectedItemView,
-                                       int position, long id) {
+            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                sensorManager.unregisterListener(Fragment_Sensori.this, mGyro);
                 switch (position) {
                     case 0:
                         gyrSimpRate = SensorManager.SENSOR_DELAY_FASTEST;
+                        sensorManager.registerListener(Fragment_Sensori.this, mGyro, gyrSimpRate);
                         break;
                     case 1:
                         gyrSimpRate = SensorManager.SENSOR_DELAY_GAME;
+                        sensorManager.registerListener(Fragment_Sensori.this, mGyro, gyrSimpRate);
                         break;
                     case 2:
                         gyrSimpRate = SensorManager.SENSOR_DELAY_UI;
+                        sensorManager.registerListener(Fragment_Sensori.this, mGyro, gyrSimpRate);
                         break;
                     case 3:
                     default:
                         gyrSimpRate = SensorManager.SENSOR_DELAY_NORMAL;
+                        sensorManager.registerListener(Fragment_Sensori.this, mGyro, gyrSimpRate);
                         break;
                     case 4:
-                        gyrSimpRate = 400000;
-                        break;
-                    case 5:
-                        gyrSimpRate = 800000;
-                        break;
-                    case 6:
-                        gyrSimpRate = 1000000;
+                        sensorManager.unregisterListener(Fragment_Sensori.this, mGyro);
                         break;
                 }
-                if (mGyro != null) {
-                    sensorManager.unregisterListener(Fragment_Sensori.this, mGyro);
-                    sensorManager.registerListener(Fragment_Sensori.this, mGyro, gyrSimpRate);
-                }
+
             }
 
             @Override
@@ -319,36 +310,32 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
         speedMag.setSelection(3);
         speedMag.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
-            public void onItemSelected(AdapterView<?> parentView, View selectedItemView,
-                                       int position, long id) {
+            public void onItemSelected(AdapterView<?> parentView, View selectedItemView, int position, long id) {
+                sensorManager.unregisterListener(Fragment_Sensori.this, mMagne);
                 switch (position) {
                     case 0:
                         magSimpRate = SensorManager.SENSOR_DELAY_FASTEST;
+                        sensorManager.registerListener(Fragment_Sensori.this, mMagne, magSimpRate);
                         break;
                     case 1:
                         magSimpRate = SensorManager.SENSOR_DELAY_GAME;
+                        sensorManager.registerListener(Fragment_Sensori.this, mMagne, magSimpRate);
                         break;
                     case 2:
                         magSimpRate = SensorManager.SENSOR_DELAY_UI;
+                        sensorManager.registerListener(Fragment_Sensori.this, mMagne, magSimpRate);
                         break;
                     case 3:
                     default:
                         magSimpRate = SensorManager.SENSOR_DELAY_NORMAL;
+                        sensorManager.registerListener(Fragment_Sensori.this, mMagne, magSimpRate);
                         break;
                     case 4:
-                        magSimpRate = 400000;
+                        sensorManager.unregisterListener(Fragment_Sensori.this, mMagne);
                         break;
-                    case 5:
-                        magSimpRate = 800000;
-                        break;
-                    case 6:
-                        magSimpRate = 1000000;
-                        break;
+
                 }
-                if (mMagne != null) {
-                    sensorManager.unregisterListener(Fragment_Sensori.this, mMagne);
-                    sensorManager.registerListener(Fragment_Sensori.this, mMagne, magSimpRate);
-                }
+
             }
 
             @Override
@@ -546,14 +533,20 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
         //noinspection CommentedOutCode
         switch (sensor) {
             case "accelerometro":
+                leftAxis.setAxisMaximum(10f);
+                leftAxis.setAxisMinimum(-10f);
+            /*
             case "giroscopio":
                 leftAxis.setAxisMaximum(10f);
                 leftAxis.setAxisMinimum(-10f);
                 break;
-                /*case "magnetometro":
+             */
+            /*
+            case "magnetometro":
                 leftAxis.setAxisMaximum(80);
                 leftAxis.setAxisMinimum(-80);
-                break;*/
+                break;
+            */
         }
         YAxis rightAxis = chart.getAxisRight();
         rightAxis.setEnabled(false);

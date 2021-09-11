@@ -52,6 +52,7 @@ import java.util.List;
 @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
 public class InclinometroActivity extends AppCompatActivity implements SensorEventListener {
 
+    static final float alpha = 0.08f;
     private static final int REQUEST_CAMERA_PERMISSION_RESULT = 0;
     private static final int REQUEST_WRITE_EXTERNAL_STORAGE_PERMISSION_RESULT = 1;
     private static final SparseIntArray ORIENTATIONS = new SparseIntArray();
@@ -125,6 +126,8 @@ public class InclinometroActivity extends AppCompatActivity implements SensorEve
 
         }
     };
+    private double x = 0;
+    private double y = 0;
 
     private static int sensorToDeviceRotation(CameraCharacteristics cameraCharacteristics, int deviceOrientation) {
         int sensorOrienatation = cameraCharacteristics.get(CameraCharacteristics.SENSOR_ORIENTATION);
@@ -177,7 +180,7 @@ public class InclinometroActivity extends AppCompatActivity implements SensorEve
         mTextureView = findViewById(R.id.textureView);
         sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
         accelerometer = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
-        microsecond = SensorManager.SENSOR_DELAY_NORMAL;
+        microsecond = SensorManager.SENSOR_DELAY_GAME;
         if (accelerometer != null) {
             sensorManager.registerListener(InclinometroActivity.this, accelerometer, microsecond);
         } else {
@@ -193,8 +196,14 @@ public class InclinometroActivity extends AppCompatActivity implements SensorEve
     @Override
     public void onSensorChanged(SensorEvent event) {
         if (event.sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
-            float x = event.values[0];
-            float y = event.values[1];
+            x = x + alpha * (event.values[0] - x);
+            y = y + alpha * (event.values[1] - y);
+
+            if (x > 10) x = 10;
+            if (x < -10) x = -10;
+            if (y > 10) y = 10;
+            if (y < -10) y = -10;
+
             if ((y < 0) && (x < 0))
                 degree.setText(-util.roundAvoid(mapX(x), 1) + "°");
             else if ((y < 0) && (x > 0))
@@ -213,7 +222,7 @@ public class InclinometroActivity extends AppCompatActivity implements SensorEve
     }
 
     double mapX(double x) {
-        return (float) ((90 / 10) * x);
+        return (float) ((91.40 / 10) * x);
     }
 
     @Override

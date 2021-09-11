@@ -151,6 +151,7 @@ public class LivellaActivity extends AppCompatActivity implements SensorEventLis
 
     public class AnimatedView extends LinearLayout {
 
+        static final float alpha = 0.1f;
         private static final int CIRCLE_RADIOUS = 50;
         private static final int TEXT_SIZE = 60;
         private static final int BAR_THICKNESS = 110;
@@ -319,9 +320,18 @@ public class LivellaActivity extends AppCompatActivity implements SensorEventLis
         }
 
         public void onSensorEvent(@NonNull SensorEvent event) {
+            // In this example, alpha is calculated as t / (t + dT),
+            // where t is the low-pass filter's time-constant and
+            // dT is the event delivery rate.
+            //Filter Coefficient/Alpha: A value 0 < a < 1 that determines how much weight
+            // should be applied to the high-pass and sometimes the low-pass portion of the signal.
+            //Time Constant/T: The time constant, T, is the relative duration of the signal
+            // that the filter will act on. That means that on a low-pass filter, signals that
+            // are much longer than the time constant will pass through unaltered, but signals
+            // that are shorter than the time constant with be ignored.
 
-            x = event.values[0];
-            y = event.values[1];
+            x = x + alpha * (event.values[0] - x);
+            y = y + alpha * (event.values[1] - y);
 
             if (x > 10) x = 10;
             if (x < -10) x = -10;
@@ -339,8 +349,8 @@ public class LivellaActivity extends AppCompatActivity implements SensorEventLis
                 yRound = (float) ((-y * r) / Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2)));
             }
 
-            x_text = util.roundAvoid(getArcCos(xRound, yRound), 1);
-            y_text = util.roundAvoid(-getArcSin(xRound, yRound), 1);
+            x_text = util.roundAvoid((float) -(((45 - (CIRCLE_RADIOUS * 1.8125)) / 10) * x), 1);
+            y_text = util.roundAvoid((float) -(((45 - (CIRCLE_RADIOUS * 1.8125)) / 10) * y), 1);
 
             xRound += half_hor - CIRCLE_RADIOUS - TOLERANCE;
             yRound += half_ver - CIRCLE_RADIOUS - TOLERANCE;
@@ -369,22 +379,19 @@ public class LivellaActivity extends AppCompatActivity implements SensorEventLis
             canvas.drawLine(half_hor - CIRCLE_RADIOUS - TOLERANCE, half_ver - CIRCLE_RADIOUS - TOLERANCE - r - half_stroke, half_hor - CIRCLE_RADIOUS - TOLERANCE, half_ver - CIRCLE_RADIOUS - TOLERANCE + r + half_stroke, border);
 
             canvas.drawLine(txt_pln_start, txt_pln_hight, txt_pln_end, txt_pln_hight, textPlane);
-            if ((x > -0.1 && x < 0.1) && (y > -0.1 && y < 0.1)) {
-                canvas.drawText("X: " + 0.0 + "°", hor_start_w, ver_end_h - half_textSize, textX);
-                canvas.drawText("Y: " + 0.0 + "°", (hor_start_w * 3), ver_end_h - half_textSize, textY);
-            } else {
-                canvas.drawText("X: " + x_text + "°", hor_start_w, ver_end_h - half_textSize, textX);
-                canvas.drawText("Y: " + y_text + "°", (hor_start_w * 3), ver_end_h - half_textSize, textY);
-            }
+
+            canvas.drawText("X: " + x_text + "°", hor_start_w, ver_end_h - half_textSize, textX);
+            canvas.drawText("Y: " + y_text + "°", (hor_start_w * 3), ver_end_h - half_textSize, textY);
+
             invalidate();
         }
 
         double mapX(double x, double wd) {
-            return (float) (((wd - (CIRCLE_RADIOUS * 2)) / 20) * x + (wd / 2));
+            return (float) ((((wd - (CIRCLE_RADIOUS * 2)) / 20) * x) + (wd / 2));
         }
 
         double mapY(double y, double hg) {
-            return (float) ((-((hg - (CIRCLE_RADIOUS * 2)) / 20) * y) + (hg / 2));
+            return (float) ((((hg - (CIRCLE_RADIOUS * 2)) / 20) * (-y)) + (hg / 2));
         }
 
 

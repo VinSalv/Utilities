@@ -71,6 +71,12 @@ public class MainActivity extends AppCompatActivity {
         tabs.setupWithViewPager(viewPager);
         FloatingActionButton fab = binding.fab;
         fab.setOnClickListener(view -> utils.goToInfoActivity(MainActivity.this));
+        try {
+            String value = getIntent().getExtras().getString("from");
+            if (value.equals("othersSensors")) tabs.getTabAt(2).select();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         mPrevConfig = new Configuration(getResources().getConfiguration());
     }
 
