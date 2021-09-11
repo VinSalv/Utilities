@@ -385,13 +385,6 @@ public class LivellaActivity extends AppCompatActivity implements SensorEventLis
             return (float) ((((hg - (CIRCLE_RADIOUS * 2)) / 20) * (-y)) + (hg / 2));
         }
 
-        public float getArcCos(double x, double y) {
-            return (float) (Math.toDegrees(Math.acos((x / (Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2)))))));
-        }
-
-        public float getArcSin(double x, double y) {
-            return (float) (Math.toDegrees(Math.asin((y / (Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2)))))));
-        }
     }
 
 }

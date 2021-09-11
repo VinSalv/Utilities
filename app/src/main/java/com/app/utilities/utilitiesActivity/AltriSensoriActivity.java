@@ -567,7 +567,6 @@ public class AltriSensoriActivity extends AppCompatActivity implements SensorEve
     public void onAccuracyChanged(Sensor sensor, int accuracy) {
     }
 
-    @SuppressWarnings("CommentedOutCode")
     private void config(LineChart chart, String sensor) {
         chart.getDescription().setEnabled(false);
         chart.setTouchEnabled(true);
@@ -592,8 +591,6 @@ public class AltriSensoriActivity extends AppCompatActivity implements SensorEve
         leftAxis.setDrawGridLines(false);
         switch (sensor) {
             case "luminosità":
-                leftAxis.setAxisMinimum(0f);
-                break;
 
             case "umnidità":
 
@@ -694,6 +691,7 @@ public class AltriSensoriActivity extends AppCompatActivity implements SensorEve
         return set;
     }
 
+    @SuppressWarnings("BusyWait")
     private void feedMultiple() {
         if (thread != null) {
             thread.interrupt();

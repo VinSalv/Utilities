@@ -11,6 +11,7 @@
         <ignore path="src/main/res/drawable/ic_compass.png" />
         <ignore path="src/main/res/drawable/ic_csf.png" />
         <ignore path="src/main/res/drawable/ic_dice.png" />
+        <ignore path="src/main/res/drawable/ic_protractor.png" />
         <ignore path="src/main/res/drawable/ic_ruler.png" />
         <ignore path="src/main/res/drawable/ic_testa_o_croce.png" />
         <ignore path="src/main/res/drawable/paper_blue.png" />

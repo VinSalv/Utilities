@@ -77,8 +77,8 @@ com/app/utilities/utility/CustomAdapter.java
  com.app.utilities.utility.CustomAdapter
  com.app.utilities.utility.CustomAdapter$1
  com.app.utilities.utility.CustomAdapter$ViewHolder
-com/app/utilities/databinding/ActivityMonetaBinding.java
- com.app.utilities.databinding.ActivityMonetaBinding
+com/app/utilities/utility/Utils.java
+ com.app.utilities.utility.Utils
 com/app/utilities/utilitiesActivity/inclinometro/InclinometroActivity.java
  com.app.utilities.utilitiesActivity.inclinometro.InclinometroActivity
  com.app.utilities.utilitiesActivity.inclinometro.InclinometroActivity$1
@@ -92,9 +92,9 @@ com/app/utilities/utilitiesActivity/moneta/PreferencesMoneta.java
 com/app/utilities/utilitiesActivity/_ARMeasure/Arl_saved.java
  com.app.utilities.utilitiesActivity._ARMeasure.Arl_saved
  com.app.utilities.utilitiesActivity._ARMeasure.Arl_saved$1
-com/app/utilities/settings/SettingsActivity.java
- com.app.utilities.settings.SettingsActivity
- com.app.utilities.settings.SettingsActivity$SettingsFragment
+com/app/utilities/utilitiesActivity/_ARMeasure/ARMeasureActivity.java
+ com.app.utilities.utilitiesActivity._ARMeasure.ARMeasureActivity
+ com.app.utilities.utilitiesActivity._ARMeasure.ARMeasureActivity$1
 com/app/utilities/databinding/FragmentMainBinding.java
  com.app.utilities.databinding.FragmentMainBinding
 com/app/utilities/databinding/ActivityInclinometroBinding.java
@@ -117,8 +117,8 @@ com/app/utilities/databinding/ActivityAltriSensoriBinding.java
  com.app.utilities.databinding.ActivityAltriSensoriBinding
 com/app/utilities/databinding/PreferenzeDadoActivityBinding.java
  com.app.utilities.databinding.PreferenzeDadoActivityBinding
-com/app/utilities/utility/Utils.java
- com.app.utilities.utility.Utils
-com/app/utilities/utilitiesActivity/_ARMeasure/ARMeasureActivity.java
- com.app.utilities.utilitiesActivity._ARMeasure.ARMeasureActivity
- com.app.utilities.utilitiesActivity._ARMeasure.ARMeasureActivity$1
+com/app/utilities/settings/SettingsActivity.java
+ com.app.utilities.settings.SettingsActivity
+ com.app.utilities.settings.SettingsActivity$SettingsFragment
+com/app/utilities/databinding/ActivityMonetaBinding.java
+ com.app.utilities.databinding.ActivityMonetaBinding

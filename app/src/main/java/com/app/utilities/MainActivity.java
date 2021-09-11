@@ -23,6 +23,8 @@ import com.app.utilities.utility.Utils;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.tabs.TabLayout;
 
+import java.util.Objects;
+
 @SuppressWarnings("unused")
 public class MainActivity extends AppCompatActivity {
 
@@ -72,7 +74,7 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(view -> utils.goToInfoActivity(MainActivity.this));
         try {
             String value = getIntent().getExtras().getString("from");
-            if (value.equals("othersSensors")) tabs.getTabAt(2).select();
+            if (value.equals("othersSensors")) Objects.requireNonNull(tabs.getTabAt(2)).select();
         } catch (Exception e) {
             e.printStackTrace();
         }
