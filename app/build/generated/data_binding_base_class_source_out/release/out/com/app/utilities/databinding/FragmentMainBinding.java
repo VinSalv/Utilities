@@ -54,7 +54,7 @@ public final class FragmentMainBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
-      id = R.id.section_label;
+      id = R.id.sectionLabel;
       TextView sectionLabel = ViewBindings.findChildViewById(rootView, id);
       if (sectionLabel == null) {
         break missingId;

@@ -29,13 +29,15 @@
         android:layout_width="match_parent"
         android:layout_height="5dp"
         android:layout_gravity="center"
-        android:background="@color/black" />
+        android:background="@color/black"
+        android:contentDescription="@string/todo" />
 
     <ImageView
         android:layout_width="5dp"
         android:layout_height="match_parent"
         android:layout_gravity="center"
-        android:background="@color/black" />
+        android:background="@color/black"
+        android:contentDescription="@string/todo" />
 
     <TextView
         android:id="@+id/textViewDegree"
@@ -44,7 +46,7 @@
         android:layout_gravity="center"
         android:background="?attr/colorOnBackground"
         android:padding="10dp"
-        android:text="0°"
+        android:text="@string/_0"
         android:textColor="?attr/colorPrimaryDark"
         android:textSize="60sp"
         android:textStyle="bold" />

@@ -2623,7 +2623,6 @@ drawable btn_radio_on_to_off_mtrl_animation
 drawable cameraview_focus_marker_fill
 drawable cameraview_focus_marker_outline
 drawable croce
-drawable cross
 drawable design_fab_background
 drawable design_ic_visibility
 drawable design_ic_visibility_off
@@ -2702,7 +2701,6 @@ drawable notification_template_icon_bg
 drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
-drawable orizzontale
 drawable paper_blue
 drawable paper_red
 drawable preference_list_divider_material
@@ -2719,12 +2717,9 @@ drawable testa
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
 drawable utilities
-drawable verticale
 id ALT
 id BOTTOM_END
 id BOTTOM_START
-id CSVRecommendationTextView
-id CSVTextView
 id CTRL
 id FUNCTION
 id META
@@ -3111,7 +3106,6 @@ id on
 id oneDice
 id otherSensorsButton
 id otherSensorsLayout
-id otherSensorsTextView
 id outline
 id outward
 id overshoot
@@ -3144,9 +3138,7 @@ id question
 id radio
 id ratio
 id recOtherSensorsButton
-id recOtherSensorsLayout
 id recSensorsButton
-id recSensorsLayout
 id rectangles
 id recycler_view
 id refresh
@@ -3186,7 +3178,7 @@ id search_mag_icon
 id search_plate
 id search_src_text
 id search_voice_btn
-id section_label
+id sectionLabel
 id seekbar
 id seekbar_value
 id select_dialog_listview
@@ -3608,6 +3600,7 @@ string SCF_text
 string TemperatureCheckBox
 string TemperatureNotSupported
 string Two_dices
+string _0
 string _SCFActivity
 string __arcore_cancel
 string __arcore_continue
