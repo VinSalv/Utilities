@@ -4,7 +4,7 @@
     <string name="tab_text_2">Sorte</string>
     <string name="tab_text_3">Sensori</string>
     <string name="info">Info</string>
-    <string name="copyright">Versione 24.0.0\n\n© 2021\nVincenzo Salvati &amp; Co\nRights Reserved.</string>
+    <string name="copyright">Versione 25.0.0\n\n© 2021\nVincenzo Salvati &amp; Co\nRights Reserved.</string>
     <string name="backButton">back</string>
     <string name="AccelerometerNotSupported"><b>Accelerometro:</b> Non Supportato</string>
     <string name="GyroscopeNotSupported"><b>Giroscopio:</b> Non Supportato</string>

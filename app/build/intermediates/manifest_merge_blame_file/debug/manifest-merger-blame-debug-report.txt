@@ -1,11 +1,11 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 3    package="com.app.utilities"
-4    android:versionCode="24"
-5    android:versionName="24.0" >
+4    android:versionCode="25"
+5    android:versionName="25.0" >
 6
 7    <uses-sdk
-7-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:6:5-10:55
+7-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:6:5-10:42
 8        android:maxSdkVersion="30"
 8-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:7:9-35
 9        android:minSdkVersion="16"
@@ -13,309 +13,290 @@
 10        android:targetSdkVersion="30" />
 10-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:9:9-38
 11
-12    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-12-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:12:5-79
-12-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:12:22-76
-13    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-13-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:13:5-81
-13-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:13:22-78
-14    <uses-permission android:name="android.permission.HIGH_SAMPLING_RATE_SENSORS" />
-14-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:14:5-85
-14-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:14:22-82
-15    <uses-permission android:name="android.permission.VIBRATE" />
-15-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:15:5-66
-15-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:15:22-63
-16    <uses-permission android:name="android.permission.CAMERA" />
-16-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:16:5-65
-16-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:16:22-62
-17
-18    <uses-feature
-18-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:18:5-20:35
-19        android:glEsVersion="0x00030000"
-19-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:19:9-41
-20        android:required="true" />
-20-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:20:9-32
-21    <uses-feature android:name="android.hardware.camera.ar" />
-21-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:22:5-63
-21-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:22:19-60
-22
-23    <queries>
-23-->[com.google.ar:core:1.26.0] C:\Users\vince\.gradle\caches\transforms-3\4b537e78a41c16f003bac2ea314a4f50\transformed\jetified-core-1.26.0\AndroidManifest.xml:29:5-31:15
-24        <package android:name="com.google.ar.core" />
-24-->[com.google.ar:core:1.26.0] C:\Users\vince\.gradle\caches\transforms-3\4b537e78a41c16f003bac2ea314a4f50\transformed\jetified-core-1.26.0\AndroidManifest.xml:30:9-54
-24-->[com.google.ar:core:1.26.0] C:\Users\vince\.gradle\caches\transforms-3\4b537e78a41c16f003bac2ea314a4f50\transformed\jetified-core-1.26.0\AndroidManifest.xml:30:18-51
-25    </queries>
-26    <!--
-27         Have developers add this. We don't want AUDIO permission to be auto-added to
-28         apps that just want to take pictures.
-29    -->
-30    <!-- uses-permission android:name="android.permission.RECORD_AUDIO" / -->
-31    <uses-feature
-31-->[com.otaliastudios:cameraview:2.7.1] C:\Users\vince\.gradle\caches\transforms-3\d054c6beaa09a32ad95b68fdd10c59fe\transformed\jetified-cameraview-2.7.1\AndroidManifest.xml:19:5-21:36
-32        android:name="android.hardware.camera"
-32-->[com.otaliastudios:cameraview:2.7.1] C:\Users\vince\.gradle\caches\transforms-3\d054c6beaa09a32ad95b68fdd10c59fe\transformed\jetified-cameraview-2.7.1\AndroidManifest.xml:20:9-47
-33        android:required="false" />
-33-->[com.otaliastudios:cameraview:2.7.1] C:\Users\vince\.gradle\caches\transforms-3\d054c6beaa09a32ad95b68fdd10c59fe\transformed\jetified-cameraview-2.7.1\AndroidManifest.xml:21:9-33
-34    <uses-feature
-34-->[com.otaliastudios:cameraview:2.7.1] C:\Users\vince\.gradle\caches\transforms-3\d054c6beaa09a32ad95b68fdd10c59fe\transformed\jetified-cameraview-2.7.1\AndroidManifest.xml:22:5-24:36
-35        android:name="android.hardware.camera.autofocus"
-35-->[com.otaliastudios:cameraview:2.7.1] C:\Users\vince\.gradle\caches\transforms-3\d054c6beaa09a32ad95b68fdd10c59fe\transformed\jetified-cameraview-2.7.1\AndroidManifest.xml:23:9-57
-36        android:required="false" />
-36-->[com.otaliastudios:cameraview:2.7.1] C:\Users\vince\.gradle\caches\transforms-3\d054c6beaa09a32ad95b68fdd10c59fe\transformed\jetified-cameraview-2.7.1\AndroidManifest.xml:24:9-33
-37    <uses-feature
-37-->[com.otaliastudios:cameraview:2.7.1] C:\Users\vince\.gradle\caches\transforms-3\d054c6beaa09a32ad95b68fdd10c59fe\transformed\jetified-cameraview-2.7.1\AndroidManifest.xml:25:5-27:36
-38        android:name="android.hardware.camera.front"
-38-->[com.otaliastudios:cameraview:2.7.1] C:\Users\vince\.gradle\caches\transforms-3\d054c6beaa09a32ad95b68fdd10c59fe\transformed\jetified-cameraview-2.7.1\AndroidManifest.xml:26:9-53
-39        android:required="false" />
-39-->[com.otaliastudios:cameraview:2.7.1] C:\Users\vince\.gradle\caches\transforms-3\d054c6beaa09a32ad95b68fdd10c59fe\transformed\jetified-cameraview-2.7.1\AndroidManifest.xml:27:9-33
-40    <uses-feature
-40-->[com.otaliastudios:cameraview:2.7.1] C:\Users\vince\.gradle\caches\transforms-3\d054c6beaa09a32ad95b68fdd10c59fe\transformed\jetified-cameraview-2.7.1\AndroidManifest.xml:28:5-30:36
-41        android:name="android.hardware.microphone"
-41-->[com.otaliastudios:cameraview:2.7.1] C:\Users\vince\.gradle\caches\transforms-3\d054c6beaa09a32ad95b68fdd10c59fe\transformed\jetified-cameraview-2.7.1\AndroidManifest.xml:29:9-51
-42        android:required="false" />
-42-->[com.otaliastudios:cameraview:2.7.1] C:\Users\vince\.gradle\caches\transforms-3\d054c6beaa09a32ad95b68fdd10c59fe\transformed\jetified-cameraview-2.7.1\AndroidManifest.xml:30:9-33
-43
-44    <application
-44-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:24:5-145:19
-45        android:name="androidx.multidex.MultiDexApplication"
-46        android:allowBackup="true"
-46-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:25:9-35
-47        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-47-->[androidx.core:core:1.5.0] C:\Users\vince\.gradle\caches\transforms-3\86071044eeee3ee860af8ca98bf418d5\transformed\core-1.5.0\AndroidManifest.xml:24:18-86
-48        android:configChanges="uiMode"
-48-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:26:9-39
-49        android:debuggable="true"
-50        android:fullBackupContent="@xml/backup_descriptor"
-50-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:27:9-59
-51        android:icon="@drawable/utilities"
-51-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:28:9-43
-52        android:label="@string/app_name"
-52-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:29:9-41
-53        android:roundIcon="@drawable/utilities"
-53-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:30:9-48
-54        android:screenOrientation="portrait"
-54-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:31:9-45
-55        android:supportsRtl="true"
-55-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:32:9-35
-56        android:testOnly="true"
-57        android:theme="@style/LightTheme" >
-57-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:33:9-42
-58        <meta-data
-58-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:35:9-37:40
-59            android:name="com.google.ar.core"
-59-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:36:13-46
-60            android:value="required" />
-60-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:37:13-37
-61
-62        <activity
-62-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:39:9-45:56
-63            android:name="com.app.utilities.utilitiesActivity.InfoActivity"
-63-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:40:13-59
-64            android:configChanges="uiMode"
-64-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:41:13-43
-65            android:label="@string/infoActivity"
-65-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:42:13-49
-66            android:screenOrientation="portrait"
-66-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:43:13-49
-67            android:theme="@style/LightTheme" />
-67-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:44:13-46
-68        <activity
-68-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:46:9-52:56
-69            android:name="com.app.utilities.settings.SettingsActivity"
-69-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:47:13-54
-70            android:configChanges="uiMode"
-70-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:48:13-43
-71            android:label="@string/settingsActivity"
-71-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:49:13-53
-72            android:screenOrientation="portrait"
-72-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:50:13-49
-73            android:theme="@style/LightTheme" />
-73-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:51:13-46
-74        <activity
-74-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:53:9-59:56
-75            android:name="com.app.utilities.utilitiesActivity.AltriSensoriActivity"
-75-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:54:13-67
-76            android:configChanges="uiMode"
-76-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:55:13-43
-77            android:label="@string/AltriSensoriActivity"
-77-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:56:13-57
-78            android:screenOrientation="portrait"
-78-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:57:13-49
-79            android:theme="@style/LightTheme" />
-79-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:58:13-46
-80        <activity
-80-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:60:9-66:56
-81            android:name="com.app.utilities.utilitiesActivity._ARMeasure.ARMeasureActivity"
-81-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:61:13-75
-82            android:configChanges="uiMode"
-82-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:62:13-43
-83            android:label="@string/ARMeasureActivity"
-83-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:63:13-54
-84            android:screenOrientation="portrait"
-84-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:64:13-49
-85            android:theme="@style/LightTheme" />
-85-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:65:13-46
-86        <activity
-86-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:67:9-73:56
-87            android:name="com.app.utilities.utilitiesActivity.LivellaActivity"
-87-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:68:13-62
-88            android:configChanges="uiMode"
-88-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:69:13-43
-89            android:label="@string/livellaActivity"
-89-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:70:13-52
-90            android:screenOrientation="portrait"
-90-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:71:13-49
-91            android:theme="@style/LightTheme" />
-91-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:72:13-46
-92        <activity
-92-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:74:9-80:56
-93            android:name="com.app.utilities.utilitiesActivity.bussola.BussolaActivity"
-93-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:75:13-70
-94            android:configChanges="uiMode"
-94-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:76:13-43
-95            android:label="@string/bussolaActivity"
-95-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:77:13-52
-96            android:screenOrientation="portrait"
-96-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:78:13-49
-97            android:theme="@style/LightTheme" />
-97-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:79:13-46
-98        <activity
-98-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:81:9-87:56
-99            android:name="com.app.utilities.utilitiesActivity.inclinometro.InclinometroActivity"
-99-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:82:13-80
-100            android:configChanges="uiMode"
-100-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:83:13-43
-101            android:label="InclinometroActivity"
-101-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:84:13-49
-102            android:screenOrientation="portrait"
-102-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:85:13-49
-103            android:theme="@style/LightTheme" />
-103-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:86:13-46
-104        <activity
-104-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:88:9-94:56
-105            android:name="com.app.utilities.utilitiesActivity.dado.DadoActivity"
-105-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:89:13-64
-106            android:configChanges="uiMode"
-106-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:90:13-43
-107            android:label="@string/dadoActivity"
-107-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:91:13-49
-108            android:screenOrientation="portrait"
-108-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:92:13-49
-109            android:theme="@style/LightTheme" />
-109-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:93:13-46
-110        <activity
-110-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:95:9-101:56
-111            android:name="com.app.utilities.settings.PreferenzeDado"
-111-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:96:13-52
-112            android:configChanges="uiMode"
-112-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:97:13-43
-113            android:label="@string/PrefderenzeDado"
-113-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:98:13-52
-114            android:screenOrientation="portrait"
-114-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:99:13-49
-115            android:theme="@style/LightTheme" />
-115-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:100:13-46
-116        <activity
-116-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:102:9-108:56
-117            android:name="com.app.utilities.utilitiesActivity.moneta.MonetaActivity"
-117-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:103:13-68
-118            android:configChanges="uiMode"
-118-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:104:13-43
-119            android:label="@string/monetaActivity"
-119-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:105:13-51
-120            android:screenOrientation="portrait"
-120-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:106:13-49
-121            android:theme="@style/LightTheme" />
-121-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:107:13-46
-122        <activity
-122-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:109:9-115:56
-123            android:name="com.app.utilities.settings.PreferenzeMoneta"
-123-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:110:13-54
-124            android:configChanges="uiMode"
-124-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:111:13-43
-125            android:label="@string/PrefderenzeMoneta"
-125-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:112:13-54
-126            android:screenOrientation="portrait"
-126-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:113:13-49
-127            android:theme="@style/LightTheme" />
-127-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:114:13-46
-128        <activity
-128-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:116:9-122:56
-129            android:name="com.app.utilities.utilitiesActivity.scf.SCFActivity"
-129-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:117:13-62
-130            android:configChanges="uiMode"
-130-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:118:13-43
-131            android:label="@string/_SCFActivity"
-131-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:119:13-49
-132            android:screenOrientation="portrait"
-132-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:120:13-49
-133            android:theme="@style/LightTheme" />
-133-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:121:13-46
-134        <activity
-134-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:123:9-129:56
-135            android:name="com.app.utilities.settings.PreferenzeSCF"
-135-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:124:13-51
-136            android:configChanges="uiMode"
-136-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:125:13-43
-137            android:label="@string/PrefderenzeSCF"
-137-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:126:13-51
-138            android:screenOrientation="portrait"
-138-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:127:13-49
-139            android:theme="@style/LightTheme" />
-139-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:128:13-46
-140        <activity
-140-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:131:9-144:20
-141            android:name="com.app.utilities.MainActivity"
-141-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:132:13-41
-142            android:configChanges="uiMode"
-142-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:133:13-43
-143            android:exported="true"
-143-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:134:13-36
-144            android:label="@string/app_name"
-144-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:135:13-45
-145            android:screenOrientation="portrait"
-145-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:136:13-49
-146            android:theme="@style/LightTheme" >
-146-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:137:13-46
-147            <intent-filter>
-147-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:139:13-143:29
-148                <action android:name="android.intent.action.MAIN" />
-148-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:140:17-69
-148-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:140:25-66
-149
-150                <category android:name="android.intent.category.LAUNCHER" />
-150-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:142:17-77
-150-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:142:27-74
-151            </intent-filter>
-152        </activity>
-153        <!-- The minimal version code of ARCore APK required for an app using this SDK. -->
-154        <meta-data
-154-->[com.google.ar:core:1.26.0] C:\Users\vince\.gradle\caches\transforms-3\4b537e78a41c16f003bac2ea314a4f50\transformed\jetified-core-1.26.0\AndroidManifest.xml:36:9-38:41
-155            android:name="com.google.ar.core.min_apk_version"
-155-->[com.google.ar:core:1.26.0] C:\Users\vince\.gradle\caches\transforms-3\4b537e78a41c16f003bac2ea314a4f50\transformed\jetified-core-1.26.0\AndroidManifest.xml:37:13-62
-156            android:value="211680000" /> <!-- This activity is critical for installing ARCore when it is not already present. -->
-156-->[com.google.ar:core:1.26.0] C:\Users\vince\.gradle\caches\transforms-3\4b537e78a41c16f003bac2ea314a4f50\transformed\jetified-core-1.26.0\AndroidManifest.xml:38:13-38
-157        <activity
-157-->[com.google.ar:core:1.26.0] C:\Users\vince\.gradle\caches\transforms-3\4b537e78a41c16f003bac2ea314a4f50\transformed\jetified-core-1.26.0\AndroidManifest.xml:40:9-46:80
-158            android:name="com.google.ar.core.InstallActivity"
-158-->[com.google.ar:core:1.26.0] C:\Users\vince\.gradle\caches\transforms-3\4b537e78a41c16f003bac2ea314a4f50\transformed\jetified-core-1.26.0\AndroidManifest.xml:41:13-62
-159            android:configChanges="keyboardHidden|orientation|screenSize"
-159-->[com.google.ar:core:1.26.0] C:\Users\vince\.gradle\caches\transforms-3\4b537e78a41c16f003bac2ea314a4f50\transformed\jetified-core-1.26.0\AndroidManifest.xml:42:13-74
-160            android:excludeFromRecents="true"
-160-->[com.google.ar:core:1.26.0] C:\Users\vince\.gradle\caches\transforms-3\4b537e78a41c16f003bac2ea314a4f50\transformed\jetified-core-1.26.0\AndroidManifest.xml:43:13-46
-161            android:exported="false"
-161-->[com.google.ar:core:1.26.0] C:\Users\vince\.gradle\caches\transforms-3\4b537e78a41c16f003bac2ea314a4f50\transformed\jetified-core-1.26.0\AndroidManifest.xml:44:13-37
-162            android:launchMode="singleTop"
-162-->[com.google.ar:core:1.26.0] C:\Users\vince\.gradle\caches\transforms-3\4b537e78a41c16f003bac2ea314a4f50\transformed\jetified-core-1.26.0\AndroidManifest.xml:45:13-43
-163            android:theme="@android:style/Theme.Material.Light.Dialog.Alert" />
-163-->[com.google.ar:core:1.26.0] C:\Users\vince\.gradle\caches\transforms-3\4b537e78a41c16f003bac2ea314a4f50\transformed\jetified-core-1.26.0\AndroidManifest.xml:46:13-77
-164
-165        <meta-data
-165-->[com.google.android.gms:play-services-basement:17.6.0] C:\Users\vince\.gradle\caches\transforms-3\d0303a81883e70b044b65927914677eb\transformed\jetified-play-services-basement-17.6.0\AndroidManifest.xml:23:9-25:69
-166            android:name="com.google.android.gms.version"
-166-->[com.google.android.gms:play-services-basement:17.6.0] C:\Users\vince\.gradle\caches\transforms-3\d0303a81883e70b044b65927914677eb\transformed\jetified-play-services-basement-17.6.0\AndroidManifest.xml:24:13-58
-167            android:value="@integer/google_play_services_version" />
-167-->[com.google.android.gms:play-services-basement:17.6.0] C:\Users\vince\.gradle\caches\transforms-3\d0303a81883e70b044b65927914677eb\transformed\jetified-play-services-basement-17.6.0\AndroidManifest.xml:25:13-66
-168    </application>
-169
-170</manifest>
+12    <uses-permission android:name="android.permission.VIBRATE" />
+12-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:12:5-66
+12-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:12:22-63
+13    <uses-permission android:name="android.permission.CAMERA" />
+13-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:13:5-65
+13-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:13:22-62
+14
+15    <queries>
+15-->[com.google.ar:core:1.26.0] C:\Users\vince\.gradle\caches\transforms-3\4b537e78a41c16f003bac2ea314a4f50\transformed\jetified-core-1.26.0\AndroidManifest.xml:29:5-31:15
+16        <package android:name="com.google.ar.core" />
+16-->[com.google.ar:core:1.26.0] C:\Users\vince\.gradle\caches\transforms-3\4b537e78a41c16f003bac2ea314a4f50\transformed\jetified-core-1.26.0\AndroidManifest.xml:30:9-54
+16-->[com.google.ar:core:1.26.0] C:\Users\vince\.gradle\caches\transforms-3\4b537e78a41c16f003bac2ea314a4f50\transformed\jetified-core-1.26.0\AndroidManifest.xml:30:18-51
+17    </queries>
+18    <!--
+19         Have developers add this. We don't want AUDIO permission to be auto-added to
+20         apps that just want to take pictures.
+21    -->
+22    <!-- uses-permission android:name="android.permission.RECORD_AUDIO" / -->
+23    <uses-feature
+23-->[com.otaliastudios:cameraview:2.7.1] C:\Users\vince\.gradle\caches\transforms-3\d054c6beaa09a32ad95b68fdd10c59fe\transformed\jetified-cameraview-2.7.1\AndroidManifest.xml:19:5-21:36
+24        android:name="android.hardware.camera"
+24-->[com.otaliastudios:cameraview:2.7.1] C:\Users\vince\.gradle\caches\transforms-3\d054c6beaa09a32ad95b68fdd10c59fe\transformed\jetified-cameraview-2.7.1\AndroidManifest.xml:20:9-47
+25        android:required="false" />
+25-->[com.otaliastudios:cameraview:2.7.1] C:\Users\vince\.gradle\caches\transforms-3\d054c6beaa09a32ad95b68fdd10c59fe\transformed\jetified-cameraview-2.7.1\AndroidManifest.xml:21:9-33
+26    <uses-feature
+26-->[com.otaliastudios:cameraview:2.7.1] C:\Users\vince\.gradle\caches\transforms-3\d054c6beaa09a32ad95b68fdd10c59fe\transformed\jetified-cameraview-2.7.1\AndroidManifest.xml:22:5-24:36
+27        android:name="android.hardware.camera.autofocus"
+27-->[com.otaliastudios:cameraview:2.7.1] C:\Users\vince\.gradle\caches\transforms-3\d054c6beaa09a32ad95b68fdd10c59fe\transformed\jetified-cameraview-2.7.1\AndroidManifest.xml:23:9-57
+28        android:required="false" />
+28-->[com.otaliastudios:cameraview:2.7.1] C:\Users\vince\.gradle\caches\transforms-3\d054c6beaa09a32ad95b68fdd10c59fe\transformed\jetified-cameraview-2.7.1\AndroidManifest.xml:24:9-33
+29    <uses-feature
+29-->[com.otaliastudios:cameraview:2.7.1] C:\Users\vince\.gradle\caches\transforms-3\d054c6beaa09a32ad95b68fdd10c59fe\transformed\jetified-cameraview-2.7.1\AndroidManifest.xml:25:5-27:36
+30        android:name="android.hardware.camera.front"
+30-->[com.otaliastudios:cameraview:2.7.1] C:\Users\vince\.gradle\caches\transforms-3\d054c6beaa09a32ad95b68fdd10c59fe\transformed\jetified-cameraview-2.7.1\AndroidManifest.xml:26:9-53
+31        android:required="false" />
+31-->[com.otaliastudios:cameraview:2.7.1] C:\Users\vince\.gradle\caches\transforms-3\d054c6beaa09a32ad95b68fdd10c59fe\transformed\jetified-cameraview-2.7.1\AndroidManifest.xml:27:9-33
+32    <uses-feature
+32-->[com.otaliastudios:cameraview:2.7.1] C:\Users\vince\.gradle\caches\transforms-3\d054c6beaa09a32ad95b68fdd10c59fe\transformed\jetified-cameraview-2.7.1\AndroidManifest.xml:28:5-30:36
+33        android:name="android.hardware.microphone"
+33-->[com.otaliastudios:cameraview:2.7.1] C:\Users\vince\.gradle\caches\transforms-3\d054c6beaa09a32ad95b68fdd10c59fe\transformed\jetified-cameraview-2.7.1\AndroidManifest.xml:29:9-51
+34        android:required="false" />
+34-->[com.otaliastudios:cameraview:2.7.1] C:\Users\vince\.gradle\caches\transforms-3\d054c6beaa09a32ad95b68fdd10c59fe\transformed\jetified-cameraview-2.7.1\AndroidManifest.xml:30:9-33
+35
+36    <application
+36-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:15:5-136:19
+37        android:name="androidx.multidex.MultiDexApplication"
+38        android:allowBackup="true"
+38-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:16:9-35
+39        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+39-->[androidx.core:core:1.5.0] C:\Users\vince\.gradle\caches\transforms-3\86071044eeee3ee860af8ca98bf418d5\transformed\core-1.5.0\AndroidManifest.xml:24:18-86
+40        android:configChanges="uiMode"
+40-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:17:9-39
+41        android:debuggable="true"
+42        android:fullBackupContent="@xml/backup_descriptor"
+42-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:18:9-59
+43        android:icon="@drawable/utilities"
+43-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:19:9-43
+44        android:label="@string/app_name"
+44-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:20:9-41
+45        android:roundIcon="@drawable/utilities"
+45-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:21:9-48
+46        android:screenOrientation="portrait"
+46-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:22:9-45
+47        android:supportsRtl="true"
+47-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:23:9-35
+48        android:testOnly="true"
+49        android:theme="@style/LightTheme" >
+49-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:24:9-42
+50        <meta-data
+50-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:26:9-28:40
+51            android:name="com.google.ar.core"
+51-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:27:13-46
+52            android:value="required" />
+52-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:28:13-37
+53
+54        <activity
+54-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:30:9-36:56
+55            android:name="com.app.utilities.utilitiesActivity.InfoActivity"
+55-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:31:13-59
+56            android:configChanges="uiMode"
+56-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:32:13-43
+57            android:label="@string/infoActivity"
+57-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:33:13-49
+58            android:screenOrientation="portrait"
+58-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:34:13-49
+59            android:theme="@style/LightTheme" />
+59-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:35:13-46
+60        <activity
+60-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:37:9-43:56
+61            android:name="com.app.utilities.settings.SettingsActivity"
+61-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:38:13-54
+62            android:configChanges="uiMode"
+62-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:39:13-43
+63            android:label="@string/settingsActivity"
+63-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:40:13-53
+64            android:screenOrientation="portrait"
+64-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:41:13-49
+65            android:theme="@style/LightTheme" />
+65-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:42:13-46
+66        <activity
+66-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:44:9-50:56
+67            android:name="com.app.utilities.utilitiesActivity.AltriSensoriActivity"
+67-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:45:13-67
+68            android:configChanges="uiMode"
+68-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:46:13-43
+69            android:label="@string/AltriSensoriActivity"
+69-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:47:13-57
+70            android:screenOrientation="portrait"
+70-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:48:13-49
+71            android:theme="@style/LightTheme" />
+71-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:49:13-46
+72        <activity
+72-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:51:9-57:56
+73            android:name="com.app.utilities.utilitiesActivity._ARMeasure.ARMeasureActivity"
+73-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:52:13-75
+74            android:configChanges="uiMode"
+74-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:53:13-43
+75            android:label="@string/ARMeasureActivity"
+75-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:54:13-54
+76            android:screenOrientation="portrait"
+76-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:55:13-49
+77            android:theme="@style/LightTheme" />
+77-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:56:13-46
+78        <activity
+78-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:58:9-64:56
+79            android:name="com.app.utilities.utilitiesActivity.LivellaActivity"
+79-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:59:13-62
+80            android:configChanges="uiMode"
+80-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:60:13-43
+81            android:label="@string/livellaActivity"
+81-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:61:13-52
+82            android:screenOrientation="portrait"
+82-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:62:13-49
+83            android:theme="@style/LightTheme" />
+83-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:63:13-46
+84        <activity
+84-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:65:9-71:56
+85            android:name="com.app.utilities.utilitiesActivity.bussola.BussolaActivity"
+85-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:66:13-70
+86            android:configChanges="uiMode"
+86-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:67:13-43
+87            android:label="@string/bussolaActivity"
+87-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:68:13-52
+88            android:screenOrientation="portrait"
+88-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:69:13-49
+89            android:theme="@style/LightTheme" />
+89-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:70:13-46
+90        <activity
+90-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:72:9-78:56
+91            android:name="com.app.utilities.utilitiesActivity.inclinometro.InclinometroActivity"
+91-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:73:13-80
+92            android:configChanges="uiMode"
+92-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:74:13-43
+93            android:label="InclinometroActivity"
+93-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:75:13-49
+94            android:screenOrientation="portrait"
+94-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:76:13-49
+95            android:theme="@style/LightTheme" />
+95-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:77:13-46
+96        <activity
+96-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:79:9-85:56
+97            android:name="com.app.utilities.utilitiesActivity.dado.DadoActivity"
+97-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:80:13-64
+98            android:configChanges="uiMode"
+98-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:81:13-43
+99            android:label="@string/dadoActivity"
+99-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:82:13-49
+100            android:screenOrientation="portrait"
+100-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:83:13-49
+101            android:theme="@style/LightTheme" />
+101-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:84:13-46
+102        <activity
+102-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:86:9-92:56
+103            android:name="com.app.utilities.settings.PreferenzeDado"
+103-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:87:13-52
+104            android:configChanges="uiMode"
+104-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:88:13-43
+105            android:label="@string/PrefderenzeDado"
+105-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:89:13-52
+106            android:screenOrientation="portrait"
+106-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:90:13-49
+107            android:theme="@style/LightTheme" />
+107-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:91:13-46
+108        <activity
+108-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:93:9-99:56
+109            android:name="com.app.utilities.utilitiesActivity.moneta.MonetaActivity"
+109-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:94:13-68
+110            android:configChanges="uiMode"
+110-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:95:13-43
+111            android:label="@string/monetaActivity"
+111-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:96:13-51
+112            android:screenOrientation="portrait"
+112-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:97:13-49
+113            android:theme="@style/LightTheme" />
+113-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:98:13-46
+114        <activity
+114-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:100:9-106:56
+115            android:name="com.app.utilities.settings.PreferenzeMoneta"
+115-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:101:13-54
+116            android:configChanges="uiMode"
+116-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:102:13-43
+117            android:label="@string/PrefderenzeMoneta"
+117-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:103:13-54
+118            android:screenOrientation="portrait"
+118-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:104:13-49
+119            android:theme="@style/LightTheme" />
+119-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:105:13-46
+120        <activity
+120-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:107:9-113:56
+121            android:name="com.app.utilities.utilitiesActivity.scf.SCFActivity"
+121-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:108:13-62
+122            android:configChanges="uiMode"
+122-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:109:13-43
+123            android:label="@string/_SCFActivity"
+123-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:110:13-49
+124            android:screenOrientation="portrait"
+124-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:111:13-49
+125            android:theme="@style/LightTheme" />
+125-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:112:13-46
+126        <activity
+126-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:114:9-120:56
+127            android:name="com.app.utilities.settings.PreferenzeSCF"
+127-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:115:13-51
+128            android:configChanges="uiMode"
+128-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:116:13-43
+129            android:label="@string/PrefderenzeSCF"
+129-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:117:13-51
+130            android:screenOrientation="portrait"
+130-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:118:13-49
+131            android:theme="@style/LightTheme" />
+131-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:119:13-46
+132        <activity
+132-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:122:9-135:20
+133            android:name="com.app.utilities.MainActivity"
+133-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:123:13-41
+134            android:configChanges="uiMode"
+134-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:124:13-43
+135            android:exported="true"
+135-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:125:13-36
+136            android:label="@string/app_name"
+136-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:126:13-45
+137            android:screenOrientation="portrait"
+137-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:127:13-49
+138            android:theme="@style/LightTheme" >
+138-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:128:13-46
+139            <intent-filter>
+139-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:130:13-134:29
+140                <action android:name="android.intent.action.MAIN" />
+140-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:131:17-69
+140-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:131:25-66
+141
+142                <category android:name="android.intent.category.LAUNCHER" />
+142-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:133:17-77
+142-->C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\AndroidManifest.xml:133:27-74
+143            </intent-filter>
+144        </activity>
+145        <!-- The minimal version code of ARCore APK required for an app using this SDK. -->
+146        <meta-data
+146-->[com.google.ar:core:1.26.0] C:\Users\vince\.gradle\caches\transforms-3\4b537e78a41c16f003bac2ea314a4f50\transformed\jetified-core-1.26.0\AndroidManifest.xml:36:9-38:41
+147            android:name="com.google.ar.core.min_apk_version"
+147-->[com.google.ar:core:1.26.0] C:\Users\vince\.gradle\caches\transforms-3\4b537e78a41c16f003bac2ea314a4f50\transformed\jetified-core-1.26.0\AndroidManifest.xml:37:13-62
+148            android:value="211680000" /> <!-- This activity is critical for installing ARCore when it is not already present. -->
+148-->[com.google.ar:core:1.26.0] C:\Users\vince\.gradle\caches\transforms-3\4b537e78a41c16f003bac2ea314a4f50\transformed\jetified-core-1.26.0\AndroidManifest.xml:38:13-38
+149        <activity
+149-->[com.google.ar:core:1.26.0] C:\Users\vince\.gradle\caches\transforms-3\4b537e78a41c16f003bac2ea314a4f50\transformed\jetified-core-1.26.0\AndroidManifest.xml:40:9-46:80
+150            android:name="com.google.ar.core.InstallActivity"
+150-->[com.google.ar:core:1.26.0] C:\Users\vince\.gradle\caches\transforms-3\4b537e78a41c16f003bac2ea314a4f50\transformed\jetified-core-1.26.0\AndroidManifest.xml:41:13-62
+151            android:configChanges="keyboardHidden|orientation|screenSize"
+151-->[com.google.ar:core:1.26.0] C:\Users\vince\.gradle\caches\transforms-3\4b537e78a41c16f003bac2ea314a4f50\transformed\jetified-core-1.26.0\AndroidManifest.xml:42:13-74
+152            android:excludeFromRecents="true"
+152-->[com.google.ar:core:1.26.0] C:\Users\vince\.gradle\caches\transforms-3\4b537e78a41c16f003bac2ea314a4f50\transformed\jetified-core-1.26.0\AndroidManifest.xml:43:13-46
+153            android:exported="false"
+153-->[com.google.ar:core:1.26.0] C:\Users\vince\.gradle\caches\transforms-3\4b537e78a41c16f003bac2ea314a4f50\transformed\jetified-core-1.26.0\AndroidManifest.xml:44:13-37
+154            android:launchMode="singleTop"
+154-->[com.google.ar:core:1.26.0] C:\Users\vince\.gradle\caches\transforms-3\4b537e78a41c16f003bac2ea314a4f50\transformed\jetified-core-1.26.0\AndroidManifest.xml:45:13-43
+155            android:theme="@android:style/Theme.Material.Light.Dialog.Alert" />
+155-->[com.google.ar:core:1.26.0] C:\Users\vince\.gradle\caches\transforms-3\4b537e78a41c16f003bac2ea314a4f50\transformed\jetified-core-1.26.0\AndroidManifest.xml:46:13-77
+156
+157        <meta-data
+157-->[com.google.android.gms:play-services-basement:17.6.0] C:\Users\vince\.gradle\caches\transforms-3\d0303a81883e70b044b65927914677eb\transformed\jetified-play-services-basement-17.6.0\AndroidManifest.xml:23:9-25:69
+158            android:name="com.google.android.gms.version"
+158-->[com.google.android.gms:play-services-basement:17.6.0] C:\Users\vince\.gradle\caches\transforms-3\d0303a81883e70b044b65927914677eb\transformed\jetified-play-services-basement-17.6.0\AndroidManifest.xml:24:13-58
+159            android:value="@integer/google_play_services_version" />
+159-->[com.google.android.gms:play-services-basement:17.6.0] C:\Users\vince\.gradle\caches\transforms-3\d0303a81883e70b044b65927914677eb\transformed\jetified-play-services-basement-17.6.0\AndroidManifest.xml:25:13-66
+160    </application>
+161
+162</manifest>
