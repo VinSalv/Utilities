@@ -8,6 +8,6 @@
     <path
         android:pathData="M100,10 L100,35"
         android:strokeWidth="4"
-        android:strokeColor="?android:attr/colorPrimary"
+        android:strokeColor="?attr/color"
         tools:targetApi="lollipop" />
 </vector>
