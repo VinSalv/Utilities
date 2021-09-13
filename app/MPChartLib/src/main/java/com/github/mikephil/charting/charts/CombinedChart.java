@@ -39,12 +39,10 @@ public class CombinedChart extends BarLineChartBase<CombinedData> implements Com
     @Override
     protected void init() {
         super.init();
-
         mDrawOrder = new DrawOrder[]{
                 DrawOrder.BAR, DrawOrder.BUBBLE, DrawOrder.LINE, DrawOrder.CANDLE, DrawOrder.SCATTER
         };
         setHighlighter(new CombinedHighlighter(this, this));
-
         setHighlightFullBarEnabled(true);
         mRenderer = new CombinedChartRenderer(this, mAnimator, mViewPortHandler);
     }
@@ -70,7 +68,6 @@ public class CombinedChart extends BarLineChartBase<CombinedData> implements Com
         } else {
             Highlight h = getHighlighter().getHighlight(x, y);
             if (h == null || !isHighlightFullBarEnabled()) return h;
-
             return new Highlight(h.getX(), h.getY(),
                     h.getXPx(), h.getYPx(),
                     h.getDataSetIndex(), -1, h.getAxis());
@@ -150,7 +147,6 @@ public class CombinedChart extends BarLineChartBase<CombinedData> implements Com
     }
 
     protected void drawMarkers(Canvas canvas) {
-
         if (mMarker == null || !isDrawMarkersEnabled() || !valuesToHighlight())
             return;
         for (int i = 0; i < mIndicesToHighlight.length; i++) {
@@ -160,16 +156,12 @@ public class CombinedChart extends BarLineChartBase<CombinedData> implements Com
             if (e == null)
                 continue;
             int entryIndex = set.getEntryIndex(e);
-
             if (entryIndex > set.getEntryCount() * mAnimator.getPhaseX())
                 continue;
             float[] pos = getMarkerPosition(highlight);
-
             if (!mViewPortHandler.isInBounds(pos[0], pos[1]))
                 continue;
-
             mMarker.refreshContent(e, highlight);
-
             mMarker.draw(canvas, pos[0], pos[1]);
         }
     }

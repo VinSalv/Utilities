@@ -28,7 +28,6 @@ public class MarkerView extends RelativeLayout implements IMarker {
         View inflated = LayoutInflater.from(getContext()).inflate(layoutResource, this);
         inflated.setLayoutParams(new LayoutParams(RelativeLayout.LayoutParams.WRAP_CONTENT, RelativeLayout.LayoutParams.WRAP_CONTENT));
         inflated.measure(MeasureSpec.makeMeasureSpec(0, MeasureSpec.UNSPECIFIED), MeasureSpec.makeMeasureSpec(0, MeasureSpec.UNSPECIFIED));
-
         inflated.layout(0, 0, inflated.getMeasuredWidth(), inflated.getMeasuredHeight());
     }
 
@@ -89,7 +88,6 @@ public class MarkerView extends RelativeLayout implements IMarker {
     public void draw(Canvas canvas, float posX, float posY) {
         MPPointF offset = getOffsetForDrawingAtPoint(posX, posY);
         int saveId = canvas.save();
-
         canvas.translate(posX + offset.x, posY + offset.y);
         draw(canvas);
         canvas.restoreToCount(saveId);

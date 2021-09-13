@@ -45,8 +45,6 @@ public class XAxisRenderer extends AxisRenderer {
 
     @Override
     public void computeAxis(float min, float max, boolean inverted) {
-
-
         if (mViewPortHandler.contentWidth() > 10 && !mViewPortHandler.isFullyZoomedOutX()) {
             MPPointD p1 = mTrans.getValuesByTouchPoint(mViewPortHandler.contentLeft(), mViewPortHandler.contentTop());
             MPPointD p2 = mTrans.getValuesByTouchPoint(mViewPortHandler.contentRight(), mViewPortHandler.contentTop());
@@ -152,7 +150,6 @@ public class XAxisRenderer extends AxisRenderer {
         boolean centeringEnabled = mXAxis.isCenterAxisLabelsEnabled();
         float[] positions = new float[mXAxis.mEntryCount * 2];
         for (int i = 0; i < positions.length; i += 2) {
-
             if (centeringEnabled) {
                 positions[i] = mXAxis.mCenteredEntries[i
                 2 == mXAxis.mEntryCount - 1 && mXAxis.mEntryCount > 1){
@@ -205,7 +202,6 @@ public class XAxisRenderer extends AxisRenderer {
     protected void drawGridLine(Canvas c, float x, float y, Path gridLinePath) {
         gridLinePath.moveTo(x, mViewPortHandler.contentBottom());
         gridLinePath.lineTo(x, mViewPortHandler.contentTop());
-
         c.drawPath(gridLinePath, mGridPaint);
         gridLinePath.reset();
     }
@@ -252,7 +248,6 @@ public class XAxisRenderer extends AxisRenderer {
 
     public void renderLimitLineLabel(Canvas c, LimitLine limitLine, float[] position, float yOffset) {
         String label = limitLine.getLabel();
-
         if (label != null && !label.equals("")) {
             mLimitLinePaint.setStyle(limitLine.getTextStyle());
             mLimitLinePaint.setPathEffect(null);

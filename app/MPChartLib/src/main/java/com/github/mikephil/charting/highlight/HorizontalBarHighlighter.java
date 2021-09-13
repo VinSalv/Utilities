@@ -37,13 +37,10 @@ public class HorizontalBarHighlighter extends BarHighlighter {
     @Override
     protected List<Highlight> buildHighlights(IDataSet set, int dataSetIndex, float xVal, DataSet.Rounding rounding) {
         ArrayList<Highlight> highlights = new ArrayList<>();
-
         List<Entry> entries = set.getEntriesForXValue(xVal);
         if (entries.size() == 0) {
-
             final Entry closest = set.getEntryForXValue(xVal, Float.NaN, rounding);
             if (closest != null) {
-
                 entries = set.getEntriesForXValue(closest.getX());
             }
         }

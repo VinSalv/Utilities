@@ -50,5 +50,4 @@
         android:textColor="?attr/colorPrimaryDark"
         android:textSize="60sp"
         android:textStyle="bold" />
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

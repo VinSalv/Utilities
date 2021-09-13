@@ -12,5 +12,4 @@
         android:autofillHints="@string/titolo_della_misurazione"
         android:hint="@string/titolo_della_misurazione"
         android:inputType="text" />
-
 </LinearLayout>

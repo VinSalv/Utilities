@@ -63,7 +63,6 @@ public class BubbleChartRenderer extends BarLineScatterCandleBubbleRenderer {
         sizeBuffer[2] = 1f;
         trans.pointValuesToPixel(sizeBuffer);
         boolean normalizeSize = dataSet.isNormalizeSizeEnabled();
-
         final float maxBubbleWidth = Math.abs(sizeBuffer[2] - sizeBuffer[0]);
         final float maxBubbleHeight = Math.abs(mViewPortHandler.contentBottom() - mViewPortHandler.contentTop());
         final float referenceSize = Math.min(maxBubbleHeight, maxBubbleWidth);
@@ -123,7 +122,6 @@ final BubbleEntry entry=set.getEntryForXValue(high.getX(),high.getY());
         sizeBuffer[2]=1f;
         trans.pointValuesToPixel(sizeBuffer);
         boolean normalizeSize=set.isNormalizeSizeEnabled();
-
 final float maxBubbleWidth=Math.abs(sizeBuffer[2]-sizeBuffer[0]);
 final float maxBubbleHeight=Math.abs(
         mViewPortHandler.contentBottom()-mViewPortHandler.contentTop());

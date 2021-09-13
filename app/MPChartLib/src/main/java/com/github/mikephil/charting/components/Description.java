@@ -12,7 +12,6 @@ public class Description extends ComponentBase {
 
     public Description() {
         super();
-
         mTextSize = Utils.convertDpToPixel(8f);
     }
 

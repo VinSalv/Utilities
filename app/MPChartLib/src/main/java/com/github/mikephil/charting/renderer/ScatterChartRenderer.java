@@ -75,14 +75,12 @@ public class ScatterChartRenderer extends LineScatterCandleRadarRenderer {
 
     @Override
     public void drawValues(Canvas c) {
-
         if (isDrawingValuesAllowed(mChart)) {
             List<IScatterDataSet> dataSets = mChart.getScatterData().getDataSets();
             for (int i = 0; i < mChart.getScatterData().getDataSetCount(); i++) {
                 IScatterDataSet dataSet = dataSets.get(i);
                 if (!shouldDrawValues(dataSet) || dataSet.getEntryCount() < 1)
                     continue;
-
                 applyValueTextStyle(dataSet);
                 mXBounds.set(mChart, dataSet);
                 float[] positions = mChart.getTransformer(dataSet.getAxisDependency())
@@ -95,7 +93,6 @@ public class ScatterChartRenderer extends LineScatterCandleRadarRenderer {
                 for (int j = 0; j < positions.length; j += 2) {
                     if (!mViewPortHandler.isInBoundsRight(positions[j]))
                         break;
-
                     if ((!mViewPortHandler.isInBoundsLeft(positions[j])
                             || !mViewPortHandler.isInBoundsY(positions[j + 1])))
                         continue;
@@ -143,7 +140,6 @@ public class ScatterChartRenderer extends LineScatterCandleRadarRenderer {
             MPPointD pix = mChart.getTransformer(set.getAxisDependency()).getPixelForValues(e.getX(), e.getY() * mAnimator
                     .getPhaseY());
             high.setDraw((float) pix.x, (float) pix.y);
-
             drawHighlightLines(c, (float) pix.x, (float) pix.y, set);
         }
     }

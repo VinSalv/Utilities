@@ -48,7 +48,6 @@ public class BarChart extends BarLineChartBase<BarData> implements BarDataProvid
         } else {
             mXAxis.calculate(mData.getXMin(), mData.getXMax());
         }
-
         mAxisLeft.calculate(mData.getYMin(YAxis.AxisDependency.LEFT), mData.getYMax(YAxis.AxisDependency.LEFT));
         mAxisRight.calculate(mData.getYMin(YAxis.AxisDependency.RIGHT), mData.getYMax(YAxis.AxisDependency
                 .RIGHT));
@@ -62,7 +61,6 @@ public class BarChart extends BarLineChartBase<BarData> implements BarDataProvid
         } else {
             Highlight h = getHighlighter().getHighlight(x, y);
             if (h == null || !isHighlightFullBarEnabled()) return h;
-
             return new Highlight(h.getX(), h.getY(),
                     h.getXPx(), h.getYPx(),
                     h.getDataSetIndex(), -1, h.getAxis());

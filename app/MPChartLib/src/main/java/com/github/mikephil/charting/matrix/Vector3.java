@@ -105,7 +105,6 @@ public final class Vector3 {
 
     public final float normalize() {
         final float magnitude = length();
-
         if (magnitude != 0.0f) {
             x = magnitude;
         }

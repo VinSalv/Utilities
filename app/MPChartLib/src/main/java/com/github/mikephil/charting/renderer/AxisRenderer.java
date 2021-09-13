@@ -56,8 +56,6 @@ public abstract class AxisRenderer extends Renderer {
     }
 
     public void computeAxis(float min, float max, boolean inverted) {
-
-
         if (mViewPortHandler != null && mViewPortHandler.contentWidth() > 10 && !mViewPortHandler.isFullyZoomedOutY()) {
             MPPointD p1 = mTrans.getValuesByTouchPoint(mViewPortHandler.contentLeft(), mViewPortHandler.contentTop());
             MPPointD p2 = mTrans.getValuesByTouchPoint(mViewPortHandler.contentLeft(), mViewPortHandler.contentBottom());
@@ -85,17 +83,13 @@ public abstract class AxisRenderer extends Renderer {
             mAxis.mEntryCount = 0;
             return;
         }
-
         double rawInterval = range intervalMagnitude);
         if (intervalSigDigit > 5) {
-
-
             interval = Math.floor(10.0 * intervalMagnitude) == 0.0
                     ? interval
                     : Math.floor(10.0 * intervalMagnitude);
         }
         int n = mAxis.isCenterAxisLabelsEnabled() ? 1 : 0;
-
         if (mAxis.isForceLabelsEnabled()) {
             interval = (float) range interval) *interval;
             if (mAxis.isCenterAxisLabelsEnabled()) {
@@ -113,7 +107,6 @@ public abstract class AxisRenderer extends Renderer {
             }
             mAxis.mEntryCount = n;
             if (mAxis.mEntries.length < n) {
-
                 mAxis.mEntries = new float[n];
             }
             for (f = first, i = 0; i < n; f += interval, ++i) {
@@ -122,7 +115,6 @@ public abstract class AxisRenderer extends Renderer {
                 mAxis.mEntries[i] = (float) f;
             }
         }
-
         if (interval < 1) {
             mAxis.mDecimals = (int) Math.ceil(-Math.log10(interval));
         } else {

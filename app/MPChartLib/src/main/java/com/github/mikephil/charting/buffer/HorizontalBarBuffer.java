@@ -30,7 +30,6 @@ public class HorizontalBarBuffer extends BarBuffer {
                     right = y >= 0 ? y : 0;
                     left = y <= 0 ? y : 0;
                 }
-
                 if (right > 0)
                     right *= phaseY;
                 else
@@ -40,7 +39,6 @@ public class HorizontalBarBuffer extends BarBuffer {
                 float posY = 0f;
                 float negY = -e.getNegativeSum();
                 float yStart = 0f;
-
                 for (int k = 0; k < vals.length; k++) {
                     float value = vals[k];
                     if (value >= 0f) {
@@ -62,7 +60,6 @@ public class HorizontalBarBuffer extends BarBuffer {
                         right = y >= yStart ? y : yStart;
                         left = y <= yStart ? y : yStart;
                     }
-
                     right *= phaseY;
                     left *= phaseY;
                     addBar(left, top, right, bottom);

@@ -96,7 +96,6 @@ public class ObjectPool<T extends ObjectPool.Poolable> {
             this.resizePool();
         }
         final int objectsListSize = objects.size();
-
         for (int i = 0; i < objectsListSize; i++) {
             T object = objects.get(i);
             if (object.currentOwnerId != Poolable.NO_OWNER) {

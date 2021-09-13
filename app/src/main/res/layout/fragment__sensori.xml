@@ -71,7 +71,6 @@
                 android:layout_weight="1"
                 app:srcCompat="@drawable/ic_dir"
                 tools:ignore="ContentDescription" />
-
         </LinearLayout>
 
         <CheckBox
@@ -101,7 +100,6 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/giroCheckBox" />
-
         </LinearLayout>
 
         <CheckBox
@@ -309,9 +307,6 @@
             android:textColor="?attr/colorOnSecondary"
             android:textSize="20sp"
             android:textStyle="bold"
-
             tools:targetApi="o" />
-
     </LinearLayout>
-
 </androidx.core.widget.NestedScrollView>

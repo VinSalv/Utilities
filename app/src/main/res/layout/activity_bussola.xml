@@ -8,10 +8,7 @@
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-
-    </com.google.android.material.appbar.AppBarLayout>
+        android:layout_height="wrap_content" />
 
     <ImageButton
         android:id="@+id/back"
@@ -35,5 +32,4 @@
         tools:targetApi="lollipop" />
 
     <include layout="@layout/content_bussola" />
-
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

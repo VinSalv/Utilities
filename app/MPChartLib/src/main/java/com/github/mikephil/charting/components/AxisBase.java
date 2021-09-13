@@ -169,7 +169,6 @@ public abstract class AxisBase extends ComponentBase {
 
     public void setGranularity(float granularity) {
         mGranularity = granularity;
-
         mGranularityEnabled = true;
     }
 
@@ -333,19 +332,15 @@ public abstract class AxisBase extends ComponentBase {
     }
 
     public void calculate(float dataMin, float dataMax) {
-
         float min = mCustomAxisMin ? mAxisMinimum : (dataMin - mSpaceMin);
         float max = mCustomAxisMax ? mAxisMaximum : (dataMax + mSpaceMax);
-
         float range = Math.abs(max - min);
-
         if (range == 0f) {
             max = max + 1f;
             min = min - 1f;
         }
         this.mAxisMinimum = min;
         this.mAxisMaximum = max;
-
         this.mAxisRange = Math.abs(max - min);
     }
 

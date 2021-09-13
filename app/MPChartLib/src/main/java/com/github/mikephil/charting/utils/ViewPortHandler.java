@@ -197,7 +197,6 @@ public class ViewPortHandler {
             vals[i] = 0;
         }
         outputMatrix.getValues(vals);
-
         vals[Matrix.MTRANS_X] = 0f;
         vals[Matrix.MTRANS_Y] = 0f;
         vals[Matrix.MSCALE_X] = 1f;
@@ -231,7 +230,6 @@ public class ViewPortHandler {
 
     public Matrix refresh(Matrix newMatrix, View chart, boolean invalidate) {
         mMatrixTouch.set(newMatrix);
-
         limitTransAndScale(mMatrixTouch, mContentRect);
         if (invalidate)
             chart.invalidate();
@@ -245,9 +243,7 @@ public class ViewPortHandler {
         float curScaleX = matrixBuffer[Matrix.MSCALE_X];
         float curTransY = matrixBuffer[Matrix.MTRANS_Y];
         float curScaleY = matrixBuffer[Matrix.MSCALE_Y];
-
         mScaleX = Math.min(Math.max(mMinScaleX, curScaleX), mMaxScaleX);
-
         mScaleY = Math.min(Math.max(mMinScaleY, curScaleY), mMaxScaleY);
         float width = 0f;
         float height = 0f;

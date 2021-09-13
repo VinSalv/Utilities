@@ -52,7 +52,6 @@ public abstract class ChartData<T extends IDataSet<? extends Entry>> {
         for (T set : mDataSets) {
             set.calcMinMaxY(fromX, toX);
         }
-
         calcMinMax();
     }
 
@@ -70,7 +69,6 @@ public abstract class ChartData<T extends IDataSet<? extends Entry>> {
         mLeftAxisMin = Float.MAX_VALUE;
         mRightAxisMax = -Float.MAX_VALUE;
         mRightAxisMin = Float.MAX_VALUE;
-
         T firstLeft = getFirstLeft(mDataSets);
         if (firstLeft != null) {
             mLeftAxisMax = firstLeft.getYMax();
@@ -84,7 +82,6 @@ public abstract class ChartData<T extends IDataSet<? extends Entry>> {
                 }
             }
         }
-
         T firstRight = getFirstRight(mDataSets);
         if (firstRight != null) {
             mRightAxisMax = firstRight.getYMax();
@@ -209,7 +206,6 @@ public abstract class ChartData<T extends IDataSet<? extends Entry>> {
         if (d == null)
             return false;
         boolean removed = mDataSets.remove(d);
-
         if (removed) {
             notifyDataChanged();
         }
@@ -226,7 +222,6 @@ public abstract class ChartData<T extends IDataSet<? extends Entry>> {
     public void addEntry(Entry e, int dataSetIndex) {
         if (mDataSets.size() > dataSetIndex && dataSetIndex >= 0) {
             IDataSet set = mDataSets.get(dataSetIndex);
-
             if (!set.addEntry(e))
                 return;
             calcMinMax(e, set.getAxisDependency());
@@ -280,12 +275,10 @@ public abstract class ChartData<T extends IDataSet<? extends Entry>> {
     }
 
     public boolean removeEntry(Entry e, int dataSetIndex) {
-
         if (e == null || dataSetIndex >= mDataSets.size())
             return false;
         IDataSet set = mDataSets.get(dataSetIndex);
         if (set != null) {
-
             boolean removed = set.removeEntry(e);
             if (removed) {
                 notifyDataChanged();

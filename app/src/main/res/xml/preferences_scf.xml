@@ -1,9 +1,7 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:key="prefScreenSCF">
-
     <PreferenceCategory app:title='Preferenze "Sasso Carta Forbici"'>
-
         <SwitchPreferenceCompat
             android:defaultValue="0"
             android:disableDependentsState="true"
@@ -12,16 +10,13 @@
             app:key="vibration_button_scf"
             app:title="Vibrazione sul pulsante" />
     </PreferenceCategory>
-
     <PreferenceCategory app:title='Shake'>
-
         <SwitchPreferenceCompat
             android:defaultValue="1"
             android:summaryOff='Agitanto NON otterrai i nuovi valori'
             android:summaryOn="Agitando otterrai i nuovi valori"
             app:key="shake_scf"
             app:title="Agita per ottenere i nuovi valori" />
-
         <SwitchPreferenceCompat
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -31,7 +26,5 @@
             android:summaryOn="Vibrazione allo shake attivata"
             android:title="Vibrazione allo shake"
             app:dependency="shake_scf" />
-
     </PreferenceCategory>
-
 </PreferenceScreen>

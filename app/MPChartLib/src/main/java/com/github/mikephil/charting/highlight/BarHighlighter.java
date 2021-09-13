@@ -35,7 +35,6 @@ public class BarHighlighter extends ChartHighlighter<BarDataProvider> {
         BarEntry entry = set.getEntryForXValue(xVal, yVal);
         if (entry == null)
             return null;
-
         if (entry.getYVals() == null) {
             return high;
         } else {
@@ -72,7 +71,6 @@ public class BarHighlighter extends ChartHighlighter<BarDataProvider> {
         int length = Math.max(ranges.length - 1, 0);
         return (value > ranges[length].to) ? length : 0;
     }
-
 
     @Override
     protected float getDistance(float x1, float y1, float x2, float y2) {

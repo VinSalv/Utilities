@@ -119,7 +119,6 @@ public class HorizontalBarChart extends BarChart {
         offsetTop += mOffsetsBuffer.top;
         offsetRight += mOffsetsBuffer.right;
         offsetBottom += mOffsetsBuffer.bottom;
-
         if (mAxisLeft.needsOffset()) {
             offsetTop += mAxisLeft.getRequiredHeightSpace(mAxisRendererLeft.getPaintAxisLabels());
         }
@@ -128,7 +127,6 @@ public class HorizontalBarChart extends BarChart {
         }
         float xlabelwidth = mXAxis.mLabelRotatedWidth;
         if (mXAxis.isEnabled()) {
-
             if (mXAxis.getPosition() == XAxisPosition.BOTTOM) {
                 offsetLeft += xlabelwidth;
             } else if (mXAxis.getPosition() == XAxisPosition.TOP) {

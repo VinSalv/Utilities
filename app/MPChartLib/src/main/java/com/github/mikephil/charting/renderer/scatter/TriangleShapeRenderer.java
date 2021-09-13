@@ -22,7 +22,6 @@ public class TriangleShapeRenderer implements IShapeRenderer {
         final float shapeStrokeSize = (shapeSize - shapeHoleSize) / 2.f;
         final int shapeHoleColor = dataSet.getScatterShapeHoleColor();
         renderPaint.setStyle(Paint.Style.FILL);
-
         Path tri = mTrianglePathBuffer;
         tri.reset();
         tri.moveTo(posX, posY - shapeHalf);

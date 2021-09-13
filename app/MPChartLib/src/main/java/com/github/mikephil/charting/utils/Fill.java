@@ -123,14 +123,11 @@ public class Fill {
                     c.drawColor(mFinalColor);
                     c.restoreToCount(save);
                 } else {
-
                     Paint.Style previous = paint.getStyle();
                     int previousColor = paint.getColor();
-
                     paint.setStyle(Paint.Style.FILL);
                     paint.setColor(mFinalColor);
                     c.drawRect(left, top, right, bottom, paint);
-
                     paint.setColor(previousColor);
                     paint.setStyle(previous);
                 }
@@ -188,14 +185,11 @@ public class Fill {
                     c.drawColor(mFinalColor);
                     c.restoreToCount(save);
                 } else {
-
                     Paint.Style previous = paint.getStyle();
                     int previousColor = paint.getColor();
-
                     paint.setStyle(Paint.Style.FILL);
                     paint.setColor(mFinalColor);
                     c.drawPath(path, paint);
-
                     paint.setColor(previousColor);
                     paint.setStyle(previous);
                 }

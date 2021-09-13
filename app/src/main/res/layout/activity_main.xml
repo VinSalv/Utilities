@@ -35,7 +35,6 @@
             app:tabPaddingStart="12dp"
             app:tabSelectedTextColor="?attr/colorSecondary"
             app:tabTextColor="?attr/colorOnPrimary" />
-
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.viewpager.widget.ViewPager

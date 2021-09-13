@@ -9,11 +9,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RadarDataSet extends LineRadarDataSet<RadarEntry> implements IRadarDataSet {
-
     protected boolean mDrawHighlightCircleEnabled = false;
     protected int mHighlightCircleFillColor = Color.WHITE;
-
-
     protected int mHighlightCircleStrokeColor = ColorTemplate.COLOR_NONE;
     protected int mHighlightCircleStrokeAlpha = (int) (0.3 * 255);
     protected float mHighlightCircleInnerRadius = 3.0f;
@@ -43,12 +40,10 @@ public class RadarDataSet extends LineRadarDataSet<RadarEntry> implements IRadar
         mHighlightCircleFillColor = color;
     }
 
-
     @Override
     public int getHighlightCircleStrokeColor() {
         return mHighlightCircleStrokeColor;
     }
-
 
     public void setHighlightCircleStrokeColor(int color) {
         mHighlightCircleStrokeColor = color;

@@ -22,7 +22,6 @@ public class FileUtils {
 
     public static List<Entry> loadEntriesFromFile(String path) {
         File sdcard = Environment.getExternalStorageDirectory();
-
         File file = new File(sdcard, path);
         List<Entry> entries = new ArrayList<Entry>();
         try {
@@ -45,8 +44,6 @@ public class FileUtils {
             e(LOG, e.toString());
         }
         return entries;
-
-
     }
 
     public static List<Entry> loadEntriesFromAssets(AssetManager am, String path) {
@@ -57,7 +54,6 @@ public class FileUtils {
                     new InputStreamReader(am.open(path), "UTF-8"));
             String line = reader.readLine();
             while (line != null) {
-
                 String[] split = line.split("#");
                 if (split.length <= 2) {
                     entries.add(new Entry(Float.parseFloat(split[1]), Float.parseFloat(split[0])));
@@ -82,8 +78,6 @@ public class FileUtils {
             }
         }
         return entries;
-
-
     }
 
     public static void saveToSdCard(List<Entry> entries, String path) {
@@ -97,7 +91,6 @@ public class FileUtils {
             }
         }
         try {
-
             BufferedWriter buf = new BufferedWriter(new FileWriter(saved, true));
             for (Entry e : entries) {
                 buf.append(e.getY() + "#" + e.getX());
@@ -117,7 +110,6 @@ public class FileUtils {
                     new InputStreamReader(am.open(path), "UTF-8"));
             String line = reader.readLine();
             while (line != null) {
-
                 String[] split = line.split("#");
                 entries.add(new BarEntry(Float.parseFloat(split[1]), Float.parseFloat(split[0])));
                 line = reader.readLine();
@@ -134,7 +126,5 @@ public class FileUtils {
             }
         }
         return entries;
-
-
     }
 }

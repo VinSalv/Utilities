@@ -673,7 +673,6 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
             while (true) {
                 plotData = true;
                 try {
-
                     //noinspection BusyWait
                     Thread.sleep(10);
                 } catch (InterruptedException e) {

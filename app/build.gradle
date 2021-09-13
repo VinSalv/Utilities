@@ -69,12 +69,10 @@ sceneform.asset('sampledata/cubito.fbx',
         'default',
         'sampledata/cubito.sfa',
         'src/main/res/raw/cubito')
-
 sceneform.asset('sampledata/cubito2.fbx',
         'default',
         'sampledata/cubito2.sfa',
         'src/main/res/raw/cubito2')
-
 sceneform.asset('sampledata/cubito3.fbx',
         'default',
         'sampledata/cubito3.sfa',

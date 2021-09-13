@@ -128,7 +128,6 @@ public class ObjectPoolTest {
         Assert.assertEquals(16, poolCount);
         Exception e = null;
         try {
-
             TestPoolable.recycleInstance(testPoolable);
         } catch (Exception ex) {
             e = ex;

@@ -1,9 +1,7 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:key="prefScreen">
-
     <PreferenceCategory app:title="Personalizzazione">
-
         <SwitchPreferenceCompat
             android:defaultValue="1"
             android:disableDependentsState="true"
@@ -11,7 +9,6 @@
             android:summaryOn="È impostato il tema dello smartphone"
             app:key="pred"
             app:title="Tema predefinito" />
-
         <ListPreference
             android:defaultValue="1"
             android:entries="@array/themes_entries"
@@ -19,9 +16,6 @@
             android:key="list_themes"
             android:title="Temi"
             app:dependency="pred" />
-
     </PreferenceCategory>
-
     <PreferenceCategory app:title="Altro..." />
-
 </PreferenceScreen>

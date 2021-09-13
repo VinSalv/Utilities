@@ -10,7 +10,6 @@ import com.github.mikephil.charting.utils.Utils;
 import java.util.List;
 
 public abstract class LineRadarDataSet<T extends Entry> extends LineScatterCandleRadarDataSet<T> implements ILineRadarDataSet<T> {
-
     protected Drawable mFillDrawable;
     private int mFillColor = Color.rgb(140, 234, 255);
     private int mFillAlpha = 85;

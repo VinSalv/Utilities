@@ -38,7 +38,6 @@ public class ChartDataTest {
         assertEquals(-2f, data.getYMin(), 0.01f);
         assertEquals(50f, data.getYMax(), 0.01f);
         assertEquals(3, data.getMaxEntryCountSet().getEntryCount());
-
         data.addEntry(new Entry(-10, -10), 0);
         assertEquals(set1, data.getMaxEntryCountSet());
         assertEquals(4, data.getMaxEntryCountSet().getEntryCount());
@@ -52,7 +51,6 @@ public class ChartDataTest {
         data.addEntry(new Entry(0, -100), 0);
         assertEquals(-100f, data.getYMin(YAxis.AxisDependency.LEFT), 0.01f);
         assertEquals(100f, data.getYMax(YAxis.AxisDependency.LEFT), 0.01f);
-
         assertEquals(-100, data.getYMin(YAxis.AxisDependency.RIGHT), 0.01f);
         assertEquals(100f, data.getYMax(YAxis.AxisDependency.RIGHT), 0.01f);
         List<Entry> entries3 = new ArrayList<Entry>();

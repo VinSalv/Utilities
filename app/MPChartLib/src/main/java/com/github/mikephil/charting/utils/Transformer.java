@@ -38,7 +38,6 @@ public class Transformer {
         if (Float.isInfinite(scaleY)) {
             scaleY = 0;
         }
-
         mMatrixValueToPx.reset();
         mMatrixValueToPx.postTranslate(-xChartMin, -yChartMin);
         mMatrixValueToPx.postScale(scaleX, -scaleY);
@@ -46,7 +45,6 @@ public class Transformer {
 
     public void prepareMatrixOffset(boolean inverted) {
         mMatrixOffset.reset();
-
         if (!inverted)
             mMatrixOffset.postTranslate(mViewPortHandler.offsetLeft(),
                     mViewPortHandler.getChartHeight() - mViewPortHandler.offsetBottom());
@@ -166,7 +164,6 @@ public class Transformer {
     }
 
     public void rectToPixelPhase(RectF r, float phaseY) {
-
         r.top *= phaseY;
         r.bottom *= phaseY;
         mMatrixValueToPx.mapRect(r);
@@ -175,7 +172,6 @@ public class Transformer {
     }
 
     public void rectToPixelPhaseHorizontal(RectF r, float phaseY) {
-
         r.left *= phaseY;
         r.right *= phaseY;
         mMatrixValueToPx.mapRect(r);
@@ -190,7 +186,6 @@ public class Transformer {
     }
 
     public void rectValueToPixelHorizontal(RectF r, float phaseY) {
-
         r.left *= phaseY;
         r.right *= phaseY;
         mMatrixValueToPx.mapRect(r);
@@ -207,7 +202,6 @@ public class Transformer {
     public void pixelsToValue(float[] pixels) {
         Matrix tmp = mPixelToValueMatrixBuffer;
         tmp.reset();
-
         mMatrixOffset.invert(tmp);
         tmp.mapPoints(pixels);
         mViewPortHandler.getMatrixTouch().invert(tmp);

@@ -15,11 +15,9 @@ public class ApproximatorN {
                         fromLinePoint2[0] * fromLinePoint1[1]);
         double divisor = Math.sqrt(dx * dx + dy * dy);
         return (float) (dividend 2;
-
         if (resultCount <= 2 || resultCount >= pointCount)
             return points;
         boolean[] keep = new boolean[pointCount];
-
         keep[0] = true;
         keep[pointCount - 1] = true;
         int currentStoredPoints = 2;
@@ -28,13 +26,10 @@ public class ApproximatorN {
         queue.add(line);
         do {
             line = queue.remove(queue.size() - 1);
-
             keep[line.index] = true;
-
             currentStoredPoints += 1;
             if (currentStoredPoints == resultCount)
                 break;
-
             Line left = new Line(line.start, line.index, points);
             if (left.index > 0) {
                 int insertionIndex = insertionIndex(left, queue);

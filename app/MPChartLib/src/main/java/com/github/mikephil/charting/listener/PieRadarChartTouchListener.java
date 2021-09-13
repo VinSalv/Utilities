@@ -29,8 +29,6 @@ public class PieRadarChartTouchListener extends ChartTouchListener<PieRadarChart
     public boolean onTouch(View v, MotionEvent event) {
         if (mGestureDetector.onTouchEvent(event))
             return true;
-
-
         if (mChart.isRotationEnabled()) {
             float x = event.getX();
             float y = event.getY();
@@ -115,7 +113,6 @@ public class PieRadarChartTouchListener extends ChartTouchListener<PieRadarChart
     private void sampleVelocity(float touchLocationX, float touchLocationY) {
         long currentTime = AnimationUtils.currentAnimationTimeMillis();
         _velocitySamples.add(new AngularVelocitySample(currentTime, mChart.getAngleForPoint(touchLocationX, touchLocationY)));
-
         for (int i = 0, count = _velocitySamples.size(); i < count - 2; i++) {
             if (currentTime - _velocitySamples.get(i).time > 1000) {
                 _velocitySamples.remove(0);
@@ -132,7 +129,6 @@ public class PieRadarChartTouchListener extends ChartTouchListener<PieRadarChart
             return 0.f;
         AngularVelocitySample firstSample = _velocitySamples.get(0);
         AngularVelocitySample lastSample = _velocitySamples.get(_velocitySamples.size() - 1);
-
         AngularVelocitySample beforeLastSample = firstSample;
         for (int i = _velocitySamples.size() - 1; i >= 0; i--) {
             beforeLastSample = _velocitySamples.get(i);
@@ -140,9 +136,7 @@ public class PieRadarChartTouchListener extends ChartTouchListener<PieRadarChart
                 break;
             }
         }
-
         float timeDelta = (lastSample.time - firstSample.time) timeDelta);
-
         if (!clockwise) {
             velocity = -velocity;
         }

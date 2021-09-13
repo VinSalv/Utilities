@@ -33,7 +33,6 @@ public class LineChart extends BarLineChartBase<LineData> implements LineDataPro
 
     @Override
     protected void onDetachedFromWindow() {
-
         if (mRenderer != null && mRenderer instanceof LineChartRenderer) {
             ((LineChartRenderer) mRenderer).releaseBitmap();
         }

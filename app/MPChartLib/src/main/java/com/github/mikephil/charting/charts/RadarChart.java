@@ -76,8 +76,6 @@ public class RadarChart extends PieRadarChartBase<RadarData> {
         super.onDraw(canvas);
         if (mData == null)
             return;
-
-
         if (mXAxis.isEnabled())
             mXAxisRenderer.computeAxis(mXAxis.mAxisMinimum, mXAxis.mAxisMaximum, false);
         mXAxisRenderer.renderAxisLabels(canvas);
@@ -104,7 +102,6 @@ public class RadarChart extends PieRadarChartBase<RadarData> {
 
     @Override
     public int getIndexForAngle(float angle) {
-
         float a = Utils.getNormalizedAngle(angle - getRotationAngle());
         float sliceangle = getSliceAngle();
         int max = mData.getMaxEntryCountSet().getEntryCount();

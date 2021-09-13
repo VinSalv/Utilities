@@ -28,14 +28,10 @@ public class LineDataSet extends LineRadarDataSet<Entry> implements ILineDataSet
 
     public LineDataSet(List<Entry> yVals, String label) {
         super(yVals, label);
-
-
         if (mCircleColors == null) {
             mCircleColors = new ArrayList<Integer>();
         }
         mCircleColors.clear();
-
-
         mCircleColors.add(Color.rgb(140, 234, 255));
     }
 

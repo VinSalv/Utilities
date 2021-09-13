@@ -49,9 +49,7 @@ public abstract class Utils {
     @SuppressWarnings("deprecation")
     public static void init(Context context) {
         if (context == null) {
-
             mMinimumFlingVelocity = ViewConfiguration.getMinimumFlingVelocity();
-
             mMaximumFlingVelocity = ViewConfiguration.getMaximumFlingVelocity();
             e("MPChartLib-Utils"
                     , "Utils.init(...) PROVIDED CONTEXT OBJECT IS NULL");
@@ -67,9 +65,7 @@ public abstract class Utils {
     @Deprecated
     public static void init(Resources res) {
         mMetrics = res.getDisplayMetrics();
-
         mMinimumFlingVelocity = ViewConfiguration.getMinimumFlingVelocity();
-
         mMaximumFlingVelocity = ViewConfiguration.getMaximumFlingVelocity();
     }
 
@@ -179,12 +175,10 @@ public abstract class Utils {
             lval = lval / 10;
             out[ind--] = (char) (digit + '0');
             charCount++;
-
             if (charCount == digitCount) {
                 out[ind--] = ',';
                 charCount++;
                 decimalPointAdded = true;
-
             } else if (separateThousands && lval != 0 && charCount > digitCount) {
                 if (decimalPointAdded) {
                     if ((charCount - digitCount) % 4 == 0) {
@@ -199,18 +193,15 @@ public abstract class Utils {
                 }
             }
         }
-
         if (zero) {
             out[ind--] = '0';
             charCount += 1;
         }
-
         if (neg) {
             out[ind--] = '-';
             charCount += 1;
         }
         int start = out.length - charCount;
-
         return String.valueOf(out, start, out.length - start);
     }
 
@@ -284,8 +275,6 @@ public abstract class Utils {
 
     public static void velocityTrackerPointerUpCleanUpIfNecessary(MotionEvent ev,
                                                                   VelocityTracker tracker) {
-
-
         tracker.computeCurrentVelocity(1000, mMaximumFlingVelocity);
         final int upIndex = ev.getActionIndex();
         final int id1 = ev.getPointerId(upIndex);
@@ -341,7 +330,6 @@ public abstract class Utils {
                 mDrawableBoundsCache.left + width,
                 mDrawableBoundsCache.top + width);
         int saveId = canvas.save();
-
         canvas.translate(drawOffset.x, drawOffset.y);
         drawable.draw(canvas);
         canvas.restoreToCount(saveId);
@@ -354,21 +342,15 @@ public abstract class Utils {
         float drawOffsetY = 0.f;
         final float lineHeight = paint.getFontMetrics(mFontMetricsBuffer);
         paint.getTextBounds(text, 0, text.length(), mDrawTextRectBuffer);
-
         drawOffsetX -= mDrawTextRectBuffer.left;
-
-
         drawOffsetY += -mFontMetricsBuffer.ascent;
-
         Paint.Align originalTextAlign = paint.getTextAlign();
         paint.setTextAlign(Paint.Align.LEFT);
         if (angleDegrees != 0.f) {
-
             drawOffsetX -= mDrawTextRectBuffer.width() * 0.5f;
             drawOffsetY -= lineHeight * 0.5f;
             float translateX = x;
             float translateY = y;
-
             if (anchor.x != 0.5f || anchor.y != 0.5f) {
                 final FSize rotatedSize = getSizeOfRotatedRectangleByDegrees(
                         mDrawTextRectBuffer.width(),
@@ -406,21 +388,15 @@ public abstract class Utils {
         final float lineHeight = paint.getFontMetrics(mFontMetricsBuffer);
         drawWidth = textLayout.getWidth();
         drawHeight = textLayout.getLineCount() * lineHeight;
-
         drawOffsetX -= mDrawTextRectBuffer.left;
-
-
         drawOffsetY += drawHeight;
-
         Paint.Align originalTextAlign = paint.getTextAlign();
         paint.setTextAlign(Paint.Align.LEFT);
         if (angleDegrees != 0.f) {
-
             drawOffsetX -= drawWidth * 0.5f;
             drawOffsetY -= drawHeight * 0.5f;
             float translateX = x;
             float translateY = y;
-
             if (anchor.x != 0.5f || anchor.y != 0.5f) {
                 final FSize rotatedSize = getSizeOfRotatedRectangleByDegrees(
                         drawWidth,

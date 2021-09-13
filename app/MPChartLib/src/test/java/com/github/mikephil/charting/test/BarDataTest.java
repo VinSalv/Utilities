@@ -31,7 +31,6 @@ public class BarDataTest {
         assertEquals(0f, values1.get(0).getX(), 0.01f);
         assertEquals(1f, values1.get(1).getX(), 0.01f);
         data.groupBars(1000, groupSpace, barSpace);
-
         assertEquals(1008f, values1.get(0).getX(), 0.01f);
         assertEquals(1019f, values2.get(0).getX(), 0.01f);
         assertEquals(1035f, values1.get(1).getX(), 0.01f);

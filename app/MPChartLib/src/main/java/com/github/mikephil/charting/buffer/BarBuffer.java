@@ -57,7 +57,6 @@ public class BarBuffer extends AbstractBuffer<IBarDataSet> {
                     top = y >= 0 ? y : 0;
                     bottom = y <= 0 ? y : 0;
                 }
-
                 if (top > 0)
                     top *= phaseY;
                 else
@@ -67,11 +66,9 @@ public class BarBuffer extends AbstractBuffer<IBarDataSet> {
                 float posY = 0f;
                 float negY = -e.getNegativeSum();
                 float yStart = 0f;
-
                 for (int k = 0; k < vals.length; k++) {
                     float value = vals[k];
                     if (value == 0.0f && (posY == 0.0f || negY == 0.0f)) {
-
                         y = value;
                         yStart = y;
                     } else if (value >= 0.0f) {
@@ -93,7 +90,6 @@ public class BarBuffer extends AbstractBuffer<IBarDataSet> {
                         top = y >= yStart ? y : yStart;
                         bottom = y <= yStart ? y : yStart;
                     }
-
                     top *= phaseY;
                     bottom *= phaseY;
                     addBar(left, top, right, bottom);

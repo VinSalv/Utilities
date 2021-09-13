@@ -34,18 +34,14 @@ public class YAxisRendererRadarChart extends YAxisRenderer {
             mAxis.mEntryCount = 0;
             return;
         }
-
         double rawInterval = range intervalMagnitude);
         if (intervalSigDigit > 5) {
-
-
             interval = Math.floor(10.0 * intervalMagnitude) == 0.0
                     ? interval
                     : Math.floor(10.0 * intervalMagnitude);
         }
         boolean centeringEnabled = mAxis.isCenterAxisLabelsEnabled();
         int n = centeringEnabled ? 1 : 0;
-
         if (mAxis.isForceLabelsEnabled()) {
             float step = (float) range interval) *interval;
             if (centeringEnabled) {
@@ -62,7 +58,6 @@ public class YAxisRendererRadarChart extends YAxisRenderer {
             n++;
             mAxis.mEntryCount = n;
             if (mAxis.mEntries.length < n) {
-
                 mAxis.mEntries = new float[n];
             }
             for (f = first, i = 0; i < n; f += interval, ++i) {
@@ -71,7 +66,6 @@ public class YAxisRendererRadarChart extends YAxisRenderer {
                 mAxis.mEntries[i] = (float) f;
             }
         }
-
         if (interval < 1) {
             mAxis.mDecimals = (int) Math.ceil(-Math.log10(interval));
         } else {
@@ -122,8 +116,6 @@ public class YAxisRendererRadarChart extends YAxisRenderer {
         if (limitLines == null)
             return;
         float sliceangle = mChart.getSliceAngle();
-
-
         float factor = mChart.getFactor();
         MPPointF center = mChart.getCenterOffsets();
         MPPointF pOut = MPPointF.getInstance(0, 0);

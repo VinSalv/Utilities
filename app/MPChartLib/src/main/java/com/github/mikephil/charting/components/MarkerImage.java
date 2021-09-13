@@ -122,7 +122,6 @@ public class MarkerImage implements IMarker {
                 mDrawableBoundsCache.left + (int) width,
                 mDrawableBoundsCache.top + (int) height);
         int saveId = canvas.save();
-
         canvas.translate(posX + offset.x, posY + offset.y);
         mDrawable.draw(canvas);
         canvas.restoreToCount(saveId);

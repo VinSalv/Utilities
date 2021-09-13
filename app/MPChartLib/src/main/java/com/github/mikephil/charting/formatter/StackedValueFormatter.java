@@ -29,16 +29,13 @@ public class StackedValueFormatter implements IValueFormatter {
             BarEntry barEntry = (BarEntry) entry;
             float[] vals = barEntry.getYVals();
             if (vals != null) {
-
                 if (vals[vals.length - 1] == value) {
-
                     return mFormat.format(barEntry.getY()) + mAppendix;
                 } else {
                     return "";
                 }
             }
         }
-
         return mFormat.format(value) + mAppendix;
     }
 }

@@ -21,7 +21,6 @@ public class DefaultAxisValueFormatter implements IAxisValueFormatter {
 
     @Override
     public String getFormattedValue(float value, AxisBase axis) {
-
         return mFormat.format(value);
     }
 

@@ -68,7 +68,6 @@
             android:minHeight="48dp"
             android:padding="1dp"
             app:srcCompat="@drawable/ic_share_black" />
-
     </LinearLayout>
 
     <LinearLayout
@@ -146,5 +145,4 @@
             android:src="@drawable/ic_ask"
             tools:targetApi="lollipop" />
     </LinearLayout>
-
 </FrameLayout>

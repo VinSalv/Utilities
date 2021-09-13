@@ -3,7 +3,6 @@ package com.github.mikephil.charting.utils;
 import java.util.List;
 
 public final class FSize extends ObjectPool.Poolable {
-
     private static ObjectPool<FSize> pool;
 
     static {

@@ -52,13 +52,11 @@ public class LegendRenderer extends Renderer {
     public void computeLegend(ChartData<?> data) {
         if (!mLegend.isLegendCustom()) {
             computedEntries.clear();
-
             for (int i = 0; i < data.getDataSetCount(); i++) {
                 IDataSet dataSet = data.getDataSetByIndex(i);
                 if (dataSet == null) continue;
                 List<Integer> clrs = dataSet.getColors();
                 int entryCount = dataSet.getEntryCount();
-
                 if (dataSet instanceof IBarDataSet && ((IBarDataSet) dataSet).isStacked()) {
                     IBarDataSet bds = (IBarDataSet) dataSet;
                     String[] sLabels = bds.getStackLabels();
@@ -81,7 +79,6 @@ public class LegendRenderer extends Renderer {
                         ));
                     }
                     if (bds.getLabel() != null) {
-
                         computedEntries.add(new LegendEntry(
                                 dataSet.getLabel(),
                                 Legend.LegendForm.NONE,
@@ -104,7 +101,6 @@ public class LegendRenderer extends Renderer {
                         ));
                     }
                     if (pds.getLabel() != null) {
-
                         computedEntries.add(new LegendEntry(
                                 dataSet.getLabel(),
                                 Legend.LegendForm.NONE,
@@ -137,7 +133,6 @@ public class LegendRenderer extends Renderer {
                 } else {
                     for (int j = 0; j < clrs.size() && j < entryCount; j++) {
                         String label;
-
                         if (j < clrs.size() - 1 && j < entryCount - 1) {
                             label = null;
                         } else {
@@ -164,7 +159,6 @@ public class LegendRenderer extends Renderer {
             mLegendLabelPaint.setTypeface(tf);
         mLegendLabelPaint.setTextSize(mLegend.getTextSize());
         mLegendLabelPaint.setColor(mLegend.getTextColor());
-
         mLegend.calculateDimensions(mLegendLabelPaint, mViewPortHandler);
     }
 
@@ -188,7 +182,6 @@ public class LegendRenderer extends Renderer {
         Legend.LegendVerticalAlignment verticalAlignment = mLegend.getVerticalAlignment();
         Legend.LegendDirection direction = mLegend.getDirection();
         float defaultFormSize = Utils.convertDpToPixel(mLegend.getFormSize());
-
         float stackSpace = Utils.convertDpToPixel(mLegend.getStackSpace());
         float yoffset = mLegend.getYOffset();
         float xoffset = mLegend.getXOffset();
@@ -219,8 +212,6 @@ public class LegendRenderer extends Renderer {
                 originPosX += (direction == Legend.LegendDirection.LEFT_TO_RIGHT
                         ? +xoffset
                         : -xoffset);
-
-
                 if (orientation == Legend.LegendOrientation.VERTICAL) {
                     originPosX += (direction == Legend.LegendDirection.LEFT_TO_RIGHT
                             ? -mLegend.mNeededWidth / 2.0 + xoffset
@@ -287,7 +278,6 @@ public class LegendRenderer extends Renderer {
                 break;
             }
             case VERTICAL: {
-
                 float stack = 0f;
                 boolean wasStacked = false;
                 float posY = 0.f;
@@ -338,7 +328,6 @@ public class LegendRenderer extends Renderer {
                             posY += labelLineHeight + labelLineSpacing;
                             drawLabel(c, posX, posY + labelLineHeight, e.label);
                         }
-
                         posY += labelLineHeight + labelLineSpacing;
                         stack = 0f;
                     } else {
@@ -372,10 +361,8 @@ public class LegendRenderer extends Renderer {
         final float half = formSize / 2f;
         switch (form) {
             case NONE:
-
                 break;
             case EMPTY:
-
                 break;
             case DEFAULT:
             case CIRCLE:

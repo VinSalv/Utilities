@@ -16,7 +16,6 @@
             </shape>
         </clip>
     </item>
-
     <item android:id="@android:id/progress">
         <clip>
             <shape android:shape="line">
@@ -26,5 +25,4 @@
             </shape>
         </clip>
     </item>
-
 </layer-list>

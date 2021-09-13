@@ -22,7 +22,6 @@
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
             app:title="Dadi"
             tools:targetApi="lollipop" />
-
     </com.google.android.material.appbar.AppBarLayout>
 
     <LinearLayout
@@ -49,7 +48,6 @@
             android:padding="5dp"
             android:text="@string/Roll_or_Shake_Dice"
             android:textStyle="bold"
-
             tools:targetApi="o" />
     </LinearLayout>
 
@@ -193,6 +191,5 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/diceNumber"
             tools:targetApi="o" />
-
     </androidx.constraintlayout.widget.ConstraintLayout>
 </LinearLayout>

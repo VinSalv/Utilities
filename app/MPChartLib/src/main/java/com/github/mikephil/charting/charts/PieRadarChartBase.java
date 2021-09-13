@@ -48,7 +48,6 @@ public abstract class PieRadarChartBase<T extends ChartData<? extends IDataSet<?
 
     @Override
     protected void calcMinMax() {
-
     }
 
     @Override
@@ -58,7 +57,6 @@ public abstract class PieRadarChartBase<T extends ChartData<? extends IDataSet<?
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-
         if (mTouchEnabled && mChartTouchListener != null)
             return mChartTouchListener.onTouch(this, event);
         else
@@ -93,11 +91,9 @@ public abstract class PieRadarChartBase<T extends ChartData<? extends IDataSet<?
                     if (mLegend.getHorizontalAlignment() == Legend.LegendHorizontalAlignment.LEFT
                             || mLegend.getHorizontalAlignment() == Legend.LegendHorizontalAlignment.RIGHT) {
                         if (mLegend.getVerticalAlignment() == Legend.LegendVerticalAlignment.CENTER) {
-
                             final float spacing = Utils.convertDpToPixel(13f);
                             xLegendOffset = fullLegendWidth + spacing;
                         } else {
-
                             float spacing = Utils.convertDpToPixel(8f);
                             float legendWidth = fullLegendWidth + spacing;
                             float legendHeight = mLegend.mNeededHeight + mLegend.mTextHeightMax;
@@ -148,8 +144,6 @@ public abstract class PieRadarChartBase<T extends ChartData<? extends IDataSet<?
                     float yLegendOffset = 0.f;
                     if (mLegend.getVerticalAlignment() == Legend.LegendVerticalAlignment.TOP ||
                             mLegend.getVerticalAlignment() == Legend.LegendVerticalAlignment.BOTTOM) {
-
-
                         float yOffset = getRequiredLegendOffset();
                         yLegendOffset = Math.min(mLegend.mNeededHeight + yOffset,
                                 mViewPortHandler.getChartHeight() * mLegend.getMaxSizePercent());
@@ -198,9 +192,7 @@ public abstract class PieRadarChartBase<T extends ChartData<? extends IDataSet<?
         float angle = (float) Math.toDegrees(r);
         if (x > c.x)
             angle = 360f - angle;
-
         angle = angle + 90f;
-
         if (angle > 360f)
             angle = angle - 360f;
         MPPointF.recycleInstance(c);
@@ -233,7 +225,6 @@ public abstract class PieRadarChartBase<T extends ChartData<? extends IDataSet<?
         } else {
             yDist = c.y - y;
         }
-
         dist = (float) Math.sqrt(Math.pow(xDist, 2.0) + Math.pow(yDist, 2.0));
         MPPointF.recycleInstance(c);
         return dist;
@@ -287,13 +278,11 @@ public abstract class PieRadarChartBase<T extends ChartData<? extends IDataSet<?
 
     @Override
     public float getYChartMax() {
-
         return 0;
     }
 
     @Override
     public float getYChartMin() {
-
         return 0;
     }
 

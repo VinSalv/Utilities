@@ -30,8 +30,6 @@ public class YAxisRendererHorizontalBarChart extends YAxisRenderer {
 
     @Override
     public void computeAxis(float yMin, float yMax, boolean inverted) {
-
-
         if (mViewPortHandler.contentHeight() > 10 && !mViewPortHandler.isFullyZoomedOutX()) {
             MPPointD p1 = mTrans.getValuesByTouchPoint(mViewPortHandler.contentLeft(),
                     mViewPortHandler.contentTop());
@@ -123,7 +121,6 @@ public class YAxisRendererHorizontalBarChart extends YAxisRenderer {
         }
         float[] positions = mGetTransformedPositionsBuffer;
         for (int i = 0; i < positions.length; i += 2) {
-
             positions[i] = mYAxis.mEntries[i / 2];
         }
         mTrans.pointValuesToPixel(positions);
@@ -150,7 +147,6 @@ public class YAxisRendererHorizontalBarChart extends YAxisRenderer {
         mZeroLineClippingRect.set(mViewPortHandler.getContentRect());
         mZeroLineClippingRect.inset(-mYAxis.getZeroLineWidth(), 0.f);
         c.clipRect(mLimitLineClippingRect);
-
         MPPointD pos = mTrans.getPixelForValues(0f, 0f);
         mZeroLinePaint.setColor(mYAxis.getZeroLineColor());
         mZeroLinePaint.setStrokeWidth(mYAxis.getZeroLineWidth());
@@ -158,7 +154,6 @@ public class YAxisRendererHorizontalBarChart extends YAxisRenderer {
         zeroLinePath.reset();
         zeroLinePath.moveTo((float) pos.x - 1, mViewPortHandler.contentTop());
         zeroLinePath.lineTo((float) pos.x - 1, mViewPortHandler.contentBottom());
-
         c.drawPath(zeroLinePath, mZeroLinePaint);
         c.restoreToCount(clipRestoreCount);
     }
@@ -197,7 +192,6 @@ public class YAxisRendererHorizontalBarChart extends YAxisRenderer {
             c.drawPath(limitLinePath, mLimitLinePaint);
             limitLinePath.reset();
             String label = l.getLabel();
-
             if (label != null && !label.equals("")) {
                 mLimitLinePaint.setStyle(l.getTextStyle());
                 mLimitLinePaint.setPathEffect(null);

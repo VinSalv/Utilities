@@ -26,8 +26,6 @@ public class DefaultValueFormatter implements IValueFormatter {
 
     @Override
     public String getFormattedValue(float value, Entry entry, int dataSetIndex, ViewPortHandler viewPortHandler) {
-
-
         return mFormat.format(value);
     }
 

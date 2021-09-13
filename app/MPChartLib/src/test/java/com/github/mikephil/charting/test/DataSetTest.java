@@ -123,7 +123,6 @@ public class DataSetTest {
 
     @Test
     public void testGetEntryForXValueWithDuplicates() {
-
         List<Entry> values = new ArrayList<Entry>();
         values.add(new Entry(0, 10));
         values.add(new Entry(1, 20));

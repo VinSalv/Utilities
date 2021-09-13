@@ -154,7 +154,6 @@
             android:strokeColor="?android:attr/textColorSecondary"
             tools:targetApi="lollipop" />
     </group>
-
     <group
         android:pivotX="100"
         android:pivotY="100"
@@ -165,7 +164,6 @@
             android:strokeColor="?android:attr/textColorPrimary"
             tools:targetApi="lollipop" />
     </group>
-
     <group
         android:pivotX="100"
         android:pivotY="100"
@@ -306,7 +304,6 @@
             android:strokeColor="?android:attr/textColorSecondary"
             tools:targetApi="lollipop" />
     </group>
-
     <group
         android:pivotX="100"
         android:pivotY="100"
@@ -317,7 +314,6 @@
             android:strokeColor="?android:attr/textColorPrimary"
             tools:targetApi="lollipop" />
     </group>
-
     <group
         android:pivotX="100"
         android:pivotY="100"
@@ -458,7 +454,6 @@
             android:strokeColor="?android:attr/textColorSecondary"
             tools:targetApi="lollipop" />
     </group>
-
     <group
         android:pivotX="100"
         android:pivotY="100"
@@ -469,7 +464,6 @@
             android:strokeColor="?android:attr/textColorPrimary"
             tools:targetApi="lollipop" />
     </group>
-
     <group
         android:pivotX="100"
         android:pivotY="100"
@@ -610,7 +604,6 @@
             android:strokeColor="?android:attr/textColorSecondary"
             tools:targetApi="lollipop" />
     </group>
-
     <group
         android:pivotX="100"
         android:pivotY="100"
@@ -621,7 +614,6 @@
             android:strokeColor="?android:attr/textColorPrimary"
             tools:targetApi="lollipop" />
     </group>
-
     <group
         android:pivotX="100"
         android:pivotY="100"
@@ -762,7 +754,6 @@
             android:strokeColor="?android:attr/textColorSecondary"
             tools:targetApi="lollipop" />
     </group>
-
     <group
         android:pivotX="100"
         android:pivotY="100"
@@ -773,7 +764,6 @@
             android:strokeColor="?android:attr/textColorPrimary"
             tools:targetApi="lollipop" />
     </group>
-
     <group
         android:pivotX="100"
         android:pivotY="100"
@@ -914,7 +904,6 @@
             android:strokeColor="?android:attr/textColorSecondary"
             tools:targetApi="lollipop" />
     </group>
-
     <group
         android:pivotX="100"
         android:pivotY="100"
@@ -925,7 +914,6 @@
             android:strokeColor="?android:attr/textColorPrimary"
             tools:targetApi="lollipop" />
     </group>
-
     <group
         android:pivotX="100"
         android:pivotY="100"
@@ -1066,7 +1054,6 @@
             android:strokeColor="?android:attr/textColorSecondary"
             tools:targetApi="lollipop" />
     </group>
-
     <group
         android:pivotX="100"
         android:pivotY="100"
@@ -1077,7 +1064,6 @@
             android:strokeColor="?android:attr/textColorPrimary"
             tools:targetApi="lollipop" />
     </group>
-
     <group
         android:pivotX="100"
         android:pivotY="100"
@@ -1218,7 +1204,6 @@
             android:strokeColor="?android:attr/textColorSecondary"
             tools:targetApi="lollipop" />
     </group>
-
     <group
         android:pivotX="100"
         android:pivotY="100"
@@ -1229,7 +1214,6 @@
             android:strokeColor="?android:attr/textColorPrimary"
             tools:targetApi="lollipop" />
     </group>
-
     <group
         android:pivotX="100"
         android:pivotY="100"
@@ -1370,7 +1354,6 @@
             android:strokeColor="?android:attr/textColorSecondary"
             tools:targetApi="lollipop" />
     </group>
-
     <group
         android:pivotX="100"
         android:pivotY="100"
@@ -1381,7 +1364,6 @@
             android:strokeColor="?android:attr/textColorPrimary"
             tools:targetApi="lollipop" />
     </group>
-
     <group
         android:pivotX="100"
         android:pivotY="100"
@@ -1522,7 +1504,6 @@
             android:strokeColor="?android:attr/textColorSecondary"
             tools:targetApi="lollipop" />
     </group>
-
     <group
         android:pivotX="100"
         android:pivotY="100"
@@ -1533,7 +1514,6 @@
             android:strokeColor="?android:attr/textColorPrimary"
             tools:targetApi="lollipop" />
     </group>
-
     <group
         android:pivotX="100"
         android:pivotY="100"
@@ -1674,7 +1654,6 @@
             android:strokeColor="?android:attr/textColorSecondary"
             tools:targetApi="lollipop" />
     </group>
-
     <group
         android:pivotX="100"
         android:pivotY="100"
@@ -1685,7 +1664,6 @@
             android:strokeColor="?android:attr/textColorPrimary"
             tools:targetApi="lollipop" />
     </group>
-
     <group
         android:pivotX="100"
         android:pivotY="100"
@@ -1826,5 +1804,4 @@
             android:strokeColor="?android:attr/textColorSecondary"
             tools:targetApi="lollipop" />
     </group>
-
 </vector>

@@ -38,14 +38,11 @@ public abstract class LineRadarRenderer extends LineScatterCandleRadarRenderer {
             c.drawColor(color);
             c.restoreToCount(save);
         } else {
-
             Paint.Style previous = mRenderPaint.getStyle();
             int previousColor = mRenderPaint.getColor();
-
             mRenderPaint.setStyle(Paint.Style.FILL);
             mRenderPaint.setColor(color);
             c.drawPath(filledPath, mRenderPaint);
-
             mRenderPaint.setColor(previousColor);
             mRenderPaint.setStyle(previous);
         }

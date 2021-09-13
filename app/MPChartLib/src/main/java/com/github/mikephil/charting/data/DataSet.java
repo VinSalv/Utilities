@@ -41,7 +41,6 @@ public abstract class DataSet<T extends Entry> extends BaseDataSet<T> {
         int indexTo = getEntryIndex(toX, Float.NaN, Rounding.UP);
         if (indexTo < indexFrom) return;
         for (int i = indexFrom; i <= indexTo; i++) {
-
             calcMinMaxY(mEntries.get(i));
         }
     }
@@ -165,7 +164,6 @@ public abstract class DataSet<T extends Entry> extends BaseDataSet<T> {
             values = new ArrayList<>();
         }
         calcMinMax(e);
-
         return values.add(e);
     }
 
@@ -175,7 +173,6 @@ public abstract class DataSet<T extends Entry> extends BaseDataSet<T> {
             return false;
         if (mEntries == null)
             return false;
-
         boolean removed = mEntries.remove(e);
         if (removed) {
             calcMinMax();
@@ -219,20 +216,13 @@ public abstract class DataSet<T extends Entry> extends BaseDataSet<T> {
                     d2 = mEntries.get(m + 1).getX() - xValue,
                     ad1 = Math.abs(d1), ad2 = Math.abs(d2);
             if (ad2 < ad1) {
-
-
                 low = m + 1;
             } else if (ad1 < ad2) {
-
-
                 high = m;
             } else {
-
                 if (d1 >= 0.0) {
-
                     high = m;
                 } else if (d1 < 0.0) {
-
                     low = m + 1;
                 }
             }
@@ -241,17 +231,14 @@ public abstract class DataSet<T extends Entry> extends BaseDataSet<T> {
         if (closest != -1) {
             float closestXValue = mEntries.get(closest).getX();
             if (rounding == Rounding.UP) {
-
                 if (closestXValue < xValue && closest < mEntries.size() - 1) {
                     ++closest;
                 }
             } else if (rounding == Rounding.DOWN) {
-
                 if (closestXValue > xValue && closest > 0) {
                     --closest;
                 }
             }
-
             if (!Float.isNaN(closestToY)) {
                 while (closest > 0 && mEntries.get(closest - 1).getX() == closestXValue)
                     closest -= 1;
@@ -283,12 +270,10 @@ public abstract class DataSet<T extends Entry> extends BaseDataSet<T> {
         while (low <= high) {
             int m = (high + low) / 2;
             T entry = mEntries.get(m);
-
             if (xValue == entry.getX()) {
                 while (m > 0 && mEntries.get(m - 1).getX() == xValue)
                     m--;
                 high = mEntries.size();
-
                 for (; m < high; m++) {
                     entry = mEntries.get(m);
                     if (entry.getX() == xValue) {

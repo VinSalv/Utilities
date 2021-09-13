@@ -15,22 +15,16 @@ public abstract class LineScatterCandleRadarRenderer extends BarLineScatterCandl
     }
 
     protected void drawHighlightLines(Canvas c, float x, float y, ILineScatterCandleRadarDataSet set) {
-
         mHighlightPaint.setColor(set.getHighLightColor());
         mHighlightPaint.setStrokeWidth(set.getHighlightLineWidth());
-
         mHighlightPaint.setPathEffect(set.getDashPathEffectHighlight());
-
         if (set.isVerticalHighlightIndicatorEnabled()) {
-
             mHighlightLinePath.reset();
             mHighlightLinePath.moveTo(x, mViewPortHandler.contentTop());
             mHighlightLinePath.lineTo(x, mViewPortHandler.contentBottom());
             c.drawPath(mHighlightLinePath, mHighlightPaint);
         }
-
         if (set.isHorizontalHighlightIndicatorEnabled()) {
-
             mHighlightLinePath.reset();
             mHighlightLinePath.moveTo(mViewPortHandler.contentLeft(), y);
             mHighlightLinePath.lineTo(mViewPortHandler.contentRight(), y);

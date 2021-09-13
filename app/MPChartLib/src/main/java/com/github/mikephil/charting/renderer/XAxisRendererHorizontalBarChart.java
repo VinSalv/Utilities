@@ -31,8 +31,6 @@ public class XAxisRendererHorizontalBarChart extends XAxisRenderer {
 
     @Override
     public void computeAxis(float min, float max, boolean inverted) {
-
-
         if (mViewPortHandler.contentWidth() > 10 && !mViewPortHandler.isFullyZoomedOutY()) {
             MPPointD p1 = mTrans.getValuesByTouchPoint(mViewPortHandler.contentLeft(), mViewPortHandler.contentBottom());
             MPPointD p2 = mTrans.getValuesByTouchPoint(mViewPortHandler.contentLeft(), mViewPortHandler.contentTop());
@@ -110,7 +108,6 @@ public class XAxisRendererHorizontalBarChart extends XAxisRenderer {
         boolean centeringEnabled = mXAxis.isCenterAxisLabelsEnabled();
         float[] positions = new float[mXAxis.mEntryCount * 2];
         for (int i = 0; i < positions.length; i += 2) {
-
             if (centeringEnabled) {
                 positions[i + 1] = mXAxis.mCenteredEntries[i / 2];
             } else {
@@ -138,7 +135,6 @@ public class XAxisRendererHorizontalBarChart extends XAxisRenderer {
     protected void drawGridLine(Canvas c, float x, float y, Path gridLinePath) {
         gridLinePath.moveTo(mViewPortHandler.contentRight(), y);
         gridLinePath.lineTo(mViewPortHandler.contentLeft(), y);
-
         c.drawPath(gridLinePath, mGridPaint);
         gridLinePath.reset();
     }
@@ -193,9 +189,7 @@ public class XAxisRendererHorizontalBarChart extends XAxisRenderer {
             limitLinePath.lineTo(mViewPortHandler.contentRight(), pts[1]);
             c.drawPath(limitLinePath, mLimitLinePaint);
             limitLinePath.reset();
-
             String label = l.getLabel();
-
             if (label != null && !label.equals("")) {
                 mLimitLinePaint.setStyle(l.getTextStyle());
                 mLimitLinePaint.setPathEffect(null);

@@ -14,7 +14,6 @@ import org.junit.runner.RunWith;
 public class ExampleInstrumentedTest {
     @Test
     public void useAppContext() {
-
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
         assertEquals("com.app.utilities", appContext.getPackageName());
     }

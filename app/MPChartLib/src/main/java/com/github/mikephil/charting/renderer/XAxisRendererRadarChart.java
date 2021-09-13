@@ -27,8 +27,6 @@ public class XAxisRendererRadarChart extends XAxisRenderer {
         mAxisLabelPaint.setTextSize(mXAxis.getTextSize());
         mAxisLabelPaint.setColor(mXAxis.getTextColor());
         float sliceangle = mChart.getSliceAngle();
-
-
         float factor = mChart.getFactor();
         MPPointF center = mChart.getCenterOffsets();
         MPPointF pOut = MPPointF.getInstance(0, 0);
@@ -46,6 +44,5 @@ public class XAxisRendererRadarChart extends XAxisRenderer {
 
     @Override
     public void renderLimitLines(Canvas c) {
-
     }
 }

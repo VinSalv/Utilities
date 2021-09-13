@@ -25,5 +25,4 @@
         android:text="@string/rowtextview"
         android:textAlignment="center"
         android:textSize="20sp" />
-
 </RelativeLayout>

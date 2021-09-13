@@ -97,7 +97,6 @@ public class YAxisRenderer extends AxisRenderer {
                 ? mYAxis.mEntryCount
                 : (mYAxis.mEntryCount - 1);
         float xOffset = mYAxis.getLabelXOffset();
-
         for (int i = from; i < to; i++) {
             String text = mYAxis.getFormattedLabel(i);
             c.drawText(text,
@@ -120,9 +119,7 @@ public class YAxisRenderer extends AxisRenderer {
             mGridPaint.setPathEffect(mYAxis.getGridDashPathEffect());
             Path gridLinePath = mRenderGridLinesPath;
             gridLinePath.reset();
-
             for (int i = 0; i < positions.length; i += 2) {
-
                 c.drawPath(linePath(gridLinePath, i, positions), mGridPaint);
                 gridLinePath.reset();
             }
@@ -151,7 +148,6 @@ public class YAxisRenderer extends AxisRenderer {
         }
         float[] positions = mGetTransformedPositionsBuffer;
         for (int i = 0; i < positions.length; i += 2) {
-
             positions[i + 1] = mYAxis.mEntries[i / 2];
         }
         mTrans.pointValuesToPixel(positions);
@@ -163,7 +159,6 @@ public class YAxisRenderer extends AxisRenderer {
         mZeroLineClippingRect.set(mViewPortHandler.getContentRect());
         mZeroLineClippingRect.inset(0.f, -mYAxis.getZeroLineWidth());
         c.clipRect(mZeroLineClippingRect);
-
         MPPointD pos = mTrans.getPixelForValues(0f, 0f);
         mZeroLinePaint.setColor(mYAxis.getZeroLineColor());
         mZeroLinePaint.setStrokeWidth(mYAxis.getZeroLineWidth());
@@ -171,7 +166,6 @@ public class YAxisRenderer extends AxisRenderer {
         zeroLinePath.reset();
         zeroLinePath.moveTo(mViewPortHandler.contentLeft(), (float) pos.y);
         zeroLinePath.lineTo(mViewPortHandler.contentRight(), (float) pos.y);
-
         c.drawPath(zeroLinePath, mZeroLinePaint);
         c.restoreToCount(clipRestoreCount);
     }
@@ -204,9 +198,7 @@ public class YAxisRenderer extends AxisRenderer {
             limitLinePath.lineTo(mViewPortHandler.contentRight(), pts[1]);
             c.drawPath(limitLinePath, mLimitLinePaint);
             limitLinePath.reset();
-
             String label = l.getLabel();
-
             if (label != null && !label.equals("")) {
                 mLimitLinePaint.setStyle(l.getTextStyle());
                 mLimitLinePaint.setPathEffect(null);

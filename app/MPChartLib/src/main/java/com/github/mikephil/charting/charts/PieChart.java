@@ -74,14 +74,12 @@ public class PieChart extends PieRadarChartBase<PieData> {
     @Override
     public void calculateOffsets() {
         super.calculateOffsets();
-
         if (mData == null)
             return;
         float diameter = getDiameter();
         float radius = diameter 10f * 3.6f;
         if (isDrawHoleEnabled()) {
             off = (r - (r / 100f * getHoleRadius())) 2;
-
             float x = (float) (r
                     * Math.cos(Math.toRadians((rotationAngle + mAbsoluteAngles[entryIndex] - offset)
                     * mAnimator.getPhaseY())) + center.x);
@@ -138,8 +136,6 @@ public class PieChart extends PieRadarChartBase<PieData> {
                 }
             }
             if (hasMinAngle) {
-
-
                 for (int i = 0; i < entryCount; i++) {
                     minAngles[i] -= (minAngles[i] - mMinAngleForSlices) / diff * offset;
                     if (i == 0) {
@@ -152,11 +148,9 @@ public class PieChart extends PieRadarChartBase<PieData> {
             }
         }
         public boolean needsHighlight ( int index){
-
             if (!valuesToHighlight())
                 return false;
             for (int i = 0; i < mIndicesToHighlight.length; i++)
-
                 if ((int) mIndicesToHighlight[i].getX() == index)
                     return true;
             return false;
@@ -174,7 +168,6 @@ public class PieChart extends PieRadarChartBase<PieData> {
         }
         @Override
         public int getIndexForAngle ( float angle){
-
             float a = Utils.getNormalizedAngle(angle - getRotationAngle());
             for (int i = 0; i < mAbsoluteAngles.length; i++) {
                 if (mAbsoluteAngles[i] > a)
@@ -347,7 +340,6 @@ public class PieChart extends PieRadarChartBase<PieData> {
         }
         @Override
         protected void onDetachedFromWindow () {
-
             if (mRenderer != null && mRenderer instanceof PieChartRenderer) {
                 ((PieChartRenderer) mRenderer).releaseBitmap();
             }
