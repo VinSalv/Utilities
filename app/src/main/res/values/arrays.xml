@@ -1,5 +1,4 @@
 <resources>
-
     <string-array name="themes_values">
         <item>LightTheme</item>
         <item>DarkTheme</item>
@@ -7,35 +6,29 @@
     <string-array name="themes_entries">
         <item>Tema chiaro</item>
         <item>Tema scuro</item>
-
     </string-array>
-
     <array name="sorte_images">
         <item>@drawable/ic_dice</item>
         <item>@drawable/ic_csf</item>
         <item>@drawable/ic_testa_o_croce</item>
     </array>
-
     <string-array name="sorte_strings">
         <item>Dadi</item>
         <item>Sasso Carta Forbici</item>
         <item>Testa o Croce</item>
     </string-array>
-
     <array name="orientazione_images">
         <item>@drawable/ic_ruler</item>
         <item>@drawable/ic_bubble_level</item>
         <item>@drawable/ic_compass</item>
         <item>@drawable/ic_protractor</item>
     </array>
-
     <string-array name="orientazione_strings">
         <item>Metro</item>
         <item>Livella a bolla</item>
         <item>Bussola</item>
         <item>Inclinometro</item>
     </string-array>
-
     <string-array name="speed">
         <item>Molto veloce (0ms)</item>
         <item>Veloce (20.000ms)</item>

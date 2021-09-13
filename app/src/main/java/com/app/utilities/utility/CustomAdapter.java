@@ -15,7 +15,6 @@ import com.app.utilities.R;
 import java.util.List;
 
 public class CustomAdapter extends BaseAdapter {
-
     final Context context;
     final List<RowItem> rowItems;
 
@@ -43,9 +42,7 @@ public class CustomAdapter extends BaseAdapter {
     @SuppressLint("InflateParams")
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-
         ViewHolder holder;
-
         LayoutInflater mInflater = (LayoutInflater) context.getSystemService(Activity.LAYOUT_INFLATER_SERVICE);
         if (convertView == null) {
             convertView = mInflater.inflate(R.layout.single_row, null);
@@ -53,7 +50,6 @@ public class CustomAdapter extends BaseAdapter {
             holder.rowImageView = convertView
                     .findViewById(R.id.rowImageView);
             holder.rowTextView = convertView.findViewById(R.id.rowTextView);
-
             RowItem row_pos = rowItems.get(position);
             holder.rowImageView.setImageResource(row_pos.getRowImageViewId());
             holder.rowTextView.setText(row_pos.getRowTextView());
@@ -66,5 +62,4 @@ public class CustomAdapter extends BaseAdapter {
         ImageView rowImageView;
         TextView rowTextView;
     }
-
 }

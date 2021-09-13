@@ -76,10 +76,8 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment__sensori, container, false);
-
         directory = view.findViewById(R.id.direcotry);
         directory.setOnClickListener(v -> utils.openFolderDownload(requireActivity()));
-
         arrayListAccelX = new ArrayList<>();
         arrayListAccelY = new ArrayList<>();
         arrayListAccelZ = new ArrayList<>();
@@ -89,36 +87,28 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
         arrayListMagneX = new ArrayList<>();
         arrayListMagneY = new ArrayList<>();
         arrayListMagneZ = new ArrayList<>();
-
         bAccel = false;
         bGyro = false;
         bMagne = false;
         bRecOrPause = false;
-
         recSensorSButton = view.findViewById(R.id.recSensorsButton);
         pauseSensorsButton = view.findViewById(R.id.pauseSensorsButton);
         stopSensorsButton = view.findViewById(R.id.stopSensorsButton);
-
         allSensorsCheckBox = view.findViewById(R.id.allSensorsCheckBox);
         accelCheckBox = view.findViewById(R.id.accelCheckBox);
         gyroCheckBox = view.findViewById(R.id.gyroCheckBox);
         magneCheckBox = view.findViewById(R.id.magneCheckBox);
-
         pauseSensorsButton.setEnabled(false);
         stopSensorsButton.setEnabled(false);
-
         speedAcc = view.findViewById(R.id.speedAcc);
         speedGyr = view.findViewById(R.id.speedGir);
         speedMag = view.findViewById(R.id.speedMag);
-
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(requireContext(), android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.speed));
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         speedAcc.setAdapter(arrayAdapter);
         speedGyr.setAdapter(arrayAdapter);
         speedMag.setAdapter(arrayAdapter);
-
         sensorsLayout = view.findViewById(R.id.sensorsLayout);
-
         xAccelValue = view.findViewById(R.id.xValue);
         yAccelValue = view.findViewById(R.id.yValue);
         zAccelValue = view.findViewById(R.id.zValue);
@@ -128,32 +118,25 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
         xMagneValue = view.findViewById(R.id.xMagnoValue);
         yMagneValue = view.findViewById(R.id.yMagnoValue);
         zMagneValue = view.findViewById(R.id.zMagnoValue);
-
         sensorManager = (SensorManager) requireActivity().getSystemService(Context.SENSOR_SERVICE);
         mAccel = sensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER);
-
         chartAccelX = view.findViewById(R.id.chartAceleX);
         chartAccelY = view.findViewById(R.id.chartAceleY);
         chartAccelZ = view.findViewById(R.id.chartAceleZ);
-
         chartGyroX = view.findViewById(R.id.chartGirX);
         chartGyroY = view.findViewById(R.id.chartGirY);
         chartGyroZ = view.findViewById(R.id.chartGirZ);
-
         chartMagnetX = view.findViewById(R.id.chartMagnetX);
         chartMagnetY = view.findViewById(R.id.chartMagnetY);
         chartMagnetZ = view.findViewById(R.id.chartMagnetZ);
-
         accSimpRate = SensorManager.SENSOR_DELAY_NORMAL;
         gyrSimpRate = SensorManager.SENSOR_DELAY_NORMAL;
         magSimpRate = SensorManager.SENSOR_DELAY_NORMAL;
-
         if (mAccel != null) {
             sensorManager.registerListener(Fragment_Sensori.this, mAccel, accSimpRate);
             config(chartAccelX, "accelerometro");
             config(chartAccelY, "accelerometro");
             config(chartAccelZ, "accelerometro");
-
         } else {
             xAccelValue.setText(R.string.AccelerometerNotSupported);
             sensorsLayout.removeView(chartAccelX);
@@ -162,7 +145,6 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
             sensorsLayout.removeView(speedAcc);
             accelCheckBox.setEnabled(false);
         }
-
         mGyro = sensorManager.getDefaultSensor(Sensor.TYPE_GYROSCOPE);
         if (mGyro != null) {
             sensorManager.registerListener(Fragment_Sensori.this, mGyro, gyrSimpRate);
@@ -177,7 +159,6 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
             sensorsLayout.removeView(speedGyr);
             gyroCheckBox.setEnabled(false);
         }
-
         mMagne = sensorManager.getDefaultSensor(Sensor.TYPE_MAGNETIC_FIELD);
         if (mMagne != null) {
             sensorManager.registerListener(Fragment_Sensori.this, mMagne, magSimpRate);
@@ -223,7 +204,6 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
                     }
                     if ((accelCheckBox.isChecked() ^ (mAccel == null)) && (gyroCheckBox.isChecked() ^ (mGyro == null)) && (magneCheckBox.isChecked() ^ (mMagne == null)))
                         allSensorsCheckBox.setChecked(true);
-
                 }
         );
         magneCheckBox.setOnCheckedChangeListener((buttonView, isChecked) -> {
@@ -234,10 +214,8 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
                     }
                     if ((accelCheckBox.isChecked() ^ (mAccel == null)) && (gyroCheckBox.isChecked() ^ (mGyro == null)) && (magneCheckBox.isChecked() ^ (mMagne == null)))
                         allSensorsCheckBox.setChecked(true);
-
                 }
         );
-
         speedAcc.setSelection(3);
         speedAcc.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
@@ -264,9 +242,7 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
                     case 4:
                         sensorManager.unregisterListener(Fragment_Sensori.this, mAccel);
                         break;
-
                 }
-
             }
 
             @Override
@@ -300,7 +276,6 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
                         sensorManager.unregisterListener(Fragment_Sensori.this, mGyro);
                         break;
                 }
-
             }
 
             @Override
@@ -333,16 +308,13 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
                     case 4:
                         sensorManager.unregisterListener(Fragment_Sensori.this, mMagne);
                         break;
-
                 }
-
             }
 
             @Override
             public void onNothingSelected(AdapterView<?> parentView) {
             }
         });
-
         feedMultiple();
         recSensorSButton.setOnClickListener(v -> {
             if (accelCheckBox.isChecked() || gyroCheckBox.isChecked() || magneCheckBox.isChecked()) {
@@ -530,7 +502,6 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
         YAxis leftAxis = chart.getAxisLeft();
         leftAxis.setTextColor(Color.BLACK);
         leftAxis.setDrawGridLines(false);
-
         if ("accelerometro".equals(sensor)) {
             leftAxis.setAxisMaximum(10f);
             leftAxis.setAxisMinimum(-10f);
@@ -559,7 +530,6 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
                     chartAccelX.setVisibleXRangeMaximum(10);
                     chartAccelX.moveViewToX(data.getEntryCount());
                     if (bAccel) arrayListAccelX.add(String.valueOf(event.values[0]));
-
                 }
                 data = chartAccelY.getData();
                 if (data != null) {
@@ -676,10 +646,8 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
                     chartMagnetZ.setVisibleXRangeMaximum(10);
                     chartMagnetZ.moveViewToX(data.getEntryCount());
                     if (bMagne) arrayListMagneZ.add(String.valueOf(event.values[2]));
-
                     break;
                 }
-
         }
     }
 

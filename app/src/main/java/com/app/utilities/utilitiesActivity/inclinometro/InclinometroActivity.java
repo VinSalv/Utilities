@@ -51,7 +51,6 @@ import java.util.List;
 
 @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
 public class InclinometroActivity extends AppCompatActivity implements SensorEventListener {
-
     static final float alpha = 0.08f;
     private static final int REQUEST_CAMERA_PERMISSION_RESULT = 0;
     private static final int REQUEST_WRITE_EXTERNAL_STORAGE_PERMISSION_RESULT = 1;
@@ -89,7 +88,6 @@ public class InclinometroActivity extends AppCompatActivity implements SensorEve
 
         @Override
         public void onSurfaceTextureSizeChanged(SurfaceTexture surface, int width, int height) {
-
         }
 
         @Override
@@ -99,7 +97,6 @@ public class InclinometroActivity extends AppCompatActivity implements SensorEve
 
         @Override
         public void onSurfaceTextureUpdated(SurfaceTexture surface) {
-
         }
     };
     private CameraDevice mCameraDevice;
@@ -198,12 +195,10 @@ public class InclinometroActivity extends AppCompatActivity implements SensorEve
         if (event.sensor.getType() == Sensor.TYPE_ACCELEROMETER) {
             x = x + alpha * (event.values[0] - x);
             y = y + alpha * (event.values[1] - y);
-
             if (x > 10) x = 10;
             if (x < -10) x = -10;
             if (y > 10) y = 10;
             if (y < -10) y = -10;
-
             if ((y < 0) && (x < 0))
                 degree.setText(-util.roundAvoid(mapX(x), 1) + "°");
             else if ((y < 0) && (x > 0))
@@ -213,12 +208,10 @@ public class InclinometroActivity extends AppCompatActivity implements SensorEve
             else if ((y > 0) && (x > 0))
                 degree.setText(-util.roundAvoid(mapX(x), 1) + "°");
         }
-
     }
 
     @Override
     public void onAccuracyChanged(Sensor sensor, int accuracy) {
-
     }
 
     double mapX(double x) {
@@ -338,7 +331,6 @@ public class InclinometroActivity extends AppCompatActivity implements SensorEve
                     requestPermissions(new String[]{android.Manifest.permission.CAMERA, Manifest.permission.RECORD_AUDIO
                     }, REQUEST_CAMERA_PERMISSION_RESULT);
                 }
-
             } else {
                 cameraManager.openCamera(mCameraId, mCameraDeviceStateCallback, mBackgroundHandler);
             }
@@ -351,7 +343,6 @@ public class InclinometroActivity extends AppCompatActivity implements SensorEve
         SurfaceTexture surfaceTexture = mTextureView.getSurfaceTexture();
         surfaceTexture.setDefaultBufferSize(mPreviewSize.getWidth(), mPreviewSize.getHeight());
         Surface previewSurface = new Surface(surfaceTexture);
-
         try {
             mCaptureRequestBuilder = mCameraDevice.createCaptureRequest(CameraDevice.TEMPLATE_PREVIEW);
             mCaptureRequestBuilder.addTarget(previewSurface);
@@ -370,7 +361,6 @@ public class InclinometroActivity extends AppCompatActivity implements SensorEve
 
                         @Override
                         public void onConfigureFailed(CameraCaptureSession session) {
-
                         }
                     }, null);
         } catch (CameraAccessException e) {
@@ -424,13 +414,10 @@ public class InclinometroActivity extends AppCompatActivity implements SensorEve
     }
 
     private static class CompareSizeByArea implements Comparator<Size> {
-
         @Override
         public int compare(Size lhs, Size rhs) {
             return Long.signum(((long) lhs.getWidth() * lhs.getHeight()) -
                     ((long) rhs.getWidth() * rhs.getHeight()));
         }
-
     }
-
 }

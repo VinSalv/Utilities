@@ -4,12 +4,8 @@ import android.annotation.SuppressLint;
 import android.graphics.drawable.Drawable;
 import android.util.Log;
 
-/**
- * @author Philipp Jahoda
- */
 @SuppressLint("ParcelCreator")
 public class PieEntry extends Entry {
-
     private String label;
 
     public PieEntry(float value) {
@@ -48,11 +44,6 @@ public class PieEntry extends Entry {
         this.label = label;
     }
 
-    /**
-     * This is the same as getY(). Returns the value of the PieEntry.
-     *
-     * @return
-     */
     public float getValue() {
         return getY();
     }
@@ -68,7 +59,7 @@ public class PieEntry extends Entry {
     @Deprecated
     @Override
     public float getX() {
-        Log.i("DEPRECATED", "Pie entries do not have x values");
+        i("DEPRECATED", "Pie entries do not have x values");
         return super.getX();
     }
 
@@ -76,7 +67,7 @@ public class PieEntry extends Entry {
     @Override
     public void setX(float x) {
         super.setX(x);
-        Log.i("DEPRECATED", "Pie entries do not have x values");
+        i("DEPRECATED", "Pie entries do not have x values");
     }
 
     public PieEntry copy() {

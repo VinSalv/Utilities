@@ -91,64 +91,51 @@ public class AltriSensoriActivity extends AppCompatActivity implements SensorEve
             }
         }
         setContentView(R.layout.activity_altri_sensori);
-
         directory = findViewById(R.id.direcotry);
         directory.setOnClickListener(v -> utils.openFolderDownload(this));
-
         arrayListLight = new ArrayList<>();
         arrayListPressure = new ArrayList<>();
         arrayListTemperature = new ArrayList<>();
         arrayListHumidty = new ArrayList<>();
-
         bLig = false;
         bPres = false;
         bTemp = false;
         bHum = false;
         bRecOrPause = false;
-
         recOtherSensorsButton = findViewById(R.id.recOtherSensorsButton);
         pauseOtherSensorsButton = findViewById(R.id.pauseOtherSensorsButton);
         stopOtherSensorsButton = findViewById(R.id.stopOtherSensorsButton);
-
         allOtherSensorsCheckBox = findViewById(R.id.allOtherSensorsCheckBox);
         ligCheckBox = findViewById(R.id.ligCheckBox);
         presCheckBox = findViewById(R.id.presCheckBox);
         tempCheckBox = findViewById(R.id.tempCheckBox);
         humCheckBox = findViewById(R.id.humCheckBox);
-
         pauseOtherSensorsButton.setEnabled(false);
         stopOtherSensorsButton.setEnabled(false);
-
         speedLig = findViewById(R.id.speedLig);
         speedPre = findViewById(R.id.speedPre);
         speedTem = findViewById(R.id.speedTem);
         speedHum = findViewById(R.id.speedHum);
-
         ArrayAdapter<String> arrayAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, getResources().getStringArray(R.array.speed));
         arrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         speedLig.setAdapter(arrayAdapter);
         speedPre.setAdapter(arrayAdapter);
         speedTem.setAdapter(arrayAdapter);
         speedHum.setAdapter(arrayAdapter);
-
         otherSensorsLayout = findViewById(R.id.otherSensorsLayout);
-
         light = findViewById(R.id.light);
         pressure = findViewById(R.id.pressure);
         temperature = findViewById(R.id.temperature);
         humidity = findViewById(R.id.humidity);
         sensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
-
         chartLight = findViewById(R.id.chartLight);
         chartPressure = findViewById(R.id.chartPressure);
         chartTemperature = findViewById(R.id.chartTemperature);
         chartHumidity = findViewById(R.id.chartHumidity);
-
         ligSimpRate = SensorManager.SENSOR_DELAY_NORMAL;
         preSimpRate = SensorManager.SENSOR_DELAY_NORMAL;
         temSimpRate = SensorManager.SENSOR_DELAY_NORMAL;
         humSimpRate = SensorManager.SENSOR_DELAY_NORMAL;
-
         mLight = sensorManager.getDefaultSensor(Sensor.TYPE_LIGHT);
         if (mLight != null) {
             sensorManager.registerListener(this, mLight, ligSimpRate);
@@ -591,9 +578,7 @@ public class AltriSensoriActivity extends AppCompatActivity implements SensorEve
         leftAxis.setDrawGridLines(false);
         switch (sensor) {
             case "luminosità":
-
             case "umnidità":
-
                 leftAxis.setAxisMinimum(0f);
                 break;
         }
@@ -621,7 +606,6 @@ public class AltriSensoriActivity extends AppCompatActivity implements SensorEve
                     chartLight.setVisibleXRangeMaximum(10);
                     chartLight.moveViewToX(data.getEntryCount());
                     if (bLig) arrayListLight.add(String.valueOf(event.values[0]));
-
                 }
                 break;
             case "pressione":
@@ -638,7 +622,6 @@ public class AltriSensoriActivity extends AppCompatActivity implements SensorEve
                     chartPressure.setVisibleXRangeMaximum(10);
                     chartPressure.moveViewToX(data.getEntryCount());
                     if (bPres) arrayListPressure.add(String.valueOf(event.values[0]));
-
                 }
                 break;
             case "temperatura":
@@ -674,7 +657,6 @@ public class AltriSensoriActivity extends AppCompatActivity implements SensorEve
                 }
                 break;
         }
-
     }
 
     @NonNull
@@ -700,7 +682,6 @@ public class AltriSensoriActivity extends AppCompatActivity implements SensorEve
             while (true) {
                 plotData = true;
                 try {
-
                     Thread.sleep(10);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
@@ -775,5 +756,4 @@ public class AltriSensoriActivity extends AppCompatActivity implements SensorEve
     protected boolean isNightConfigChanged(Configuration newConfig) {
         return (newConfig.diff(mPrevConfig) & ActivityInfo.CONFIG_UI_MODE) != 0 && isOnDarkMode(newConfig) != isOnDarkMode(mPrevConfig);
     }
-
 }

@@ -11,18 +11,9 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 public class Fill {
-    /**
-     * the drawable to be used for filling
-     */
     @Nullable
     protected Drawable mDrawable;
-    /**
-     * the type of fill
-     */
     private Type mType = Type.EMPTY;
-    /**
-     * the color that is used for filling
-     */
     @Nullable
     private Integer mColor = null;
     private Integer mFinalColor = null;
@@ -30,9 +21,6 @@ public class Fill {
     private int[] mGradientColors;
     @Nullable
     private float[] mGradientPositions;
-    /**
-     * transparency used for filling
-     */
     private int mAlpha = 255;
 
     public Fill() {
@@ -127,38 +115,29 @@ public class Fill {
         switch (mType) {
             case EMPTY:
                 return;
-
             case COLOR: {
                 if (mFinalColor == null) return;
-
                 if (isClipPathSupported()) {
                     int save = c.save();
-
                     c.clipRect(left, top, right, bottom);
                     c.drawColor(mFinalColor);
-
                     c.restoreToCount(save);
                 } else {
-                    // save
+
                     Paint.Style previous = paint.getStyle();
                     int previousColor = paint.getColor();
 
-                    // set
                     paint.setStyle(Paint.Style.FILL);
                     paint.setColor(mFinalColor);
-
                     c.drawRect(left, top, right, bottom, paint);
 
-                    // restore
                     paint.setColor(previousColor);
                     paint.setStyle(previous);
                 }
             }
             break;
-
             case LINEAR_GRADIENT: {
                 if (mGradientColors == null) return;
-
                 LinearGradient gradient = new LinearGradient(
                         (int) (gradientDirection == Direction.RIGHT
                                 ? right
@@ -183,16 +162,12 @@ public class Fill {
                         mGradientColors,
                         mGradientPositions,
                         android.graphics.Shader.TileMode.MIRROR);
-
                 paint.setShader(gradient);
-
                 c.drawRect(left, top, right, bottom, paint);
             }
             break;
-
             case DRAWABLE: {
                 if (mDrawable == null) return;
-
                 mDrawable.setBounds((int) left, (int) top, (int) right, (int) bottom);
                 mDrawable.draw(c);
             }
@@ -205,38 +180,29 @@ public class Fill {
         switch (mType) {
             case EMPTY:
                 return;
-
             case COLOR: {
                 if (mFinalColor == null) return;
-
                 if (clipRect != null && isClipPathSupported()) {
                     int save = c.save();
-
                     c.clipPath(path);
                     c.drawColor(mFinalColor);
-
                     c.restoreToCount(save);
                 } else {
-                    // save
+
                     Paint.Style previous = paint.getStyle();
                     int previousColor = paint.getColor();
 
-                    // set
                     paint.setStyle(Paint.Style.FILL);
                     paint.setColor(mFinalColor);
-
                     c.drawPath(path, paint);
 
-                    // restore
                     paint.setColor(previousColor);
                     paint.setStyle(previous);
                 }
             }
             break;
-
             case LINEAR_GRADIENT: {
                 if (mGradientColors == null) return;
-
                 LinearGradient gradient = new LinearGradient(
                         0,
                         0,
@@ -245,28 +211,21 @@ public class Fill {
                         mGradientColors,
                         mGradientPositions,
                         android.graphics.Shader.TileMode.MIRROR);
-
                 paint.setShader(gradient);
-
                 c.drawPath(path, paint);
             }
             break;
-
             case DRAWABLE: {
                 if (mDrawable == null) return;
-
                 ensureClipPathSupported();
-
                 int save = c.save();
                 c.clipPath(path);
-
                 mDrawable.setBounds(
                         clipRect == null ? 0 : (int) clipRect.left,
                         clipRect == null ? 0 : (int) clipRect.top,
                         clipRect == null ? c.getWidth() : (int) clipRect.right,
                         clipRect == null ? c.getHeight() : (int) clipRect.bottom);
                 mDrawable.draw(c);
-
                 c.restoreToCount(save);
             }
             break;

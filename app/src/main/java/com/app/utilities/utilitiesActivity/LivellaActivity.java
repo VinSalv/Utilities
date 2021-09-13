@@ -150,7 +150,6 @@ public class LivellaActivity extends AppCompatActivity implements SensorEventLis
     }
 
     public class AnimatedView extends LinearLayout {
-
         static final float alpha = 0.1f;
         private static final int CIRCLE_RADIOUS = 50;
         private static final int TEXT_SIZE = 60;
@@ -197,44 +196,36 @@ public class LivellaActivity extends AppCompatActivity implements SensorEventLis
         @RequiresApi(api = Build.VERSION_CODES.M)
         public AnimatedView(Context context) {
             super(context);
-
             horizBubble = new Paint();
             bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.blue);
             fillBMPshader = new BitmapShader(bitmap, Shader.TileMode.CLAMP, Shader.TileMode.CLAMP);
             horizBubble.setShader(fillBMPshader);
-
             horizPlane = new Paint();
             bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.green);
             fillBMPshader = new BitmapShader(bitmap, Shader.TileMode.CLAMP, Shader.TileMode.CLAMP);
             horizPlane.setShader(fillBMPshader);
             horizPlane.setStrokeWidth(BAR_THICKNESS);
-
             vertBubble = new Paint();
             bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.blue);
             fillBMPshader = new BitmapShader(bitmap, Shader.TileMode.CLAMP, Shader.TileMode.CLAMP);
             vertBubble.setShader(fillBMPshader);
-
             vertPlane = new Paint();
             bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.green);
             fillBMPshader = new BitmapShader(bitmap, Shader.TileMode.CLAMP, Shader.TileMode.CLAMP);
             vertPlane.setShader(fillBMPshader);
             vertPlane.setStrokeWidth(BAR_THICKNESS);
-
             roundBubble = new Paint();
             bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.blue);
             fillBMPshader = new BitmapShader(bitmap, Shader.TileMode.CLAMP, Shader.TileMode.CLAMP);
             roundBubble.setShader(fillBMPshader);
-
             roundPlane = new Paint();
             bitmap = BitmapFactory.decodeResource(getResources(), R.drawable.green);
             fillBMPshader = new BitmapShader(bitmap, Shader.TileMode.CLAMP, Shader.TileMode.CLAMP);
             roundPlane.setShader(fillBMPshader);
-
             border = new Paint();
             border.setColor(getColor(R.color.black));
             border.setStrokeWidth(STROKE);
             border.setStyle(Paint.Style.STROKE);
-
             textPlane = new Paint();
             if (!pref.getPredBool()) {
                 if (pref.getThemeText().equals("LightTheme") || pref.getThemeText().equals("LightThemeSelected"))
@@ -244,32 +235,26 @@ public class LivellaActivity extends AppCompatActivity implements SensorEventLis
             } else
                 switch (getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK) {
                     case Configuration.UI_MODE_NIGHT_UNDEFINED:
-
                     case Configuration.UI_MODE_NIGHT_NO:
                         textPlane.setColor(getColor(color));
                         break;
-
                     case Configuration.UI_MODE_NIGHT_YES:
                         textPlane.setColor(getColor(colorSecondaryVariant));
                         break;
                 }
             textPlane.setStrokeWidth(BAR_THICKNESS);
             textPlane.setStyle(Paint.Style.STROKE);
-
             textX = new Paint();
             textX.setColor(getColor(colorOnPrimary));
             textX.setStyle(Paint.Style.FILL_AND_STROKE);
             textX.setTextSize(TEXT_SIZE);
             textX.setTypeface(Typeface.create(Typeface.DEFAULT, Typeface.BOLD));
-
             textY = new Paint();
             textY.setColor(getColor(colorOnPrimary));
             textY.setStyle(Paint.Style.FILL_AND_STROKE);
             textY.setTextSize(TEXT_SIZE);
             textY.setTypeface(Typeface.create(Typeface.DEFAULT, Typeface.BOLD));
-
             ImageButton back = new ImageButton(LivellaActivity.this);
-
             if (!pref.getPredBool()) {
                 if (pref.getThemeText().equals("LightTheme") || pref.getThemeText().equals("LightThemeSelected"))
                     back.setImageResource(R.drawable.ic_arrow_back_light);
@@ -300,38 +285,29 @@ public class LivellaActivity extends AppCompatActivity implements SensorEventLis
             float half_width = (float) (w / 2);
             float half_height = (float) (h / 2);
             length_bar = (float) (w - ((w / 8) * 2));
-
             hor_start_w = (float) (w / 8);
             hor_end_w = hor_start_w + length_bar;
             hor_h = (float) (h / 5);
-
             ver_start_h = (float) (h / 3.5);
             ver_end_h = ver_start_h + length_bar;
             ver_w = (float) (w - (w / 6));
-
             r = w / 4;
-
             txt_pln_start = (float) (hor_start_w * 0.8);
             txt_pln_end = hor_start_w * 5;
             txt_pln_hight = (float) (ver_end_h - (TEXT_SIZE / 1.1));
-
             half_hor = half_width;
             half_ver = (ver_start_h + ver_end_h) / 2;
         }
 
         public void onSensorEvent(@NonNull SensorEvent event) {
-
             x = x + alpha * (event.values[0] - x);
             y = y + alpha * (event.values[1] - y);
-
             if (x > 10) x = 10;
             if (x < -10) x = -10;
             if (y > 10) y = 10;
             if (y < -10) y = -10;
-
             horizPos = (float) (util.roundAvoid(mapX(x, length_bar), 1) + (double) hor_start_w);
             vertPos = (float) (util.roundAvoid(mapY(y, length_bar), 1) + (double) ver_start_h);
-
             xRound = (float) (x * (r - CIRCLE_RADIOUS) / 10);
             yRound = (float) (-y * (r - CIRCLE_RADIOUS) / 10);
             float module = (float) (Math.sqrt(Math.pow(xRound, 2) + Math.pow(yRound, 2)));
@@ -339,41 +315,32 @@ public class LivellaActivity extends AppCompatActivity implements SensorEventLis
                 xRound = (float) ((x * r) / Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2)));
                 yRound = (float) ((-y * r) / Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2)));
             }
-
             x_text = util.roundAvoid((float) -(((45 - (CIRCLE_RADIOUS * 1.8125)) / 10) * x), 1);
             y_text = util.roundAvoid((float) -(((45 - (CIRCLE_RADIOUS * 1.8125)) / 10) * y), 1);
-
             xRound += half_hor - CIRCLE_RADIOUS - TOLERANCE;
             yRound += half_ver - CIRCLE_RADIOUS - TOLERANCE;
-
         }
 
         @Override
         protected void onDraw(Canvas canvas) {
             super.onDraw(canvas);
-
             canvas.drawLine(hor_start_w, hor_h, hor_end_w, hor_h, horizPlane);
             canvas.drawCircle(horizPos, hor_h, CIRCLE_RADIOUS, horizBubble);
             canvas.drawRect(hor_start_w - half_stroke, hor_h - half_stroke - half_barThickness, hor_end_w + half_stroke, hor_h + half_stroke + half_barThickness, border);
             canvas.drawRect(half_hor - half_stroke - CIRCLE_RADIOUS - TOLERANCE, hor_h - half_stroke - half_barThickness, half_hor + half_stroke + CIRCLE_RADIOUS + TOLERANCE, hor_h + half_stroke + half_barThickness, border);
-
             canvas.drawLine(ver_w, ver_start_h, ver_w, ver_end_h, vertPlane);
             canvas.drawCircle(ver_w, vertPos, CIRCLE_RADIOUS, vertBubble);
             canvas.drawRect(ver_w - half_stroke - half_barThickness, ver_start_h - half_stroke, ver_w + half_stroke + half_barThickness, ver_end_h + half_stroke, border);
             canvas.drawRect(ver_w - half_stroke - half_barThickness, half_ver - half_stroke - CIRCLE_RADIOUS - TOLERANCE, ver_w + half_stroke + half_barThickness, half_ver + half_stroke + CIRCLE_RADIOUS + TOLERANCE, border);
-
             canvas.drawCircle(half_hor - CIRCLE_RADIOUS - TOLERANCE, half_ver - CIRCLE_RADIOUS - TOLERANCE, r, roundPlane);
             canvas.drawCircle(xRound, yRound, CIRCLE_RADIOUS, roundBubble);
             canvas.drawCircle(half_hor - CIRCLE_RADIOUS - TOLERANCE, half_ver - CIRCLE_RADIOUS - TOLERANCE, r + half_stroke, border);
             canvas.drawCircle(half_hor - CIRCLE_RADIOUS - TOLERANCE, half_ver - CIRCLE_RADIOUS - TOLERANCE, CIRCLE_RADIOUS + TOLERANCE + half_stroke, border);
             canvas.drawLine(half_hor - CIRCLE_RADIOUS - TOLERANCE - r - half_stroke, half_ver - CIRCLE_RADIOUS - TOLERANCE, half_hor - CIRCLE_RADIOUS - TOLERANCE + r + half_stroke, half_ver - CIRCLE_RADIOUS - TOLERANCE, border);
             canvas.drawLine(half_hor - CIRCLE_RADIOUS - TOLERANCE, half_ver - CIRCLE_RADIOUS - TOLERANCE - r - half_stroke, half_hor - CIRCLE_RADIOUS - TOLERANCE, half_ver - CIRCLE_RADIOUS - TOLERANCE + r + half_stroke, border);
-
             canvas.drawLine(txt_pln_start, txt_pln_hight, txt_pln_end, txt_pln_hight, textPlane);
-
             canvas.drawText("X: " + x_text + "°", hor_start_w, ver_end_h - half_textSize, textX);
             canvas.drawText("Y: " + y_text + "°", (hor_start_w * 3), ver_end_h - half_textSize, textY);
-
             invalidate();
         }
 
@@ -384,7 +351,5 @@ public class LivellaActivity extends AppCompatActivity implements SensorEventLis
         double mapY(double y, double hg) {
             return (float) ((((hg - (CIRCLE_RADIOUS * 2)) / 20) * (-y)) + (hg / 2));
         }
-
     }
-
 }

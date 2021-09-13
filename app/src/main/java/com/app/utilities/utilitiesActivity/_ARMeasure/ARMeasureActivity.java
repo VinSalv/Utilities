@@ -47,7 +47,6 @@ import java.util.Objects;
 
 @SuppressWarnings("ALL")
 public class ARMeasureActivity extends AppCompatActivity {
-
     private static final double MIN_OPENGL_VERSION = 3.0;
     final List<AnchorNode> anchorNodes = new ArrayList<>();
     private final DecimalFormat form_numbers = new DecimalFormat("#0.00 m");
@@ -81,7 +80,6 @@ public class ARMeasureActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         pref = utils.loadData(this, new Preferenze());
         if (!pref.getPredBool()) {
             if (pref.getThemeText().equals("LightTheme") || pref.getThemeText().equals("LightThemeSelected"))
@@ -99,16 +97,13 @@ public class ARMeasureActivity extends AppCompatActivity {
                     break;
             }
         }
-
         try {
             createSession();
             Objects.requireNonNull(this.getSupportActionBar()).hide();
         } catch (Exception e) {
             e.printStackTrace();
         }
-
         setContentView(R.layout.activity_armeasure);
-
         try {
             ArrayList<Arl_saved> arl_saved_object = getIntent().getExtras().getParcelableArrayList("arl_saved_object");
             for (Arl_saved s : arl_saved_object) {
@@ -117,38 +112,30 @@ public class ARMeasureActivity extends AppCompatActivity {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
         arFragment = (ArFragment) getSupportFragmentManager().findFragmentById(R.id.ux_fragment);
-
         text = findViewById(R.id.text);
-
         sk_height_control = findViewById(R.id.sk_height_control);
         Button btn_height = findViewById(R.id.btn_height);
         Button btn_save = findViewById(R.id.btn_save);
         Button btn_width = findViewById(R.id.btn_width);
         ImageButton btn_share = findViewById(R.id.btn_share);
-
         sk_height_control.setEnabled(false);
-
         btn_width.setOnClickListener(view -> {
             resetLayout();
             measure_height = false;
             text.setText("Clicca sugli estremi che vuoi misurare\n(sui puntini bianchi)");
         });
-
         btn_height.setOnClickListener(view -> {
             resetLayout();
             measure_height = true;
             text.setText("Fare clic sulla base dell'oggetto che si vuole misurare\n(sui puntini bianchi)");
         });
-
         btn_save.setOnClickListener(view -> {
             if (fl_measurement != 0.0f)
                 saveDialog();
             else
                 Toast.makeText(ARMeasureActivity.this, "Effettuare una misurazione prima di salvare", Toast.LENGTH_SHORT).show();
         });
-
         btn_share.setOnClickListener(view -> {
             if (arl_saved.size() > 0) {
                 Intent sharingIntent = new Intent(Intent.ACTION_SEND);
@@ -163,7 +150,6 @@ public class ARMeasureActivity extends AppCompatActivity {
             } else
                 Toast.makeText(ARMeasureActivity.this, "Salvare le misure prima di condividere", Toast.LENGTH_SHORT).show();
         });
-
         sk_height_control.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
@@ -171,7 +157,6 @@ public class ARMeasureActivity extends AppCompatActivity {
                 fl_measurement = progress / 100f;
                 text.setText("Altezza: " + form_numbers.format(fl_measurement));
                 myanchornode.setLocalScale(new Vector3(1f, progress / 10f, 1f));
-
             }
 
             @Override
@@ -182,7 +167,6 @@ public class ARMeasureActivity extends AppCompatActivity {
             public void onStopTrackingTouch(SeekBar seekBar) {
             }
         });
-
         if (Build.VERSION.SDK_INT >= VERSION_CODES.N) {
             ModelRenderable.builder()
                     .setSource(this, R.raw.cubito3)
@@ -197,20 +181,15 @@ public class ARMeasureActivity extends AppCompatActivity {
                                 return null;
                             });
         }
-
         arFragment.setOnTapArPlaneListener(
                 (HitResult hitResult, Plane plane, MotionEvent motionEvent) -> {
                     if (andyRenderable == null) {
                         return;
                     }
                     myhit = hitResult;
-
                     Anchor anchor = hitResult.createAnchor();
-
                     AnchorNode anchorNode = new AnchorNode(anchor);
-
                     anchorNode.setParent(arFragment.getArSceneView().getScene());
-
                     if (!measure_height) {
                         if (anchor2 != null) {
                             emptyAnchors();
@@ -221,7 +200,6 @@ public class ARMeasureActivity extends AppCompatActivity {
                             anchor2 = anchor;
                             fl_measurement = getMetersBetweenAnchors(anchor1, anchor2);
                             text.setText("Larghezza: " + form_numbers.format(fl_measurement));
-
                         }
                     } else {
                         emptyAnchors();
@@ -229,10 +207,8 @@ public class ARMeasureActivity extends AppCompatActivity {
                         text.setText("Muovi la barra (in basso) finché il cubo raggiunge la base superiore");
                         sk_height_control.setEnabled(true);
                     }
-
                     myanchornode = anchorNode;
                     anchorNodes.add(anchorNode);
-
                     TransformableNode andy = new TransformableNode(arFragment.getTransformationSystem());
                     andy.setParent(anchorNode);
                     andy.setRenderable(andyRenderable);
@@ -245,7 +221,6 @@ public class ARMeasureActivity extends AppCompatActivity {
             toast.setGravity(Gravity.CENTER, 0, 0);
             toast.show();
         });
-
         ImageButton refresh = findViewById(R.id.refresh);
         refresh.setOnClickListener(view -> {
             Intent intent = new Intent(this, ARMeasureActivity.class);
@@ -257,10 +232,8 @@ public class ARMeasureActivity extends AppCompatActivity {
             finish();
             startActivity(intent);
         });
-
         ImageButton back = findViewById(R.id.back);
         back.setOnClickListener(view -> onBackPressed());
-
         mPrevConfig = new Configuration(getResources().getConfiguration());
     }
 
@@ -278,7 +251,6 @@ public class ARMeasureActivity extends AppCompatActivity {
     private void ascend(AnchorNode an, float up) {
         Anchor anchor = myhit.getTrackable().createAnchor(
                 myhit.getHitPose().compose(Pose.makeTranslation(0, up / 100f, 0)));
-
         an.setAnchor(anchor);
     }
 
@@ -341,5 +313,4 @@ public class ARMeasureActivity extends AppCompatActivity {
     protected boolean isNightConfigChanged(Configuration newConfig) {
         return (newConfig.diff(mPrevConfig) & ActivityInfo.CONFIG_UI_MODE) != 0 && isOnDarkMode(newConfig) != isOnDarkMode(mPrevConfig);
     }
-
 }

@@ -6,11 +6,7 @@ import com.github.mikephil.charting.utils.ObjectPool;
 import com.github.mikephil.charting.utils.Transformer;
 import com.github.mikephil.charting.utils.ViewPortHandler;
 
-/**
- * Created by Philipp Jahoda on 19/02/16.
- */
 public class MoveViewJob extends ViewPortJob {
-
     private static ObjectPool<MoveViewJob> pool;
 
     static {
@@ -38,13 +34,10 @@ public class MoveViewJob extends ViewPortJob {
 
     @Override
     public void run() {
-
         pts[0] = xValue;
         pts[1] = yValue;
-
         mTrans.pointValuesToPixel(pts);
         mViewPortHandler.centerViewPort(pts, view);
-
         this.recycleInstance(this);
     }
 

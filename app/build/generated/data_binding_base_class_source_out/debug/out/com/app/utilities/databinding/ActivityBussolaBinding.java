@@ -5,11 +5,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageButton;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.coordinatorlayout.widget.CoordinatorLayout;
 import androidx.viewbinding.ViewBinding;
 import androidx.viewbinding.ViewBindings;
 import com.app.utilities.R;
@@ -19,32 +17,24 @@ import java.lang.String;
 
 public final class ActivityBussolaBinding implements ViewBinding {
   @NonNull
-  private final LinearLayout rootView;
+  private final CoordinatorLayout rootView;
+
+  @NonNull
+  public final ImageButton accuracy;
 
   @NonNull
   public final ImageButton back;
 
-  @NonNull
-  public final ImageView compass;
-
-  @NonNull
-  public final ImageView mainImageHands;
-
-  @NonNull
-  public final TextView sotwLabel;
-
-  private ActivityBussolaBinding(@NonNull LinearLayout rootView, @NonNull ImageButton back,
-      @NonNull ImageView compass, @NonNull ImageView mainImageHands, @NonNull TextView sotwLabel) {
+  private ActivityBussolaBinding(@NonNull CoordinatorLayout rootView, @NonNull ImageButton accuracy,
+      @NonNull ImageButton back) {
     this.rootView = rootView;
+    this.accuracy = accuracy;
     this.back = back;
-    this.compass = compass;
-    this.mainImageHands = mainImageHands;
-    this.sotwLabel = sotwLabel;
   }
 
   @Override
   @NonNull
-  public LinearLayout getRoot() {
+  public CoordinatorLayout getRoot() {
     return rootView;
   }
 
@@ -69,32 +59,19 @@ public final class ActivityBussolaBinding implements ViewBinding {
     // This is done to optimize the compiled bytecode for size and performance.
     int id;
     missingId: {
+      id = R.id.accuracy;
+      ImageButton accuracy = ViewBindings.findChildViewById(rootView, id);
+      if (accuracy == null) {
+        break missingId;
+      }
+
       id = R.id.back;
       ImageButton back = ViewBindings.findChildViewById(rootView, id);
       if (back == null) {
         break missingId;
       }
 
-      id = R.id.compass;
-      ImageView compass = ViewBindings.findChildViewById(rootView, id);
-      if (compass == null) {
-        break missingId;
-      }
-
-      id = R.id.main_image_hands;
-      ImageView mainImageHands = ViewBindings.findChildViewById(rootView, id);
-      if (mainImageHands == null) {
-        break missingId;
-      }
-
-      id = R.id.sotw_label;
-      TextView sotwLabel = ViewBindings.findChildViewById(rootView, id);
-      if (sotwLabel == null) {
-        break missingId;
-      }
-
-      return new ActivityBussolaBinding((LinearLayout) rootView, back, compass, mainImageHands,
-          sotwLabel);
+      return new ActivityBussolaBinding((CoordinatorLayout) rootView, accuracy, back);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

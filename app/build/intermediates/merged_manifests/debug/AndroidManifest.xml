@@ -12,6 +12,8 @@
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.CAMERA" />
 
+    <uses-feature android:name="android.hardware.camera.ar" />
+
     <queries>
         <package android:name="com.google.ar.core" />
     </queries>
@@ -39,6 +41,7 @@
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:configChanges="uiMode"
         android:debuggable="true"
+        android:exported="true"
         android:fullBackupContent="@xml/backup_descriptor"
         android:icon="@drawable/utilities"
         android:label="@string/app_name"
@@ -55,6 +58,12 @@
             android:name="com.app.utilities.utilitiesActivity.InfoActivity"
             android:configChanges="uiMode"
             android:label="@string/infoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LightTheme" />
+        <activity
+            android:name="com.app.utilities.utilitiesActivity.bussola.BussolaActivity"
+            android:configChanges="uiMode"
+            android:label="@string/bussolaActivity"
             android:screenOrientation="portrait"
             android:theme="@style/LightTheme" />
         <activity
@@ -79,12 +88,6 @@
             android:name="com.app.utilities.utilitiesActivity.LivellaActivity"
             android:configChanges="uiMode"
             android:label="@string/livellaActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/LightTheme" />
-        <activity
-            android:name="com.app.utilities.utilitiesActivity.bussola.BussolaActivity"
-            android:configChanges="uiMode"
-            android:label="@string/bussolaActivity"
             android:screenOrientation="portrait"
             android:theme="@style/LightTheme" />
         <activity

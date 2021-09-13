@@ -7,10 +7,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BubbleDataSet extends BarLineScatterCandleBubbleDataSet<BubbleEntry> implements IBubbleDataSet {
-
     protected float mMaxSize;
     protected boolean mNormalizeSize = true;
-
     private float mHighlightCircleWidth = 2.5f;
 
     public BubbleDataSet(List<BubbleEntry> yVals, String label) {
@@ -30,9 +28,7 @@ public class BubbleDataSet extends BarLineScatterCandleBubbleDataSet<BubbleEntry
     @Override
     protected void calcMinMax(BubbleEntry e) {
         super.calcMinMax(e);
-
         final float size = e.getSize();
-
         if (size > mMaxSize) {
             mMaxSize = size;
         }

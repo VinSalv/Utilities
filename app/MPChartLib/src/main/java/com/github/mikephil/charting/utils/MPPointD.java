@@ -2,13 +2,7 @@ package com.github.mikephil.charting.utils;
 
 import java.util.List;
 
-/**
- * Point encapsulating two double values.
- *
- * @author Philipp Jahoda
- */
 public class MPPointD extends ObjectPool.Poolable {
-
     private static ObjectPool<MPPointD> pool;
 
     static {
@@ -43,9 +37,6 @@ public class MPPointD extends ObjectPool.Poolable {
         return new MPPointD(0, 0);
     }
 
-    /**
-     * returns a string representation of the object
-     */
     public String toString() {
         return "MPPointD, x: " + x + ", y: " + y;
     }

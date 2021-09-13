@@ -1,6 +1,4 @@
-/**
- * Automatically generated file. DO NOT MODIFY
- */
+
 package com.app.utilities.test;
 
 public final class BuildConfig {

@@ -13,10 +13,10 @@
     <uses-permission android:name="android.permission.CAMERA" />
 
     <uses-feature android:name="android.hardware.camera.ar" />
-
     <application
         android:allowBackup="true"
         android:configChanges="uiMode"
+        android:exported="true"
         android:fullBackupContent="@xml/backup_descriptor"
         android:icon="@drawable/utilities"
         android:label="@string/app_name"
@@ -33,6 +33,13 @@
             android:name=".utilitiesActivity.InfoActivity"
             android:configChanges="uiMode"
             android:label="@string/infoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/LightTheme"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name=".utilitiesActivity.bussola.BussolaActivity"
+            android:configChanges="uiMode"
+            android:label="@string/bussolaActivity"
             android:screenOrientation="portrait"
             android:theme="@style/LightTheme"
             tools:ignore="LockedOrientationActivity" />
@@ -61,13 +68,6 @@
             android:name=".utilitiesActivity.LivellaActivity"
             android:configChanges="uiMode"
             android:label="@string/livellaActivity"
-            android:screenOrientation="portrait"
-            android:theme="@style/LightTheme"
-            tools:ignore="LockedOrientationActivity" />
-        <activity
-            android:name=".utilitiesActivity.bussola.BussolaActivity"
-            android:configChanges="uiMode"
-            android:label="@string/bussolaActivity"
             android:screenOrientation="portrait"
             android:theme="@style/LightTheme"
             tools:ignore="LockedOrientationActivity" />
@@ -134,5 +134,4 @@
             </intent-filter>
         </activity>
     </application>
-
 </manifest>

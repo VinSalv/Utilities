@@ -93,14 +93,11 @@ public class PreferenzeSCF extends AppCompatActivity {
             vibration_button_scf = findPreference("vibration_button_scf");
             shake_scf = findPreference("shake_scf");
             vibration_shake_scf = findPreference("vibration_shake_scf");
-
             vibration_button_scf.setChecked(prefSCF.getVibrationButtonSCFBool());
             shake_scf.setChecked(prefSCF.getShakeSCFBool());
             vibration_shake_scf.setChecked(prefSCF.getVibrationShakeSCFBool());
-
             if (!shake_scf.isChecked())
                 vibration_shake_scf.setChecked(false);
-
             Objects.requireNonNull(vibration_button_scf).setOnPreferenceChangeListener((preference, newValue) -> {
                 utils.saveDataSCF(requireActivity(), prefSCF, (Boolean) newValue, shake_scf.isChecked(), vibration_shake_scf.isChecked());
                 return true;

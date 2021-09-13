@@ -32,7 +32,6 @@
     <string-array name="themes_entries">
         <item>Tema chiaro</item>
         <item>Tema scuro</item>
-
     </string-array>
     <string-array name="themes_values">
         <item>LightTheme</item>
@@ -1723,8 +1722,11 @@
     <dimen name="preference_seekbar_padding_horizontal">0dp</dimen>
     <dimen name="preference_seekbar_padding_vertical">15dp</dimen>
     <dimen name="preference_seekbar_value_minWidth">36dp</dimen>
+    <dimen name="root_layout_padding">8dp</dimen>
     <dimen name="seek_bar_thickness">4dp</dimen>
     <dimen name="seek_bar_thumb_size">20dp</dimen>
+    <dimen name="sensor_alert_dialog_icon_padding">8dp</dimen>
+    <dimen name="sensor_alert_dialog_icon_size">30dp</dimen>
     <dimen name="subtitle_corner_radius">2dp</dimen>
     <dimen name="subtitle_outline_width">2dp</dimen>
     <dimen name="subtitle_shadow_offset">2dp</dimen>
@@ -1987,17 +1989,41 @@
     <string name="cameraview_filter_temperature">com.otaliastudios.cameraview.filters.TemperatureFilter</string>
     <string name="cameraview_filter_tint">com.otaliastudios.cameraview.filters.TintFilter</string>
     <string name="cameraview_filter_vignette">com.otaliastudios.cameraview.filters.VignetteFilter</string>
+    <string name="cardinal_direction_east">Est</string>
+    <string name="cardinal_direction_east_abbreviation">E</string>
+    <string name="cardinal_direction_north">Nord</string>
+    <string name="cardinal_direction_north_abbreviation">N</string>
+    <string name="cardinal_direction_northeast">Nord-Est</string>
+    <string name="cardinal_direction_northwest">Nord-Ovest</string>
+    <string name="cardinal_direction_south">Sud</string>
+    <string name="cardinal_direction_south_abbreviation">S</string>
+    <string name="cardinal_direction_southeast">Sud-Est</string>
+    <string name="cardinal_direction_southwest">Sud-Ovest</string>
+    <string name="cardinal_direction_west">Ovest</string>
+    <string name="cardinal_direction_west_abbreviation">W</string>
     <string name="character_counter_content_description">Characters entered %1$d of %2$d</string>
     <string name="character_counter_overflowed_content_description">Character limit exceeded %1$d of %2$d</string>
     <string name="character_counter_pattern" translatable="false">%1$d/%2$d</string>
     <string name="chip_text">Chip text</string>
     <string name="clear_text_end_icon_content_description">Clear text</string>
     <string name="common_google_play_services_unknown_issue"><ns2:g id="app_name">%1$s</ns2:g> is having trouble with Google Play services. Please try again.</string>
-    <string name="compass_dial" translatable="false">Compass Dial</string>
-    <string name="compass_hands" translatable="false">Compass Hands</string>
+    <string name="compass_rose_image_description">Rosa dei venti che mostra il nord magnetico</string>
     <string name="copy">Copy</string>
-    <string name="copyright">Versione 25.0.0\n\n© 2021\nVincenzo Salvati &amp; Co\nRights Reserved.</string>
+    <string name="copyright">Versione 26.0.0\n\n© 2021\nVincenzo Salvati &amp; Co\nRights Reserved.</string>
     <string name="dadoActivity">DadoActivity</string>
+    <string name="degree_0_text">0°</string>
+    <string name="degree_120_text">120°</string>
+    <string name="degree_150_text">150°</string>
+    <string name="degree_180_text">180°</string>
+    <string name="degree_210_text">210°</string>
+    <string name="degree_240_text">240°</string>
+    <string name="degree_270_text">270°</string>
+    <string name="degree_300_text">300°</string>
+    <string name="degree_30_text">30°</string>
+    <string name="degree_330_text">330°</string>
+    <string name="degree_60_text">60°</string>
+    <string name="degree_90_text">90°</string>
+    <string name="device_heading_indicator_image_description">Indica in quale direzione sta puntando il dispositivo</string>
     <string name="error_icon_content_description">Error</string>
     <string name="expand_button_title">Advanced</string>
     <string name="exposed_dropdown_menu_content_description">Show dropdown menu</string>
@@ -2077,6 +2103,7 @@
     <string name="nav_app_bar_navigate_up_description">Navigate up</string>
     <string name="nav_app_bar_open_drawer_description">Open navigation drawer</string>
     <string name="not_set">Not set</string>
+    <string name="ok">OK</string>
     <string name="other_Sensors">Altri sensori</string>
     <string name="password_toggle_content_description">Show password</string>
     <string name="path_password_eye" translatable="false">M12,4.5C7,4.5 2.73,7.61 1,12c1.73,4.39 6,7.5 11,7.5s9.27,-3.11 11,-7.5c-1.73,-4.39 -6,-7.5 -11,-7.5zM12,17c-2.76,0 -5,-2.24 -5,-5s2.24,-5 5,-5 5,2.24 5,5 -2.24,5 -5,5zM12,9c-1.66,0 -3,1.34 -3,3s1.34,3 3,3 3,-1.34 3,-3 -1.34,-3 -3,-3z</string>
@@ -2093,16 +2120,21 @@
     <string name="scfWinner">Chi sarà il vincitore?</string>
     <string name="search_menu_title">Search</string>
     <string name="seleziona_larghezza_o_altezza">Muovi la telecamera\nsul piano di interesse\nfinchè la manina non scompare\n(per altre info clicca su "?")</string>
+    <string name="sensor_accuracy_high">Massima precisione</string>
+    <string name="sensor_accuracy_image_description">Indica graficamente la precisione dei sensori</string>
+    <string name="sensor_accuracy_low">Bassa precisione</string>
+    <string name="sensor_accuracy_medium">Precisione media</string>
+    <string name="sensor_accuracy_no_contact">Sensore non disponibile</string>
+    <string name="sensor_accuracy_text_description">Descrive la precisione dei sensori</string>
+    <string name="sensor_accuracy_unreliable">I valori dei sensori sono inaffidabili</string>
+    <string name="sensor_calibration_text" ns1:ignore="Typos">Puoi provare a migliorare la precisione del tuo sensore in qualsiasi momento ruotando il dispositivo in uno schema a 8.</string>
+    <string name="sensor_calibration_text_description">Spiega come migliorare la precisione del sensore</string>
+    <string name="sensor_error_message">Sensore non disponibile</string>
+    <string name="sensor_status">Stato del sensore</string>
     <string name="settingsActivity">SettingsActivity</string>
-    <string name="sotw_east">E</string>
-    <string name="sotw_north">N</string>
-    <string name="sotw_northeast">NE</string>
-    <string name="sotw_northwest">NW</string>
-    <string name="sotw_south">S</string>
-    <string name="sotw_southeast">SE</string>
-    <string name="sotw_southwest">SW</string>
-    <string name="sotw_west">W</string>
     <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="status_cardinal_direction_text_description">Direzione cardinale della bussola</string>
+    <string name="status_degrees_text_description">Gradi della bussola</string>
     <string name="summary_collapsed_preference_list"><ns2:g id="current_items">%1$s</ns2:g>, <ns2:g id="added_items">%2$s</ns2:g></string>
     <string name="tab_text_1">Misurazione</string>
     <string name="tab_text_2">Sorte</string>
@@ -2113,6 +2145,7 @@
     <string name="utilityImage">UtilityImage</string>
     <string name="v7_preference_off">OFF</string>
     <string name="v7_preference_on">ON</string>
+    <string name="zero_degrees">0°</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="AndroidThemeColorAccentYellow" ns1:ignore="NewApi">

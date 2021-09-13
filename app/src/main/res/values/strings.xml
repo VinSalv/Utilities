@@ -4,7 +4,7 @@
     <string name="tab_text_2">Sorte</string>
     <string name="tab_text_3">Sensori</string>
     <string name="info">Info</string>
-    <string name="copyright">Versione 25.0.0\n\n© 2021\nVincenzo Salvati &amp; Co\nRights Reserved.</string>
+    <string name="copyright">Versione 26.0.0\n\n© 2021\nVincenzo Salvati &amp; Co\nRights Reserved.</string>
     <string name="backButton">back</string>
     <string name="AccelerometerNotSupported"><b>Accelerometro:</b> Non Supportato</string>
     <string name="GyroscopeNotSupported"><b>Giroscopio:</b> Non Supportato</string>
@@ -13,16 +13,6 @@
     <string name="PressureNotSupported"><b>Pressione:</b> Non Supportato</string>
     <string name="TemperatureNotSupported"><b>Temperatura:</b> Non Supportato</string>
     <string name="HumidityNotSupported"><b>Umidità:</b> Non Supportato</string>
-    <string name="compass_dial" translatable="false">Compass Dial</string>
-    <string name="compass_hands" translatable="false">Compass Hands</string>
-    <string name="sotw_north">N</string>
-    <string name="sotw_east">E</string>
-    <string name="sotw_south">S</string>
-    <string name="sotw_west">W</string>
-    <string name="sotw_northeast">NE</string>
-    <string name="sotw_northwest">NW</string>
-    <string name="sotw_southeast">SE</string>
-    <string name="sotw_southwest">SW</string>
     <string name="utilityImage">UtilityImage</string>
     <string name="accelerometer">Accelerometro</string>
     <string name="gyroscope">Giroscopio</string>
@@ -35,7 +25,6 @@
     <string name="monetaActivity">MonetaActivity</string>
     <string name="_SCFActivity">SCFActivity</string>
     <string name="settingsActivity">SettingsActivity</string>
-
     <string name="One_dice">1 Dado</string>
     <string name="Two_dices">2 Dadi</string>
     <string name="Roll">Gira</string>
@@ -44,10 +33,8 @@
     <string name="monetaWinner">Chi sarà il vincitore?</string>
     <string name="scfWinner">Chi sarà il vincitore?</string>
     <string name="txt_settings">Impostazioni</string>
-
     <string name="rowimageview">rowImageView</string>
     <string name="rowtextview">rowTextView</string>
-
     <string name="SCF_text">Sasso Carta Forbici</string>
     <string name="AltriSensoriActivity">AltriSensoriActivity</string>
     <string name="Roll_or_Shake_Dice">Clicca su \"GIRA\"\noppure \nscuoti il tuo smartphone!</string>
@@ -78,5 +65,45 @@
     <string name="giocatore_croce">Giocatore Croce</string>
     <string name="todo">TODO</string>
     <string name="_0">0°</string>
-
+    <string name="sensor_status">Stato del sensore</string>
+    <string name="compass_rose_image_description">Rosa dei venti che mostra il nord magnetico</string>
+    <string name="device_heading_indicator_image_description">Indica in quale direzione sta puntando il dispositivo</string>
+    <string name="status_degrees_text_description">Gradi della bussola</string>
+    <string name="status_cardinal_direction_text_description">Direzione cardinale della bussola</string>
+    <string name="zero_degrees">0°</string>
+    <string name="cardinal_direction_north">Nord</string>
+    <string name="cardinal_direction_northeast">Nord-Est</string>
+    <string name="cardinal_direction_east">Est</string>
+    <string name="cardinal_direction_southeast">Sud-Est</string>
+    <string name="cardinal_direction_south">Sud</string>
+    <string name="cardinal_direction_southwest">Sud-Ovest</string>
+    <string name="cardinal_direction_west">Ovest</string>
+    <string name="cardinal_direction_northwest">Nord-Ovest</string>
+    <string name="cardinal_direction_north_abbreviation">N</string>
+    <string name="cardinal_direction_east_abbreviation">E</string>
+    <string name="cardinal_direction_south_abbreviation">S</string>
+    <string name="cardinal_direction_west_abbreviation">W</string>
+    <string name="degree_0_text">0°</string>
+    <string name="degree_30_text">30°</string>
+    <string name="degree_60_text">60°</string>
+    <string name="degree_90_text">90°</string>
+    <string name="degree_120_text">120°</string>
+    <string name="degree_150_text">150°</string>
+    <string name="degree_180_text">180°</string>
+    <string name="degree_210_text">210°</string>
+    <string name="degree_240_text">240°</string>
+    <string name="degree_270_text">270°</string>
+    <string name="degree_300_text">300°</string>
+    <string name="degree_330_text">330°</string>
+    <string name="ok">OK</string>
+    <string name="sensor_accuracy_no_contact">Sensore non disponibile</string>
+    <string name="sensor_accuracy_unreliable">I valori dei sensori sono inaffidabili</string>
+    <string name="sensor_accuracy_low">Bassa precisione</string>
+    <string name="sensor_accuracy_medium">Precisione media</string>
+    <string name="sensor_accuracy_high">Massima precisione</string>
+    <string name="sensor_accuracy_image_description">Indica graficamente la precisione dei sensori</string>
+    <string name="sensor_accuracy_text_description">Descrive la precisione dei sensori</string>
+    <string name="sensor_error_message">Sensore non disponibile</string>
+    <string name="sensor_calibration_text" tools:ignore="Typos">Puoi provare a migliorare la precisione del tuo sensore in qualsiasi momento ruotando il dispositivo in uno schema a 8.</string>
+    <string name="sensor_calibration_text_description">Spiega come migliorare la precisione del sensore</string>
 </resources>

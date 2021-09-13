@@ -1,7 +1,6 @@
 package com.app.utilities.utility;
 
 public class RowItem {
-
     private final String rowTextView;
     private final int rowImageViewId;
 
@@ -17,5 +16,4 @@ public class RowItem {
     public int getRowImageViewId() {
         return rowImageViewId;
     }
-
 }

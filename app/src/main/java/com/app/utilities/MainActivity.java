@@ -27,7 +27,6 @@ import java.util.Objects;
 
 @SuppressWarnings("unused")
 public class MainActivity extends AppCompatActivity {
-
     private static final Utils utils = new Utils();
     @SuppressWarnings("unused")
     protected Configuration mPrevConfig;
@@ -55,7 +54,6 @@ public class MainActivity extends AppCompatActivity {
                 case Configuration.UI_MODE_NIGHT_NO:
                     utils.changeTheme(this, 0);
                     break;
-
                 case Configuration.UI_MODE_NIGHT_YES:
                     utils.changeTheme(this, 1);
                     break;
@@ -110,7 +108,6 @@ public class MainActivity extends AppCompatActivity {
         }
         this.doubleBackToExitPressedOnce = true;
         utils.notifyUser(this, Html.fromHtml("Premi nuovamente <b>INDIETRO</b> per uscire dall'applicazione.", HtmlCompat.FROM_HTML_MODE_LEGACY).toString());
-
         new Handler().postDelayed(() -> doubleBackToExitPressedOnce = false, 2000);
     }
 

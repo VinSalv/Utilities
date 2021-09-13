@@ -93,14 +93,11 @@ public class PreferenzeMoneta extends AppCompatActivity {
             vibration_button_moneta = findPreference("vibration_button_moneta");
             shake_moneta = findPreference("shake_moneta");
             vibration_shake_moneta = findPreference("vibration_shake_moneta");
-
             vibration_button_moneta.setChecked(prefMoneta.getVibrationButtonMonetaBool());
             shake_moneta.setChecked(prefMoneta.getShakeMonetaBool());
             vibration_shake_moneta.setChecked(prefMoneta.getVibrationShakeMonetaBool());
-
             if (!shake_moneta.isChecked())
                 vibration_shake_moneta.setChecked(false);
-
             Objects.requireNonNull(vibration_button_moneta).setOnPreferenceChangeListener((preference, newValue) -> {
                 utils.saveDataMoneta(requireActivity(), prefMoneta, (Boolean) newValue, shake_moneta.isChecked(), vibration_shake_moneta.isChecked());
                 return true;

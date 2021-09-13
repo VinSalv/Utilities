@@ -9,16 +9,10 @@ import android.view.View;
 import com.github.mikephil.charting.utils.Transformer;
 import com.github.mikephil.charting.utils.ViewPortHandler;
 
-/**
- * Created by Philipp Jahoda on 19/02/16.
- */
 @SuppressLint("NewApi")
 public abstract class AnimatedViewPortJob extends ViewPortJob implements ValueAnimator.AnimatorUpdateListener, Animator.AnimatorListener {
-
     protected ObjectAnimator animator;
-
     protected float phase;
-
     protected float xOrigin;
     protected float yOrigin;
 
@@ -66,7 +60,6 @@ public abstract class AnimatedViewPortJob extends ViewPortJob implements ValueAn
 
     @Override
     public void onAnimationStart(Animator animation) {
-
     }
 
     @Override
@@ -74,7 +67,7 @@ public abstract class AnimatedViewPortJob extends ViewPortJob implements ValueAn
         try {
             recycleSelf();
         } catch (IllegalArgumentException e) {
-            // don't worry about it.
+
         }
     }
 
@@ -83,17 +76,15 @@ public abstract class AnimatedViewPortJob extends ViewPortJob implements ValueAn
         try {
             recycleSelf();
         } catch (IllegalArgumentException e) {
-            // don't worry about it.
+
         }
     }
 
     @Override
     public void onAnimationRepeat(Animator animation) {
-
     }
 
     @Override
     public void onAnimationUpdate(ValueAnimator animation) {
-
     }
 }

@@ -2,22 +2,13 @@ package com.github.mikephil.charting.model;
 
 import com.github.mikephil.charting.utils.Fill;
 
-/**
- * Deprecated. Use `Fill`
- */
 @Deprecated
 public class GradientColor extends Fill {
-    /**
-     * Deprecated. Use `Fill.getGradientColors()`
-     */
     @Deprecated
     public int getStartColor() {
         return getGradientColors()[0];
     }
 
-    /**
-     * Deprecated. Use `Fill.setGradientColors(...)`
-     */
     @Deprecated
     public void setStartColor(int startColor) {
         if (getGradientColors() == null || getGradientColors().length != 2) {
@@ -32,17 +23,11 @@ public class GradientColor extends Fill {
         }
     }
 
-    /**
-     * Deprecated. Use `Fill.getGradientColors()`
-     */
     @Deprecated
     public int getEndColor() {
         return getGradientColors()[1];
     }
 
-    /**
-     * Deprecated. Use `Fill.setGradientColors(...)`
-     */
     @Deprecated
     public void setEndColor(int endColor) {
         if (getGradientColors() == null || getGradientColors().length != 2) {
@@ -56,5 +41,4 @@ public class GradientColor extends Fill {
             getGradientColors()[1] = endColor;
         }
     }
-
 }

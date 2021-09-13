@@ -39,5 +39,4 @@ public class Preferenze {
     public void setThemeText(String themeText) {
         this.themeText = themeText;
     }
-
 }

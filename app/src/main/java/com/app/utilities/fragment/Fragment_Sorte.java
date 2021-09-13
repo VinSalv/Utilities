@@ -18,7 +18,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Fragment_Sorte extends Fragment {
-
     private final Utils utils = new Utils();
     String[] sorteTextsView;
     TypedArray sorteImagesView;

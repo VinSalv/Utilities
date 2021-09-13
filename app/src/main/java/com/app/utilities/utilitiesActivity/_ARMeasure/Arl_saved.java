@@ -43,5 +43,4 @@ public class Arl_saved implements Parcelable {
     public void writeToParcel(Parcel dest, int flags) {
         dest.writeString(arl_saved);
     }
-
 }

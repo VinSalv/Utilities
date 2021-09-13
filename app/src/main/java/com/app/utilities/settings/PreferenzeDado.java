@@ -95,15 +95,12 @@ public class PreferenzeDado extends AppCompatActivity {
             vibration_button_dice = findPreference("vibration_button_dice");
             shake_dice = findPreference("shake_dice");
             vibration_shake_dice = findPreference("vibration_shake_dice");
-
             vibration_buttons_dice.setChecked(prefDado.getVibrationButtonsDiceBool());
             vibration_button_dice.setChecked(prefDado.getVibrationButtonDiceBool());
             shake_dice.setChecked(prefDado.getShakeDiceBool());
             vibration_shake_dice.setChecked(prefDado.getVibrationShakeDiceBool());
-
             if (!shake_dice.isChecked())
                 vibration_shake_dice.setChecked(false);
-
             Objects.requireNonNull(vibration_buttons_dice).setOnPreferenceChangeListener((preference, newValue) -> {
                 utils.saveDataDado(requireActivity(), prefDado, (Boolean) newValue, vibration_button_dice.isChecked(), shake_dice.isChecked(), vibration_shake_dice.isChecked());
                 return true;

@@ -171,7 +171,6 @@ public class DadoActivity extends AppCompatActivity implements Shake.Callback {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 vibrator.vibrate(VibrationEffect.createOneShot(300, VibrationEffect.DEFAULT_AMPLITUDE));
             } else {
-
                 vibrator.vibrate(300);
             }
         b2 = true;
@@ -190,7 +189,6 @@ public class DadoActivity extends AppCompatActivity implements Shake.Callback {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                     vibrator.vibrate(VibrationEffect.createOneShot(300, VibrationEffect.DEFAULT_AMPLITUDE));
                 } else {
-
                     vibrator.vibrate(300);
                 }
             diceLayout.removeAllViews();
@@ -210,7 +208,6 @@ public class DadoActivity extends AppCompatActivity implements Shake.Callback {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 vibrator.vibrate(VibrationEffect.createOneShot(300, VibrationEffect.DEFAULT_AMPLITUDE));
             } else {
-
                 vibrator.vibrate(300);
             }
         one = false;
@@ -235,7 +232,6 @@ public class DadoActivity extends AppCompatActivity implements Shake.Callback {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                     vibrator.vibrate(VibrationEffect.createOneShot(300, VibrationEffect.DEFAULT_AMPLITUDE));
                 } else {
-
                     vibrator.vibrate(300);
                 }
             diceLayout.removeAllViews();
@@ -270,7 +266,6 @@ public class DadoActivity extends AppCompatActivity implements Shake.Callback {
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                         vibrator.vibrate(VibrationEffect.createOneShot(300, VibrationEffect.DEFAULT_AMPLITUDE));
                     } else {
-
                         vibrator.vibrate(300);
                     }
                 diceLayout.removeAllViews();
@@ -286,7 +281,6 @@ public class DadoActivity extends AppCompatActivity implements Shake.Callback {
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                         vibrator.vibrate(VibrationEffect.createOneShot(300, VibrationEffect.DEFAULT_AMPLITUDE));
                     } else {
-
                         vibrator.vibrate(300);
                     }
                 diceLayout.removeAllViews();
@@ -305,7 +299,6 @@ public class DadoActivity extends AppCompatActivity implements Shake.Callback {
                 rightDice.getLayoutParams().width = width / 2;
                 rightDice.getLayoutParams().height = height;
                 diceNumber.setText((first + 1) + " + " + (nbre + 1) + " = " + (first + 1 + nbre + 1));
-
             }
     }
 

@@ -18,7 +18,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Fragment_Misurazione extends Fragment {
-
     private final Utils utils = new Utils();
     String[] orientazioneTextsView;
     TypedArray orientazioneImagesView;
@@ -37,17 +36,14 @@ public class Fragment_Misurazione extends Fragment {
         rowItems = new ArrayList<>();
         orientazioneImagesView = getResources().obtainTypedArray(R.array.orientazione_images);
         orientazioneTextsView = getResources().getStringArray(R.array.orientazione_strings);
-
         for (int i = 0; i < orientazioneTextsView.length; i++) {
             RowItem item = new RowItem(orientazioneTextsView[i],
                     orientazioneImagesView.getResourceId(i, -1));
             rowItems.add(item);
         }
-
         listView = view.findViewById(R.id.sorteListView);
         adapter = new CustomAdapter(requireActivity(), rowItems);
         listView.setAdapter(adapter);
-
         listView.setOnItemClickListener((parent, view1, position, id) -> {
             if (position == 0) {
                 utils.goToARMeasureActivity(requireActivity());

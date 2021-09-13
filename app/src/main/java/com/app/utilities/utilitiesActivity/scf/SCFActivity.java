@@ -159,7 +159,6 @@ public class SCFActivity extends AppCompatActivity implements Shake.Callback {
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 vibrator.vibrate(VibrationEffect.createOneShot(300, VibrationEffect.DEFAULT_AMPLITUDE));
             } else {
-
                 vibrator.vibrate(300);
             }
         scfLayout.removeAllViews();
@@ -226,7 +225,6 @@ public class SCFActivity extends AppCompatActivity implements Shake.Callback {
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                     vibrator.vibrate(VibrationEffect.createOneShot(300, VibrationEffect.DEFAULT_AMPLITUDE));
                 } else {
-
                     vibrator.vibrate(300);
                 }
             scfLayout.removeAllViews();
@@ -288,7 +286,6 @@ public class SCFActivity extends AppCompatActivity implements Shake.Callback {
 
     @Override
     public void shakingStopped() {
-
     }
 
     @Override

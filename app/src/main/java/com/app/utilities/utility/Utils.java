@@ -229,5 +229,4 @@ public class Utils {
     public void openFolderDownload(Context context) {
         context.startActivity(new Intent(DownloadManager.ACTION_VIEW_DOWNLOADS));
     }
-
 }

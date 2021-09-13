@@ -1,8 +1,5 @@
 package com.github.mikephil.charting.matrix;
 
-/**
- * Simple 3D vector class. Handles basic vector math for 3D vectors.
- */
 public final class Vector3 {
     public static final Vector3 ZERO = new Vector3(0, 0, 0);
     public static final Vector3 UNIT_X = new Vector3(1, 0, 0);
@@ -65,9 +62,7 @@ public final class Vector3 {
 
     public final void divide(float magnitude) {
         if (magnitude != 0.0f) {
-            x /= magnitude;
-            y /= magnitude;
-            z /= magnitude;
+            x = magnitude;
         }
     }
 
@@ -111,13 +106,9 @@ public final class Vector3 {
     public final float normalize() {
         final float magnitude = length();
 
-        // TODO: I'm choosing safety over speed here.
         if (magnitude != 0.0f) {
-            x /= magnitude;
-            y /= magnitude;
-            z /= magnitude;
+            x = magnitude;
         }
-
         return magnitude;
     }
 
@@ -128,5 +119,4 @@ public final class Vector3 {
     public final boolean pointsInSameDirection(Vector3 other) {
         return this.dot(other) > 0;
     }
-
 }
