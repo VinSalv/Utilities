@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merge xmlns:android="http://schemas.android.com/apk/res/android"
+<merge xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <androidx.constraintlayout.widget.Guideline
@@ -51,9 +52,12 @@
         android:contentDescription="@string/status_cardinal_direction_text_description"
         android:text="@string/cardinal_direction_north"
         android:textColor="?android:attr/textColorPrimary"
+        android:textSize="20sp"
+        android:autoSizeTextType="uniform"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/center_horizontal_guideline" />
+        app:layout_constraintTop_toBottomOf="@id/center_horizontal_guideline"
+        tools:targetApi="o" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/cardinal_direction_north_text"
@@ -166,5 +170,4 @@
         android:layout_height="wrap_content"
         android:text="@string/degree_330_text"
         android:textColor="?android:attr/textColorPrimary" />
-
 </merge>

@@ -10,7 +10,6 @@ import android.hardware.SensorEvent;
 import android.hardware.SensorEventListener;
 import android.hardware.SensorManager;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.View;
 import android.widget.ImageButton;
 
@@ -32,22 +31,19 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import kotlin.jvm.internal.Intrinsics;
-
-@SuppressWarnings("ALL")
 public final class BussolaActivity extends AppCompatActivity implements SensorEventListener {
     private final Utils utils = new Utils();
     protected Configuration mPrevConfig;
     Preferenze pref;
     private CompassView compassView;
     private SensorManager sensorManager;
-    private Menu optionsMenu;
     private SensorAccuracy sensorAccuracy;
 
     public static boolean isOnDarkMode(Configuration configuration) {
         return (configuration.uiMode & Configuration.UI_MODE_NIGHT_MASK) == Configuration.UI_MODE_NIGHT_YES;
     }
 
+    @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         pref = utils.loadData(this, new Preferenze());
@@ -82,21 +78,14 @@ public final class BussolaActivity extends AppCompatActivity implements SensorEv
         mPrevConfig = new Configuration(getResources().getConfiguration());
     }
 
+    @Override
     protected void onResume() {
         super.onResume();
-        SensorManager var10000 = this.sensorManager;
-        if (var10000 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("sensorManager");
-        }
-        Sensor rotationVectorSensor = var10000.getDefaultSensor(Sensor.TYPE_ROTATION_VECTOR);
+        Sensor rotationVectorSensor = this.sensorManager.getDefaultSensor(Sensor.TYPE_ROTATION_VECTOR);
         if (rotationVectorSensor == null) {
             this.showSensorErrorDialog();
         } else {
-            var10000 = this.sensorManager;
-            if (var10000 == null) {
-                Intrinsics.throwUninitializedPropertyAccessException("sensorManager");
-            }
-            var10000.registerListener(this, rotationVectorSensor, SENSOR_DELAY_FASTEST);
+            this.sensorManager.registerListener(this, rotationVectorSensor, SENSOR_DELAY_FASTEST);
         }
     }
 
@@ -104,13 +93,22 @@ public final class BussolaActivity extends AppCompatActivity implements SensorEv
         (new MaterialAlertDialogBuilder(this)).setMessage(R.string.sensor_error_message).setIcon(android.R.drawable.ic_dialog_alert).setCancelable(false).show();
     }
 
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        this.sensorManager.unregisterListener(this);
+    }
+
+    @Override
     protected void onPause() {
         super.onPause();
-        SensorManager var10000 = this.sensorManager;
-        if (var10000 == null) {
-            Intrinsics.throwUninitializedPropertyAccessException("sensorManager");
-        }
-        var10000.unregisterListener(this);
+        this.sensorManager.unregisterListener(this);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        sensorManager.unregisterListener(this);
     }
 
     private void showSensorStatusPopup() {
@@ -123,6 +121,7 @@ public final class BussolaActivity extends AppCompatActivity implements SensorEv
                 setNeutralButton(R.string.ok, (dialog, i) -> dialog.dismiss()).show();
     }
 
+    @Override
     public void onAccuracyChanged(@NotNull Sensor sensor, int accuracy) {
         if (sensor.getType() == Sensor.TYPE_ROTATION_VECTOR) {
             this.updateSensorAccuracy(accuracy);
@@ -154,6 +153,7 @@ public final class BussolaActivity extends AppCompatActivity implements SensorEv
         return var10000;
     }
 
+    @Override
     public void onSensorChanged(@NotNull SensorEvent event) {
         if (event.sensor.getType() == Sensor.TYPE_ROTATION_VECTOR) {
             this.updateCompass(event);

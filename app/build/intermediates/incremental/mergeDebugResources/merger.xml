@@ -8298,18 +8298,14 @@
         <item>Lento (200.000ms)</item>
         <item>Disabilita</item>
     </string-array></file><file path="C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\res\values\colors.xml" qualifiers=""><color name="beige">#A98C60</color><color name="grey">#303030</color><color name="dark_gray">#121212</color><color name="cream">#F3DDA1</color><color name="jeans">#657A97</color><color name="red">#AE1B21</color><color name="blue_text">#0305ea</color><color name="red_text">#e40c0b</color><color name="yellow">#FEE12B</color><color name="dark_yellow">#9D8800</color><color name="black">#FF000000</color><color name="white">#FFFFFFFF</color><color name="transparent">#00000000</color><color name="colorPrimary" ns2:ignore="UnusedResources">#008577</color><color name="colorPrimaryDark" ns2:ignore="UnusedResources">#00574B</color><color name="colorAccent" ns2:ignore="UnusedResources">#D81B60</color><color name="colorGreen" ns2:ignore="UnusedResources">#060</color><color name="colorOrange" ns2:ignore="UnusedResources">#FF5722</color><color name="translucent_black">#80000000</color><color name="translucent_jeans">#80657A97</color></file><file path="C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\res\values\dimens.xml" qualifiers=""><dimen name="activity_horizontal_margin">16dp</dimen><dimen name="activity_vertical_margin">16dp</dimen><dimen name="fab_margin">16dp</dimen><dimen name="seek_bar_thickness">4dp</dimen><dimen name="seek_bar_thumb_size">20dp</dimen><dimen name="root_layout_padding">8dp</dimen><dimen name="sensor_alert_dialog_icon_size">30dp</dimen><dimen name="sensor_alert_dialog_icon_padding">8dp</dimen></file><file path="C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\res\values\selectedTheme.xml" qualifiers=""><style name="LightThemeSelected" parent="ThemeOverlay.AppCompat.Light">
-
         <item name="colorPrimary">@color/cream</item>
         <item name="colorPrimaryVariant">@color/white</item>
         <item name="colorOnPrimary">@color/black</item>
-
         <item name="colorSecondary">@color/beige</item>
         <item name="colorSecondaryVariant">@color/white</item>
         <item name="colorOnSecondary">@color/black</item>
         <item name="color">@color/jeans</item>
-
         <item name="android:statusBarColor" ns2:targetApi="l">?attr/colorPrimary</item>
-
         <item name="android:textColor">@color/black</item>
         <item name="appBarLayoutStyle">@color/cream</item>
         <item name="colorPrimaryDark">@color/cream</item>
@@ -8318,10 +8314,8 @@
         <item name="colorPrimarySurface">@color/black</item>
         <item name="colorOnBackground">@color/translucent_jeans</item>
         <item name="backgroundColor">@color/jeans</item>
-
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-
         <item name="dialogTheme">@style/DialogThemeLight</item>
         <item name="alertDialogTheme">@style/DialogThemeLight</item>
     </style><style name="DialogThemeLight" parent="Theme.AppCompat.Dialog.Alert">
@@ -8332,14 +8326,11 @@
         <item name="colorPrimary">@color/black</item>
         <item name="colorPrimaryVariant">@color/yellow</item>
         <item name="colorOnPrimary">@color/white</item>
-
         <item name="colorSecondary">@color/red</item>
         <item name="colorSecondaryVariant">@color/dark_yellow</item>
         <item name="colorOnSecondary">@color/black</item>
         <item name="color">@color/grey</item>
-
         <item name="android:statusBarColor" ns2:targetApi="l">?attr/colorPrimary</item>
-
         <item name="android:textColor">@color/white</item>
         <item name="appBarLayoutStyle">@color/black</item>
         <item name="colorPrimaryDark">@color/red</item>
@@ -8348,10 +8339,8 @@
         <item name="colorPrimarySurface">@color/red</item>
         <item name="colorOnBackground">@color/translucent_black</item>
         <item name="backgroundColor">@color/black</item>
-
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-
         <item name="dialogTheme">@style/DialogThemeDark</item>
         <item name="alertDialogTheme">@style/DialogThemeDark</item>
     </style><style name="DialogThemeDark" parent="Theme.AppCompat.Dialog.Alert">
@@ -8359,18 +8348,14 @@
         <item name="android:textColor">@color/red</item>
         <item name="colorAccent">@color/red</item>
     </style></file><file path="C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\res\values\strings.xml" qualifiers=""><string name="app_name">Utilities</string><string name="tab_text_1">Misurazione</string><string name="tab_text_2">Sorte</string><string name="tab_text_3">Sensori</string><string name="info">Info</string><string name="copyright">Versione 26.0.0\n\n© 2021\nVincenzo Salvati &amp; Co\nRights Reserved.</string><string name="backButton">back</string><string name="AccelerometerNotSupported"><b>Accelerometro:</b> Non Supportato</string><string name="GyroscopeNotSupported"><b>Giroscopio:</b> Non Supportato</string><string name="MagnetometerNotSupported"><b>Magnetometro:</b> Non Supportato</string><string name="BrightnessNotSupported"><b>Luminosità:</b> Non Supportato</string><string name="PressureNotSupported"><b>Pressione:</b> Non Supportato</string><string name="TemperatureNotSupported"><b>Temperatura:</b> Non Supportato</string><string name="HumidityNotSupported"><b>Umidità:</b> Non Supportato</string><string name="utilityImage">UtilityImage</string><string name="accelerometer">Accelerometro</string><string name="gyroscope">Giroscopio</string><string name="magnometer">Magnetometro</string><string name="other_Sensors">Altri sensori</string><string name="infoActivity">InfoActivity</string><string name="livellaActivity">LivellaActivity</string><string name="bussolaActivity">BussolaActivity</string><string name="dadoActivity">DadoActivity</string><string name="monetaActivity">MonetaActivity</string><string name="_SCFActivity">SCFActivity</string><string name="settingsActivity">SettingsActivity</string><string name="One_dice">1 Dado</string><string name="Two_dices">2 Dadi</string><string name="Roll">Gira</string><string name="red_player">Giocatore rosso</string><string name="blue_player">Giocatore blu</string><string name="monetaWinner">Chi sarà il vincitore?</string><string name="scfWinner">Chi sarà il vincitore?</string><string name="txt_settings">Impostazioni</string><string name="rowimageview">rowImageView</string><string name="rowtextview">rowTextView</string><string name="SCF_text">Sasso Carta Forbici</string><string name="AltriSensoriActivity">AltriSensoriActivity</string><string name="Roll_or_Shake_Dice">Clicca su \"GIRA\"\noppure \nscuoti il tuo smartphone!</string><string name="Roll_or_Shake_SCF">Clicca su \"SASSO CARTA FORBICI\"\noppure \nscuoti il tuo smartphone!</string><string name="Roll_or_Shake_Moneta">Clicca su \"VAI\"\noppure \nscuoti il tuo smartphone!</string><string name="Preferenze">Preference</string><string name="PrefderenzeSCF">PrefderenzeSCF</string><string name="PrefderenzeDado">PrefderenzeDado</string><string name="PrefderenzeMoneta">PrefderenzeMoneta</string><string name="CSVTextView">Registra l\'andamento dei sensori selezionati e crea i tuoi file CSV.</string><string name="CSVRecommendationTextView" ns2:ignore="Typos">N.B. La registrazione verrà stoppata nel momento in cui si cambierà finestra o si uscirà dall\'app Utilities.\nQualora non dovessero visualizzarsi i CSV generati, riaprire nuovamente la cartella \"Download\" della propria memoria interna.</string><string name="allSensorsCheckBox">Tutti i sensori</string><string name="accelCheckBox">Accelerometro</string><string name="giroCheckBox">Giroscopio</string><string name="magnoCheckBox">Magnetometro</string><string name="LightCheckBox">Luminosità</string><string name="PressureCheckBox">Pressione</string><string name="TemperatureCheckBox">Temperatura</string><string name="HumidityCheckBox">Umidità</string><string name="larghezza">Larghezza</string><string name="salva">Salva misura</string><string name="altezza">Altezza</string><string name="seleziona_larghezza_o_altezza">Muovi la telecamera\nsul piano di interesse\nfinchè la manina non scompare\n(per altre info clicca su "?")</string><string name="titolo_della_misurazione">Titolo della misurazione</string><string name="ARMeasureActivity">ARMeasureAcrivity</string><string name="Moneta_button">Vai</string><string name="giocatore_testa">Giocatore Testa</string><string name="giocatore_croce">Giocatore Croce</string><string name="todo">TODO</string><string name="_0">0°</string><string name="sensor_status">Stato del sensore</string><string name="compass_rose_image_description">Rosa dei venti che mostra il nord magnetico</string><string name="device_heading_indicator_image_description">Indica in quale direzione sta puntando il dispositivo</string><string name="status_degrees_text_description">Gradi della bussola</string><string name="status_cardinal_direction_text_description">Direzione cardinale della bussola</string><string name="zero_degrees">0°</string><string name="cardinal_direction_north">Nord</string><string name="cardinal_direction_northeast">Nord-Est</string><string name="cardinal_direction_east">Est</string><string name="cardinal_direction_southeast">Sud-Est</string><string name="cardinal_direction_south">Sud</string><string name="cardinal_direction_southwest">Sud-Ovest</string><string name="cardinal_direction_west">Ovest</string><string name="cardinal_direction_northwest">Nord-Ovest</string><string name="cardinal_direction_north_abbreviation">N</string><string name="cardinal_direction_east_abbreviation">E</string><string name="cardinal_direction_south_abbreviation">S</string><string name="cardinal_direction_west_abbreviation">W</string><string name="degree_0_text">0°</string><string name="degree_30_text">30°</string><string name="degree_60_text">60°</string><string name="degree_90_text">90°</string><string name="degree_120_text">120°</string><string name="degree_150_text">150°</string><string name="degree_180_text">180°</string><string name="degree_210_text">210°</string><string name="degree_240_text">240°</string><string name="degree_270_text">270°</string><string name="degree_300_text">300°</string><string name="degree_330_text">330°</string><string name="ok">OK</string><string name="sensor_accuracy_no_contact">Sensore non disponibile</string><string name="sensor_accuracy_unreliable">I valori dei sensori sono inaffidabili</string><string name="sensor_accuracy_low">Bassa precisione</string><string name="sensor_accuracy_medium">Precisione media</string><string name="sensor_accuracy_high">Massima precisione</string><string name="sensor_accuracy_image_description">Indica graficamente la precisione dei sensori</string><string name="sensor_accuracy_text_description">Descrive la precisione dei sensori</string><string name="sensor_error_message">Sensore non disponibile</string><string name="sensor_calibration_text" ns2:ignore="Typos">Puoi provare a migliorare la precisione del tuo sensore in qualsiasi momento ruotando il dispositivo in uno schema a 8.</string><string name="sensor_calibration_text_description">Spiega come migliorare la precisione del sensore</string></file><file path="C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\res\values\themes.xml" qualifiers=""><style name="LightTheme" parent="Theme.MaterialComponents.DayNight">
-
         <item name="colorPrimary">@color/cream</item>
         <item name="colorPrimaryVariant">@color/white</item>
         <item name="colorOnPrimary">@color/black</item>
-
         <item name="colorSecondary">@color/beige</item>
         <item name="colorSecondaryVariant">@color/white</item>
         <item name="colorOnSecondary">@color/black</item>
         <item name="color">@color/jeans</item>
-
         <item name="android:statusBarColor" ns2:targetApi="l">?attr/colorPrimary</item>
-
         <item name="android:textColor">@color/black</item>
         <item name="appBarLayoutStyle">@color/cream</item>
         <item name="colorPrimaryDark">@color/cream</item>
@@ -8379,25 +8364,19 @@
         <item name="colorPrimarySurface">@color/black</item>
         <item name="colorOnBackground">@color/translucent_jeans</item>
         <item name="backgroundColor">@color/jeans</item>
-
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-
         <item name="dialogTheme">@style/DialogThemeLight</item>
         <item name="alertDialogTheme">@style/DialogThemeLight</item>
     </style></file><file path="C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\res\values-night\themes.xml" qualifiers="night-v8"><style name="DarkTheme" parent="Theme.MaterialComponents.DayNight">
-
         <item name="colorPrimary">@color/black</item>
         <item name="colorPrimaryVariant">@color/yellow</item>
         <item name="colorOnPrimary">@color/white</item>
-
         <item name="colorSecondary">@color/red</item>
         <item name="colorSecondaryVariant">@color/dark_yellow</item>
         <item name="colorOnSecondary">@color/black</item>
         <item name="color">@color/grey</item>
-
         <item name="android:statusBarColor" ns2:targetApi="l">?attr/colorPrimary</item>
-
         <item name="android:textColor">@color/white</item>
         <item name="appBarLayoutStyle">@color/black</item>
         <item name="colorPrimaryDark">@color/red</item>
@@ -8406,10 +8385,8 @@
         <item name="colorPrimarySurface">@color/red</item>
         <item name="colorOnBackground">@color/translucent_black</item>
         <item name="backgroundColor">@color/black</item>
-
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
-
         <item name="dialogTheme">@style/DialogThemeDark</item>
         <item name="alertDialogTheme">@style/DialogThemeDark</item>
     </style></file><file name="backup_descriptor" path="C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\res\xml\backup_descriptor.xml" qualifiers="" type="xml"/><file name="preferences" path="C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\res\xml\preferences.xml" qualifiers="" type="xml"/><file name="preferences_dado" path="C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\res\xml\preferences_dado.xml" qualifiers="" type="xml"/><file name="preferences_moneta" path="C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\res\xml\preferences_moneta.xml" qualifiers="" type="xml"/><file name="preferences_scf" path="C:\Users\vince\AndroidStudioProjects\Utilities\app\src\main\res\xml\preferences_scf.xml" qualifiers="" type="xml"/></source><source path="C:\Users\vince\AndroidStudioProjects\Utilities\app\build\generated\res\rs\debug"/><source path="C:\Users\vince\AndroidStudioProjects\Utilities\app\build\generated\res\resValues\debug"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug$Generated" generated="true" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\vince\AndroidStudioProjects\Utilities\app\src\debug\res"/></dataSet><dataSet aapt-namespace="http://schemas.android.com/apk/res-auto" config="debug" generated-set="debug$Generated" ignore_pattern="!.svn:!.git:!.ds_store:!*.scc:.*:&lt;dir>_*:!CVS:!thumbs.db:!picasa.ini:!*~"><source path="C:\Users\vince\AndroidStudioProjects\Utilities\app\src\debug\res"/></dataSet><mergedItems><configuration qualifiers=""><declare-styleable name="AlertDialog">

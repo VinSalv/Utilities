@@ -38,8 +38,8 @@ com/app/utilities/databinding/CompassViewBinding.java
  com.app.utilities.databinding.CompassViewBinding
 com/app/utilities/utilitiesActivity/bussola/model/MathUtils.java
  com.app.utilities.utilitiesActivity.bussola.model.MathUtils
-com/app/utilities/databinding/SettingsActivityBinding.java
- com.app.utilities.databinding.SettingsActivityBinding
+com/app/utilities/utility/Utils.java
+ com.app.utilities.utility.Utils
 com/app/utilities/utilitiesActivity/inclinometro/InclinometroActivity.java
  com.app.utilities.utilitiesActivity.inclinometro.InclinometroActivity
  com.app.utilities.utilitiesActivity.inclinometro.InclinometroActivity$1
@@ -92,9 +92,8 @@ com/app/utilities/fragment/Fragment_Sensori.java
  com.app.utilities.fragment.Fragment_Sensori$3
 com/app/utilities/utilitiesActivity/dado/PreferencesDado.java
  com.app.utilities.utilitiesActivity.dado.PreferencesDado
-com/app/utilities/settings/SettingsActivity.java
- com.app.utilities.settings.SettingsActivity
- com.app.utilities.settings.SettingsActivity$SettingsFragment
+com/app/utilities/databinding/ContentBussolaBinding.java
+ com.app.utilities.databinding.ContentBussolaBinding
 com/app/utilities/settings/PreferenzeDado.java
  com.app.utilities.settings.PreferenzeDado
  com.app.utilities.settings.PreferenzeDado$SettingsFragment
@@ -105,8 +104,8 @@ com/app/utilities/settings/PreferenzeMoneta.java
  com.app.utilities.settings.PreferenzeMoneta$SettingsFragment
 com/app/utilities/databinding/FragmentSensoriBinding.java
  com.app.utilities.databinding.FragmentSensoriBinding
-com/app/utilities/databinding/FragmentMainBinding.java
- com.app.utilities.databinding.FragmentMainBinding
+com/app/utilities/utilitiesActivity/bussola/BussolaActivity.java
+ com.app.utilities.utilitiesActivity.bussola.BussolaActivity
 com/app/utilities/databinding/SingleRowBinding.java
  com.app.utilities.databinding.SingleRowBinding
 com/app/utilities/databinding/ActivityDadoBinding.java
@@ -121,18 +120,19 @@ com/app/utilities/utility/CustomAdapter.java
  com.app.utilities.utility.CustomAdapter
  com.app.utilities.utility.CustomAdapter$1
  com.app.utilities.utility.CustomAdapter$ViewHolder
-com/app/utilities/fragment/ui/SectionsPagerAdapter.java
- com.app.utilities.fragment.ui.SectionsPagerAdapter
+com/app/utilities/utilitiesActivity/bussola/view/CompassView.java
+ com.app.utilities.utilitiesActivity.bussola.view.CompassView
 com/app/utilities/databinding/ActivityBussolaBinding.java
  com.app.utilities.databinding.ActivityBussolaBinding
 com/app/utilities/utilitiesActivity/_ARMeasure/Arl_saved.java
  com.app.utilities.utilitiesActivity._ARMeasure.Arl_saved
  com.app.utilities.utilitiesActivity._ARMeasure.Arl_saved$1
-com/app/utilities/databinding/ContentBussolaBinding.java
- com.app.utilities.databinding.ContentBussolaBinding
-com/app/utilities/utility/Utils.java
- com.app.utilities.utility.Utils
-com/app/utilities/utilitiesActivity/bussola/view/CompassView.java
- com.app.utilities.utilitiesActivity.bussola.view.CompassView
-com/app/utilities/utilitiesActivity/bussola/BussolaActivity.java
- com.app.utilities.utilitiesActivity.bussola.BussolaActivity
+com/app/utilities/databinding/FragmentMainBinding.java
+ com.app.utilities.databinding.FragmentMainBinding
+com/app/utilities/fragment/ui/SectionsPagerAdapter.java
+ com.app.utilities.fragment.ui.SectionsPagerAdapter
+com/app/utilities/databinding/SettingsActivityBinding.java
+ com.app.utilities.databinding.SettingsActivityBinding
+com/app/utilities/settings/SettingsActivity.java
+ com.app.utilities.settings.SettingsActivity
+ com.app.utilities.settings.SettingsActivity$SettingsFragment

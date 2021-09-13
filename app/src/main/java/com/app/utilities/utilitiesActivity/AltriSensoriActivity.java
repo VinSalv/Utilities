@@ -741,6 +741,12 @@ public class AltriSensoriActivity extends AppCompatActivity implements SensorEve
     }
 
     @Override
+    public void onStop() {
+        super.onStop();
+        sensorManager.unregisterListener(this);
+    }
+
+    @Override
     public void onConfigurationChanged(@NonNull Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
         configurationChanged(newConfig);

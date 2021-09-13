@@ -724,4 +724,10 @@ public class Fragment_Sensori extends Fragment implements SensorEventListener {
         thread.interrupt();
         super.onDestroy();
     }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        sensorManager.unregisterListener(this);
+    }
 }

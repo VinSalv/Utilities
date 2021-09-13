@@ -76,6 +76,12 @@ public class ARMeasureActivity extends AppCompatActivity {
         session.close();
     }
 
+    @Override
+    protected void onStop() {
+        super.onStop();
+        session.close();
+    }
+
     @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
