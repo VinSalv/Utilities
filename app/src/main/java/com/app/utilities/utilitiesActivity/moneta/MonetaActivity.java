@@ -149,12 +149,14 @@ public class MonetaActivity extends AppCompatActivity implements Shake.Callback 
 
     @SuppressLint("SetTextI18n")
     public void goButton(View view) {
-        if (prefMoneta.getVibrationButtonMonetaBool() && b)
+        if (prefMoneta.getVibrationButtonMonetaBool() && b) {
+            vibrator.cancel();
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 vibrator.vibrate(VibrationEffect.createOneShot(300, VibrationEffect.DEFAULT_AMPLITUDE));
             } else {
                 vibrator.vibrate(300);
             }
+        }
         monetaLayout.removeAllViews();
         croceWinner.setText(getString(R.string.monetaWinner));
         if ((testaPlayerEditText.getText().length() == 0) && (crocePlayerEditText.getText().length() == 0)) {
@@ -186,12 +188,14 @@ public class MonetaActivity extends AppCompatActivity implements Shake.Callback 
     @Override
     public void shakingStarted() {
         if (prefMoneta.getShakeMonetaBool() && b) {
-            if (prefMoneta.getVibrationShakeMonetaBool() && b)
+            if (prefMoneta.getVibrationShakeMonetaBool() && b) {
+                vibrator.cancel();
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                     vibrator.vibrate(VibrationEffect.createOneShot(300, VibrationEffect.DEFAULT_AMPLITUDE));
                 } else {
                     vibrator.vibrate(300);
                 }
+            }
             monetaLayout.removeAllViews();
             croceWinner.setText(getString(R.string.monetaWinner));
             if ((testaPlayerEditText.getText().length() == 0) && (crocePlayerEditText.getText().length() == 0)) {

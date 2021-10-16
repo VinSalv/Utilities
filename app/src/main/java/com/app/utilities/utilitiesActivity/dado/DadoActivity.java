@@ -167,12 +167,14 @@ public class DadoActivity extends AppCompatActivity implements Shake.Callback {
 
     @SuppressLint("SetTextI18n")
     public void OneDiceButton(View view) {
-        if (prefDado.getVibrationButtonsDiceBool() && b & b2)
+        if (prefDado.getVibrationButtonsDiceBool() && b & b2) {
+            vibrator.cancel();
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 vibrator.vibrate(VibrationEffect.createOneShot(300, VibrationEffect.DEFAULT_AMPLITUDE));
             } else {
                 vibrator.vibrate(300);
             }
+        }
         b2 = true;
         one = true;
         diceLayout.removeAllViews();
@@ -185,12 +187,14 @@ public class DadoActivity extends AppCompatActivity implements Shake.Callback {
         dice_empty.getLayoutParams().width = width;
         dice_empty.getLayoutParams().height = height;
         rollButton.setOnClickListener(v -> {
-            if (prefDado.getVibrationButtonDiceBool() && b)
+            if (prefDado.getVibrationButtonDiceBool() && b) {
+                vibrator.cancel();
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                     vibrator.vibrate(VibrationEffect.createOneShot(300, VibrationEffect.DEFAULT_AMPLITUDE));
                 } else {
                     vibrator.vibrate(300);
                 }
+            }
             diceLayout.removeAllViews();
             Random RandomGenerator = new Random();
             int nbre = RandomGenerator.nextInt(6);
@@ -204,12 +208,14 @@ public class DadoActivity extends AppCompatActivity implements Shake.Callback {
 
     @SuppressLint("SetTextI18n")
     public void TwoDicesButton(View view) {
-        if (prefDado.getVibrationButtonsDiceBool() && b)
+        if (prefDado.getVibrationButtonsDiceBool() && b) {
+            vibrator.cancel();
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 vibrator.vibrate(VibrationEffect.createOneShot(300, VibrationEffect.DEFAULT_AMPLITUDE));
             } else {
                 vibrator.vibrate(300);
             }
+        }
         one = false;
         diceLayout.removeAllViews();
         diceNumber.setText("0");
@@ -228,12 +234,14 @@ public class DadoActivity extends AppCompatActivity implements Shake.Callback {
         dice_empty2.getLayoutParams().width = width / 2;
         dice_empty2.getLayoutParams().height = height;
         rollButton.setOnClickListener(v -> {
-            if (prefDado.getVibrationButtonDiceBool() && b)
+            if (prefDado.getVibrationButtonDiceBool() && b) {
+                vibrator.cancel();
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                     vibrator.vibrate(VibrationEffect.createOneShot(300, VibrationEffect.DEFAULT_AMPLITUDE));
                 } else {
                     vibrator.vibrate(300);
                 }
+            }
             diceLayout.removeAllViews();
             Random RandomGenerator = new Random();
             int nbre = RandomGenerator.nextInt(6);
@@ -262,12 +270,14 @@ public class DadoActivity extends AppCompatActivity implements Shake.Callback {
     public void shakingStarted() {
         if (prefDado.getShakeDiceBool() && b)
             if (one) {
-                if (prefDado.getVibrationShakeDiceBool() && b)
+                if (prefDado.getVibrationShakeDiceBool() && b) {
+                    vibrator.cancel();
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                         vibrator.vibrate(VibrationEffect.createOneShot(300, VibrationEffect.DEFAULT_AMPLITUDE));
                     } else {
                         vibrator.vibrate(300);
                     }
+                }
                 diceLayout.removeAllViews();
                 Random RandomGenerator = new Random();
                 int nbre = RandomGenerator.nextInt(6);
@@ -277,12 +287,14 @@ public class DadoActivity extends AppCompatActivity implements Shake.Callback {
                 dice.getLayoutParams().width = width;
                 dice.getLayoutParams().height = height;
             } else {
-                if (prefDado.getVibrationShakeDiceBool() && b)
+                if (prefDado.getVibrationShakeDiceBool() && b) {
+                    vibrator.cancel();
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                         vibrator.vibrate(VibrationEffect.createOneShot(300, VibrationEffect.DEFAULT_AMPLITUDE));
                     } else {
                         vibrator.vibrate(300);
                     }
+                }
                 diceLayout.removeAllViews();
                 Random RandomGenerator = new Random();
                 int nbre = RandomGenerator.nextInt(6);

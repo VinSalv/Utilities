@@ -155,12 +155,14 @@ public class SCFActivity extends AppCompatActivity implements Shake.Callback {
 
     @SuppressLint("SetTextI18n")
     public void goButton(View view) {
-        if (prefSCF.getVibrationButtonSCFBool() && b)
+        if (prefSCF.getVibrationButtonSCFBool() && b) {
+            vibrator.cancel();
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                 vibrator.vibrate(VibrationEffect.createOneShot(300, VibrationEffect.DEFAULT_AMPLITUDE));
             } else {
                 vibrator.vibrate(300);
             }
+        }
         scfLayout.removeAllViews();
         scfWinner.setText(getString(R.string.scfWinner));
         if ((redPlayerEditText.getText().length() == 0) && (bluePlayerEditText.getText().length() == 0)) {
@@ -221,12 +223,14 @@ public class SCFActivity extends AppCompatActivity implements Shake.Callback {
     @Override
     public void shakingStarted() {
         if (prefSCF.getShakeSCFBool() && b) {
-            if (prefSCF.getVibrationShakeSCFBool() && b)
+            if (prefSCF.getVibrationShakeSCFBool() && b) {
+                vibrator.cancel();
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
                     vibrator.vibrate(VibrationEffect.createOneShot(300, VibrationEffect.DEFAULT_AMPLITUDE));
                 } else {
                     vibrator.vibrate(300);
                 }
+            }
             scfLayout.removeAllViews();
             scfWinner.setText(getString(R.string.scfWinner));
             if ((redPlayerEditText.getText().length() == 0) && (bluePlayerEditText.getText().length() == 0)) {

@@ -27,9 +27,8 @@ com/app/utilities/databinding/ActivityInfoBinding.java
  com.app.utilities.databinding.ActivityInfoBinding
 com/app/utilities/utilitiesActivity/bussola/model/SensorAccuracy.java
  com.app.utilities.utilitiesActivity.bussola.model.SensorAccuracy
-com/app/utilities/utilitiesActivity/moneta/MonetaActivity.java
- com.app.utilities.utilitiesActivity.moneta.MonetaActivity
- com.app.utilities.utilitiesActivity.moneta.MonetaActivity$1
+com/app/utilities/fragment/ui/SectionsPagerAdapter.java
+ com.app.utilities.fragment.ui.SectionsPagerAdapter
 com/app/utilities/utility/RowItem.java
  com.app.utilities.utility.RowItem
 com/app/utilities/utilitiesActivity/InfoActivity.java
@@ -38,8 +37,8 @@ com/app/utilities/databinding/CompassViewBinding.java
  com.app.utilities.databinding.CompassViewBinding
 com/app/utilities/utilitiesActivity/bussola/model/MathUtils.java
  com.app.utilities.utilitiesActivity.bussola.model.MathUtils
-com/app/utilities/utility/Utils.java
- com.app.utilities.utility.Utils
+com/app/utilities/databinding/SettingsActivityBinding.java
+ com.app.utilities.databinding.SettingsActivityBinding
 com/app/utilities/utilitiesActivity/inclinometro/InclinometroActivity.java
  com.app.utilities.utilitiesActivity.inclinometro.InclinometroActivity
  com.app.utilities.utilitiesActivity.inclinometro.InclinometroActivity$1
@@ -53,16 +52,15 @@ com/app/utilities/utilitiesActivity/_ARMeasure/ARMeasureActivity.java
  com.app.utilities.utilitiesActivity._ARMeasure.ARMeasureActivity$1
 com/app/utilities/databinding/ActivityInclinometroBinding.java
  com.app.utilities.databinding.ActivityInclinometroBinding
-com/app/utilities/utilitiesActivity/scf/SCFActivity.java
- com.app.utilities.utilitiesActivity.scf.SCFActivity
- com.app.utilities.utilitiesActivity.scf.SCFActivity$1
+com/app/utilities/databinding/FragmentMainBinding.java
+ com.app.utilities.databinding.FragmentMainBinding
 com/app/utilities/databinding/FragmentSorteBinding.java
  com.app.utilities.databinding.FragmentSorteBinding
 com/app/utilities/databinding/FragmentOrientazioneBinding.java
  com.app.utilities.databinding.FragmentOrientazioneBinding
-com/app/utilities/utilitiesActivity/dado/DadoActivity.java
- com.app.utilities.utilitiesActivity.dado.DadoActivity
- com.app.utilities.utilitiesActivity.dado.DadoActivity$1
+com/app/utilities/settings/SettingsActivity.java
+ com.app.utilities.settings.SettingsActivity
+ com.app.utilities.settings.SettingsActivity$SettingsFragment
 com/app/utilities/databinding/ActivityAltriSensoriBinding.java
  com.app.utilities.databinding.ActivityAltriSensoriBinding
 com/app/utilities/databinding/PreferenzeDadoActivityBinding.java
@@ -127,12 +125,14 @@ com/app/utilities/databinding/ActivityBussolaBinding.java
 com/app/utilities/utilitiesActivity/_ARMeasure/Arl_saved.java
  com.app.utilities.utilitiesActivity._ARMeasure.Arl_saved
  com.app.utilities.utilitiesActivity._ARMeasure.Arl_saved$1
-com/app/utilities/databinding/FragmentMainBinding.java
- com.app.utilities.databinding.FragmentMainBinding
-com/app/utilities/fragment/ui/SectionsPagerAdapter.java
- com.app.utilities.fragment.ui.SectionsPagerAdapter
-com/app/utilities/databinding/SettingsActivityBinding.java
- com.app.utilities.databinding.SettingsActivityBinding
-com/app/utilities/settings/SettingsActivity.java
- com.app.utilities.settings.SettingsActivity
- com.app.utilities.settings.SettingsActivity$SettingsFragment
+com/app/utilities/utilitiesActivity/moneta/MonetaActivity.java
+ com.app.utilities.utilitiesActivity.moneta.MonetaActivity
+ com.app.utilities.utilitiesActivity.moneta.MonetaActivity$1
+com/app/utilities/utilitiesActivity/dado/DadoActivity.java
+ com.app.utilities.utilitiesActivity.dado.DadoActivity
+ com.app.utilities.utilitiesActivity.dado.DadoActivity$1
+com/app/utilities/utility/Utils.java
+ com.app.utilities.utility.Utils
+com/app/utilities/utilitiesActivity/scf/SCFActivity.java
+ com.app.utilities.utilitiesActivity.scf.SCFActivity
+ com.app.utilities.utilitiesActivity.scf.SCFActivity$1
