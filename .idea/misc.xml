@@ -103,8 +103,31 @@
         <entry key="..\:/Users/vince/AndroidStudioProjects/Utilities/app/src/main/res/xml/preferences_scD.xml" value="0.5234375" />
         <entry key="..\:/Users/vince/AndroidStudioProjects/Utilities/app/src/main/res/xml/preferences_scf.xml" value="0.391304347826087" />
         <entry key="..\:/Users/vince/AndroidStudioProjects/Utilities/app/src/main/res/xml/root_preferences.xml" value="0.30416666666666664" />
+        <entry key="..\:/Users/vince/StudioProjects/Utilities/app/src/main/res/layout-v26/popup_info_metro.xml" value="0.55" />
+        <entry key="..\:/Users/vince/StudioProjects/Utilities/app/src/main/res/layout/activity_altri_sensori.xml" value="0.55" />
+        <entry key="..\:/Users/vince/StudioProjects/Utilities/app/src/main/res/layout/activity_armeasure.xml" value="0.55" />
+        <entry key="..\:/Users/vince/StudioProjects/Utilities/app/src/main/res/layout/activity_bussola.xml" value="0.3125" />
+        <entry key="..\:/Users/vince/StudioProjects/Utilities/app/src/main/res/layout/activity_dado.xml" value="0.21302083333333333" />
+        <entry key="..\:/Users/vince/StudioProjects/Utilities/app/src/main/res/layout/activity_inclinometro.xml" value="0.21302083333333333" />
         <entry key="..\:/Users/vince/StudioProjects/Utilities/app/src/main/res/layout/activity_info.xml" value="0.296875" />
+        <entry key="..\:/Users/vince/StudioProjects/Utilities/app/src/main/res/layout/activity_scf.xml" value="0.55" />
+        <entry key="..\:/Users/vince/StudioProjects/Utilities/app/src/main/res/layout/compass_view.xml" value="0.55" />
+        <entry key="..\:/Users/vince/StudioProjects/Utilities/app/src/main/res/layout/dialog_save.xml" value="0.55" />
+        <entry key="..\:/Users/vince/StudioProjects/Utilities/app/src/main/res/layout/fragment__orientazione.xml" value="0.55" />
+        <entry key="..\:/Users/vince/StudioProjects/Utilities/app/src/main/res/layout/fragment_main.xml" value="0.3125" />
+        <entry key="..\:/Users/vince/StudioProjects/Utilities/app/src/main/res/layout/popup_info_metro.xml" value="0.1963272120200334" />
+        <entry key="..\:/Users/vince/StudioProjects/Utilities/app/src/main/res/layout/preferenze_dado_activity.xml" value="0.3125" />
+        <entry key="..\:/Users/vince/StudioProjects/Utilities/app/src/main/res/layout/sensor_alert_dialog_view.xml" value="0.3125" />
         <entry key="..\:/Users/vince/StudioProjects/Utilities/app/src/main/res/layout/settings_activity.xml" value="0.296875" />
+        <entry key="..\:/Users/vince/StudioProjects/Utilities/app/src/main/res/layout/single_row.xml" value="0.55" />
+        <entry key="..\:/Users/vince/StudioProjects/Utilities/app/src/main/res/menu/list_options.xml" value="0.55" />
+        <entry key="..\:/Users/vince/StudioProjects/Utilities/app/src/main/res/menu/list_options_dice.xml" value="0.55" />
+        <entry key="..\:/Users/vince/StudioProjects/Utilities/app/src/main/res/menu/list_options_moneta.xml" value="0.55" />
+        <entry key="..\:/Users/vince/StudioProjects/Utilities/app/src/main/res/menu/list_options_scf.xml" value="0.55" />
+        <entry key="..\:/Users/vince/StudioProjects/Utilities/app/src/main/res/xml/preferences.xml" value="0.55" />
+        <entry key="..\:/Users/vince/StudioProjects/Utilities/app/src/main/res/xml/preferences_dado.xml" value="0.55" />
+        <entry key="..\:/Users/vince/StudioProjects/Utilities/app/src/main/res/xml/preferences_moneta.xml" value="0.55" />
+        <entry key="..\:/Users/vince/StudioProjects/Utilities/app/src/main/res/xml/preferences_scf.xml" value="0.55" />
       </map>
     </option>
   </component>

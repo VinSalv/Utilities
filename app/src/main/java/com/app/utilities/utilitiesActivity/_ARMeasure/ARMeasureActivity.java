@@ -1,6 +1,7 @@
 package com.app.utilities.utilitiesActivity._ARMeasure;
 
 import android.annotation.SuppressLint;
+import android.app.Dialog;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
@@ -10,6 +11,7 @@ import android.os.Bundle;
 import android.view.Gravity;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.Window;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -223,9 +225,7 @@ public class ARMeasureActivity extends AppCompatActivity {
                 });
         ImageButton question = findViewById(R.id.question);
         question.setOnClickListener(view -> {
-            Toast toast = Toast.makeText(this, "1) Ispeziona l'area con la telecamera finchè la manina non scompare;\n2) Scegli quale misura adoperare;\n3) Piazza i cubi:\n   - DUE per la larghezza;\n   - UNO per l'altezza;\n4) Salva tutte le misure che desideri cliccando sul pulsante \"SALVA MISURA\";\n5) Clicca sull'icona in alto a destra per usare le tue misure.\n\nP.S.\n--> Ogni quando si cambia piano di misurazione si raccomanda di cliccare sul pulsante refresh in alto (non si perderanno le misure già acquisite).\n--> Per cancellare le misure acquisite fino ad ora è necessario uscire e rientrare dall'attività \"Metro\".\n--> Se non compaiono i puntini bianchi sulla superfice (per piazzare i cubi) clicca il pulsante refresh e scansiona nuovamente la superfice di interesse.\n--> Puoi acquisire/salvare una sola misura per volta.", Toast.LENGTH_LONG);
-            toast.setGravity(Gravity.CENTER, 0, 0);
-            toast.show();
+            showAlertbox();
         });
         ImageButton refresh = findViewById(R.id.refresh);
         refresh.setOnClickListener(view -> {
@@ -283,6 +283,28 @@ public class ARMeasureActivity extends AppCompatActivity {
         });
         mBuilder.setView(mView);
         AlertDialog dialog = mBuilder.create();
+        dialog.show();
+    }
+
+    public void showAlertbox() {
+        Dialog dialog = new Dialog(this);
+        dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+        dialog.setContentView(R.layout.popup_info_metro);
+        dialog.setCanceledOnTouchOutside(false);
+        Button alertbox_uderstood = (Button) dialog.findViewById(R.id.alertbox_uderstood);
+        Button alertbox_back = (Button) dialog.findViewById(R.id.alertbox_back);
+        alertbox_uderstood.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.cancel();
+            }
+        });
+        alertbox_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.cancel();
+            }
+        });
         dialog.show();
     }
 

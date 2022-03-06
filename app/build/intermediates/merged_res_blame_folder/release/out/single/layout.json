@@ -44,6 +44,10 @@
         "source": "C:\\Users\\vince\\StudioProjects\\Utilities\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
     {
+        "merged": "C:\\Users\\vince\\StudioProjects\\Utilities\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\stripped.dir\\layout\\popup_info_metro.xml",
+        "source": "C:\\Users\\vince\\StudioProjects\\Utilities\\app\\src\\main\\res\\layout\\popup_info_metro.xml"
+    },
+    {
         "merged": "C:\\Users\\vince\\StudioProjects\\Utilities\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\stripped.dir\\layout\\activity_moneta.xml",
         "source": "C:\\Users\\vince\\StudioProjects\\Utilities\\app\\src\\main\\res\\layout\\activity_moneta.xml"
     },

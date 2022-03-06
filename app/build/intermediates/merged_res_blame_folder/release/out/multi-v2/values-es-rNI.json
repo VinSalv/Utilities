@@ -4,7 +4,7 @@
             "outputFile": "C:\\Users\\vince\\StudioProjects\\Utilities\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-es-rNI\\values-es-rNI.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\vince\\.gradle\\caches\\transforms-3\\7975cc266b3f338e4aca69e68f6ad102\\transformed\\jetified-core-1.26.0\\res\\values-es-rNI\\values.xml",
+                    "source": "C:\\Users\\vince\\.gradle\\caches\\transforms-3\\8b62995e42c5f4e9c8ed50c7dd24d181\\transformed\\jetified-core-1.30.0\\res\\values-es-rNI\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8",
                         "startColumns": "0,0,0,0,0",

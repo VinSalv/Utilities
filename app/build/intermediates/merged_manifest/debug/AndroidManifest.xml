@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.app.utilities"
-    android:versionCode="27"
-    android:versionName="27.0" >
+    android:versionCode="29"
+    android:versionName="4.2.2" >
 
     <uses-sdk
-        android:maxSdkVersion="30"
+        android:maxSdkVersion="31"
         android:minSdkVersion="16"
-        android:targetSdkVersion="30" />
+        android:targetSdkVersion="31" />
 
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.CAMERA" />
@@ -36,10 +36,10 @@
         android:required="false" />
 
     <application
-        android:name="androidx.multidex.MultiDexApplication"
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:configChanges="uiMode"
+        android:dataExtractionRules="@xml/data_extraction_rules"
         android:debuggable="true"
         android:exported="true"
         android:fullBackupContent="@xml/backup_descriptor"
@@ -148,7 +148,7 @@
         <!-- The minimal version code of ARCore APK required for an app using this SDK. -->
         <meta-data
             android:name="com.google.ar.core.min_apk_version"
-            android:value="211680000" /> <!-- This activity is critical for installing ARCore when it is not already present. -->
+            android:value="213210000" /> <!-- This activity is critical for installing ARCore when it is not already present. -->
         <activity
             android:name="com.google.ar.core.InstallActivity"
             android:configChanges="keyboardHidden|orientation|screenSize"
@@ -160,6 +160,25 @@
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
+
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="com.app.utilities.androidx-startup"
+            android:exported="false" >
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup" />
+        </provider>
+
+        <uses-library
+            android:name="androidx.window.extensions"
+            android:required="false" />
+        <uses-library
+            android:name="androidx.window.sidecar"
+            android:required="false" />
     </application>
 
 </manifest>

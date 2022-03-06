@@ -1,8 +1,8 @@
 1<?xml version="1.0" encoding="utf-8"?>
 2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
 3    package="com.app.utilities"
-4    android:versionCode="28"
-5    android:versionName="4.2.1" >
+4    android:versionCode="29"
+5    android:versionName="4.2.2" >
 6
 7    <uses-sdk
 7-->C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:6:5-10:42
@@ -25,10 +25,10 @@
 15-->C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:15:19-60
 16
 17    <queries>
-17-->[com.google.ar:core:1.26.0] C:\Users\vince\.gradle\caches\transforms-3\7975cc266b3f338e4aca69e68f6ad102\transformed\jetified-core-1.26.0\AndroidManifest.xml:29:5-31:15
+17-->[com.google.ar:core:1.30.0] C:\Users\vince\.gradle\caches\transforms-3\8b62995e42c5f4e9c8ed50c7dd24d181\transformed\jetified-core-1.30.0\AndroidManifest.xml:29:5-31:15
 18        <package android:name="com.google.ar.core" />
-18-->[com.google.ar:core:1.26.0] C:\Users\vince\.gradle\caches\transforms-3\7975cc266b3f338e4aca69e68f6ad102\transformed\jetified-core-1.26.0\AndroidManifest.xml:30:9-54
-18-->[com.google.ar:core:1.26.0] C:\Users\vince\.gradle\caches\transforms-3\7975cc266b3f338e4aca69e68f6ad102\transformed\jetified-core-1.26.0\AndroidManifest.xml:30:18-51
+18-->[com.google.ar:core:1.30.0] C:\Users\vince\.gradle\caches\transforms-3\8b62995e42c5f4e9c8ed50c7dd24d181\transformed\jetified-core-1.30.0\AndroidManifest.xml:30:9-54
+18-->[com.google.ar:core:1.30.0] C:\Users\vince\.gradle\caches\transforms-3\8b62995e42c5f4e9c8ed50c7dd24d181\transformed\jetified-core-1.30.0\AndroidManifest.xml:30:18-51
 19    </queries>
 20    <!--
 21         Have developers add this. We don't want AUDIO permission to be auto-added to
@@ -66,27 +66,27 @@
 40        android:allowBackup="true"
 40-->C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:17:9-35
 41        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-41-->[androidx.core:core:1.5.0] C:\Users\vince\.gradle\caches\transforms-3\acca383c7fb765cf203cef2e76c23cc3\transformed\core-1.5.0\AndroidManifest.xml:24:18-86
+41-->[androidx.core:core:1.7.0] C:\Users\vince\.gradle\caches\transforms-3\5a221610cd8d1a72ca688fe06865b3a7\transformed\core-1.7.0\AndroidManifest.xml:24:18-86
 42        android:configChanges="uiMode"
 42-->C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:18:9-39
 43        android:dataExtractionRules="@xml/data_extraction_rules"
-43-->C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:28:9-65
+43-->C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:19:9-65
 44        android:exported="true"
-44-->C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:19:9-32
+44-->C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:20:9-32
 45        android:fullBackupContent="@xml/backup_descriptor"
-45-->C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:20:9-59
+45-->C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:21:9-59
 46        android:icon="@drawable/utilities"
-46-->C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:21:9-43
+46-->C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:22:9-43
 47        android:label="@string/app_name"
-47-->C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:22:9-41
+47-->C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:23:9-41
 48        android:roundIcon="@drawable/utilities"
-48-->C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:23:9-48
+48-->C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:24:9-48
 49        android:screenOrientation="portrait"
-49-->C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:24:9-45
+49-->C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:25:9-45
 50        android:supportsRtl="true"
-50-->C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:25:9-35
+50-->C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:26:9-35
 51        android:theme="@style/LightTheme" >
-51-->C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:26:9-42
+51-->C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:27:9-42
 52        <meta-data
 52-->C:\Users\vince\StudioProjects\Utilities\app\src\main\AndroidManifest.xml:30:9-32:40
 53            android:name="com.google.ar.core"
@@ -277,25 +277,25 @@
 146        </activity>
 147        <!-- The minimal version code of ARCore APK required for an app using this SDK. -->
 148        <meta-data
-148-->[com.google.ar:core:1.26.0] C:\Users\vince\.gradle\caches\transforms-3\7975cc266b3f338e4aca69e68f6ad102\transformed\jetified-core-1.26.0\AndroidManifest.xml:36:9-38:41
+148-->[com.google.ar:core:1.30.0] C:\Users\vince\.gradle\caches\transforms-3\8b62995e42c5f4e9c8ed50c7dd24d181\transformed\jetified-core-1.30.0\AndroidManifest.xml:36:9-38:41
 149            android:name="com.google.ar.core.min_apk_version"
-149-->[com.google.ar:core:1.26.0] C:\Users\vince\.gradle\caches\transforms-3\7975cc266b3f338e4aca69e68f6ad102\transformed\jetified-core-1.26.0\AndroidManifest.xml:37:13-62
-150            android:value="211680000" /> <!-- This activity is critical for installing ARCore when it is not already present. -->
-150-->[com.google.ar:core:1.26.0] C:\Users\vince\.gradle\caches\transforms-3\7975cc266b3f338e4aca69e68f6ad102\transformed\jetified-core-1.26.0\AndroidManifest.xml:38:13-38
+149-->[com.google.ar:core:1.30.0] C:\Users\vince\.gradle\caches\transforms-3\8b62995e42c5f4e9c8ed50c7dd24d181\transformed\jetified-core-1.30.0\AndroidManifest.xml:37:13-62
+150            android:value="213210000" /> <!-- This activity is critical for installing ARCore when it is not already present. -->
+150-->[com.google.ar:core:1.30.0] C:\Users\vince\.gradle\caches\transforms-3\8b62995e42c5f4e9c8ed50c7dd24d181\transformed\jetified-core-1.30.0\AndroidManifest.xml:38:13-38
 151        <activity
-151-->[com.google.ar:core:1.26.0] C:\Users\vince\.gradle\caches\transforms-3\7975cc266b3f338e4aca69e68f6ad102\transformed\jetified-core-1.26.0\AndroidManifest.xml:40:9-46:80
+151-->[com.google.ar:core:1.30.0] C:\Users\vince\.gradle\caches\transforms-3\8b62995e42c5f4e9c8ed50c7dd24d181\transformed\jetified-core-1.30.0\AndroidManifest.xml:40:9-46:80
 152            android:name="com.google.ar.core.InstallActivity"
-152-->[com.google.ar:core:1.26.0] C:\Users\vince\.gradle\caches\transforms-3\7975cc266b3f338e4aca69e68f6ad102\transformed\jetified-core-1.26.0\AndroidManifest.xml:41:13-62
+152-->[com.google.ar:core:1.30.0] C:\Users\vince\.gradle\caches\transforms-3\8b62995e42c5f4e9c8ed50c7dd24d181\transformed\jetified-core-1.30.0\AndroidManifest.xml:41:13-62
 153            android:configChanges="keyboardHidden|orientation|screenSize"
-153-->[com.google.ar:core:1.26.0] C:\Users\vince\.gradle\caches\transforms-3\7975cc266b3f338e4aca69e68f6ad102\transformed\jetified-core-1.26.0\AndroidManifest.xml:42:13-74
+153-->[com.google.ar:core:1.30.0] C:\Users\vince\.gradle\caches\transforms-3\8b62995e42c5f4e9c8ed50c7dd24d181\transformed\jetified-core-1.30.0\AndroidManifest.xml:42:13-74
 154            android:excludeFromRecents="true"
-154-->[com.google.ar:core:1.26.0] C:\Users\vince\.gradle\caches\transforms-3\7975cc266b3f338e4aca69e68f6ad102\transformed\jetified-core-1.26.0\AndroidManifest.xml:43:13-46
+154-->[com.google.ar:core:1.30.0] C:\Users\vince\.gradle\caches\transforms-3\8b62995e42c5f4e9c8ed50c7dd24d181\transformed\jetified-core-1.30.0\AndroidManifest.xml:43:13-46
 155            android:exported="false"
-155-->[com.google.ar:core:1.26.0] C:\Users\vince\.gradle\caches\transforms-3\7975cc266b3f338e4aca69e68f6ad102\transformed\jetified-core-1.26.0\AndroidManifest.xml:44:13-37
+155-->[com.google.ar:core:1.30.0] C:\Users\vince\.gradle\caches\transforms-3\8b62995e42c5f4e9c8ed50c7dd24d181\transformed\jetified-core-1.30.0\AndroidManifest.xml:44:13-37
 156            android:launchMode="singleTop"
-156-->[com.google.ar:core:1.26.0] C:\Users\vince\.gradle\caches\transforms-3\7975cc266b3f338e4aca69e68f6ad102\transformed\jetified-core-1.26.0\AndroidManifest.xml:45:13-43
+156-->[com.google.ar:core:1.30.0] C:\Users\vince\.gradle\caches\transforms-3\8b62995e42c5f4e9c8ed50c7dd24d181\transformed\jetified-core-1.30.0\AndroidManifest.xml:45:13-43
 157            android:theme="@android:style/Theme.Material.Light.Dialog.Alert" />
-157-->[com.google.ar:core:1.26.0] C:\Users\vince\.gradle\caches\transforms-3\7975cc266b3f338e4aca69e68f6ad102\transformed\jetified-core-1.26.0\AndroidManifest.xml:46:13-77
+157-->[com.google.ar:core:1.30.0] C:\Users\vince\.gradle\caches\transforms-3\8b62995e42c5f4e9c8ed50c7dd24d181\transformed\jetified-core-1.30.0\AndroidManifest.xml:46:13-77
 158
 159        <meta-data
 159-->[com.google.android.gms:play-services-basement:17.6.0] C:\Users\vince\.gradle\caches\transforms-3\4cc4f76a99583cb32089e990cf09b9ac\transformed\jetified-play-services-basement-17.6.0\AndroidManifest.xml:23:9-25:69
@@ -303,6 +303,41 @@
 160-->[com.google.android.gms:play-services-basement:17.6.0] C:\Users\vince\.gradle\caches\transforms-3\4cc4f76a99583cb32089e990cf09b9ac\transformed\jetified-play-services-basement-17.6.0\AndroidManifest.xml:24:13-58
 161            android:value="@integer/google_play_services_version" />
 161-->[com.google.android.gms:play-services-basement:17.6.0] C:\Users\vince\.gradle\caches\transforms-3\4cc4f76a99583cb32089e990cf09b9ac\transformed\jetified-play-services-basement-17.6.0\AndroidManifest.xml:25:13-66
-162    </application>
-163
-164</manifest>
+162
+163        <provider
+163-->[androidx.emoji2:emoji2:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\ea38177eb5a4d0b639e579dd8e987407\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:26:9-34:20
+164            android:name="androidx.startup.InitializationProvider"
+164-->[androidx.emoji2:emoji2:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\ea38177eb5a4d0b639e579dd8e987407\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:27:13-67
+165            android:authorities="com.app.utilities.androidx-startup"
+165-->[androidx.emoji2:emoji2:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\ea38177eb5a4d0b639e579dd8e987407\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:28:13-68
+166            android:exported="false" >
+166-->[androidx.emoji2:emoji2:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\ea38177eb5a4d0b639e579dd8e987407\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:29:13-37
+167            <meta-data
+167-->[androidx.emoji2:emoji2:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\ea38177eb5a4d0b639e579dd8e987407\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:31:13-33:52
+168                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+168-->[androidx.emoji2:emoji2:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\ea38177eb5a4d0b639e579dd8e987407\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:32:17-75
+169                android:value="androidx.startup" />
+169-->[androidx.emoji2:emoji2:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\ea38177eb5a4d0b639e579dd8e987407\transformed\jetified-emoji2-1.0.0\AndroidManifest.xml:33:17-49
+170            <meta-data
+170-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\vince\.gradle\caches\transforms-3\5b1178826e93e4185c2e52e552fa43b2\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:31:13-33:52
+171                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+171-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\vince\.gradle\caches\transforms-3\5b1178826e93e4185c2e52e552fa43b2\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:32:17-78
+172                android:value="androidx.startup" />
+172-->[androidx.lifecycle:lifecycle-process:2.4.0] C:\Users\vince\.gradle\caches\transforms-3\5b1178826e93e4185c2e52e552fa43b2\transformed\jetified-lifecycle-process-2.4.0\AndroidManifest.xml:33:17-49
+173        </provider>
+174
+175        <uses-library
+175-->[androidx.window:window:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\acbe168e1961cf498414c9bce22e8b21\transformed\jetified-window-1.0.0\AndroidManifest.xml:25:9-27:40
+176            android:name="androidx.window.extensions"
+176-->[androidx.window:window:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\acbe168e1961cf498414c9bce22e8b21\transformed\jetified-window-1.0.0\AndroidManifest.xml:26:13-54
+177            android:required="false" />
+177-->[androidx.window:window:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\acbe168e1961cf498414c9bce22e8b21\transformed\jetified-window-1.0.0\AndroidManifest.xml:27:13-37
+178        <uses-library
+178-->[androidx.window:window:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\acbe168e1961cf498414c9bce22e8b21\transformed\jetified-window-1.0.0\AndroidManifest.xml:28:9-30:40
+179            android:name="androidx.window.sidecar"
+179-->[androidx.window:window:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\acbe168e1961cf498414c9bce22e8b21\transformed\jetified-window-1.0.0\AndroidManifest.xml:29:13-51
+180            android:required="false" />
+180-->[androidx.window:window:1.0.0] C:\Users\vince\.gradle\caches\transforms-3\acbe168e1961cf498414c9bce22e8b21\transformed\jetified-window-1.0.0\AndroidManifest.xml:30:13-37
+181    </application>
+182
+183</manifest>

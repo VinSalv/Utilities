@@ -4,7 +4,7 @@
     <string name="tab_text_2">Sorte</string>
     <string name="tab_text_3">Sensori</string>
     <string name="info">Info</string>
-    <string name="copyright">Versione 4.2.1\n\n© 2022\nVincenzo Salvati &amp; Co\nRights Reserved.</string>
+    <string name="copyright">Versione 4.2.2\n\n© 2022\nVincenzo Salvati &amp; Co\nRights Reserved.</string>
     <string name="backButton">back</string>
     <string name="AccelerometerNotSupported"><b>Accelerometro:</b> Non Supportato</string>
     <string name="GyroscopeNotSupported"><b>Giroscopio:</b> Non Supportato</string>
@@ -37,9 +37,9 @@
     <string name="rowtextview">rowTextView</string>
     <string name="SCF_text">Sasso Carta Forbici</string>
     <string name="AltriSensoriActivity">AltriSensoriActivity</string>
-    <string name="Roll_or_Shake_Dice">Clicca su \"GIRA\"\noppure \nscuoti il tuo smartphone!</string>
-    <string name="Roll_or_Shake_SCF">Clicca su \"SASSO CARTA FORBICI\"\noppure \nscuoti il tuo smartphone!</string>
-    <string name="Roll_or_Shake_Moneta">Clicca su \"VAI\"\noppure \nscuoti il tuo smartphone!</string>
+    <string name="Roll_or_Shake_Dice">Clicca su \"GIRA\"\noppure \nscuoti con forza il tuo smartphone!</string>
+    <string name="Roll_or_Shake_SCF">Clicca su \"SASSO CARTA FORBICI\"\noppure \nscuoti con forza il tuo smartphone!</string>
+    <string name="Roll_or_Shake_Moneta">Clicca su \"VAI\"\noppure \nscuoti con forza il tuo smartphone!</string>
     <string name="Preferenze">Preference</string>
     <string name="PrefderenzeSCF">PrefderenzeSCF</string>
     <string name="PrefderenzeDado">PrefderenzeDado</string>
@@ -106,4 +106,18 @@
     <string name="sensor_error_message">Sensore non disponibile</string>
     <string name="sensor_calibration_text" tools:ignore="Typos">Puoi provare a migliorare la precisione del tuo sensore in qualsiasi momento ruotando il dispositivo in uno schema a 8.</string>
     <string name="sensor_calibration_text_description">Spiega come migliorare la precisione del sensore</string>
+    <string name="how_to_use_meter">Premessa: assicurarsi di effettuare la misura in un luogo ben illuminato.</string>
+    <string name="how_to_use_meter_1">1) Ispeziona l\'area con la telecamera finchè la manina non scompare;</string>
+    <string name="how_to_use_meter_2">2) Scegli quale misura adoperare;</string>
+    <string name="how_to_use_meter_3_1">3) Clicca sullo schermo per piazzare i cubi sui puntini bianchi apparsi sulla superfice:</string>
+    <string name="how_to_use_meter_3_2">- due cubi per la larghezza;</string>
+    <string name="how_to_use_meter_3_3">- un cubo per l\'altezza;</string>
+    <string name="how_to_use_meter_4">4) Salva tutte le misure che desideri cliccando sul pulsante \"SALVA MISURA\";</string>
+    <string name="how_to_use_meter_5">5) Clicca sull\'icona in alto a destra per usare le tue misure.</string>
+    <string name="how_to_use_meter_6">P.S.</string>
+    <string name="how_to_use_meter_7">- Ogni quando si cambia piano di misurazione si raccomanda di cliccare sul pulsante refresh in alto (non si perderanno le misure già acquisite).</string>
+    <string name="how_to_use_meter_8">- Per cancellare le misure acquisite fino ad ora è necessario uscire e rientrare dall\'attività \"Metro\".</string>
+    <string name="how_to_use_meter_9">- Se non compaiono i puntini bianchi sulla superfice (per piazzare i cubi) clicca il pulsante refresh e scansiona nuovamente la superfice di interesse.</string>
+    <string name="understood">Capito</string>
+    <string name="come_back_to_the_app">Torna all\'app</string>
 </resources>
