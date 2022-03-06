@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.app.utilities"
-    android:versionCode="27"
-    android:versionName="27.0" >
+    android:versionCode="28"
+    android:versionName="4.2.1" >
 
     <uses-sdk
-        android:maxSdkVersion="30"
+        android:maxSdkVersion="31"
         android:minSdkVersion="16"
-        android:targetSdkVersion="30" />
+        android:targetSdkVersion="31" />
 
     <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.CAMERA" />
@@ -40,6 +40,7 @@
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:configChanges="uiMode"
+        android:dataExtractionRules="@xml/data_extraction_rules"
         android:exported="true"
         android:fullBackupContent="@xml/backup_descriptor"
         android:icon="@drawable/utilities"

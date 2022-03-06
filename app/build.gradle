@@ -2,15 +2,14 @@ plugins {
     id 'com.android.application'
 }
 android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.3"
+    compileSdkVersion 31
     defaultConfig {
         applicationId "com.app.utilities"
         vectorDrawables.useSupportLibrary = true
         minSdkVersion 16
-        targetSdkVersion 30
-        versionCode 27
-        versionName "27.0"
+        targetSdkVersion 31
+        versionCode 28
+        versionName "4.2.1"
         multiDexEnabled true
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -20,10 +19,6 @@ android {
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
-    }
-    compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
     }
     buildFeatures {
         viewBinding true

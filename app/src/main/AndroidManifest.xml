@@ -4,9 +4,9 @@
     package="com.app.utilities">
 
     <uses-sdk
-        android:maxSdkVersion="30"
+        android:maxSdkVersion="31"
         android:minSdkVersion="16"
-        android:targetSdkVersion="30"
+        android:targetSdkVersion="31"
         tools:ignore="GradleOverrides" />
 
     <uses-permission android:name="android.permission.VIBRATE" />
@@ -24,7 +24,9 @@
         android:screenOrientation="portrait"
         android:supportsRtl="true"
         android:theme="@style/LightTheme"
-        tools:ignore="RtlEnabled">
+        tools:ignore="RtlEnabled"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        tools:targetApi="s">
         <meta-data
             android:name="com.google.ar.core"
             android:value="required" />

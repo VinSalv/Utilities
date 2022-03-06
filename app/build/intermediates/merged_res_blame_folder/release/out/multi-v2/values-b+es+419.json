@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "C:\\Users\\vince\\AndroidStudioProjects\\Utilities\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-b+es+419\\values-b+es+419.xml",
+            "outputFile": "C:\\Users\\vince\\StudioProjects\\Utilities\\app\\build\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-b+es+419\\values-b+es+419.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\vince\\.gradle\\caches\\transforms-3\\a2c0f6c049fa3a64fe7868605f8eb49b\\transformed\\material-1.4.0\\res\\values-b+es+419\\values-b+es+419.xml",
+                    "source": "C:\\Users\\vince\\.gradle\\caches\\transforms-3\\af9ded7affaa67fbda53957756c9c334\\transformed\\material-1.4.0\\res\\values-b+es+419\\values-b+es+419.xml",
                     "from": {
                         "startLines": "2,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54,55,56,57,58,59",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
@@ -23,7 +23,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\vince\\.gradle\\caches\\transforms-3\\4b537e78a41c16f003bac2ea314a4f50\\transformed\\jetified-core-1.26.0\\res\\values-b+es+419\\values.xml",
+                    "source": "C:\\Users\\vince\\.gradle\\caches\\transforms-3\\7975cc266b3f338e4aca69e68f6ad102\\transformed\\jetified-core-1.26.0\\res\\values-b+es+419\\values.xml",
                     "from": {
                         "startLines": "4,5,6,7,8",
                         "startColumns": "0,0,0,0,0",
